@@ -19,7 +19,7 @@ export function Header({ instrument, instruments, onInstrumentChange }: HeaderPr
         </select>
       </div>
       <div className="header__right">
-        <span>Sponsored by </span>
+        <span>In collaboration with </span>
         <a href="https://rightkey.app" target="_blank" rel="noopener noreferrer">Rightkey.app</a>
       </div>
     </header>
