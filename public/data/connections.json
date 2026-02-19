@@ -1,0 +1,314 @@
+[
+  {
+    "from": "frescobaldi",
+    "to": "froberger",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "louis-couperin",
+    "to": "francois-couperin",
+    "type": "relative",
+    "label": "uncle/nephew"
+  },
+  {
+    "from": "a-scarlatti",
+    "to": "scarlatti",
+    "type": "relative",
+    "label": "father/son"
+  },
+  {
+    "from": "bohm",
+    "to": "bach",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "buxtehude",
+    "to": "bach",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "kuhnau",
+    "to": "bach",
+    "type": "student-teacher",
+    "label": "predecessor"
+  },
+  {
+    "from": "bach",
+    "to": "wf-bach",
+    "type": "relative",
+    "label": "father/son"
+  },
+  {
+    "from": "bach",
+    "to": "cpe-bach",
+    "type": "relative",
+    "label": "father/son"
+  },
+  {
+    "from": "bach",
+    "to": "jc-bach",
+    "type": "relative",
+    "label": "father/son"
+  },
+  {
+    "from": "scarlatti",
+    "to": "soler",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "jc-bach",
+    "to": "mozart",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "clementi",
+    "to": "cramer",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "clementi",
+    "to": "field",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "haydn",
+    "to": "beethoven",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "beethoven",
+    "to": "czerny",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "czerny",
+    "to": "liszt",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "mozart",
+    "to": "hummel",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "field",
+    "to": "chopin",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "liszt",
+    "to": "von-buelow",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "czerny",
+    "to": "leschetizky",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "leschetizky",
+    "to": "paderewski",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "schumann",
+    "to": "clara-schumann",
+    "type": "relative",
+    "label": "husband/wife"
+  },
+  {
+    "from": "saint-saens",
+    "to": "faure",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "liszt",
+    "to": "albeniz",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "hummel",
+    "to": "henselt",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "faure",
+    "to": "ravel",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "anton-rubinstein",
+    "to": "tchaikovsky",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "messiaen",
+    "to": "boulez",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "messiaen",
+    "to": "stockhausen",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "liszt",
+    "to": "bartok",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "faure",
+    "to": "debussy",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "debussy",
+    "to": "ravel",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "satie",
+    "to": "debussy",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "liszt",
+    "to": "scriabin",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "scriabin",
+    "to": "rachmaninoff",
+    "type": "relative",
+    "label": "classmates"
+  },
+  {
+    "from": "liszt",
+    "to": "grieg",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "faure",
+    "to": "poulenc",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "prokofiev",
+    "to": "shostakovich",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "glass",
+    "to": "einaudi",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "graffman",
+    "to": "lang-lang",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "graffman",
+    "to": "wang",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "neuhaus",
+    "to": "richter",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "neuhaus",
+    "to": "gilels",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "leschetizky",
+    "to": "schnabel",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "rosina-lhevinne",
+    "to": "cliburn",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "gulda",
+    "to": "argerich",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "michelangeli",
+    "to": "pollini",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "schnabel",
+    "to": "fleisher",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "fleisher",
+    "to": "watts",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "fleisher",
+    "to": "grimaud",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "kempff",
+    "to": "uchida",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "granados",
+    "to": "de-larrocha",
+    "type": "student-teacher",
+    "label": "influence"
+  }
+]
