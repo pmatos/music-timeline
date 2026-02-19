@@ -1,0 +1,57 @@
+name: New person request
+description: Suggest a composer or performer to add to the timeline
+labels: ["new person"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g. "Clara Schumann"
+    validations:
+      required: true
+  - type: input
+    id: born
+    attributes:
+      label: Birth year
+      placeholder: e.g. "1819"
+    validations:
+      required: true
+  - type: input
+    id: died
+    attributes:
+      label: Death year (leave blank if living)
+      placeholder: e.g. "1896"
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - composer
+        - player
+        - both
+    validations:
+      required: true
+  - type: input
+    id: instruments
+    attributes:
+      label: Instrument(s)
+      description: Which instrument timeline(s) should this person appear on?
+      placeholder: e.g. "piano, violin"
+    validations:
+      required: true
+  - type: textarea
+    id: bio
+    attributes:
+      label: Short bio
+      description: A few sentences about their significance.
+  - type: input
+    id: wiki-url
+    attributes:
+      label: Wikipedia URL
+      placeholder: https://en.wikipedia.org/wiki/...
+  - type: textarea
+    id: connections
+    attributes:
+      label: Connections
+      description: Any teacher/student or other relationships with people already on the timeline.
+      placeholder: "Student of Robert Schumann; teacher of ..."

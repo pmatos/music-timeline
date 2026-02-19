@@ -1,0 +1,31 @@
+name: General issue
+description: Bug reports, feature requests, or anything else
+labels: []
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Bug
+        - Feature request
+        - Question
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce (bugs only)
+      description: If reporting a bug, describe how to reproduce it.
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Screenshots, browser info, or anything else relevant.

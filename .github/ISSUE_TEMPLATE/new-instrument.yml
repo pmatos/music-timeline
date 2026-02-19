@@ -1,0 +1,35 @@
+name: New instrument request
+description: Suggest a new instrument timeline to add
+labels: ["new instrument"]
+body:
+  - type: input
+    id: instrument
+    attributes:
+      label: Instrument name
+      placeholder: e.g. "cello"
+    validations:
+      required: true
+  - type: textarea
+    id: eras
+    attributes:
+      label: Suggested eras
+      description: Key historical eras for this instrument and approximate date ranges.
+      placeholder: |
+        Baroque (1600-1750)
+        Classical (1730-1820)
+        ...
+  - type: textarea
+    id: key-people
+    attributes:
+      label: Key people to include
+      description: Notable composers and/or performers for this instrument.
+      placeholder: |
+        - Pablo Casals (1876-1973, player)
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Why this instrument should be added, any references, etc.

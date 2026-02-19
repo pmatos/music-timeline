@@ -1,0 +1,46 @@
+name: Correction
+description: Report incorrect data (dates, names, bios, connections, etc.)
+labels: ["correction"]
+body:
+  - type: dropdown
+    id: data-type
+    attributes:
+      label: What needs correcting?
+      options:
+        - Birth/death year
+        - Person name
+        - Bio text
+        - Role (composer/player/both)
+        - Era dates or name
+        - Connection between people
+        - Photo/portrait
+        - Wikipedia or website URL
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: person-or-item
+    attributes:
+      label: Person or item affected
+      placeholder: e.g. "J.S. Bach" or "Baroque era in piano timeline"
+    validations:
+      required: true
+  - type: textarea
+    id: current-value
+    attributes:
+      label: Current (incorrect) value
+    validations:
+      required: true
+  - type: textarea
+    id: correct-value
+    attributes:
+      label: Correct value
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source / reference
+      description: Link or citation supporting the correction.
+    validations:
+      required: true
