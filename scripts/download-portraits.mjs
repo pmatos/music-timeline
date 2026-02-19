@@ -7,48 +7,52 @@ const ROOT = join(__dirname, '..');
 const PEOPLE_JSON = join(ROOT, 'public', 'data', 'people.json');
 const PORTRAITS_DIR = join(ROOT, 'public', 'images', 'portraits');
 
-const PORTRAIT_SOURCES = {
-  'corelli': 'File:Corelli.jpg',
-  'vivaldi': 'File:Antonio_Vivaldi.jpg',
-  'tartini': 'File:Giuseppe_Tartini.jpg',
-  'geminiani': 'File:Francesco_Geminiani.jpg',
-  'locatelli': 'File:Pietro_Locatelli.jpg',
-  'leclair': 'File:Jean-Marie_Leclair.jpg',
-  'viotti': 'File:Giovanni_Battista_Viotti.jpg',
-  'rode': 'File:Pierre_Rode.jpg',
-  'kreutzer': 'File:Rodolphe_Kreutzer.jpg',
-  'baillot': 'File:Pierre_Baillot.jpg',
-  'spohr': 'File:Louis_Spohr.jpg',
-  'paganini': 'File:Niccolò_Paganini.jpg',
-  'vieuxtemps': 'File:Henri_Vieuxtemps.jpg',
-  'wieniawski': 'File:Henryk_Wieniawski.jpg',
-  'sarasate': 'File:Pablo_de_Sarasate.jpg',
-  'joachim': 'File:Joseph_Joachim.jpg',
-  'auer': 'File:Leopold_Auer.jpg',
-  'ysaye': 'File:Eugène_Ysaÿe.jpg',
-  'kreisler': 'File:Fritz_Kreisler.jpg',
-  'heifetz': 'File:Jascha_Heifetz.jpg',
-  'oistrakh': 'File:David_Oistrakh.jpg',
-  'menuhin': 'File:Yehudi_Menuhin.jpg',
-  'milstein': 'File:Nathan_Milstein.jpg',
-  'stern': 'File:Isaac_Stern.jpg',
-  'szeryng': 'File:Henryk_Szeryng.jpg',
-  'grumiaux': 'File:Arthur_Grumiaux.jpg',
-  'kogan': 'File:Leonid_Kogan.jpg',
-  'haendel': 'File:Ida_Haendel.jpg',
-  'perlman': 'File:Itzhak_Perlman.jpg',
-  'zukerman': 'File:Pinchas_Zukerman.jpg',
-  'kremer': 'File:Gidon_Kremer.jpg',
-  'mutter': 'File:Anne-Sophie_Mutter.jpg',
-  'vengerov': 'File:Maxim_Vengerov.jpg',
-  'hahn': 'File:Hilary_Hahn.jpg',
-  'jansen': 'File:Janine_Jansen.jpg',
-  'bell': 'File:Joshua_Bell.jpg',
-  'shaham': 'File:Gil_Shaham.jpg',
-  'chen': 'File:Ray_Chen.jpg',
+// Map person ID to their Wikipedia article title.
+// The script fetches the article's main image thumbnail via the Wikipedia API.
+const WIKIPEDIA_TITLES = {
+  'corelli': 'Arcangelo_Corelli',
+  'vivaldi': 'Antonio_Vivaldi',
+  'tartini': 'Giuseppe_Tartini',
+  'geminiani': 'Francesco_Geminiani',
+  'locatelli': 'Pietro_Locatelli',
+  'leclair': 'Jean-Marie_Leclair',
+  'viotti': 'Giovanni_Battista_Viotti',
+  'rode': 'Pierre_Rode',
+  'kreutzer': 'Rodolphe_Kreutzer',
+  'baillot': 'Pierre_Baillot',
+  'spohr': 'Louis_Spohr',
+  'paganini': 'Niccolò_Paganini',
+  'vieuxtemps': 'Henri_Vieuxtemps',
+  'wieniawski': 'Henryk_Wieniawski',
+  'sarasate': 'Pablo_de_Sarasate',
+  'joachim': 'Joseph_Joachim',
+  'auer': 'Leopold_Auer',
+  'ysaye': 'Eugène_Ysaÿe',
+  'kreisler': 'Fritz_Kreisler',
+  'heifetz': 'Jascha_Heifetz',
+  'oistrakh': 'David_Oistrakh',
+  'menuhin': 'Yehudi_Menuhin',
+  'milstein': 'Nathan_Milstein',
+  'stern': 'Isaac_Stern',
+  'szeryng': 'Henryk_Szeryng',
+  'grumiaux': 'Arthur_Grumiaux',
+  'kogan': 'Leonid_Kogan',
+  'haendel': 'Ida_Haendel',
+  'perlman': 'Itzhak_Perlman',
+  'zukerman': 'Pinchas_Zukerman',
+  'kremer': 'Gidon_Kremer',
+  'mutter': 'Anne-Sophie_Mutter',
+  'vengerov': 'Maxim_Vengerov',
+  'hahn': 'Hilary_Hahn',
+  'jansen': 'Janine_Jansen',
+  'bell': 'Joshua_Bell',
+  'shaham': 'Gil_Shaham',
+  'chen': 'Ray_Chen_(musician)',
 };
 
-const DELAY_MS = 500;
+const THUMB_SIZE = 400;
+const DELAY_MS = 2000;
+const USER_AGENT = 'MusicTimelinePortraitDownloader/1.0 (https://github.com/pmatos/music-timeline)';
 
 async function fileExists(path) {
   try {
@@ -63,14 +67,14 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function getImageUrl(commonsFilename) {
-  const apiUrl = `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(commonsFilename)}&prop=imageinfo&iiprop=url&format=json`;
+async function getThumbnailUrl(wikiTitle) {
+  const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(wikiTitle)}&prop=pageimages&piprop=thumbnail&pithumbsize=${THUMB_SIZE}&format=json`;
   const resp = await fetch(apiUrl, {
-    headers: { 'User-Agent': 'MusicTimelinePortraitDownloader/1.0' },
+    headers: { 'User-Agent': USER_AGENT },
   });
 
   if (!resp.ok) {
-    throw new Error(`API request failed: ${resp.status} ${resp.statusText}`);
+    throw new Error(`Wikipedia API failed: ${resp.status} ${resp.statusText}`);
   }
 
   const data = await resp.json();
@@ -79,20 +83,20 @@ async function getImageUrl(commonsFilename) {
 
   const page = Object.values(pages)[0];
   if (page.missing !== undefined) {
-    throw new Error(`File not found on Wikimedia Commons: ${commonsFilename}`);
+    throw new Error(`Wikipedia article not found: ${wikiTitle}`);
   }
 
-  const imageInfo = page.imageinfo?.[0];
-  if (!imageInfo?.url) {
-    throw new Error(`No image URL in response for: ${commonsFilename}`);
+  const thumbUrl = page.thumbnail?.source;
+  if (!thumbUrl) {
+    throw new Error(`No thumbnail image for Wikipedia article: ${wikiTitle}`);
   }
 
-  return imageInfo.url;
+  return thumbUrl;
 }
 
 async function downloadImage(url, destPath) {
   const resp = await fetch(url, {
-    headers: { 'User-Agent': 'MusicTimelinePortraitDownloader/1.0' },
+    headers: { 'User-Agent': USER_AGENT },
   });
 
   if (!resp.ok) {
@@ -108,10 +112,10 @@ async function main() {
   const people = JSON.parse(peopleRaw);
 
   const toDownload = people.filter(
-    p => p.photoUrl?.startsWith('/images/portraits/') && p.id in PORTRAIT_SOURCES
+    p => p.photoUrl?.startsWith('/images/portraits/') && p.id in WIKIPEDIA_TITLES
   );
 
-  console.log(`Found ${toDownload.length} violin portraits to check.`);
+  console.log(`Found ${toDownload.length} portraits to check.`);
 
   await mkdir(PORTRAITS_DIR, { recursive: true });
 
@@ -128,11 +132,11 @@ async function main() {
       continue;
     }
 
-    const commonsFilename = PORTRAIT_SOURCES[person.id];
+    const wikiTitle = WIKIPEDIA_TITLES[person.id];
     try {
-      console.log(`  [download] ${person.id} from ${commonsFilename}...`);
-      const imageUrl = await getImageUrl(commonsFilename);
-      await downloadImage(imageUrl, destPath);
+      console.log(`  [download] ${person.id} (${wikiTitle})...`);
+      const thumbUrl = await getThumbnailUrl(wikiTitle);
+      await downloadImage(thumbUrl, destPath);
       console.log(`  [done] ${person.id} -> ${destPath}`);
       downloaded++;
     } catch (err) {
