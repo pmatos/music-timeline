@@ -310,5 +310,131 @@
     "to": "de-larrocha",
     "type": "student-teacher",
     "label": "influence"
+  },
+  {
+    "from": "corelli",
+    "to": "vivaldi",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "corelli",
+    "to": "geminiani",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "corelli",
+    "to": "locatelli",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "vivaldi",
+    "to": "tartini",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "tartini",
+    "to": "leclair",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "viotti",
+    "to": "rode",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "viotti",
+    "to": "kreutzer",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "viotti",
+    "to": "baillot",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "rode",
+    "to": "spohr",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "spohr",
+    "to": "joachim",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "paganini",
+    "to": "vieuxtemps",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "vieuxtemps",
+    "to": "ysaye",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "joachim",
+    "to": "auer",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "wieniawski",
+    "to": "ysaye",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "auer",
+    "to": "heifetz",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "auer",
+    "to": "milstein",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "ysaye",
+    "to": "kreisler",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "oistrakh",
+    "to": "kremer",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "stern",
+    "to": "perlman",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "stern",
+    "to": "zukerman",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "menuhin",
+    "to": "mutter",
+    "type": "student-teacher",
+    "label": "influence"
   }
 ]
