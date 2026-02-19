@@ -16,7 +16,8 @@ export function PersonPanel({ person, onClose }: PersonPanelProps) {
   }, [onClose]);
 
   if (!person) return null;
-  const years = `${person.born}\u2013${person.died ?? 'present'}`;
+  const bornLabel = person.bornEstimated ? `${person.born} (est.)` : `${person.born}`;
+  const years = `${bornLabel}\u2013${person.died ?? 'present'}`;
 
   return (
     <div className="person-panel">
@@ -29,7 +30,9 @@ export function PersonPanel({ person, onClose }: PersonPanelProps) {
       <span className="person-panel__role">{person.role}</span>
       <p className="person-panel__bio">{person.bio}</p>
       <div className="person-panel__links">
-        <a href={person.wikiUrl} target="_blank" rel="noopener noreferrer">Wikipedia</a>
+        {person.wikiUrl && (
+          <a href={person.wikiUrl} target="_blank" rel="noopener noreferrer">Wikipedia</a>
+        )}
         {person.websiteUrl && (
           <a href={person.websiteUrl} target="_blank" rel="noopener noreferrer">Website</a>
         )}

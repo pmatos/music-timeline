@@ -1562,6 +1562,18 @@
     "websiteUrl": null
   },
   {
+    "id": "takako-ono",
+    "name": "T. Ono",
+    "born": 1972,
+    "bornEstimated": true,
+    "died": null,
+    "role": "both",
+    "bio": "Japanese pianist and composer based in Germany who studied at TOHO Music College Tokyo before moving to Germany in 1999, completing her concert exam with distinction at the Hochschule für Musik in Nuremberg. Her compositions include the orchestral work 5 Elements and JIKU-Timeline Op.25, selected as a compulsory piece for the Friedrich Kuhlau International Flute Competition. She directs the concert series Kunst trifft Komposition and leads the ensemble Lunata.",
+    "photoUrl": null,
+    "wikiUrl": null,
+    "websiteUrl": "https://takako-ono.com/"
+  },
+  {
     "id": "corelli",
     "name": "A. Corelli",
     "born": 1653,

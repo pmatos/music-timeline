@@ -13,11 +13,12 @@ export interface Person {
   id: string;
   name: string;
   born: number;
+  bornEstimated?: boolean;
   died: number | null;
   role: Role;
   bio: string;
   photoUrl: string | null;
-  wikiUrl: string;
+  wikiUrl: string | null;
   websiteUrl: string | null;
 }
 
