@@ -1,4 +1,4 @@
-import { useRef, useCallback } from 'react';
+import { useRef, useEffect } from 'react';
 import type { InstrumentData, Person } from '../types';
 import { useTimelineScale } from '../hooks/useTimelineScale';
 import { TimelineSVG } from './TimelineSVG';
@@ -23,16 +23,24 @@ export function TimelineView({
 
   const { yearToPixel, totalWidth, setZoom } = useTimelineScale({ startYear, endYear, containerWidth });
 
-  const handleWheel = useCallback((e: React.WheelEvent) => {
-    if (e.ctrlKey || e.metaKey) {
-      e.preventDefault();
-      const delta = e.deltaY > 0 ? 0.9 : 1.1;
-      setZoom((z: number) => Math.max(0.5, Math.min(10, z * delta)));
-    }
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? 0.9 : 1.1;
+        setZoom((z: number) => Math.max(0.5, Math.min(10, z * delta)));
+      }
+    };
+
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => el.removeEventListener('wheel', handleWheel);
   }, [setZoom]);
 
   return (
-    <div className="timeline-view" ref={containerRef} onWheel={handleWheel}>
+    <div className="timeline-view" ref={containerRef}>
       <TimelineSVG data={data} yearToPixel={yearToPixel} totalWidth={totalWidth}
         selectedPersonId={selectedPersonId} hoveredPersonId={hoveredPersonId}
         onPersonClick={onPersonClick} onPersonMouseEnter={onPersonMouseEnter}
