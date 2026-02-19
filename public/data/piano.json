@@ -1,0 +1,228 @@
+{
+  "instrument": "Piano",
+  "eras": [
+    {
+      "name": "Baroque",
+      "startYear": 1600,
+      "endYear": 1750,
+      "color": "#E3F2FD"
+    },
+    {
+      "name": "Classical",
+      "startYear": 1730,
+      "endYear": 1820,
+      "color": "#FFF3E0"
+    },
+    {
+      "name": "Romantic",
+      "startYear": 1800,
+      "endYear": 1910,
+      "color": "#FCE4EC"
+    },
+    {
+      "name": "Modern",
+      "startYear": 1890,
+      "endYear": 1975,
+      "color": "#E8F5E9"
+    },
+    {
+      "name": "Contemporary",
+      "startYear": 1950,
+      "endYear": 2030,
+      "color": "#F3E5F5"
+    }
+  ],
+  "people": [
+    {
+      "id": "bach",
+      "name": "J.S. Bach",
+      "born": 1685,
+      "died": 1750,
+      "role": "composer",
+      "bio": "German composer and musician of the Baroque period, widely regarded as one of the greatest composers in Western musical history. His works include the Well-Tempered Clavier, a landmark in keyboard composition.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+      "websiteUrl": null
+    },
+    {
+      "id": "handel",
+      "name": "G.F. Handel",
+      "born": 1685,
+      "died": 1759,
+      "role": "composer",
+      "bio": "German-British Baroque composer celebrated for his operas, oratorios, and concerti grossi. His Messiah remains one of the most performed choral works in Western music.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/George_Frideric_Handel",
+      "websiteUrl": null
+    },
+    {
+      "id": "scarlatti",
+      "name": "D. Scarlatti",
+      "born": 1685,
+      "died": 1757,
+      "role": "composer",
+      "bio": "Italian composer who spent much of his life in the service of the Portuguese and Spanish royal families. He is best known for his 555 keyboard sonatas, which expanded the technical and musical possibilities of the harpsichord.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Domenico_Scarlatti",
+      "websiteUrl": null
+    },
+    {
+      "id": "cpe-bach",
+      "name": "C.P.E. Bach",
+      "born": 1714,
+      "died": 1788,
+      "role": "composer",
+      "bio": "German Classical period musician and composer, the fifth child of J.S. Bach. He was a crucial figure in the transition between Baroque and Classical styles, and his Essay on the True Art of Playing Keyboard Instruments was highly influential.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach",
+      "websiteUrl": null
+    },
+    {
+      "id": "haydn",
+      "name": "J. Haydn",
+      "born": 1732,
+      "died": 1809,
+      "role": "composer",
+      "bio": "Austrian composer who was instrumental in the development of chamber music and the symphony. Known as the \"Father of the Symphony,\" he was a central figure of the Classical period and a teacher of Beethoven.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Haydn",
+      "websiteUrl": null
+    },
+    {
+      "id": "mozart",
+      "name": "W.A. Mozart",
+      "born": 1756,
+      "died": 1791,
+      "role": "composer",
+      "bio": "Austrian composer widely regarded as one of the greatest in Western music history. A child prodigy, he composed over 600 works including piano concertos, sonatas, and operas that remain cornerstones of the classical repertoire.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+      "websiteUrl": null
+    },
+    {
+      "id": "beethoven",
+      "name": "L. van Beethoven",
+      "born": 1770,
+      "died": 1827,
+      "role": "composer",
+      "bio": "German composer and pianist who bridged the Classical and Romantic eras. Despite progressive hearing loss, he produced masterworks including 32 piano sonatas that transformed the instrument's repertoire.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+      "websiteUrl": null
+    },
+    {
+      "id": "czerny",
+      "name": "C. Czerny",
+      "born": 1791,
+      "died": 1857,
+      "role": "composer",
+      "bio": "Austrian pianist, composer, and teacher who studied under Beethoven and taught Franz Liszt. He is best remembered for his extensive collection of piano exercises and etudes that remain staples of piano pedagogy.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Carl_Czerny",
+      "websiteUrl": null
+    },
+    {
+      "id": "chopin",
+      "name": "F. Chopin",
+      "born": 1810,
+      "died": 1849,
+      "role": "composer",
+      "bio": "Polish composer and virtuoso pianist of the Romantic period who wrote primarily for solo piano. His technically demanding and poetically expressive works, including nocturnes, etudes, and ballades, redefined piano music.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+      "websiteUrl": null
+    },
+    {
+      "id": "schumann",
+      "name": "R. Schumann",
+      "born": 1810,
+      "died": 1856,
+      "role": "composer",
+      "bio": "German composer and influential music critic of the Romantic era. His piano works, including Carnaval and Kinderszenen, are celebrated for their literary imagination and emotional depth.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Schumann",
+      "websiteUrl": null
+    },
+    {
+      "id": "liszt",
+      "name": "F. Liszt",
+      "born": 1811,
+      "died": 1886,
+      "role": "composer",
+      "bio": "Hungarian composer, virtuoso pianist, and conductor who was a leading figure of the Romantic era. He pioneered the solo piano recital and his compositions pushed the boundaries of piano technique and harmonic language.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Franz_Liszt",
+      "websiteUrl": null
+    },
+    {
+      "id": "debussy",
+      "name": "C. Debussy",
+      "born": 1862,
+      "died": 1918,
+      "role": "composer",
+      "bio": "French composer who was a leading figure of Impressionist music, though he rejected the term. His piano works, including Clair de Lune and the Preludes, introduced innovative harmonic structures and tonal colors.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Claude_Debussy",
+      "websiteUrl": null
+    },
+    {
+      "id": "rachmaninoff",
+      "name": "S. Rachmaninoff",
+      "born": 1873,
+      "died": 1943,
+      "role": "composer",
+      "bio": "Russian composer, virtuoso pianist, and conductor of the late Romantic era. His piano concertos and preludes are renowned for their sweeping melodies, technical brilliance, and emotional intensity.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff",
+      "websiteUrl": null
+    },
+    {
+      "id": "einaudi",
+      "name": "L. Einaudi",
+      "born": 1955,
+      "died": null,
+      "role": "both",
+      "bio": "Italian pianist and composer whose accessible style blends classical, pop, and minimalist elements. His albums have topped classical charts worldwide, making him one of the most commercially successful living pianists.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ludovico_Einaudi",
+      "websiteUrl": "https://www.ludovicoeinaudi.com"
+    },
+    {
+      "id": "lang-lang",
+      "name": "Lang Lang",
+      "born": 1982,
+      "died": null,
+      "role": "player",
+      "bio": "Chinese concert pianist known for his energetic and expressive performances. He has performed with leading orchestras worldwide and is widely credited with inspiring a new generation of piano students, particularly in China.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lang_Lang",
+      "websiteUrl": "https://www.langlangofficial.com"
+    }
+  ],
+  "connections": [
+    {
+      "from": "bach",
+      "to": "cpe-bach",
+      "type": "relative",
+      "label": "father/son"
+    },
+    {
+      "from": "haydn",
+      "to": "beethoven",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "beethoven",
+      "to": "czerny",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "czerny",
+      "to": "liszt",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    }
+  ]
+}
