@@ -1,0 +1,36 @@
+{
+  "instrument": "Violin",
+  "eras": [
+    {
+      "name": "Baroque",
+      "startYear": 1600,
+      "endYear": 1750,
+      "color": "#E3F2FD"
+    },
+    {
+      "name": "Classical",
+      "startYear": 1730,
+      "endYear": 1820,
+      "color": "#FFF3E0"
+    },
+    {
+      "name": "Romantic",
+      "startYear": 1800,
+      "endYear": 1910,
+      "color": "#FCE4EC"
+    },
+    {
+      "name": "Modern",
+      "startYear": 1890,
+      "endYear": 1975,
+      "color": "#E8F5E9"
+    },
+    {
+      "name": "Contemporary",
+      "startYear": 1950,
+      "endYear": 2030,
+      "color": "#F3E5F5"
+    }
+  ],
+  "peopleIds": []
+}
