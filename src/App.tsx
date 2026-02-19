@@ -7,7 +7,7 @@ import { PersonPanel } from './components/PersonPanel';
 import { Tooltip } from './components/Tooltip';
 import type { Person } from './types';
 
-const INSTRUMENTS = ['piano', 'violin'];
+const INSTRUMENTS = ['piano', 'violin', 'trombone'];
 
 function App() {
   const [instrument, setInstrument] = useState('piano');

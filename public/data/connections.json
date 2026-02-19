@@ -436,5 +436,83 @@
     "to": "mutter",
     "type": "student-teacher",
     "label": "influence"
+  },
+  {
+    "from": "g-gabrieli",
+    "to": "schutz",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "belcke",
+    "to": "queisser",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "kid-ory",
+    "to": "teagarden",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "teagarden",
+    "to": "tommy-dorsey",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "teagarden",
+    "to": "glenn-miller",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "jj-johnson",
+    "to": "curtis-fuller",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "jj-johnson",
+    "to": "slide-hampton",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "jj-johnson",
+    "to": "eubanks",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "jj-johnson",
+    "to": "wycliffe-gordon",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "mangelsdorff",
+    "to": "nils-landgren",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "denis-wick",
+    "to": "bousfield",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "dempster",
+    "to": "lindberg",
+    "type": "student-teacher",
+    "label": "influence"
+  },
+  {
+    "from": "dieppo",
+    "to": "becquet",
+    "type": "student-teacher",
+    "label": "influence"
   }
 ]
