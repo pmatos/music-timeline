@@ -44,10 +44,13 @@ function App() {
         onPersonMouseLeave={handlePersonMouseLeave} />
       <Legend />
       <footer className="footer">
-        To suggest edits or propose fixes, visit{' '}
-        <a href="https://github.com/pmatos/music-timeline/issues" target="_blank" rel="noopener noreferrer">
-          github.com/pmatos/music-timeline/issues
-        </a>
+        <span>To suggest edits or propose fixes, visit{' '}
+          <a href="https://github.com/pmatos/music-timeline/issues" target="_blank" rel="noopener noreferrer">
+            github.com/pmatos/music-timeline/issues
+          </a>
+        </span>
+        <span className="footer__separator">|</span>
+        <span>&copy; 2026 Linki Tools</span>
       </footer>
       <Tooltip person={hoveredPerson} x={tooltipPos.x} y={tooltipPos.y} />
       <PersonPanel person={selectedPerson} onClose={() => setSelectedPerson(null)} />
