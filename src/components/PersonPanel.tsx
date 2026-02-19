@@ -22,7 +22,7 @@ export function PersonPanel({ person, onClose }: PersonPanelProps) {
     <div className="person-panel">
       <button className="person-panel__close" onClick={onClose} aria-label="Close">&times;</button>
       {person.photoUrl && (
-        <img className="person-panel__photo" src={person.photoUrl} alt={person.name} />
+        <img className="person-panel__photo" src={`${import.meta.env.BASE_URL}${person.photoUrl.replace(/^\//, '')}`} alt={person.name} />
       )}
       <h2>{person.name}</h2>
       <div className="person-panel__years">{years}</div>

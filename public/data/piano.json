@@ -859,6 +859,17 @@
       "websiteUrl": null
     },
     {
+      "id": "rosina-lhevinne",
+      "name": "R. Lhévinne",
+      "born": 1880,
+      "died": 1976,
+      "role": "player",
+      "bio": "Russian-American pianist and legendary pedagogue who taught at the Juilliard School for over 50 years. A gold medalist of the Moscow Conservatory, her students included Van Cliburn, John Browning, and Garrick Ohlsson.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Rosina_Lh%C3%A9vinne",
+      "websiteUrl": null
+    },
+    {
       "id": "bartok",
       "name": "B. Bartók",
       "born": 1881,
@@ -878,6 +889,17 @@
       "bio": "Russian-born composer who revolutionized 20th-century music through constantly evolving styles. His piano works include Petrouchka, the Concerto for Piano and Wind Instruments, and Movements for Piano and Orchestra.",
       "photoUrl": "/images/portraits/stravinsky.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/Igor_Stravinsky",
+      "websiteUrl": null
+    },
+    {
+      "id": "schnabel",
+      "name": "A. Schnabel",
+      "born": 1882,
+      "died": 1951,
+      "role": "both",
+      "bio": "Austrian pianist and composer who studied with Leschetizky and made the first complete recording of Beethoven's piano sonatas (1932-35). His intellectual approach to the Austro-German repertoire set new standards for piano interpretation.",
+      "photoUrl": "/images/portraits/schnabel.png",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Artur_Schnabel",
       "websiteUrl": null
     },
     {
@@ -903,6 +925,28 @@
       "websiteUrl": null
     },
     {
+      "id": "neuhaus",
+      "name": "H. Neuhaus",
+      "born": 1888,
+      "died": 1964,
+      "role": "player",
+      "bio": "Russian-Soviet pianist and one of the most influential piano pedagogues of the 20th century at the Moscow Conservatory. His students included Sviatoslav Richter and Emil Gilels, and his book The Art of Piano Playing remains a standard text.",
+      "photoUrl": "/images/portraits/neuhaus.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Heinrich_Neuhaus",
+      "websiteUrl": null
+    },
+    {
+      "id": "myra-hess",
+      "name": "M. Hess",
+      "born": 1890,
+      "died": 1965,
+      "role": "player",
+      "bio": "English pianist best remembered for organizing the morale-boosting National Gallery concerts in London throughout World War II. She was celebrated for her performances of Bach, Mozart, Beethoven, and Schumann.",
+      "photoUrl": "/images/portraits/myra-hess.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Myra_Hess",
+      "websiteUrl": null
+    },
+    {
       "id": "prokofiev",
       "name": "S. Prokofiev",
       "born": 1891,
@@ -911,6 +955,17 @@
       "bio": "Russian composer and pianist whose nine piano sonatas and five piano concertos combine biting rhythmic energy, lyrical beauty, and sardonic wit. He was himself a formidable performer.",
       "photoUrl": "/images/portraits/prokofiev.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Prokofiev",
+      "websiteUrl": null
+    },
+    {
+      "id": "kempff",
+      "name": "W. Kempff",
+      "born": 1895,
+      "died": 1991,
+      "role": "both",
+      "bio": "German pianist and composer whose poetic and deeply spiritual interpretations of Beethoven and Schubert are among the most celebrated on record. His masterclasses at Positano influenced pianists including Mitsuko Uchida.",
+      "photoUrl": "/images/portraits/kempff.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Wilhelm_Kempff",
       "websiteUrl": null
     },
     {
@@ -966,6 +1021,17 @@
       "bio": "Chilean-American pianist acclaimed for deeply intellectual and emotionally profound interpretations. His recordings of Beethoven, Chopin, Liszt, and Brahms are considered definitive.",
       "photoUrl": "/images/portraits/arrau.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/Claudio_Arrau",
+      "websiteUrl": null
+    },
+    {
+      "id": "rudolf-serkin",
+      "name": "R. Serkin",
+      "born": 1903,
+      "died": 1991,
+      "role": "player",
+      "bio": "Bohemian-born Austrian-American pianist renowned for intensely serious and powerful performances of the Austro-German repertoire. He directed the Curtis Institute and co-founded the Marlboro Music Festival.",
+      "photoUrl": "/images/portraits/rudolf-serkin.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Rudolf_Serkin",
       "websiteUrl": null
     },
     {
@@ -1057,6 +1123,28 @@
       "websiteUrl": null
     },
     {
+      "id": "lipatti",
+      "name": "D. Lipatti",
+      "born": 1917,
+      "died": 1950,
+      "role": "player",
+      "bio": "Romanian pianist whose career, cut tragically short by Hodgkin's disease at age 33, left some of the most treasured piano recordings of the 20th century. He studied with Alfred Cortot in Paris.",
+      "photoUrl": "/images/portraits/lipatti.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Dinu_Lipatti",
+      "websiteUrl": null
+    },
+    {
+      "id": "michelangeli",
+      "name": "A.B. Michelangeli",
+      "born": 1920,
+      "died": 1995,
+      "role": "player",
+      "bio": "Italian pianist whose perfectionism and extraordinary tonal control made him a legendary and enigmatic figure in 20th-century pianism. His students included Maurizio Pollini and Martha Argerich.",
+      "photoUrl": "/images/portraits/michelangeli.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Arturo_Benedetti_Michelangeli",
+      "websiteUrl": null
+    },
+    {
       "id": "ligeti",
       "name": "G. Ligeti",
       "born": 1923,
@@ -1065,6 +1153,17 @@
       "bio": "Hungarian-Austrian composer whose cycle of 18 Études for piano is among the most important piano works of the late 20th century. His music explores complex textures, polyrhythms, and micropolyphony.",
       "photoUrl": "/images/portraits/ligeti.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Ligeti",
+      "websiteUrl": null
+    },
+    {
+      "id": "de-larrocha",
+      "name": "A. de Larrocha",
+      "born": 1923,
+      "died": 2009,
+      "role": "player",
+      "bio": "Spanish pianist celebrated as the foremost interpreter of Spanish piano music, especially the works of Granados and Albéniz. She studied with Frank Marshall, himself a student of Granados.",
+      "photoUrl": "/images/portraits/de-larrocha.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Alicia_de_Larrocha",
       "websiteUrl": null
     },
     {
@@ -1090,6 +1189,28 @@
       "websiteUrl": null
     },
     {
+      "id": "fleisher",
+      "name": "L. Fleisher",
+      "born": 1928,
+      "died": 2020,
+      "role": "player",
+      "bio": "American pianist and conductor who studied with Artur Schnabel and overcame focal dystonia in his right hand to forge a remarkable second career. His students included André Watts and Hélène Grimaud.",
+      "photoUrl": "/images/portraits/fleisher.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Leon_Fleisher",
+      "websiteUrl": null
+    },
+    {
+      "id": "graffman",
+      "name": "G. Graffman",
+      "born": 1928,
+      "died": 2025,
+      "role": "player",
+      "bio": "American pianist and pedagogue who served as director and president of the Curtis Institute. He taught Lang Lang and Yuja Wang, shaping two of the most prominent pianists of the 21st century.",
+      "photoUrl": "/images/portraits/graffman.png",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Gary_Graffman",
+      "websiteUrl": null
+    },
+    {
       "id": "takemitsu",
       "name": "T. Takemitsu",
       "born": 1930,
@@ -1098,6 +1219,17 @@
       "bio": "Japanese composer whose piano works, including Rain Tree Sketch and Les yeux clos, blend Western avant-garde techniques with the delicate sensibility of traditional Japanese aesthetics.",
       "photoUrl": "/images/portraits/takemitsu.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/T%C5%8Dru_Takemitsu",
+      "websiteUrl": null
+    },
+    {
+      "id": "gulda",
+      "name": "F. Gulda",
+      "born": 1930,
+      "died": 2000,
+      "role": "both",
+      "bio": "Austrian pianist and composer known for authoritative interpretations of the Viennese classics and boundary-crossing explorations of jazz. His students included Martha Argerich, who called him her most important influence.",
+      "photoUrl": "/images/portraits/gulda.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Friedrich_Gulda",
       "websiteUrl": null
     },
     {
@@ -1120,6 +1252,17 @@
       "bio": "Canadian pianist renowned for his idiosyncratic interpretations of Bach, particularly the Goldberg Variations. His unconventional approach and early retreat from concerts to focus on recording made him a legendary figure.",
       "photoUrl": "/images/portraits/gould.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/Glenn_Gould",
+      "websiteUrl": null
+    },
+    {
+      "id": "cliburn",
+      "name": "V. Cliburn",
+      "born": 1934,
+      "died": 2013,
+      "role": "player",
+      "bio": "American pianist who became a sensation by winning the inaugural International Tchaikovsky Competition in Moscow in 1958 at the height of the Cold War. A student of Rosina Lhévinne at Juilliard.",
+      "photoUrl": "/images/portraits/cliburn.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Van_Cliburn",
       "websiteUrl": null
     },
     {
@@ -1200,6 +1343,17 @@
       "websiteUrl": null
     },
     {
+      "id": "freire",
+      "name": "N. Freire",
+      "born": 1944,
+      "died": 2021,
+      "role": "player",
+      "bio": "Brazilian pianist renowned for his warm, poetic tone and effortless virtuosity, particularly in Chopin, Brahms, and Schumann. He maintained a long artistic partnership with Martha Argerich.",
+      "photoUrl": null,
+      "wikiUrl": "https://en.wikipedia.org/wiki/Nelson_Freire",
+      "websiteUrl": null
+    },
+    {
       "id": "lupu",
       "name": "R. Lupu",
       "born": 1945,
@@ -1208,6 +1362,17 @@
       "bio": "Romanian pianist revered for profoundly poetic and introspective interpretations of Beethoven, Schubert, Brahms, and Mozart. Camera-shy and rarely recorded, his concerts were legendary for their transcendent quality.",
       "photoUrl": "/images/portraits/lupu.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/Radu_Lupu",
+      "websiteUrl": null
+    },
+    {
+      "id": "watts",
+      "name": "A. Watts",
+      "born": 1946,
+      "died": 2023,
+      "role": "player",
+      "bio": "American pianist who became a sensation at age 16 performing with Leonard Bernstein on national television. A student of Leon Fleisher, he was one of the first Black classical soloists to achieve major international recognition.",
+      "photoUrl": "/images/portraits/watts.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Andr%C3%A9_Watts",
       "websiteUrl": null
     },
     {
@@ -1297,6 +1462,28 @@
       "photoUrl": "/images/portraits/pogorelich.jpg",
       "wikiUrl": "https://en.wikipedia.org/wiki/Ivo_Pogoreli%C4%87",
       "websiteUrl": null
+    },
+    {
+      "id": "hamelin",
+      "name": "M.-A. Hamelin",
+      "born": 1961,
+      "died": null,
+      "role": "both",
+      "bio": "Canadian pianist and composer celebrated for phenomenal technique and adventurous programming of neglected virtuoso repertoire. His recordings of Alkan, Godowsky, and Medtner have brought many forgotten works back to prominence.",
+      "photoUrl": "/images/portraits/hamelin.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Marc-Andr%C3%A9_Hamelin",
+      "websiteUrl": "https://www.marcandrehamelin.com"
+    },
+    {
+      "id": "hough",
+      "name": "S. Hough",
+      "born": 1961,
+      "died": null,
+      "role": "both",
+      "bio": "British-Australian pianist, composer, and writer who was the first classical musician to receive a MacArthur Fellowship. Equally acclaimed as a performer and composer, his writings on music have appeared widely.",
+      "photoUrl": "/images/portraits/hough.jpg",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Stephen_Hough",
+      "websiteUrl": "https://stephenhough.com"
     },
     {
       "id": "grimaud",
@@ -1621,12 +1808,6 @@
       "label": "classmates"
     },
     {
-      "from": "leschetizky",
-      "to": "arthur-rubinstein",
-      "type": "student-teacher",
-      "label": "influence"
-    },
-    {
       "from": "liszt",
       "to": "grieg",
       "type": "student-teacher",
@@ -1645,20 +1826,86 @@
       "label": "influence"
     },
     {
-      "from": "busoni",
-      "to": "horowitz",
+      "from": "glass",
+      "to": "einaudi",
       "type": "student-teacher",
       "label": "influence"
     },
     {
-      "from": "leschetizky",
-      "to": "arrau",
+      "from": "graffman",
+      "to": "lang-lang",
       "type": "student-teacher",
       "label": "teacher/student"
     },
     {
-      "from": "glass",
-      "to": "einaudi",
+      "from": "graffman",
+      "to": "wang",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "neuhaus",
+      "to": "richter",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "neuhaus",
+      "to": "gilels",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "leschetizky",
+      "to": "schnabel",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "rosina-lhevinne",
+      "to": "cliburn",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "gulda",
+      "to": "argerich",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "michelangeli",
+      "to": "pollini",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "schnabel",
+      "to": "fleisher",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "fleisher",
+      "to": "watts",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "fleisher",
+      "to": "grimaud",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "kempff",
+      "to": "uchida",
+      "type": "student-teacher",
+      "label": "teacher/student"
+    },
+    {
+      "from": "granados",
+      "to": "de-larrocha",
       "type": "student-teacher",
       "label": "influence"
     }
