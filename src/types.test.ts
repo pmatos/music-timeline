@@ -1,4 +1,4 @@
-import type { InstrumentData, Person, Connection, Era } from './types';
+import type { InstrumentData, Person, Connection, Era, InstrumentConfig } from './types';
 
 test('InstrumentData structure is valid', () => {
   const data: InstrumentData = {
@@ -45,4 +45,18 @@ test('Person with null died represents living person', () => {
 
   expect(person.died).toBeNull();
   expect(person.websiteUrl).not.toBeNull();
+});
+
+test('InstrumentConfig structure is valid', () => {
+  const config: InstrumentConfig = {
+    instrument: 'Piano',
+    eras: [
+      { name: 'Baroque', startYear: 1600, endYear: 1750, color: '#E3F2FD' },
+    ],
+    peopleIds: ['bach', 'beethoven'],
+  };
+
+  expect(config.instrument).toBe('Piano');
+  expect(config.eras).toHaveLength(1);
+  expect(config.peopleIds).toHaveLength(2);
 });

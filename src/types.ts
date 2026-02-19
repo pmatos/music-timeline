@@ -34,3 +34,9 @@ export interface InstrumentData {
   people: Person[];
   connections: Connection[];
 }
+
+export interface InstrumentConfig {
+  instrument: string;
+  eras: Era[];
+  peopleIds: string[];
+}
