@@ -53,7 +53,9 @@ function App() {
         <span>&copy; 2026 Linki Tools</span>
       </footer>
       <Tooltip person={hoveredPerson} x={tooltipPos.x} y={tooltipPos.y} />
-      <PersonPanel person={selectedPerson} onClose={() => setSelectedPerson(null)} />
+      <PersonPanel person={selectedPerson} connections={data.connections}
+        people={data.people} onPersonClick={handlePersonClick}
+        onClose={() => setSelectedPerson(null)} />
     </div>
   );
 }
