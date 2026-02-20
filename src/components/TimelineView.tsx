@@ -28,11 +28,9 @@ export function TimelineView({
     if (!el) return;
 
     const handleWheel = (e: WheelEvent) => {
-      if (e.ctrlKey || e.metaKey) {
-        e.preventDefault();
-        const delta = e.deltaY > 0 ? 0.9 : 1.1;
-        setZoom((z: number) => Math.max(0.5, Math.min(10, z * delta)));
-      }
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? 0.9 : 1.1;
+      setZoom((z: number) => Math.max(0.5, Math.min(10, z * delta)));
     };
 
     el.addEventListener('wheel', handleWheel, { passive: false });
