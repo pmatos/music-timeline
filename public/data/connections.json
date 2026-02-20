@@ -234,6 +234,24 @@
     "label": "influence"
   },
   {
+    "from": "leschetizky",
+    "to": "vengerova",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "vengerova",
+    "to": "graffman",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
+    "from": "vengerova",
+    "to": "barber",
+    "type": "student-teacher",
+    "label": "teacher/student"
+  },
+  {
     "from": "graffman",
     "to": "lang-lang",
     "type": "student-teacher",

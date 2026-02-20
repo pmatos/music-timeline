@@ -814,6 +814,17 @@
     "websiteUrl": null
   },
   {
+    "id": "vengerova",
+    "name": "I. Vengerova",
+    "born": 1877,
+    "died": 1956,
+    "role": "player",
+    "bio": "Russian-American pianist and pedagogue who studied with Leschetizky and helped found the Curtis Institute of Music in 1924. Her demanding teaching shaped generations of major pianists including Gary Graffman, Samuel Barber, and Leonard Bernstein.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Isabelle_Vengerova",
+    "websiteUrl": null
+  },
+  {
     "id": "medtner",
     "name": "N. Medtner",
     "born": 1880,
