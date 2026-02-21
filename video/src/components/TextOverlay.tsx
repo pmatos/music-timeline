@@ -37,15 +37,16 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
   const scale = interpolate(entrance, [0, 1], [0.8, 1]);
   const translateY = interpolate(entrance, [0, 1], [30, 0]);
 
-  const top = position === 'top' ? '15%' : position === 'bottom' ? '75%' : '50%';
+  const justifyContent = position === 'top' ? 'flex-start' : position === 'bottom' ? 'flex-end' : 'center';
+  const paddingVertical = position === 'top' ? 80 : position === 'bottom' ? 80 : 0;
 
   return (
     <AbsoluteFill
       style={{
-        justifyContent: 'center',
+        justifyContent,
         alignItems: 'center',
-        top,
-        position: 'absolute',
+        paddingTop: position === 'top' ? paddingVertical : 0,
+        paddingBottom: position === 'bottom' ? paddingVertical : 0,
       }}
     >
       <div
