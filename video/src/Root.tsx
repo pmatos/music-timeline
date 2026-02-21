@@ -1,17 +1,14 @@
-import {Composition} from 'remotion';
-import {Main} from './Main';
+import { Composition } from 'remotion';
+import { MarketingVideo } from './MarketingVideo';
+import { FPS, WIDTH, HEIGHT, TOTAL_FRAMES } from './constants';
 
-export const RemotionRoot: React.FC = () => {
-	return (
-		<>
-			<Composition
-				id="MusikerVideo"
-				component={Main}
-				durationInFrames={30 * 60}
-				fps={30}
-				width={1920}
-				height={1080}
-			/>
-		</>
-	);
-};
+export const RemotionRoot: React.FC = () => (
+  <Composition
+    id="MarketingVideo"
+    component={MarketingVideo}
+    durationInFrames={TOTAL_FRAMES}
+    fps={FPS}
+    width={WIDTH}
+    height={HEIGHT}
+  />
+);
