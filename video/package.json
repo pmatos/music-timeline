@@ -1,0 +1,26 @@
+{
+  "name": "musiker-video",
+  "version": "1.0.0",
+  "description": "Marketing video for musiker.page built with Remotion",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts MusikerVideo out/video.mp4",
+    "build": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.427",
+    "@remotion/google-fonts": "^4.0.427",
+    "@remotion/media-utils": "^4.0.427",
+    "@remotion/player": "^4.0.427",
+    "@remotion/transitions": "^4.0.427",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.427",
+    "typescript": "^5.9.3"
+  }
+}
