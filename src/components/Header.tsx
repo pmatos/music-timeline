@@ -21,6 +21,7 @@ export function Header({ instrument, instruments, onInstrumentChange }: HeaderPr
     <header className="header">
       <div className="header__left">
         <div className="header__title-row">
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="musiker.page logo" className="header__logo" />
           <h1 className="header__title">{instrument} Music Timeline</h1>
           <select className="header__select" value={instrument.toLowerCase()}
             onChange={handleChange}>
