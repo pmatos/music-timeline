@@ -44,14 +44,6 @@ function App() {
         onPersonMouseLeave={handlePersonMouseLeave} />
       <Legend />
       <footer className="footer">
-        <span>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFJuWko7RQq8PxRiDxNVwX50pft4VxaATDI3I6vmVN2Jsq9Q/viewform" target="_blank" rel="noopener noreferrer">Suggest a person</a>
-          {' · '}
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6wKEsGC8QY6v4AbLj4N8mqIs4YGsD3SmqFR0CBKQML9lGIQ/viewform" target="_blank" rel="noopener noreferrer">Report a correction</a>
-          {' · '}
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScLVa8CZRCjYHgRWmphRZzMhrXOsWzikumDqQkevCSjqPahPg/viewform" target="_blank" rel="noopener noreferrer">Feedback</a>
-        </span>
-        <span className="footer__separator">|</span>
         <span>&copy; 2026 Linki Tools</span>
       </footer>
       <Tooltip person={hoveredPerson} x={tooltipPos.x} y={tooltipPos.y} />
