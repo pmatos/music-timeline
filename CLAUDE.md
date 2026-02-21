@@ -17,7 +17,7 @@ Tests use vitest with jsdom environment and `globals: true` (no need to import `
 
 ## Architecture
 
-Static GitHub Pages site displaying an interactive SVG timeline of composers/players per instrument. Deployed via GitHub Actions on push to `main`.
+Static site deployed to **musiker.page** via GitHub Actions on push to `main`. Displays an interactive SVG timeline of composers/players per instrument.
 
 ### Split Data Model
 
@@ -46,10 +46,14 @@ Selection/hover state flows down from `App`. Clicking a person opens `PersonPane
 
 `useOrientation` hook checks `matchMedia('(min-aspect-ratio: 1/1)')` — landscape uses horizontal time axis, portrait uses vertical. `useTimelineScale` converts between years and pixels with zoom support.
 
+### Styling
+
+Plain CSS with BEM naming (e.g. `.person-panel__close`, `.header__title`). CSS custom properties defined in `src/index.css` for colors (`--ink`, `--accent`, `--bg`, etc.) and fonts (`--font-display`: Cormorant Garamond, `--font-body`: Karla).
+
 ## Data Integrity
 
 Every ID in an instrument's `peopleIds` must exist in `people.json`. Every `from`/`to` in `connections.json` must reference a valid person ID. The download script at `scripts/download-portraits.mjs` fetches Wikipedia thumbnail portraits for people whose `photoUrl` points to a local path but the file doesn't exist on disk.
 
 ## Vite Base Path
 
-`vite.config.ts` sets `base: '/music-timeline/'` for GitHub Pages. The hook uses `import.meta.env.BASE_URL` to prefix data fetch URLs.
+`vite.config.ts` sets `base: '/'` for the custom domain (musiker.page). The `useInstrumentData` hook uses `import.meta.env.BASE_URL` to prefix data fetch URLs.

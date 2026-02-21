@@ -4,7 +4,7 @@ interface HeaderProps {
   onInstrumentChange: (instrument: string) => void;
 }
 
-const NEW_INSTRUMENT_URL = 'https://github.com/pmatos/music-timeline/issues/new?template=new-instrument.yml';
+const NEW_INSTRUMENT_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSc35MOk22mxxvZrKu-jJFR2uHunJKkTozH0RC4mSRm9oRE64A/viewform';
 
 export function Header({ instrument, instruments, onInstrumentChange }: HeaderProps) {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
