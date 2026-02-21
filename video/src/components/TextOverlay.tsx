@@ -12,7 +12,7 @@ type TextOverlayProps = {
 export const TextOverlay: React.FC<TextOverlayProps> = ({
   text,
   fontSize = 72,
-  color = '#ffffff',
+  color = '#1a1a1a',
   position = 'center',
   delay = 0,
 }) => {
@@ -55,7 +55,7 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
           fontSize,
           fontWeight: 700,
           color,
-          textShadow: '0 4px 20px rgba(0,0,0,0.6)',
+          textShadow: '0 2px 12px rgba(150,150,150,0.7)',
           opacity,
           transform: `scale(${scale}) translateY(${translateY}px)`,
           textAlign: 'center',

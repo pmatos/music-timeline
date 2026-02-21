@@ -19,7 +19,7 @@ export const CTAScene: React.FC = () => {
       <KenBurns src="screenshots/hero-clean.png" startScale={1.05} endScale={1.1} />
       <AbsoluteFill
         style={{
-          background: 'linear-gradient(transparent 20%, rgba(0,0,0,0.7) 100%)',
+          background: 'rgba(255,255,255,0.6)',
         }}
       />
       <AbsoluteFill
@@ -35,9 +35,9 @@ export const CTAScene: React.FC = () => {
             fontFamily: displayFont,
             fontSize: 64,
             fontWeight: 700,
-            color: COLORS.white,
+            color: COLORS.ink,
             opacity: titleOpacity,
-            textShadow: '0 4px 20px rgba(0,0,0,0.5)',
+            textShadow: '0 2px 12px rgba(150,150,150,0.7)',
           }}
         >
           Explore the history of music.
@@ -47,10 +47,10 @@ export const CTAScene: React.FC = () => {
             fontFamily: bodyFont,
             fontSize: 48,
             fontWeight: 700,
-            color: COLORS.white,
+            color: COLORS.accent,
             opacity: urlOpacity,
             transform: `scale(${urlScale})`,
-            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+            textShadow: '0 2px 8px rgba(150,150,150,0.5)',
           }}
         >
           musiker.page
