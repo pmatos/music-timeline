@@ -1,6 +1,8 @@
 # Music Timeline
 
-An interactive timeline of composers and performers across instruments. View it at [pmatos.github.io/music-timeline](https://pmatos.github.io/music-timeline/).
+An interactive timeline of composers and performers across instruments. View it at [musiker.page](https://musiker.page).
+
+Built in collaboration with [Rightkey.app](https://rightkey.app), an app for learning to play the piano.
 
 ## Contributing Data
 
