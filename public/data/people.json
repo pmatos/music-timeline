@@ -924,6 +924,17 @@
     "websiteUrl": null
   },
   {
+    "id": "ibert",
+    "name": "J. Ibert",
+    "born": 1890,
+    "died": 1962,
+    "role": "composer",
+    "bio": "French composer whose elegant, witty style drew freely on Impressionism, neoclassicism, and jazz without ever belonging to a single school. His piano miniatures, above all the ten Histoires including the beloved Le petit ane blanc, sit alongside the orchestral Escales and Divertissement among his best-known works.",
+    "photoUrl": "/images/portraits/ibert.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jacques_Ibert",
+    "websiteUrl": null
+  },
+  {
     "id": "prokofiev",
     "name": "S. Prokofiev",
     "born": 1891,
