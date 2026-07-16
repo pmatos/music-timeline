@@ -8,6 +8,8 @@ export function useInstrumentData(instrument: string) {
   const cacheRef = useRef<{ people: Person[]; connections: Connection[] } | null>(null);
 
   useEffect(() => {
+    // Reset request state when the instrument changes before the async fetch below.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
     setError(null);
     setData(null);

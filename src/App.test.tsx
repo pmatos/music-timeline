@@ -37,9 +37,11 @@ test('renders header with instrument name after loading', async () => {
   });
 });
 
-test('renders footer with github link', async () => {
+test('renders header feedback links after loading', async () => {
   render(<App />);
   await waitFor(() => {
-    expect(screen.getByText(/suggest edits/i)).toBeInTheDocument();
+    expect(screen.getByText(/suggest a person/i)).toBeInTheDocument();
   });
+  expect(screen.getByText(/report a correction/i)).toBeInTheDocument();
+  expect(screen.getByText(/feedback/i)).toBeInTheDocument();
 });
