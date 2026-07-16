@@ -2300,6 +2300,17 @@
     "websiteUrl": null
   },
   {
+    "id": "urbie-green",
+    "name": "U. Green",
+    "born": 1926,
+    "died": 2018,
+    "role": "player",
+    "bio": "American jazz trombonist celebrated for his warm, lyrical tone and effortless technique across an unusually wide range. He rose to prominence with the big bands of Woody Herman and Gene Krupa, appeared on hundreds of recordings alongside artists such as Count Basie and Tony Bennett, and was inducted into the Alabama Jazz Hall of Fame in 1995.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Urbie_Green",
+    "websiteUrl": null
+  },
+  {
     "id": "mangelsdorff",
     "name": "A. Mangelsdorff",
     "born": 1928,
