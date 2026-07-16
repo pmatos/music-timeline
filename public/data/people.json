@@ -836,6 +836,17 @@
     "websiteUrl": null
   },
   {
+    "id": "cortot",
+    "name": "A. Cortot",
+    "born": 1877,
+    "died": 1962,
+    "role": "both",
+    "bio": "Franco-Swiss pianist, conductor, and teacher counted among the foremost musicians of the twentieth century. Celebrated above all for his poetic, freely expressive readings of Chopin and Schumann, he formed a legendary trio with violinist Jacques Thibaud and cellist Pablo Casals and co-founded the École Normale de Musique de Paris. He also left a substantial body of transcriptions, cadenzas, and widely used annotated editions of the Romantic piano repertoire.",
+    "photoUrl": "/images/portraits/cortot.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alfred_Cortot",
+    "websiteUrl": null
+  },
+  {
     "id": "medtner",
     "name": "N. Medtner",
     "born": 1880,
