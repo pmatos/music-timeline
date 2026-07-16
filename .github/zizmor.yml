@@ -1,0 +1,8 @@
+# Accept major-version tag pins (e.g. actions/checkout@v7) rather than requiring
+# commit-SHA pins. Dependabot keeps the tags current. zizmor still flags truly
+# unpinned refs (branches, missing ref, @latest).
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        '*': ref-pin

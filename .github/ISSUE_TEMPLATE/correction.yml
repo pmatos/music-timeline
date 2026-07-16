@@ -1,6 +1,6 @@
 name: Correction
 description: Report incorrect data (dates, names, bios, connections, etc.)
-labels: ["correction"]
+labels: ['correction']
 body:
   - type: dropdown
     id: data-type

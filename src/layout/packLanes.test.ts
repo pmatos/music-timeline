@@ -22,30 +22,21 @@ test('single person goes to lane 0', () => {
 });
 
 test('non-overlapping people share lane 0', () => {
-  const people = [
-    makePerson('a', 1700, 1750),
-    makePerson('b', 1760, 1810),
-  ];
+  const people = [makePerson('a', 1700, 1750), makePerson('b', 1760, 1810)];
   const result = packLanes(people, 2026);
   expect(result[0].lane).toBe(0);
   expect(result[1].lane).toBe(0);
 });
 
 test('overlapping people get different lanes', () => {
-  const people = [
-    makePerson('a', 1700, 1780),
-    makePerson('b', 1750, 1830),
-  ];
+  const people = [makePerson('a', 1700, 1780), makePerson('b', 1750, 1830)];
   const result = packLanes(people, 2026);
   expect(result[0].lane).toBe(0);
   expect(result[1].lane).toBe(1);
 });
 
 test('living person (died=null) uses currentYear', () => {
-  const people = [
-    makePerson('a', 1980, null),
-    makePerson('b', 1990, null),
-  ];
+  const people = [makePerson('a', 1980, null), makePerson('b', 1990, null)];
   const result = packLanes(people, 2026);
   expect(result[0].lane).toBe(0);
   expect(result[1].lane).toBe(1);
@@ -63,20 +54,14 @@ test('three overlapping people get three lanes', () => {
 });
 
 test('people are sorted by birth year in output', () => {
-  const people = [
-    makePerson('b', 1800, 1850),
-    makePerson('a', 1700, 1750),
-  ];
+  const people = [makePerson('b', 1800, 1850), makePerson('a', 1700, 1750)];
   const result = packLanes(people, 2026);
   expect(result[0].person.id).toBe('a');
   expect(result[1].person.id).toBe('b');
 });
 
 test('adds gap between bars in same lane', () => {
-  const people = [
-    makePerson('a', 1700, 1749),
-    makePerson('b', 1750, 1800),
-  ];
+  const people = [makePerson('a', 1700, 1749), makePerson('b', 1750, 1800)];
   const result = packLanes(people, 2026);
   expect(result[0].lane).toBe(0);
   expect(result[1].lane).toBe(0);

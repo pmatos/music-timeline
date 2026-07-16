@@ -3,7 +3,11 @@ import { PersonPanel } from './PersonPanel';
 import type { Person, Connection } from '../types';
 
 const person: Person = {
-  id: 'bach', name: 'J.S. Bach', born: 1685, died: 1750, role: 'composer',
+  id: 'bach',
+  name: 'J.S. Bach',
+  born: 1685,
+  died: 1750,
+  role: 'composer',
   bio: 'German composer of the Baroque period.',
   photoUrl: '/images/piano/bach.jpg',
   wikiUrl: 'https://en.wikipedia.org/wiki/Johann_Sebastian_Bach',
@@ -27,7 +31,9 @@ test('renders person details', () => {
   expect(screen.getByText('J.S. Bach')).toBeInTheDocument();
   expect(screen.getByText('1685\u20131750')).toBeInTheDocument();
   expect(screen.getByText('composer')).toBeInTheDocument();
-  expect(screen.getByText('German composer of the Baroque period.')).toBeInTheDocument();
+  expect(
+    screen.getByText('German composer of the Baroque period.'),
+  ).toBeInTheDocument();
 });
 
 test('renders wiki link', () => {
@@ -39,7 +45,10 @@ test('renders wiki link', () => {
 test('renders website link when available', () => {
   const withSite = { ...person, websiteUrl: 'https://example.com' };
   render(<PersonPanel person={withSite} {...defaultProps} />);
-  expect(screen.getByText('Website')).toHaveAttribute('href', 'https://example.com');
+  expect(screen.getByText('Website')).toHaveAttribute(
+    'href',
+    'https://example.com',
+  );
 });
 
 test('calls onClose when close button clicked', () => {
@@ -52,27 +61,58 @@ test('calls onClose when close button clicked', () => {
 // --- Connection tests ---
 
 const beethoven: Person = {
-  id: 'beethoven', name: 'L.v. Beethoven', born: 1770, died: 1827, role: 'composer',
-  bio: 'German composer.', photoUrl: null, wikiUrl: null, websiteUrl: null,
+  id: 'beethoven',
+  name: 'L.v. Beethoven',
+  born: 1770,
+  died: 1827,
+  role: 'composer',
+  bio: 'German composer.',
+  photoUrl: null,
+  wikiUrl: null,
+  websiteUrl: null,
 };
 
 const haydn: Person = {
-  id: 'haydn', name: 'Joseph Haydn', born: 1732, died: 1809, role: 'composer',
-  bio: 'Austrian composer.', photoUrl: null, wikiUrl: null, websiteUrl: null,
+  id: 'haydn',
+  name: 'Joseph Haydn',
+  born: 1732,
+  died: 1809,
+  role: 'composer',
+  bio: 'Austrian composer.',
+  photoUrl: null,
+  wikiUrl: null,
+  websiteUrl: null,
 };
 
 const cpebach: Person = {
-  id: 'cpe-bach', name: 'C.P.E. Bach', born: 1714, died: 1788, role: 'composer',
-  bio: 'German composer.', photoUrl: null, wikiUrl: null, websiteUrl: null,
+  id: 'cpe-bach',
+  name: 'C.P.E. Bach',
+  born: 1714,
+  died: 1788,
+  role: 'composer',
+  bio: 'German composer.',
+  photoUrl: null,
+  wikiUrl: null,
+  websiteUrl: null,
 };
 
 test('renders Taught group when person is teacher', () => {
   const connections: Connection[] = [
-    { from: 'haydn', to: 'beethoven', type: 'student-teacher', label: 'teacher/student' },
+    {
+      from: 'haydn',
+      to: 'beethoven',
+      type: 'student-teacher',
+      label: 'teacher/student',
+    },
   ];
   render(
-    <PersonPanel person={haydn} connections={connections}
-      people={[haydn, beethoven]} onPersonClick={vi.fn()} onClose={vi.fn()} />
+    <PersonPanel
+      person={haydn}
+      connections={connections}
+      people={[haydn, beethoven]}
+      onPersonClick={vi.fn()}
+      onClose={vi.fn()}
+    />,
   );
   expect(screen.getByText('Taught')).toBeInTheDocument();
   expect(screen.getByText('L.v. Beethoven')).toBeInTheDocument();
@@ -80,11 +120,21 @@ test('renders Taught group when person is teacher', () => {
 
 test('renders Student of group when person is student', () => {
   const connections: Connection[] = [
-    { from: 'haydn', to: 'beethoven', type: 'student-teacher', label: 'teacher/student' },
+    {
+      from: 'haydn',
+      to: 'beethoven',
+      type: 'student-teacher',
+      label: 'teacher/student',
+    },
   ];
   render(
-    <PersonPanel person={beethoven} connections={connections}
-      people={[haydn, beethoven]} onPersonClick={vi.fn()} onClose={vi.fn()} />
+    <PersonPanel
+      person={beethoven}
+      connections={connections}
+      people={[haydn, beethoven]}
+      onPersonClick={vi.fn()}
+      onClose={vi.fn()}
+    />,
   );
   expect(screen.getByText('Student of')).toBeInTheDocument();
   expect(screen.getByText('Joseph Haydn')).toBeInTheDocument();
@@ -95,8 +145,13 @@ test('renders Related to group for relatives', () => {
     { from: 'bach', to: 'cpe-bach', type: 'relative', label: 'father/son' },
   ];
   render(
-    <PersonPanel person={person} connections={connections}
-      people={[person, cpebach]} onPersonClick={vi.fn()} onClose={vi.fn()} />
+    <PersonPanel
+      person={person}
+      connections={connections}
+      people={[person, cpebach]}
+      onPersonClick={vi.fn()}
+      onClose={vi.fn()}
+    />,
   );
   expect(screen.getByText('Related to')).toBeInTheDocument();
   expect(screen.getByText('C.P.E. Bach')).toBeInTheDocument();
@@ -105,11 +160,21 @@ test('renders Related to group for relatives', () => {
 test('clicking a connection name calls onPersonClick', () => {
   const onPersonClick = vi.fn();
   const connections: Connection[] = [
-    { from: 'haydn', to: 'beethoven', type: 'student-teacher', label: 'teacher/student' },
+    {
+      from: 'haydn',
+      to: 'beethoven',
+      type: 'student-teacher',
+      label: 'teacher/student',
+    },
   ];
   render(
-    <PersonPanel person={haydn} connections={connections}
-      people={[haydn, beethoven]} onPersonClick={onPersonClick} onClose={vi.fn()} />
+    <PersonPanel
+      person={haydn}
+      connections={connections}
+      people={[haydn, beethoven]}
+      onPersonClick={onPersonClick}
+      onClose={vi.fn()}
+    />,
   );
   fireEvent.click(screen.getByText('L.v. Beethoven'));
   expect(onPersonClick).toHaveBeenCalledWith(beethoven);
@@ -117,7 +182,9 @@ test('clicking a connection name calls onPersonClick', () => {
 
 test('does not render connections section when no connections', () => {
   const { container } = render(
-    <PersonPanel person={person} {...defaultProps} />
+    <PersonPanel person={person} {...defaultProps} />,
   );
-  expect(container.querySelector('.person-panel__connections')).not.toBeInTheDocument();
+  expect(
+    container.querySelector('.person-panel__connections'),
+  ).not.toBeInTheDocument();
 });

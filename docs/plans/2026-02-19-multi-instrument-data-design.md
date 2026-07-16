@@ -46,7 +46,12 @@ Flat array of all connections:
 
 ```json
 [
-  { "from": "bach", "to": "cpe-bach", "type": "relative", "label": "father/son" }
+  {
+    "from": "bach",
+    "to": "cpe-bach",
+    "type": "relative",
+    "label": "father/son"
+  }
 ]
 ```
 
@@ -56,7 +61,12 @@ Flat array of all connections:
 {
   "instrument": "Piano",
   "eras": [
-    { "name": "Baroque", "startYear": 1600, "endYear": 1750, "color": "#E3F2FD" }
+    {
+      "name": "Baroque",
+      "startYear": 1600,
+      "endYear": 1750,
+      "color": "#E3F2FD"
+    }
   ],
   "peopleIds": ["bach", "beethoven", "chopin"]
 }

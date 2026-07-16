@@ -18,12 +18,12 @@ export function useTimelineScale({
 
   const yearToPixel = useCallback(
     (year: number) => (year - startYear) * pixelsPerYear,
-    [startYear, pixelsPerYear]
+    [startYear, pixelsPerYear],
   );
 
   const pixelToYear = useCallback(
     (px: number) => px / pixelsPerYear + startYear,
-    [startYear, pixelsPerYear]
+    [startYear, pixelsPerYear],
   );
 
   return useMemo(
@@ -35,6 +35,6 @@ export function useTimelineScale({
       yearToPixel,
       pixelToYear,
     }),
-    [zoom, setZoom, totalWidth, pixelsPerYear, yearToPixel, pixelToYear]
+    [zoom, setZoom, totalWidth, pixelsPerYear, yearToPixel, pixelToYear],
   );
 }

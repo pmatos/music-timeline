@@ -1,4 +1,10 @@
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import {
+  AbsoluteFill,
+  interpolate,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+} from 'remotion';
 import { displayFont } from '../fonts';
 
 type TextOverlayProps = {
@@ -26,19 +32,26 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
   });
 
   const exitStart = durationInFrames - 0.3 * fps;
-  const exit = frame > exitStart
-    ? interpolate(frame, [exitStart, durationInFrames], [1, 0], {
-        extrapolateLeft: 'clamp',
-        extrapolateRight: 'clamp',
-      })
-    : 1;
+  const exit =
+    frame > exitStart
+      ? interpolate(frame, [exitStart, durationInFrames], [1, 0], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 1;
 
   const opacity = entrance * exit;
   const scale = interpolate(entrance, [0, 1], [0.8, 1]);
   const translateY = interpolate(entrance, [0, 1], [30, 0]);
 
-  const justifyContent = position === 'top' ? 'flex-start' : position === 'bottom' ? 'flex-end' : 'center';
-  const paddingVertical = position === 'top' ? 80 : position === 'bottom' ? 80 : 0;
+  const justifyContent =
+    position === 'top'
+      ? 'flex-start'
+      : position === 'bottom'
+        ? 'flex-end'
+        : 'center';
+  const paddingVertical =
+    position === 'top' ? 80 : position === 'bottom' ? 80 : 0;
 
   return (
     <AbsoluteFill

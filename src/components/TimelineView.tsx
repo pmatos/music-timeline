@@ -13,15 +13,29 @@ interface TimelineViewProps {
 }
 
 export function TimelineView({
-  data, selectedPersonId, hoveredPersonId,
-  onPersonClick, onPersonMouseEnter, onPersonMouseLeave,
+  data,
+  selectedPersonId,
+  hoveredPersonId,
+  onPersonClick,
+  onPersonMouseEnter,
+  onPersonMouseLeave,
 }: TimelineViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const startYear = Math.min(...data.eras.map((e) => e.startYear), ...data.people.map((p) => p.born));
-  const endYear = Math.max(...data.eras.map((e) => e.endYear), new Date().getFullYear());
+  const startYear = Math.min(
+    ...data.eras.map((e) => e.startYear),
+    ...data.people.map((p) => p.born),
+  );
+  const endYear = Math.max(
+    ...data.eras.map((e) => e.endYear),
+    new Date().getFullYear(),
+  );
   const containerWidth = 1200;
 
-  const { yearToPixel, totalWidth, setZoom } = useTimelineScale({ startYear, endYear, containerWidth });
+  const { yearToPixel, totalWidth, setZoom } = useTimelineScale({
+    startYear,
+    endYear,
+    containerWidth,
+  });
 
   useEffect(() => {
     const el = containerRef.current;
@@ -39,10 +53,16 @@ export function TimelineView({
 
   return (
     <div className="timeline-view" ref={containerRef}>
-      <TimelineSVG data={data} yearToPixel={yearToPixel} totalWidth={totalWidth}
-        selectedPersonId={selectedPersonId} hoveredPersonId={hoveredPersonId}
-        onPersonClick={onPersonClick} onPersonMouseEnter={onPersonMouseEnter}
-        onPersonMouseLeave={onPersonMouseLeave} />
+      <TimelineSVG
+        data={data}
+        yearToPixel={yearToPixel}
+        totalWidth={totalWidth}
+        selectedPersonId={selectedPersonId}
+        hoveredPersonId={hoveredPersonId}
+        onPersonClick={onPersonClick}
+        onPersonMouseEnter={onPersonMouseEnter}
+        onPersonMouseLeave={onPersonMouseLeave}
+      />
     </div>
   );
 }

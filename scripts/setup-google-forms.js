@@ -21,18 +21,24 @@ const REPO = 'pmatos/music-timeline';
 // ─── GitHub issue creation ───────────────────────────────────────
 
 function createGitHubIssue(title, body, labels) {
-  const token = PropertiesService.getScriptProperties().getProperty('GITHUB_TOKEN');
+  const token =
+    PropertiesService.getScriptProperties().getProperty('GITHUB_TOKEN');
   if (!token) throw new Error('GITHUB_TOKEN not set in script properties');
 
-  const response = UrlFetchApp.fetch(`https://api.github.com/repos/${REPO}/issues`, {
-    method: 'post',
-    contentType: 'application/json',
-    headers: { Authorization: `token ${token}` },
-    payload: JSON.stringify({ title, body, labels }),
-  });
+  const response = UrlFetchApp.fetch(
+    `https://api.github.com/repos/${REPO}/issues`,
+    {
+      method: 'post',
+      contentType: 'application/json',
+      headers: { Authorization: `token ${token}` },
+      payload: JSON.stringify({ title, body, labels }),
+    },
+  );
 
   if (response.getResponseCode() !== 201) {
-    throw new Error(`GitHub API error ${response.getResponseCode()}: ${response.getContentText()}`);
+    throw new Error(
+      `GitHub API error ${response.getResponseCode()}: ${response.getContentText()}`,
+    );
   }
 
   return JSON.parse(response.getContentText()).html_url;
@@ -66,7 +72,9 @@ function onFormSubmitNewPerson(e) {
     wiki ? `### Wikipedia URL\n${wiki}` : null,
     connections ? `### Connections\n${connections}` : null,
     '_Submitted via Google Form_',
-  ].filter(Boolean).join('\n\n');
+  ]
+    .filter(Boolean)
+    .join('\n\n');
 
   createGitHubIssue(title, body, ['new person']);
 }
@@ -84,7 +92,9 @@ function onFormSubmitNewInstrument(e) {
     `### Key people to include\n${people}`,
     context ? `### Additional context\n${context}` : null,
     '_Submitted via Google Form_',
-  ].filter(Boolean).join('\n\n');
+  ]
+    .filter(Boolean)
+    .join('\n\n');
 
   createGitHubIssue(title, body, ['new instrument']);
 }
@@ -104,7 +114,9 @@ function onFormSubmitCorrection(e) {
     `### Correct value\n${correct}`,
     `### Source / reference\n${source}`,
     '_Submitted via Google Form_',
-  ].filter(Boolean).join('\n\n');
+  ]
+    .filter(Boolean)
+    .join('\n\n');
 
   createGitHubIssue(title, body, ['correction']);
 }
@@ -122,7 +134,9 @@ function onFormSubmitGeneral(e) {
     steps ? `### Steps to reproduce\n${steps}` : null,
     context ? `### Additional context\n${context}` : null,
     '_Submitted via Google Form_',
-  ].filter(Boolean).join('\n\n');
+  ]
+    .filter(Boolean)
+    .join('\n\n');
 
   createGitHubIssue(title, body, []);
 }
@@ -133,10 +147,7 @@ function linkSpreadsheetAndTrigger(form, handlerName) {
   const ss = SpreadsheetApp.create(form.getTitle() + ' (Responses)');
   form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
 
-  ScriptApp.newTrigger(handlerName)
-    .forSpreadsheet(ss)
-    .onFormSubmit()
-    .create();
+  ScriptApp.newTrigger(handlerName).forSpreadsheet(ss).onFormSubmit().create();
 
   return ss.getUrl();
 }
@@ -147,94 +158,171 @@ function createNewPersonForm() {
   const form = FormApp.create('Musiker — Suggest a Person');
   form.setDescription(
     'Suggest a composer or performer to add to the musiker.page timeline. ' +
-    'All fields marked * are required.'
+      'All fields marked * are required.',
   );
   form.setConfirmationMessage('Thank you! Your suggestion has been submitted.');
 
-  form.addTextItem().setTitle('Name').setHelpText('e.g. "Clara Schumann"').setRequired(true);
-  form.addTextItem().setTitle('Birth year').setHelpText('e.g. "1819"').setRequired(true);
-  form.addTextItem().setTitle('Death year').setHelpText('Leave blank if living');
-  form.addMultipleChoiceItem().setTitle('Role')
-    .setChoiceValues(['composer', 'player', 'both']).setRequired(true);
-  form.addTextItem().setTitle('Instrument(s)')
-    .setHelpText('Which instrument timeline(s) should this person appear on? e.g. "piano, violin"')
+  form
+    .addTextItem()
+    .setTitle('Name')
+    .setHelpText('e.g. "Clara Schumann"')
     .setRequired(true);
-  form.addParagraphTextItem().setTitle('Short bio')
+  form
+    .addTextItem()
+    .setTitle('Birth year')
+    .setHelpText('e.g. "1819"')
+    .setRequired(true);
+  form
+    .addTextItem()
+    .setTitle('Death year')
+    .setHelpText('Leave blank if living');
+  form
+    .addMultipleChoiceItem()
+    .setTitle('Role')
+    .setChoiceValues(['composer', 'player', 'both'])
+    .setRequired(true);
+  form
+    .addTextItem()
+    .setTitle('Instrument(s)')
+    .setHelpText(
+      'Which instrument timeline(s) should this person appear on? e.g. "piano, violin"',
+    )
+    .setRequired(true);
+  form
+    .addParagraphTextItem()
+    .setTitle('Short bio')
     .setHelpText('A few sentences about their significance.');
-  form.addTextItem().setTitle('Wikipedia URL')
+  form
+    .addTextItem()
+    .setTitle('Wikipedia URL')
     .setHelpText('https://en.wikipedia.org/wiki/...');
-  form.addParagraphTextItem().setTitle('Connections')
-    .setHelpText('Any teacher/student or other relationships with people already on the timeline.');
+  form
+    .addParagraphTextItem()
+    .setTitle('Connections')
+    .setHelpText(
+      'Any teacher/student or other relationships with people already on the timeline.',
+    );
 
   const sheetUrl = linkSpreadsheetAndTrigger(form, 'onFormSubmitNewPerson');
-  return { editUrl: form.getEditUrl(), publishedUrl: form.getPublishedUrl(), sheetUrl };
+  return {
+    editUrl: form.getEditUrl(),
+    publishedUrl: form.getPublishedUrl(),
+    sheetUrl,
+  };
 }
 
 function createNewInstrumentForm() {
   const form = FormApp.create('Musiker — Suggest an Instrument');
   form.setDescription(
     'Suggest a new instrument timeline to add to musiker.page. ' +
-    'All fields marked * are required.'
+      'All fields marked * are required.',
   );
   form.setConfirmationMessage('Thank you! Your suggestion has been submitted.');
 
-  form.addTextItem().setTitle('Instrument name').setHelpText('e.g. "cello"').setRequired(true);
-  form.addParagraphTextItem().setTitle('Suggested eras')
-    .setHelpText('Key historical eras for this instrument and approximate date ranges.\ne.g. Baroque (1600-1750), Classical (1730-1820), ...');
-  form.addParagraphTextItem().setTitle('Key people to include')
+  form
+    .addTextItem()
+    .setTitle('Instrument name')
+    .setHelpText('e.g. "cello"')
+    .setRequired(true);
+  form
+    .addParagraphTextItem()
+    .setTitle('Suggested eras')
+    .setHelpText(
+      'Key historical eras for this instrument and approximate date ranges.\ne.g. Baroque (1600-1750), Classical (1730-1820), ...',
+    );
+  form
+    .addParagraphTextItem()
+    .setTitle('Key people to include')
     .setHelpText('Notable composers and/or performers for this instrument.')
     .setRequired(true);
-  form.addParagraphTextItem().setTitle('Additional context')
+  form
+    .addParagraphTextItem()
+    .setTitle('Additional context')
     .setHelpText('Why this instrument should be added, any references, etc.');
 
   const sheetUrl = linkSpreadsheetAndTrigger(form, 'onFormSubmitNewInstrument');
-  return { editUrl: form.getEditUrl(), publishedUrl: form.getPublishedUrl(), sheetUrl };
+  return {
+    editUrl: form.getEditUrl(),
+    publishedUrl: form.getPublishedUrl(),
+    sheetUrl,
+  };
 }
 
 function createCorrectionForm() {
   const form = FormApp.create('Musiker — Report a Correction');
   form.setDescription(
     'Report incorrect data on musiker.page (dates, names, bios, connections, etc.). ' +
-    'All fields marked * are required.'
+      'All fields marked * are required.',
   );
   form.setConfirmationMessage('Thank you! Your correction has been submitted.');
 
-  form.addMultipleChoiceItem().setTitle('What needs correcting?')
+  form
+    .addMultipleChoiceItem()
+    .setTitle('What needs correcting?')
     .setChoiceValues([
-      'Birth/death year', 'Person name', 'Bio text', 'Role (composer/player/both)',
-      'Era dates or name', 'Connection between people', 'Photo/portrait',
-      'Wikipedia or website URL', 'Other',
-    ]).setRequired(true);
-  form.addTextItem().setTitle('Person or item affected')
+      'Birth/death year',
+      'Person name',
+      'Bio text',
+      'Role (composer/player/both)',
+      'Era dates or name',
+      'Connection between people',
+      'Photo/portrait',
+      'Wikipedia or website URL',
+      'Other',
+    ])
+    .setRequired(true);
+  form
+    .addTextItem()
+    .setTitle('Person or item affected')
     .setHelpText('e.g. "J.S. Bach" or "Baroque era in piano timeline"')
     .setRequired(true);
-  form.addParagraphTextItem().setTitle('Current (incorrect) value').setRequired(true);
+  form
+    .addParagraphTextItem()
+    .setTitle('Current (incorrect) value')
+    .setRequired(true);
   form.addParagraphTextItem().setTitle('Correct value').setRequired(true);
-  form.addParagraphTextItem().setTitle('Source / reference')
+  form
+    .addParagraphTextItem()
+    .setTitle('Source / reference')
     .setHelpText('Link or citation supporting the correction.')
     .setRequired(true);
 
   const sheetUrl = linkSpreadsheetAndTrigger(form, 'onFormSubmitCorrection');
-  return { editUrl: form.getEditUrl(), publishedUrl: form.getPublishedUrl(), sheetUrl };
+  return {
+    editUrl: form.getEditUrl(),
+    publishedUrl: form.getPublishedUrl(),
+    sheetUrl,
+  };
 }
 
 function createGeneralForm() {
   const form = FormApp.create('Musiker — Feedback');
   form.setDescription(
-    'Bug reports, feature requests, or general feedback for musiker.page.'
+    'Bug reports, feature requests, or general feedback for musiker.page.',
   );
   form.setConfirmationMessage('Thank you! Your feedback has been submitted.');
 
-  form.addMultipleChoiceItem().setTitle('Category')
-    .setChoiceValues(['Bug', 'Feature request', 'Question', 'Other']).setRequired(true);
+  form
+    .addMultipleChoiceItem()
+    .setTitle('Category')
+    .setChoiceValues(['Bug', 'Feature request', 'Question', 'Other'])
+    .setRequired(true);
   form.addParagraphTextItem().setTitle('Description').setRequired(true);
-  form.addParagraphTextItem().setTitle('Steps to reproduce')
+  form
+    .addParagraphTextItem()
+    .setTitle('Steps to reproduce')
     .setHelpText('If reporting a bug, describe how to reproduce it.');
-  form.addParagraphTextItem().setTitle('Additional context')
+  form
+    .addParagraphTextItem()
+    .setTitle('Additional context')
     .setHelpText('Screenshots, browser info, or anything else relevant.');
 
   const sheetUrl = linkSpreadsheetAndTrigger(form, 'onFormSubmitGeneral');
-  return { editUrl: form.getEditUrl(), publishedUrl: form.getPublishedUrl(), sheetUrl };
+  return {
+    editUrl: form.getEditUrl(),
+    publishedUrl: form.getPublishedUrl(),
+    sheetUrl,
+  };
 }
 
 // ─── Main entry point ────────────────────────────────────────────
@@ -259,5 +347,7 @@ function setupAllForms() {
   }
 
   Logger.log('=== Done! ===');
-  Logger.log('All triggers installed. Remember to set GITHUB_TOKEN in Script Properties.');
+  Logger.log(
+    'All triggers installed. Remember to set GITHUB_TOKEN in Script Properties.',
+  );
 }

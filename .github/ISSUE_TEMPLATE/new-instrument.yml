@@ -1,6 +1,6 @@
 name: New instrument request
 description: Suggest a new instrument timeline to add
-labels: ["new instrument"]
+labels: ['new instrument']
 body:
   - type: input
     id: instrument

@@ -10,7 +10,12 @@ Per-instrument JSON files (`data/piano.json`, `data/violin.json`, etc.) with thi
 {
   "instrument": "Piano",
   "eras": [
-    { "name": "Baroque", "startYear": 1600, "endYear": 1750, "color": "#E3F2FD" }
+    {
+      "name": "Baroque",
+      "startYear": 1600,
+      "endYear": 1750,
+      "color": "#E3F2FD"
+    }
   ],
   "people": [
     {
@@ -26,7 +31,12 @@ Per-instrument JSON files (`data/piano.json`, `data/violin.json`, etc.) with thi
     }
   ],
   "connections": [
-    { "from": "bach", "to": "cpe-bach", "type": "relative", "label": "father/son" },
+    {
+      "from": "bach",
+      "to": "cpe-bach",
+      "type": "relative",
+      "label": "father/son"
+    },
     { "from": "beethoven", "to": "czerny", "type": "student-teacher" }
   ]
 }

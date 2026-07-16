@@ -1,13 +1,23 @@
 import { useState, useEffect, useRef } from 'react';
-import type { InstrumentData, InstrumentConfig, Person, Connection } from '../types';
+import type {
+  InstrumentData,
+  InstrumentConfig,
+  Person,
+  Connection,
+} from '../types';
 
 export function useInstrumentData(instrument: string) {
   const [data, setData] = useState<InstrumentData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const cacheRef = useRef<{ people: Person[]; connections: Connection[] } | null>(null);
+  const cacheRef = useRef<{
+    people: Person[];
+    connections: Connection[];
+  } | null>(null);
 
   useEffect(() => {
+    // Reset request state when the instrument changes before the async fetch below.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
     setError(null);
     setData(null);

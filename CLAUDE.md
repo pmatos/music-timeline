@@ -5,15 +5,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev          # Start Vite dev server
-npm run build        # TypeScript check + Vite production build
-npm run lint         # ESLint
-npm test             # Run all tests (vitest run)
-npm run test:watch   # Watch mode
+npm run dev            # Start Vite dev server
+npm run build          # TypeScript check + Vite production build
+npm run lint           # ESLint
+npm test               # Run all tests (vitest run)
+npm run test:watch     # Watch mode
+npm run test:coverage  # Tests with v8 coverage (thresholds enforced)
+npm run format         # Prettier: format the repo
+npm run format:check   # Prettier: verify formatting (CI gate)
 npx vitest run src/hooks/useInstrumentData.test.ts  # Single test file
 ```
 
 Tests use vitest with jsdom environment and `globals: true` (no need to import `describe`/`test`/`expect`). Setup file at `src/setupTests.ts` loads `@testing-library/jest-dom/vitest`.
+
+`src/data-integrity.test.ts` validates `public/data/*.json` with Zod schemas and referential-integrity checks (the invariants in the Data Integrity section below). Coverage thresholds and the Prettier ignore list live in `vitest.config.ts` and `.prettierignore` (`public/data` is excluded from formatting — it is guarded by the data tests instead).
+
+`.github/workflows/ci.yml` runs lint + typecheck + tests/coverage + build + Prettier on every PR (plus the `video/` build and an actionlint/zizmor pass over the workflows); `codeql.yml` runs CodeQL. GitHub Actions are pinned to major-version tags (kept current by Dependabot); `.github/zizmor.yml` sets zizmor's `unpinned-uses` policy to `ref-pin` to allow that. A `Stop` hook (`.claude/settings.json` → `.claude/hooks/verify.sh`) reruns lint/typecheck/tests locally.
 
 ## Architecture
 
@@ -34,6 +41,7 @@ To add a new instrument: create `public/data/<name>.json` with eras and peopleId
 ### Rendering Pipeline
 
 `App` → `TimelineView` (scrollable container with zoom) → `TimelineSVG` (the SVG):
+
 1. `packLanes()` assigns each person to the first non-overlapping lane (greedy, sorted by birth year)
 2. `EraBackgrounds` renders semi-transparent colored bands
 3. `ConnectionLine` renders bezier curves between connected people

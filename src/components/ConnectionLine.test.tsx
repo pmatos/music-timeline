@@ -3,7 +3,17 @@ import { ConnectionLine } from './ConnectionLine';
 
 test('renders an SVG path', () => {
   const { container } = render(
-    <svg><ConnectionLine x1={100} y1={50} x2={300} y2={80} type="relative" highlighted={false} dimmed={false} /></svg>
+    <svg>
+      <ConnectionLine
+        x1={100}
+        y1={50}
+        x2={300}
+        y2={80}
+        type="relative"
+        highlighted={false}
+        dimmed={false}
+      />
+    </svg>,
   );
   const path = container.querySelector('path');
   expect(path).toBeInTheDocument();
@@ -13,7 +23,17 @@ test('renders an SVG path', () => {
 
 test('relative connections are solid', () => {
   const { container } = render(
-    <svg><ConnectionLine x1={100} y1={50} x2={300} y2={80} type="relative" highlighted={false} dimmed={false} /></svg>
+    <svg>
+      <ConnectionLine
+        x1={100}
+        y1={50}
+        x2={300}
+        y2={80}
+        type="relative"
+        highlighted={false}
+        dimmed={false}
+      />
+    </svg>,
   );
   const path = container.querySelector('path');
   expect(path).not.toHaveAttribute('stroke-dasharray');
@@ -21,7 +41,17 @@ test('relative connections are solid', () => {
 
 test('student-teacher connections are dashed', () => {
   const { container } = render(
-    <svg><ConnectionLine x1={100} y1={50} x2={300} y2={80} type="student-teacher" highlighted={false} dimmed={false} /></svg>
+    <svg>
+      <ConnectionLine
+        x1={100}
+        y1={50}
+        x2={300}
+        y2={80}
+        type="student-teacher"
+        highlighted={false}
+        dimmed={false}
+      />
+    </svg>,
   );
   const path = container.querySelector('path');
   expect(path?.getAttribute('stroke-dasharray')).toBeTruthy();

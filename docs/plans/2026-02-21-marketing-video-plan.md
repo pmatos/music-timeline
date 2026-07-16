@@ -13,11 +13,13 @@
 ### Task 1: Scaffold Remotion Project
 
 **Files:**
+
 - Create: `video/` (entire Remotion scaffold)
 
 **Step 1: Create the Remotion project**
 
 Run:
+
 ```bash
 cd /home/pmatos/dev/music-timeline && npx create-video@latest video --template blank
 ```
@@ -27,6 +29,7 @@ Select TypeScript when prompted. If `create-video` doesn't support `--template`,
 **Step 2: Install additional dependencies**
 
 Run:
+
 ```bash
 cd /home/pmatos/dev/music-timeline/video && npx remotion add @remotion/transitions && npx remotion add @remotion/media && npx remotion add @remotion/google-fonts
 ```
@@ -34,6 +37,7 @@ cd /home/pmatos/dev/music-timeline/video && npx remotion add @remotion/transitio
 **Step 3: Verify it runs**
 
 Run:
+
 ```bash
 cd /home/pmatos/dev/music-timeline/video && npx remotion studio
 ```
@@ -52,6 +56,7 @@ git commit -m "Scaffold Remotion project for marketing video"
 ### Task 2: Capture Screenshots via Browser Automation
 
 **Files:**
+
 - Create: `video/public/screenshots/` (9 PNG files)
 
 Use the Chrome MCP browser automation tools to capture screenshots from the live site at `https://musiker.page`.
@@ -117,6 +122,7 @@ git commit -m "Add app screenshots for marketing video"
 ### Task 3: Create Constants and Font Setup
 
 **Files:**
+
 - Create: `video/src/constants.ts`
 - Create: `video/src/fonts.ts`
 
@@ -128,22 +134,22 @@ export const WIDTH = 1920;
 export const HEIGHT = 1080;
 
 export const SCENES = {
-  hook:             { duration: 3 * FPS },
-  timeline:         { duration: 5 * FPS },
-  connections:      { duration: 6 * FPS },
-  personPanel:      { duration: 5 * FPS },
-  colorCoding:      { duration: 4 * FPS },
+  hook: { duration: 3 * FPS },
+  timeline: { duration: 5 * FPS },
+  connections: { duration: 6 * FPS },
+  personPanel: { duration: 5 * FPS },
+  colorCoding: { duration: 4 * FPS },
   instrumentSwitch: { duration: 5 * FPS },
-  trombone:         { duration: 4 * FPS },
-  eras:             { duration: 4 * FPS },
-  cta:              { duration: 5 * FPS },
+  trombone: { duration: 4 * FPS },
+  eras: { duration: 4 * FPS },
+  cta: { duration: 5 * FPS },
 } as const;
 
 export const TRANSITION_DURATION = 10; // frames overlap between scenes
 
-export const TOTAL_FRAMES = Object.values(SCENES).reduce(
-  (sum, s) => sum + s.duration, 0
-) - (Object.keys(SCENES).length - 1) * TRANSITION_DURATION;
+export const TOTAL_FRAMES =
+  Object.values(SCENES).reduce((sum, s) => sum + s.duration, 0) -
+  (Object.keys(SCENES).length - 1) * TRANSITION_DURATION;
 
 export const COLORS = {
   accent: '#3d5a80',
@@ -184,12 +190,20 @@ git commit -m "Add constants and font setup for marketing video"
 ### Task 4: Build KenBurns Component
 
 **Files:**
+
 - Create: `video/src/components/KenBurns.tsx`
 
 **Step 1: Create the component**
 
 ```tsx
-import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import {
+  AbsoluteFill,
+  Img,
+  interpolate,
+  staticFile,
+  useCurrentFrame,
+  useVideoConfig,
+} from 'remotion';
 
 type KenBurnsProps = {
   src: string;
@@ -213,10 +227,15 @@ export const KenBurns: React.FC<KenBurnsProps> = ({
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
-  const scale = interpolate(frame, [0, durationInFrames], [startScale, endScale], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
+  const scale = interpolate(
+    frame,
+    [0, durationInFrames],
+    [startScale, endScale],
+    {
+      extrapolateLeft: 'clamp',
+      extrapolateRight: 'clamp',
+    },
+  );
 
   const translateX = interpolate(frame, [0, durationInFrames], [startX, endX], {
     extrapolateLeft: 'clamp',
@@ -256,12 +275,19 @@ git commit -m "Add KenBurns pan/zoom component"
 ### Task 5: Build TextOverlay Component
 
 **Files:**
+
 - Create: `video/src/components/TextOverlay.tsx`
 
 **Step 1: Create the component**
 
 ```tsx
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import {
+  AbsoluteFill,
+  interpolate,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+} from 'remotion';
 import { displayFont } from '../fonts';
 
 type TextOverlayProps = {
@@ -289,18 +315,20 @@ export const TextOverlay: React.FC<TextOverlayProps> = ({
   });
 
   const exitStart = durationInFrames - 0.3 * fps;
-  const exit = frame > exitStart
-    ? interpolate(frame, [exitStart, durationInFrames], [1, 0], {
-        extrapolateLeft: 'clamp',
-        extrapolateRight: 'clamp',
-      })
-    : 1;
+  const exit =
+    frame > exitStart
+      ? interpolate(frame, [exitStart, durationInFrames], [1, 0], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 1;
 
   const opacity = entrance * exit;
   const scale = interpolate(entrance, [0, 1], [0.8, 1]);
   const translateY = interpolate(entrance, [0, 1], [30, 0]);
 
-  const top = position === 'top' ? '15%' : position === 'bottom' ? '75%' : '50%';
+  const top =
+    position === 'top' ? '15%' : position === 'bottom' ? '75%' : '50%';
 
   return (
     <AbsoluteFill
@@ -343,6 +371,7 @@ git commit -m "Add TextOverlay animated text component"
 ### Task 6: Build Individual Scene Components
 
 **Files:**
+
 - Create: `video/src/scenes/HookScene.tsx`
 - Create: `video/src/scenes/TimelineScene.tsx`
 - Create: `video/src/scenes/ConnectionsScene.tsx`
@@ -380,7 +409,11 @@ import { TextOverlay } from '../components/TextOverlay';
 export const TimelineScene: React.FC = () => (
   <AbsoluteFill>
     <KenBurns src="screenshots/piano-medium.png" startX={-5} endX={5} />
-    <TextOverlay text="Every composer. Every performer. One timeline." fontSize={64} position="bottom" />
+    <TextOverlay
+      text="Every composer. Every performer. One timeline."
+      fontSize={64}
+      position="bottom"
+    />
   </AbsoluteFill>
 );
 ```
@@ -394,8 +427,18 @@ import { TextOverlay } from '../components/TextOverlay';
 
 export const ConnectionsScene: React.FC = () => (
   <AbsoluteFill>
-    <KenBurns src="screenshots/bach-connections.png" startScale={1} endScale={1.1} startX={-2} endX={2} />
-    <TextOverlay text="Trace who taught whom." fontSize={80} position="bottom" />
+    <KenBurns
+      src="screenshots/bach-connections.png"
+      startScale={1}
+      endScale={1.1}
+      startX={-2}
+      endX={2}
+    />
+    <TextOverlay
+      text="Trace who taught whom."
+      fontSize={80}
+      position="bottom"
+    />
   </AbsoluteFill>
 );
 ```
@@ -409,7 +452,13 @@ import { TextOverlay } from '../components/TextOverlay';
 
 export const PersonPanelScene: React.FC = () => (
   <AbsoluteFill>
-    <KenBurns src="screenshots/bach-panel.png" startScale={1.05} endScale={1.15} startX={3} endX={5} />
+    <KenBurns
+      src="screenshots/bach-panel.png"
+      startScale={1.05}
+      endScale={1.15}
+      startX={3}
+      endX={5}
+    />
     <TextOverlay text="Dive into the details." fontSize={72} position="top" />
   </AbsoluteFill>
 );
@@ -454,7 +503,11 @@ import { TextOverlay } from '../components/TextOverlay';
 
 export const TromboneScene: React.FC = () => (
   <AbsoluteFill>
-    <KenBurns src="screenshots/trombone-full.png" startScale={1.05} endScale={1.15} />
+    <KenBurns
+      src="screenshots/trombone-full.png"
+      startScale={1.05}
+      endScale={1.15}
+    />
     <TextOverlay text="Piano. Violin. Trombone." fontSize={80} />
   </AbsoluteFill>
 );
@@ -470,7 +523,11 @@ import { TextOverlay } from '../components/TextOverlay';
 export const ErasScene: React.FC = () => (
   <AbsoluteFill>
     <KenBurns src="screenshots/eras-zoom.png" startX={-4} endX={4} />
-    <TextOverlay text="From Baroque to Contemporary." fontSize={72} position="bottom" />
+    <TextOverlay
+      text="From Baroque to Contemporary."
+      fontSize={72}
+      position="bottom"
+    />
   </AbsoluteFill>
 );
 ```
@@ -478,7 +535,13 @@ export const ErasScene: React.FC = () => (
 **Step 9: Create CTAScene.tsx**
 
 ```tsx
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import {
+  AbsoluteFill,
+  interpolate,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+} from 'remotion';
 import { KenBurns } from '../components/KenBurns';
 import { displayFont, bodyFont } from '../fonts';
 import { COLORS } from '../constants';
@@ -488,7 +551,12 @@ export const CTAScene: React.FC = () => {
   const { fps } = useVideoConfig();
 
   const titleEntrance = spring({ frame, fps, config: { damping: 200 } });
-  const urlEntrance = spring({ frame, fps, delay: 15, config: { damping: 200 } });
+  const urlEntrance = spring({
+    frame,
+    fps,
+    delay: 15,
+    config: { damping: 200 },
+  });
 
   const titleOpacity = titleEntrance;
   const urlOpacity = urlEntrance;
@@ -496,7 +564,11 @@ export const CTAScene: React.FC = () => {
 
   return (
     <AbsoluteFill>
-      <KenBurns src="screenshots/hero-clean.png" startScale={1.05} endScale={1.1} />
+      <KenBurns
+        src="screenshots/hero-clean.png"
+        startScale={1.05}
+        endScale={1.1}
+      />
       <AbsoluteFill
         style={{
           background: 'linear-gradient(transparent 20%, rgba(0,0,0,0.7) 100%)',
@@ -553,6 +625,7 @@ git commit -m "Add all 9 scene components for marketing video"
 ### Task 7: Build Main Composition and Root
 
 **Files:**
+
 - Create: `video/src/MarketingVideo.tsx`
 - Modify: `video/src/Root.tsx`
 
@@ -577,7 +650,9 @@ import { CTAScene } from './scenes/CTAScene';
 
 const transition = (type: 'fade' | 'slide' = 'fade') => (
   <TransitionSeries.Transition
-    presentation={type === 'slide' ? slide({ direction: 'from-right' }) : fade()}
+    presentation={
+      type === 'slide' ? slide({ direction: 'from-right' }) : fade()
+    }
     timing={linearTiming({ durationInFrames: TRANSITION_DURATION })}
   />
 );
@@ -606,7 +681,9 @@ export const MarketingVideo: React.FC = () => (
         <ColorCodingScene />
       </TransitionSeries.Sequence>
       {transition('slide')}
-      <TransitionSeries.Sequence durationInFrames={SCENES.instrumentSwitch.duration}>
+      <TransitionSeries.Sequence
+        durationInFrames={SCENES.instrumentSwitch.duration}
+      >
         <InstrumentSwitchScene />
       </TransitionSeries.Sequence>
       {transition('slide')}
@@ -659,6 +736,7 @@ git commit -m "Add main composition and root for marketing video"
 ### Task 8: Add Audio Track
 
 **Files:**
+
 - Create: `video/public/audio/backing-track.mp3`
 
 **Step 1: User provides the ElevenLabs-generated audio file**
@@ -679,6 +757,7 @@ git commit -m "Add backing audio track"
 **Step 1: Launch Remotion Studio to preview**
 
 Run:
+
 ```bash
 cd /home/pmatos/dev/music-timeline/video && npx remotion studio
 ```
@@ -692,6 +771,7 @@ Tune KenBurns `startScale`/`endScale`/`startX`/`endX` values, `TextOverlay` posi
 **Step 3: Render final video**
 
 Run:
+
 ```bash
 cd /home/pmatos/dev/music-timeline/video && npx remotion render MarketingVideo out/musiker-promo.mp4
 ```

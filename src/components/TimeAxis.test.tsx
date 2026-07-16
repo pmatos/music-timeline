@@ -4,8 +4,13 @@ import { TimeAxis } from './TimeAxis';
 test('renders year labels', () => {
   const { container } = render(
     <svg>
-      <TimeAxis startYear={1600} endYear={1800} yearToPixel={(y) => (y - 1600) * 5} y={100} />
-    </svg>
+      <TimeAxis
+        startYear={1600}
+        endYear={1800}
+        yearToPixel={(y) => (y - 1600) * 5}
+        y={100}
+      />
+    </svg>,
   );
   const texts = container.querySelectorAll('text');
   const labels = Array.from(texts).map((t) => t.textContent);
@@ -17,8 +22,13 @@ test('renders year labels', () => {
 test('renders tick marks', () => {
   const { container } = render(
     <svg>
-      <TimeAxis startYear={1600} endYear={1800} yearToPixel={(y) => (y - 1600) * 5} y={100} />
-    </svg>
+      <TimeAxis
+        startYear={1600}
+        endYear={1800}
+        yearToPixel={(y) => (y - 1600) * 5}
+        y={100}
+      />
+    </svg>,
   );
   const lines = container.querySelectorAll('line');
   expect(lines.length).toBeGreaterThan(0);

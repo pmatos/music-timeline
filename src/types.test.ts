@@ -1,4 +1,4 @@
-import type { InstrumentData, Person, Connection, Era, InstrumentConfig } from './types';
+import type { InstrumentData, Person, InstrumentConfig } from './types';
 
 test('InstrumentData structure is valid', () => {
   const data: InstrumentData = {
