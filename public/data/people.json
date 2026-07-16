@@ -891,6 +891,17 @@
     "websiteUrl": null
   },
   {
+    "id": "grainger",
+    "name": "P. Grainger",
+    "born": 1882,
+    "died": 1961,
+    "role": "both",
+    "bio": "Australian-born composer and virtuoso pianist who later settled in the United States, celebrated for exuberant folk-song settings such as Country Gardens and Molly on the Shore and the wind-band masterpiece Lincolnshire Posy. A restless experimenter, he championed Grieg's music, pioneered ideas of 'free music', and built his own machines to realise it.",
+    "photoUrl": "/images/portraits/grainger.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Percy_Grainger",
+    "websiteUrl": null
+  },
+  {
     "id": "arthur-rubinstein",
     "name": "A. Rubinstein",
     "born": 1887,
