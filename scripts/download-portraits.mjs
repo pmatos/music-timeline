@@ -50,6 +50,7 @@ const WIKIPEDIA_TITLES = {
   'shaham': 'Gil_Shaham',
   'chen': 'Ray_Chen_(musician)',
   'ehnes': 'James_Ehnes',
+  'hadelich': 'Augustin_Hadelich',
   'g-gabrieli': 'Giovanni_Gabrieli',
   'monteverdi': 'Claudio_Monteverdi',
   'schutz': 'Heinrich_Schütz',

@@ -2047,6 +2047,17 @@
     "websiteUrl": null
   },
   {
+    "id": "hadelich",
+    "name": "A. Hadelich",
+    "born": 1984,
+    "died": null,
+    "role": "player",
+    "bio": "German-American violinist, born in Italy, who won the gold medal at the 2006 International Violin Competition of Indianapolis and rose to international prominence as a soloist with the world's leading orchestras. Celebrated for his radiant tone and expansive repertoire, he won a 2016 Grammy Award for his recording of Dutilleux's L'arbre des songes with the Seattle Symphony and is a noted champion of contemporary music.",
+    "photoUrl": "/images/portraits/hadelich.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Augustin_Hadelich",
+    "websiteUrl": null
+  },
+  {
     "id": "g-gabrieli",
     "name": "G. Gabrieli",
     "born": 1557,
