@@ -15,11 +15,13 @@
 ### Task 1: Scaffold the Vite + React + TypeScript project
 
 **Files:**
+
 - Create: `package.json`, `vite.config.ts`, `tsconfig.json`, `tsconfig.app.json`, `tsconfig.node.json`, `index.html`, `src/main.tsx`, `src/App.tsx`, `src/index.css`, `src/vite-env.d.ts`
 
 **Step 1: Initialize the project**
 
 Run:
+
 ```bash
 npm create vite@latest . -- --template react-ts
 ```
@@ -29,6 +31,7 @@ Accept defaults. This creates all the scaffolding files.
 **Step 2: Install dependencies**
 
 Run:
+
 ```bash
 npm install
 ```
@@ -36,6 +39,7 @@ npm install
 **Step 3: Verify it builds**
 
 Run:
+
 ```bash
 npm run build
 ```
@@ -74,6 +78,7 @@ export default defineConfig({
 **Step 6: Verify build still works**
 
 Run:
+
 ```bash
 npm run build
 ```
@@ -92,12 +97,14 @@ git commit -m "Scaffold Vite + React + TypeScript project"
 ### Task 2: Install Vitest and React Testing Library
 
 **Files:**
+
 - Modify: `package.json`
 - Create: `vitest.config.ts`, `src/setupTests.ts`
 
 **Step 1: Install test dependencies**
 
 Run:
+
 ```bash
 npm install -D vitest @testing-library/react @testing-library/jest-dom jsdom @testing-library/user-event
 ```
@@ -131,6 +138,7 @@ import '@testing-library/jest-dom/vitest';
 **Step 4: Add test script to package.json**
 
 Add to `"scripts"`:
+
 ```json
 "test": "vitest run",
 "test:watch": "vitest"
@@ -153,6 +161,7 @@ test('renders app placeholder', () => {
 **Step 6: Run tests**
 
 Run:
+
 ```bash
 npm test
 ```
@@ -171,6 +180,7 @@ git commit -m "Add Vitest and React Testing Library"
 ### Task 3: Define TypeScript types
 
 **Files:**
+
 - Create: `src/types.ts`
 - Test: `src/types.test.ts`
 
@@ -232,6 +242,7 @@ test('Person with null died represents living person', () => {
 **Step 2: Run tests to verify they fail**
 
 Run:
+
 ```bash
 npm test
 ```
@@ -284,6 +295,7 @@ export interface InstrumentData {
 **Step 4: Run tests**
 
 Run:
+
 ```bash
 npm test
 ```
@@ -302,6 +314,7 @@ git commit -m "Define TypeScript types for instrument data"
 ### Task 4: Create sample piano.json data file
 
 **Files:**
+
 - Create: `public/data/piano.json`
 
 Note: This goes in `public/` so Vite serves it as a static asset and we can fetch it at runtime.
@@ -309,18 +322,21 @@ Note: This goes in `public/` so Vite serves it as a static asset and we can fetc
 **Step 1: Create the data file**
 
 Create `public/data/piano.json` with a representative sample of ~15 people across eras. Include:
+
 - Baroque: J.S. Bach, G.F. Handel, D. Scarlatti
 - Classical: C.P.E. Bach, W.A. Mozart, J. Haydn, L. van Beethoven
 - Romantic: F. Chopin, F. Liszt, C. Czerny, R. Schumann, C. Debussy
 - Modern/Contemporary: S. Rachmaninoff, L. Einaudi, Lang Lang
 
 Include connections:
+
 - Bach → C.P.E. Bach (relative, father/son)
 - Beethoven → Czerny (student-teacher)
 - Czerny → Liszt (student-teacher)
 - Haydn → Beethoven (student-teacher)
 
 Include eras:
+
 - Baroque (1600–1750)
 - Classical (1730–1820)
 - Romantic (1800–1910)
@@ -334,6 +350,7 @@ Use `null` for `died` for Einaudi and Lang Lang.
 **Step 2: Validate JSON is valid**
 
 Run:
+
 ```bash
 node -e "JSON.parse(require('fs').readFileSync('public/data/piano.json', 'utf8')); console.log('Valid JSON')"
 ```
@@ -352,6 +369,7 @@ git commit -m "Add sample piano data with composers, players, eras, and connecti
 ### Task 5: Data loading hook
 
 **Files:**
+
 - Create: `src/hooks/useInstrumentData.ts`
 - Test: `src/hooks/useInstrumentData.test.ts`
 
@@ -406,7 +424,7 @@ test('loads instrument data', async () => {
   expect(result.current.data).toEqual(mockData);
   expect(result.current.error).toBeNull();
   expect(global.fetch).toHaveBeenCalledWith(
-    expect.stringContaining('data/piano.json')
+    expect.stringContaining('data/piano.json'),
   );
 });
 
@@ -490,6 +508,7 @@ git commit -m "Add useInstrumentData hook for fetching instrument JSON"
 This is the core layout algorithm. Given a list of people sorted by birth year, assign each to the first available lane where they don't overlap with existing bars.
 
 **Files:**
+
 - Create: `src/layout/packLanes.ts`
 - Test: `src/layout/packLanes.test.ts`
 
@@ -522,30 +541,21 @@ test('single person goes to lane 0', () => {
 });
 
 test('non-overlapping people share lane 0', () => {
-  const people = [
-    makePerson('a', 1700, 1750),
-    makePerson('b', 1760, 1810),
-  ];
+  const people = [makePerson('a', 1700, 1750), makePerson('b', 1760, 1810)];
   const result = packLanes(people, 2026);
   expect(result[0].lane).toBe(0);
   expect(result[1].lane).toBe(0);
 });
 
 test('overlapping people get different lanes', () => {
-  const people = [
-    makePerson('a', 1700, 1780),
-    makePerson('b', 1750, 1830),
-  ];
+  const people = [makePerson('a', 1700, 1780), makePerson('b', 1750, 1830)];
   const result = packLanes(people, 2026);
   expect(result[0].lane).toBe(0);
   expect(result[1].lane).toBe(1);
 });
 
 test('living person (died=null) uses currentYear', () => {
-  const people = [
-    makePerson('a', 1980, null),
-    makePerson('b', 1990, null),
-  ];
+  const people = [makePerson('a', 1980, null), makePerson('b', 1990, null)];
   const result = packLanes(people, 2026);
   expect(result[0].lane).toBe(0);
   expect(result[1].lane).toBe(1);
@@ -563,20 +573,14 @@ test('three overlapping people get three lanes', () => {
 });
 
 test('people are sorted by birth year in output', () => {
-  const people = [
-    makePerson('b', 1800, 1850),
-    makePerson('a', 1700, 1750),
-  ];
+  const people = [makePerson('b', 1800, 1850), makePerson('a', 1700, 1750)];
   const result = packLanes(people, 2026);
   expect(result[0].person.id).toBe('a');
   expect(result[1].person.id).toBe('b');
 });
 
 test('adds gap between bars in same lane', () => {
-  const people = [
-    makePerson('a', 1700, 1749),
-    makePerson('b', 1750, 1800),
-  ];
+  const people = [makePerson('a', 1700, 1749), makePerson('b', 1750, 1800)];
   const result = packLanes(people, 2026);
   // b starts exactly when a ends — should still fit lane 0 since a ends at 1749
   expect(result[0].lane).toBe(0);
@@ -604,7 +608,7 @@ export interface LaneAssignment {
 
 export function packLanes(
   people: Person[],
-  currentYear: number
+  currentYear: number,
 ): LaneAssignment[] {
   const sorted = [...people].sort((a, b) => a.born - b.born);
   const laneEnds: number[] = []; // tracks the end year of the last person in each lane
@@ -644,6 +648,7 @@ git commit -m "Implement lane-packing algorithm for timeline bar positioning"
 ### Task 7: useOrientation hook
 
 **Files:**
+
 - Create: `src/hooks/useOrientation.ts`
 - Test: `src/hooks/useOrientation.test.ts`
 
@@ -753,6 +758,7 @@ git commit -m "Add useOrientation hook with matchMedia"
 Manages pixels-per-year, viewport offset, and coordinate conversion.
 
 **Files:**
+
 - Create: `src/hooks/useTimelineScale.ts`
 - Test: `src/hooks/useTimelineScale.test.ts`
 
@@ -766,7 +772,7 @@ import { useTimelineScale } from './useTimelineScale';
 
 test('yearToPixel converts year to pixel position', () => {
   const { result } = renderHook(() =>
-    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 })
+    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 }),
   );
 
   const px1600 = result.current.yearToPixel(1600);
@@ -778,7 +784,7 @@ test('yearToPixel converts year to pixel position', () => {
 
 test('yearToPixel scales with zoom', () => {
   const { result } = renderHook(() =>
-    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 })
+    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 }),
   );
 
   const before = result.current.yearToPixel(1800);
@@ -793,7 +799,7 @@ test('yearToPixel scales with zoom', () => {
 
 test('totalWidth scales with zoom', () => {
   const { result } = renderHook(() =>
-    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 })
+    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 }),
   );
 
   expect(result.current.totalWidth).toBe(1000);
@@ -837,12 +843,12 @@ export function useTimelineScale({
 
   const yearToPixel = useCallback(
     (year: number) => (year - startYear) * pixelsPerYear,
-    [startYear, pixelsPerYear]
+    [startYear, pixelsPerYear],
   );
 
   const pixelToYear = useCallback(
     (px: number) => px / pixelsPerYear + startYear,
-    [startYear, pixelsPerYear]
+    [startYear, pixelsPerYear],
   );
 
   return useMemo(
@@ -854,7 +860,7 @@ export function useTimelineScale({
       yearToPixel,
       pixelToYear,
     }),
-    [zoom, setZoom, totalWidth, pixelsPerYear, yearToPixel, pixelToYear]
+    [zoom, setZoom, totalWidth, pixelsPerYear, yearToPixel, pixelToYear],
   );
 }
 ```
@@ -879,6 +885,7 @@ git commit -m "Add useTimelineScale hook for zoom and coordinate conversion"
 Renders year markers along the bottom of the SVG.
 
 **Files:**
+
 - Create: `src/components/TimeAxis.tsx`
 - Test: `src/components/TimeAxis.test.tsx`
 
@@ -899,7 +906,7 @@ test('renders year labels', () => {
         yearToPixel={(y) => (y - 1600) * 5}
         y={100}
       />
-    </svg>
+    </svg>,
   );
 
   const texts = container.querySelectorAll('text');
@@ -919,7 +926,7 @@ test('renders tick marks', () => {
         yearToPixel={(y) => (y - 1600) * 5}
         y={100}
       />
-    </svg>
+    </svg>,
   );
 
   const lines = container.querySelectorAll('line');
@@ -945,7 +952,12 @@ interface TimeAxisProps {
   y: number;
 }
 
-export function TimeAxis({ startYear, endYear, yearToPixel, y }: TimeAxisProps) {
+export function TimeAxis({
+  startYear,
+  endYear,
+  yearToPixel,
+  y,
+}: TimeAxisProps) {
   const interval = getInterval(endYear - startYear);
   const firstTick = Math.ceil(startYear / interval) * interval;
   const ticks: number[] = [];
@@ -968,7 +980,14 @@ export function TimeAxis({ startYear, endYear, yearToPixel, y }: TimeAxisProps) 
         const x = yearToPixel(year);
         return (
           <g key={year}>
-            <line x1={x} x2={x} y1={y} y2={y + 8} stroke="#ccc" strokeWidth={1} />
+            <line
+              x1={x}
+              x2={x}
+              y1={y}
+              y2={y + 8}
+              stroke="#ccc"
+              strokeWidth={1}
+            />
             <text
               x={x}
               y={y + 22}
@@ -1013,6 +1032,7 @@ git commit -m "Add TimeAxis SVG component with year labels and ticks"
 Renders semi-transparent colored bands for musical eras.
 
 **Files:**
+
 - Create: `src/components/EraBackgrounds.tsx`
 - Test: `src/components/EraBackgrounds.test.tsx`
 
@@ -1038,7 +1058,7 @@ test('renders a rect for each era', () => {
         yearToPixel={(y) => (y - 1600) * 2}
         height={400}
       />
-    </svg>
+    </svg>,
   );
 
   const rects = container.querySelectorAll('rect');
@@ -1053,7 +1073,7 @@ test('renders era name labels', () => {
         yearToPixel={(y) => (y - 1600) * 2}
         height={400}
       />
-    </svg>
+    </svg>,
   );
 
   const texts = container.querySelectorAll('text');
@@ -1082,7 +1102,11 @@ interface EraBackgroundsProps {
   height: number;
 }
 
-export function EraBackgrounds({ eras, yearToPixel, height }: EraBackgroundsProps) {
+export function EraBackgrounds({
+  eras,
+  yearToPixel,
+  height,
+}: EraBackgroundsProps) {
   return (
     <g className="era-backgrounds">
       {eras.map((era) => {
@@ -1137,6 +1161,7 @@ git commit -m "Add EraBackgrounds component for era band rendering"
 Renders a single person's lifetime bar.
 
 **Files:**
+
 - Create: `src/components/PersonBar.tsx`
 - Test: `src/components/PersonBar.test.tsx`
 
@@ -1176,7 +1201,7 @@ test('renders a rect for the person', () => {
         onMouseEnter={() => {}}
         onMouseLeave={() => {}}
       />
-    </svg>
+    </svg>,
   );
 
   const rect = container.querySelector('rect');
@@ -1200,7 +1225,7 @@ test('displays person name', () => {
         onMouseEnter={() => {}}
         onMouseLeave={() => {}}
       />
-    </svg>
+    </svg>,
   );
 
   const text = container.querySelector('text');
@@ -1223,7 +1248,7 @@ test('calls onClick when clicked', () => {
         onMouseEnter={() => {}}
         onMouseLeave={() => {}}
       />
-    </svg>
+    </svg>,
   );
 
   const group = container.querySelector('g');
@@ -1333,6 +1358,7 @@ git commit -m "Add PersonBar component for lifetime bar rendering"
 Renders bezier curves between connected people.
 
 **Files:**
+
 - Create: `src/components/ConnectionLine.tsx`
 - Test: `src/components/ConnectionLine.test.tsx`
 
@@ -1356,7 +1382,7 @@ test('renders an SVG path', () => {
         highlighted={false}
         dimmed={false}
       />
-    </svg>
+    </svg>,
   );
 
   const path = container.querySelector('path');
@@ -1377,7 +1403,7 @@ test('relative connections are solid', () => {
         highlighted={false}
         dimmed={false}
       />
-    </svg>
+    </svg>,
   );
 
   const path = container.querySelector('path');
@@ -1396,7 +1422,7 @@ test('student-teacher connections are dashed', () => {
         highlighted={false}
         dimmed={false}
       />
-    </svg>
+    </svg>,
   );
 
   const path = container.querySelector('path');
@@ -1476,6 +1502,7 @@ git commit -m "Add ConnectionLine component with bezier curves"
 ### Task 13: Legend component
 
 **Files:**
+
 - Create: `src/components/Legend.tsx`
 - Test: `src/components/Legend.test.tsx`
 
@@ -1552,6 +1579,7 @@ git commit -m "Add Legend component for connection and role indicators"
 ### Task 14: Tooltip component
 
 **Files:**
+
 - Create: `src/components/Tooltip.tsx`
 - Test: `src/components/Tooltip.test.tsx`
 
@@ -1588,7 +1616,13 @@ test('renders name and years when person is provided', () => {
 });
 
 test('shows present for living person', () => {
-  const living = { ...person, id: 'll', name: 'Lang Lang', born: 1982, died: null };
+  const living = {
+    ...person,
+    id: 'll',
+    name: 'Lang Lang',
+    born: 1982,
+    died: null,
+  };
   render(<Tooltip person={living} x={100} y={50} />);
   expect(screen.getByText('1982–present')).toBeInTheDocument();
 });
@@ -1655,6 +1689,7 @@ git commit -m "Add Tooltip component for hover info"
 Slide-in side panel showing person details.
 
 **Files:**
+
 - Create: `src/components/PersonPanel.tsx`
 - Test: `src/components/PersonPanel.test.tsx`
 
@@ -1680,7 +1715,9 @@ const person: Person = {
 };
 
 test('renders nothing when person is null', () => {
-  const { container } = render(<PersonPanel person={null} onClose={() => {}} />);
+  const { container } = render(
+    <PersonPanel person={null} onClose={() => {}} />,
+  );
   expect(container.querySelector('.person-panel')).not.toBeInTheDocument();
 });
 
@@ -1689,7 +1726,9 @@ test('renders person details', () => {
   expect(screen.getByText('J.S. Bach')).toBeInTheDocument();
   expect(screen.getByText('1685–1750')).toBeInTheDocument();
   expect(screen.getByText('composer')).toBeInTheDocument();
-  expect(screen.getByText('German composer of the Baroque period.')).toBeInTheDocument();
+  expect(
+    screen.getByText('German composer of the Baroque period.'),
+  ).toBeInTheDocument();
 });
 
 test('renders wiki link', () => {
@@ -1701,7 +1740,10 @@ test('renders wiki link', () => {
 test('renders website link when available', () => {
   const withSite = { ...person, websiteUrl: 'https://example.com' };
   render(<PersonPanel person={withSite} onClose={() => {}} />);
-  expect(screen.getByText('Website')).toHaveAttribute('href', 'https://example.com');
+  expect(screen.getByText('Website')).toHaveAttribute(
+    'href',
+    'https://example.com',
+  );
 });
 
 test('calls onClose when close button clicked', () => {
@@ -1746,7 +1788,11 @@ export function PersonPanel({ person, onClose }: PersonPanelProps) {
 
   return (
     <div className="person-panel">
-      <button className="person-panel__close" onClick={onClose} aria-label="Close">
+      <button
+        className="person-panel__close"
+        onClick={onClose}
+        aria-label="Close"
+      >
         &times;
       </button>
       {person.photoUrl && (
@@ -1793,6 +1839,7 @@ git commit -m "Add PersonPanel slide-in component with bio and links"
 ### Task 16: Header component
 
 **Files:**
+
 - Create: `src/components/Header.tsx`
 - Test: `src/components/Header.test.tsx`
 
@@ -1810,7 +1857,7 @@ test('displays instrument name in title', () => {
       instrument="Piano"
       instruments={['piano', 'violin']}
       onInstrumentChange={() => {}}
-    />
+    />,
   );
   expect(screen.getByText('Piano Music Timeline')).toBeInTheDocument();
 });
@@ -1821,7 +1868,7 @@ test('displays sponsor link', () => {
       instrument="Piano"
       instruments={['piano']}
       onInstrumentChange={() => {}}
-    />
+    />,
   );
   const link = screen.getByText('Rightkey.app');
   expect(link).toHaveAttribute('href', 'https://rightkey.app');
@@ -1833,7 +1880,7 @@ test('renders instrument selector', () => {
       instrument="Piano"
       instruments={['piano', 'violin']}
       onInstrumentChange={() => {}}
-    />
+    />,
   );
   const select = screen.getByRole('combobox');
   expect(select).toBeInTheDocument();
@@ -1846,9 +1893,11 @@ test('calls onInstrumentChange when selection changes', () => {
       instrument="Piano"
       instruments={['piano', 'violin']}
       onInstrumentChange={onChange}
-    />
+    />,
   );
-  fireEvent.change(screen.getByRole('combobox'), { target: { value: 'violin' } });
+  fireEvent.change(screen.getByRole('combobox'), {
+    target: { value: 'violin' },
+  });
   expect(onChange).toHaveBeenCalledWith('violin');
 });
 ```
@@ -1870,7 +1919,11 @@ interface HeaderProps {
   onInstrumentChange: (instrument: string) => void;
 }
 
-export function Header({ instrument, instruments, onInstrumentChange }: HeaderProps) {
+export function Header({
+  instrument,
+  instruments,
+  onInstrumentChange,
+}: HeaderProps) {
   return (
     <header className="header">
       <div className="header__left">
@@ -1889,7 +1942,11 @@ export function Header({ instrument, instruments, onInstrumentChange }: HeaderPr
       </div>
       <div className="header__right">
         <span>Sponsored by </span>
-        <a href="https://rightkey.app" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://rightkey.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Rightkey.app
         </a>
       </div>
@@ -1918,6 +1975,7 @@ git commit -m "Add Header component with instrument selector and sponsor link"
 Assembles EraBackgrounds, TimeAxis, PersonBars, and ConnectionLines into a single SVG.
 
 **Files:**
+
 - Create: `src/components/TimelineSVG.tsx`
 - Test: `src/components/TimelineSVG.test.tsx`
 
@@ -1957,7 +2015,9 @@ const data: InstrumentData = {
       websiteUrl: null,
     },
   ],
-  connections: [{ from: 'bach', to: 'cpe-bach', type: 'relative', label: 'father/son' }],
+  connections: [
+    { from: 'bach', to: 'cpe-bach', type: 'relative', label: 'father/son' },
+  ],
 };
 
 test('renders an SVG element', () => {
@@ -1971,7 +2031,7 @@ test('renders an SVG element', () => {
       onPersonClick={() => {}}
       onPersonMouseEnter={() => {}}
       onPersonMouseLeave={() => {}}
-    />
+    />,
   );
 
   expect(container.querySelector('svg')).toBeInTheDocument();
@@ -1988,7 +2048,7 @@ test('renders person bars', () => {
       onPersonClick={() => {}}
       onPersonMouseEnter={() => {}}
       onPersonMouseLeave={() => {}}
-    />
+    />,
   );
 
   const bars = container.querySelectorAll('.person-bar');
@@ -2006,7 +2066,7 @@ test('renders connection lines', () => {
       onPersonClick={() => {}}
       onPersonMouseEnter={() => {}}
       onPersonMouseLeave={() => {}}
-    />
+    />,
   );
 
   const paths = container.querySelectorAll('path');
@@ -2062,7 +2122,7 @@ export function TimelineSVG({
 }: TimelineSVGProps) {
   const laneAssignments = useMemo(
     () => packLanes(data.people, CURRENT_YEAR),
-    [data.people]
+    [data.people],
   );
 
   const laneCount = Math.max(0, ...laneAssignments.map((a) => a.lane)) + 1;
@@ -2094,7 +2154,10 @@ export function TimelineSVG({
   }, [selectedPersonId, hoveredPersonId, data.connections]);
 
   const hasActive = connectedIds.size > 0;
-  const startYear = Math.min(...data.eras.map((e) => e.startYear), ...data.people.map((p) => p.born));
+  const startYear = Math.min(
+    ...data.eras.map((e) => e.startYear),
+    ...data.people.map((p) => p.born),
+  );
   const endYear = Math.max(...data.eras.map((e) => e.endYear), CURRENT_YEAR);
 
   return (
@@ -2175,6 +2238,7 @@ git commit -m "Add TimelineSVG composing eras, bars, connections, and axis"
 ### Task 18: TimelineView — scrollable container with zoom
 
 **Files:**
+
 - Create: `src/components/TimelineView.tsx`
 - Test: `src/components/TimelineView.test.tsx`
 
@@ -2215,7 +2279,7 @@ test('renders a scrollable container with the SVG', () => {
       onPersonClick={() => {}}
       onPersonMouseEnter={() => {}}
       onPersonMouseLeave={() => {}}
-    />
+    />,
   );
 
   expect(container.querySelector('.timeline-view')).toBeInTheDocument();
@@ -2260,11 +2324,11 @@ export function TimelineView({
 
   const startYear = Math.min(
     ...data.eras.map((e) => e.startYear),
-    ...data.people.map((p) => p.born)
+    ...data.people.map((p) => p.born),
   );
   const endYear = Math.max(
     ...data.eras.map((e) => e.endYear),
-    new Date().getFullYear()
+    new Date().getFullYear(),
   );
 
   const containerWidth = 1200;
@@ -2283,15 +2347,11 @@ export function TimelineView({
         setZoom((z: number) => Math.max(0.5, Math.min(10, z * delta)));
       }
     },
-    [setZoom]
+    [setZoom],
   );
 
   return (
-    <div
-      className="timeline-view"
-      ref={containerRef}
-      onWheel={handleWheel}
-    >
+    <div className="timeline-view" ref={containerRef} onWheel={handleWheel}>
       <TimelineSVG
         data={data}
         yearToPixel={yearToPixel}
@@ -2325,6 +2385,7 @@ git commit -m "Add TimelineView scrollable container with zoom"
 ### Task 19: Wire up App with all components
 
 **Files:**
+
 - Modify: `src/App.tsx`
 - Modify: `src/App.test.tsx`
 
@@ -2428,7 +2489,8 @@ function App() {
   }, []);
 
   if (loading) return <div className="loading">Loading...</div>;
-  if (error || !data) return <div className="error">Failed to load data: {error}</div>;
+  if (error || !data)
+    return <div className="error">Failed to load data: {error}</div>;
 
   return (
     <div className="app" onMouseMove={handleMouseMove}>
@@ -2457,7 +2519,10 @@ function App() {
         </a>
       </footer>
       <Tooltip person={hoveredPerson} x={tooltipPos.x} y={tooltipPos.y} />
-      <PersonPanel person={selectedPerson} onClose={() => setSelectedPerson(null)} />
+      <PersonPanel
+        person={selectedPerson}
+        onClose={() => setSelectedPerson(null)}
+      />
     </div>
   );
 }
@@ -2483,6 +2548,7 @@ git commit -m "Wire up App with all components, footer, and interactivity"
 ### Task 20: Styling — modern minimal theme
 
 **Files:**
+
 - Modify: `src/index.css`
 
 **Step 1: Implement all styles**
@@ -2505,6 +2571,7 @@ Replace `src/index.css` with the full stylesheet. This is a single CSS file cove
 - `.loading`, `.error`: centered messages
 
 Key colors:
+
 - Background: `#ffffff`
 - Text: `#333`
 - Muted text: `#888`
@@ -2517,6 +2584,7 @@ Key colors:
 **Step 2: Verify build**
 
 Run:
+
 ```bash
 npm run build
 ```
@@ -2526,6 +2594,7 @@ Expected: Successful build.
 **Step 3: Visual check**
 
 Run:
+
 ```bash
 npm run dev
 ```
@@ -2544,6 +2613,7 @@ git commit -m "Add modern minimal theme styles"
 ### Task 21: GitHub Actions deployment workflow
 
 **Files:**
+
 - Create: `.github/workflows/deploy.yml`
 
 **Step 1: Create the workflow**
@@ -2629,6 +2699,7 @@ After the action completes, verify the site loads at `https://pmatos.github.io/m
 **Step 1: Run full test suite**
 
 Run:
+
 ```bash
 npm test
 ```
@@ -2638,6 +2709,7 @@ Expected: All tests pass.
 **Step 2: Run build**
 
 Run:
+
 ```bash
 npm run build
 ```
@@ -2647,11 +2719,13 @@ Expected: Clean build, no errors.
 **Step 3: Manual browser check**
 
 Run:
+
 ```bash
 npm run dev
 ```
 
 Verify:
+
 - [ ] Header shows "Piano Music Timeline" and sponsor link
 - [ ] Instrument selector dropdown works
 - [ ] Era bands render with labels

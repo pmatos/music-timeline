@@ -7,7 +7,7 @@ export interface LaneAssignment {
 
 export function packLanes(
   people: Person[],
-  currentYear: number
+  currentYear: number,
 ): LaneAssignment[] {
   const sorted = [...people].sort((a, b) => a.born - b.born);
   const laneEnds: number[] = [];

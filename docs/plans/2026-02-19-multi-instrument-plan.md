@@ -13,6 +13,7 @@
 ### Task 1: Add InstrumentConfig type
 
 **Files:**
+
 - Modify: `src/types.ts`
 - Modify: `src/types.test.ts`
 
@@ -72,6 +73,7 @@ git commit -m "feat: add InstrumentConfig type for split data model"
 ### Task 2: Split piano.json into people.json, connections.json, and slim piano.json
 
 **Files:**
+
 - Read: `public/data/piano.json` (current monolithic file)
 - Create: `public/data/people.json`
 - Create: `public/data/connections.json`
@@ -145,6 +147,7 @@ git commit -m "refactor: split piano.json into people.json, connections.json, an
 ### Task 3: Update useInstrumentData hook
 
 **Files:**
+
 - Modify: `src/hooks/useInstrumentData.ts`
 - Modify: `src/hooks/useInstrumentData.test.ts`
 
@@ -194,7 +197,12 @@ const mockPeople: Person[] = [
 ];
 
 const mockConnections: Connection[] = [
-  { from: 'bach', to: 'beethoven', type: 'student-teacher', label: 'influence' },
+  {
+    from: 'bach',
+    to: 'beethoven',
+    type: 'student-teacher',
+    label: 'influence',
+  },
   { from: 'bach', to: 'vivaldi', type: 'student-teacher', label: 'influence' },
 ];
 
@@ -214,7 +222,10 @@ function mockFetchResponses(
       return Promise.resolve({ ok: true, json: () => Promise.resolve(people) });
     }
     if (url.includes('connections.json')) {
-      return Promise.resolve({ ok: true, json: () => Promise.resolve(connections) });
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(connections),
+      });
     }
     return Promise.resolve({ ok: true, json: () => Promise.resolve(config) });
   });
@@ -240,7 +251,10 @@ test('loads and merges instrument data', async () => {
   expect(result.current.data!.instrument).toBe('Piano');
   expect(result.current.data!.eras).toEqual(mockPianoConfig.eras);
   expect(result.current.data!.people).toHaveLength(2);
-  expect(result.current.data!.people.map((p) => p.id)).toEqual(['bach', 'beethoven']);
+  expect(result.current.data!.people.map((p) => p.id)).toEqual([
+    'bach',
+    'beethoven',
+  ]);
 });
 
 test('filters connections to only include people in the instrument', async () => {
@@ -286,9 +300,15 @@ test('fetches three URLs: people.json, connections.json, and instrument config',
   });
 
   expect(global.fetch).toHaveBeenCalledTimes(3);
-  expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('data/people.json'));
-  expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('data/connections.json'));
-  expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('data/piano.json'));
+  expect(global.fetch).toHaveBeenCalledWith(
+    expect.stringContaining('data/people.json'),
+  );
+  expect(global.fetch).toHaveBeenCalledWith(
+    expect.stringContaining('data/connections.json'),
+  );
+  expect(global.fetch).toHaveBeenCalledWith(
+    expect.stringContaining('data/piano.json'),
+  );
 });
 ```
 
@@ -303,13 +323,21 @@ Replace `src/hooks/useInstrumentData.ts` with:
 
 ```typescript
 import { useState, useEffect, useRef } from 'react';
-import type { InstrumentData, InstrumentConfig, Person, Connection } from '../types';
+import type {
+  InstrumentData,
+  InstrumentConfig,
+  Person,
+  Connection,
+} from '../types';
 
 export function useInstrumentData(instrument: string) {
   const [data, setData] = useState<InstrumentData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const cacheRef = useRef<{ people: Person[]; connections: Connection[] } | null>(null);
+  const cacheRef = useRef<{
+    people: Person[];
+    connections: Connection[];
+  } | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -388,6 +416,7 @@ git commit -m "feat: update useInstrumentData to fetch split data files and merg
 ### Task 4: Fix App.test.tsx for new fetch pattern
 
 **Files:**
+
 - Modify: `src/App.test.tsx`
 
 **Step 1: Update the mock to serve three files**
@@ -459,6 +488,7 @@ git commit -m "fix: update App tests for split data fetch pattern"
 ### Task 5: Create violin.json and add to instruments list
 
 **Files:**
+
 - Create: `public/data/violin.json`
 - Modify: `src/App.tsx` (line 10: update INSTRUMENTS array)
 
@@ -529,6 +559,7 @@ Expected: ALL PASS (violin.json doesn't affect tests since default instrument is
 **Step 4: Manually verify in dev server**
 
 Run: `npx vite dev` and check that:
+
 - Piano still loads correctly
 - Switching to Violin shows an empty timeline (no people yet)
 
@@ -544,6 +575,7 @@ git commit -m "feat: add violin instrument config and enable in UI"
 ### Task 6: Populate violin data
 
 **Files:**
+
 - Modify: `public/data/people.json` (add new violin-specific people)
 - Modify: `public/data/connections.json` (add violin-specific connections)
 - Modify: `public/data/violin.json` (populate peopleIds)
@@ -564,6 +596,7 @@ For each person already in `people.json` who is also relevant for violin (e.g. `
 **Step 2: Add violin connections to connections.json**
 
 Add connections like:
+
 - `corelli` → `vivaldi` (influence)
 - `vivaldi` → `tartini` (influence)
 - `viotti` → `spohr` (teacher/student)
@@ -589,6 +622,7 @@ Expected: No missing IDs.
 **Step 4: Manual test in dev server**
 
 Run: `npx vite dev` and verify:
+
 - Violin timeline shows the new people
 - Connections render correctly
 - Switching between Piano and Violin works
@@ -605,12 +639,14 @@ git commit -m "feat: populate violin instrument with people and connections"
 ### Task 7: Add violin portrait images
 
 **Files:**
+
 - Create: `public/images/portraits/` (new violin-specific portrait files)
 - Modify: `public/data/people.json` (update photoUrl for new people who have local portraits)
 
 **Step 1: Source portrait images**
 
 For each new person in `people.json` that needs a portrait:
+
 - Use Wikimedia Commons public domain images where available
 - Save to `public/images/portraits/<id>.jpg` (or `.png`)
 - Update the person's `photoUrl` in `people.json` to `/images/portraits/<id>.jpg`

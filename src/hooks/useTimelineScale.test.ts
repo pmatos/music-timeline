@@ -3,7 +3,7 @@ import { useTimelineScale } from './useTimelineScale';
 
 test('yearToPixel converts year to pixel position', () => {
   const { result } = renderHook(() =>
-    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 })
+    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 }),
   );
 
   const px1600 = result.current.yearToPixel(1600);
@@ -15,7 +15,7 @@ test('yearToPixel converts year to pixel position', () => {
 
 test('yearToPixel scales with zoom', () => {
   const { result } = renderHook(() =>
-    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 })
+    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 }),
   );
 
   const before = result.current.yearToPixel(1800);
@@ -30,7 +30,7 @@ test('yearToPixel scales with zoom', () => {
 
 test('totalWidth scales with zoom', () => {
   const { result } = renderHook(() =>
-    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 })
+    useTimelineScale({ startYear: 1600, endYear: 2030, containerWidth: 1000 }),
   );
 
   expect(result.current.totalWidth).toBe(1000);

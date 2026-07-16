@@ -39,7 +39,12 @@ const mockPeople: Person[] = [
 ];
 
 const mockConnections: Connection[] = [
-  { from: 'bach', to: 'beethoven', type: 'student-teacher', label: 'influence' },
+  {
+    from: 'bach',
+    to: 'beethoven',
+    type: 'student-teacher',
+    label: 'influence',
+  },
   { from: 'bach', to: 'vivaldi', type: 'student-teacher', label: 'influence' },
 ];
 
@@ -59,7 +64,10 @@ function mockFetchResponses(
       return Promise.resolve({ ok: true, json: () => Promise.resolve(people) });
     }
     if (url.includes('connections.json')) {
-      return Promise.resolve({ ok: true, json: () => Promise.resolve(connections) });
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(connections),
+      });
     }
     return Promise.resolve({ ok: true, json: () => Promise.resolve(config) });
   });
@@ -85,7 +93,10 @@ test('loads and merges instrument data', async () => {
   expect(result.current.data!.instrument).toBe('Piano');
   expect(result.current.data!.eras).toEqual(mockPianoConfig.eras);
   expect(result.current.data!.people).toHaveLength(2);
-  expect(result.current.data!.people.map((p) => p.id)).toEqual(['bach', 'beethoven']);
+  expect(result.current.data!.people.map((p) => p.id)).toEqual([
+    'bach',
+    'beethoven',
+  ]);
 });
 
 test('filters connections to only include people in the instrument', async () => {
@@ -131,7 +142,13 @@ test('fetches three URLs: people.json, connections.json, and instrument config',
   });
 
   expect(global.fetch).toHaveBeenCalledTimes(3);
-  expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('data/people.json'));
-  expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('data/connections.json'));
-  expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('data/piano.json'));
+  expect(global.fetch).toHaveBeenCalledWith(
+    expect.stringContaining('data/people.json'),
+  );
+  expect(global.fetch).toHaveBeenCalledWith(
+    expect.stringContaining('data/connections.json'),
+  );
+  expect(global.fetch).toHaveBeenCalledWith(
+    expect.stringContaining('data/piano.json'),
+  );
 });

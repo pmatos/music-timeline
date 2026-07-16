@@ -16,7 +16,9 @@ import { CTAScene } from './scenes/CTAScene';
 
 const transition = (type: 'fade' | 'slide' = 'fade') => (
   <TransitionSeries.Transition
-    presentation={type === 'slide' ? slide({ direction: 'from-right' }) : fade()}
+    presentation={
+      type === 'slide' ? slide({ direction: 'from-right' }) : fade()
+    }
     timing={linearTiming({ durationInFrames: TRANSITION_DURATION })}
   />
 );
@@ -45,7 +47,9 @@ export const MarketingVideo: React.FC = () => (
         <ColorCodingScene />
       </TransitionSeries.Sequence>
       {transition('slide')}
-      <TransitionSeries.Sequence durationInFrames={SCENES.instrumentSwitch.duration}>
+      <TransitionSeries.Sequence
+        durationInFrames={SCENES.instrumentSwitch.duration}
+      >
         <InstrumentSwitchScene />
       </TransitionSeries.Sequence>
       {transition('slide')}

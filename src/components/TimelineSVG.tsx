@@ -24,10 +24,19 @@ interface TimelineSVGProps {
 }
 
 export function TimelineSVG({
-  data, yearToPixel, totalWidth, selectedPersonId, hoveredPersonId,
-  onPersonClick, onPersonMouseEnter, onPersonMouseLeave,
+  data,
+  yearToPixel,
+  totalWidth,
+  selectedPersonId,
+  hoveredPersonId,
+  onPersonClick,
+  onPersonMouseEnter,
+  onPersonMouseLeave,
 }: TimelineSVGProps) {
-  const laneAssignments = useMemo(() => packLanes(data.people, CURRENT_YEAR), [data.people]);
+  const laneAssignments = useMemo(
+    () => packLanes(data.people, CURRENT_YEAR),
+    [data.people],
+  );
   const laneCount = Math.max(0, ...laneAssignments.map((a) => a.lane)) + 1;
   const contentHeight = laneCount * (BAR_HEIGHT + LANE_GAP);
   const svgHeight = TOP_PADDING + contentHeight + BOTTOM_PADDING;
@@ -57,32 +66,62 @@ export function TimelineSVG({
   }, [selectedPersonId, hoveredPersonId, data.connections]);
 
   const hasActive = connectedIds.size > 0;
-  const startYear = Math.min(...data.eras.map((e) => e.startYear), ...data.people.map((p) => p.born));
+  const startYear = Math.min(
+    ...data.eras.map((e) => e.startYear),
+    ...data.people.map((p) => p.born),
+  );
   const endYear = Math.max(...data.eras.map((e) => e.endYear), CURRENT_YEAR);
 
   return (
     <svg width={totalWidth} height={svgHeight}>
-      <EraBackgrounds eras={data.eras} yearToPixel={yearToPixel} height={TOP_PADDING + contentHeight} />
+      <EraBackgrounds
+        eras={data.eras}
+        yearToPixel={yearToPixel}
+        height={TOP_PADDING + contentHeight}
+      />
       {data.connections.map((conn, i) => {
         const fromPos = personPositions.get(conn.from);
         const toPos = personPositions.get(conn.to);
         if (!fromPos || !toPos) return null;
-        const isHighlighted = hasActive && connectedIds.has(conn.from) && connectedIds.has(conn.to);
+        const isHighlighted =
+          hasActive && connectedIds.has(conn.from) && connectedIds.has(conn.to);
         return (
-          <ConnectionLine key={i} x1={fromPos.x + fromPos.width / 2} y1={fromPos.y + BAR_HEIGHT / 2}
-            x2={toPos.x + toPos.width / 2} y2={toPos.y + BAR_HEIGHT / 2}
-            type={conn.type} highlighted={isHighlighted} dimmed={hasActive && !isHighlighted} />
+          <ConnectionLine
+            key={i}
+            x1={fromPos.x + fromPos.width / 2}
+            y1={fromPos.y + BAR_HEIGHT / 2}
+            x2={toPos.x + toPos.width / 2}
+            y2={toPos.y + BAR_HEIGHT / 2}
+            type={conn.type}
+            highlighted={isHighlighted}
+            dimmed={hasActive && !isHighlighted}
+          />
         );
       })}
       {laneAssignments.map(({ person }) => {
         const pos = personPositions.get(person.id)!;
         return (
-          <PersonBar key={person.id} person={person} x={pos.x} width={pos.width} y={pos.y} height={BAR_HEIGHT}
-            highlighted={connectedIds.has(person.id)} dimmed={hasActive && !connectedIds.has(person.id)}
-            onClick={onPersonClick} onMouseEnter={onPersonMouseEnter} onMouseLeave={onPersonMouseLeave} />
+          <PersonBar
+            key={person.id}
+            person={person}
+            x={pos.x}
+            width={pos.width}
+            y={pos.y}
+            height={BAR_HEIGHT}
+            highlighted={connectedIds.has(person.id)}
+            dimmed={hasActive && !connectedIds.has(person.id)}
+            onClick={onPersonClick}
+            onMouseEnter={onPersonMouseEnter}
+            onMouseLeave={onPersonMouseLeave}
+          />
         );
       })}
-      <TimeAxis startYear={startYear} endYear={endYear} yearToPixel={yearToPixel} y={TOP_PADDING + contentHeight + 4} />
+      <TimeAxis
+        startYear={startYear}
+        endYear={endYear}
+        yearToPixel={yearToPixel}
+        y={TOP_PADDING + contentHeight + 4}
+      />
     </svg>
   );
 }

@@ -6,7 +6,11 @@ interface EraBackgroundsProps {
   height: number;
 }
 
-export function EraBackgrounds({ eras, yearToPixel, height }: EraBackgroundsProps) {
+export function EraBackgrounds({
+  eras,
+  yearToPixel,
+  height,
+}: EraBackgroundsProps) {
   return (
     <g className="era-backgrounds">
       {eras.map((era) => {
@@ -14,8 +18,24 @@ export function EraBackgrounds({ eras, yearToPixel, height }: EraBackgroundsProp
         const width = yearToPixel(era.endYear) - x;
         return (
           <g key={era.name}>
-            <rect x={x} y={0} width={width} height={height} fill={era.color} opacity={0.3} />
-            <text x={x + width / 2} y={16} textAnchor="middle" fontSize={11} fill="#666" fontWeight={600}>{era.name}</text>
+            <rect
+              x={x}
+              y={0}
+              width={width}
+              height={height}
+              fill={era.color}
+              opacity={0.3}
+            />
+            <text
+              x={x + width / 2}
+              y={16}
+              textAnchor="middle"
+              fontSize={11}
+              fill="#666"
+              fontWeight={600}
+            >
+              {era.name}
+            </text>
           </g>
         );
       })}

@@ -7,7 +7,7 @@ const URL = 'https://musiker.page';
 const VIEWPORT = { width: 1920, height: 1080, deviceScaleFactor: 2 };
 
 async function delay(ms) {
-  return new Promise(r => setTimeout(r, ms));
+  return new Promise((r) => setTimeout(r, ms));
 }
 
 async function capture(page, name) {
@@ -38,7 +38,9 @@ async function main() {
   console.log('2. Piano medium zoom');
   const timelineContainer = await page.$('.timeline-view');
   if (timelineContainer) {
-    await page.evaluate(el => { el.scrollLeft = 200; }, timelineContainer);
+    await page.evaluate((el) => {
+      el.scrollLeft = 200;
+    }, timelineContainer);
   }
   await delay(500);
   await capture(page, 'piano-medium');
@@ -49,7 +51,8 @@ async function main() {
   const bachBar = await page.evaluate(() => {
     const bars = document.querySelectorAll('.person-bar');
     for (const bar of bars) {
-      const text = bar.textContent || bar.querySelector('text')?.textContent || '';
+      const text =
+        bar.textContent || bar.querySelector('text')?.textContent || '';
       if (text.includes('J.S. Bach')) {
         const rect = bar.getBoundingClientRect();
         return { x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 };
@@ -59,7 +62,8 @@ async function main() {
     const texts = document.querySelectorAll('text');
     for (const t of texts) {
       if (t.textContent?.includes('J.S. Bach')) {
-        const rect = t.closest('g')?.getBoundingClientRect() || t.getBoundingClientRect();
+        const rect =
+          t.closest('g')?.getBoundingClientRect() || t.getBoundingClientRect();
         return { x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 };
       }
     }
@@ -85,7 +89,9 @@ async function main() {
   await delay(500);
   // Scroll to show a mix of blue/orange/purple bars
   if (timelineContainer) {
-    await page.evaluate(el => { el.scrollLeft = 400; }, timelineContainer);
+    await page.evaluate((el) => {
+      el.scrollLeft = 400;
+    }, timelineContainer);
   }
   await delay(500);
   await capture(page, 'color-mix');
@@ -100,7 +106,9 @@ async function main() {
   // Reset scroll
   const newContainer = await page.$('.timeline-view');
   if (newContainer) {
-    await page.evaluate(el => { el.scrollLeft = 0; }, newContainer);
+    await page.evaluate((el) => {
+      el.scrollLeft = 0;
+    }, newContainer);
   }
   await delay(500);
   await capture(page, 'violin-full');
@@ -132,7 +140,7 @@ async function main() {
   console.log('\nDone! All screenshots saved to video/public/screenshots/');
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error('Error:', err);
   process.exit(1);
 });

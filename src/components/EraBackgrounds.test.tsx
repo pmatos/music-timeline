@@ -9,7 +9,13 @@ const eras: Era[] = [
 
 test('renders a rect for each era', () => {
   const { container } = render(
-    <svg><EraBackgrounds eras={eras} yearToPixel={(y) => (y - 1600) * 2} height={400} /></svg>
+    <svg>
+      <EraBackgrounds
+        eras={eras}
+        yearToPixel={(y) => (y - 1600) * 2}
+        height={400}
+      />
+    </svg>,
   );
   const rects = container.querySelectorAll('rect');
   expect(rects).toHaveLength(2);
@@ -17,7 +23,13 @@ test('renders a rect for each era', () => {
 
 test('renders era name labels', () => {
   const { container } = render(
-    <svg><EraBackgrounds eras={eras} yearToPixel={(y) => (y - 1600) * 2} height={400} /></svg>
+    <svg>
+      <EraBackgrounds
+        eras={eras}
+        yearToPixel={(y) => (y - 1600) * 2}
+        height={400}
+      />
+    </svg>,
   );
   const texts = container.querySelectorAll('text');
   const labels = Array.from(texts).map((t) => t.textContent);

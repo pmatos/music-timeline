@@ -1,6 +1,6 @@
 name: New person request
 description: Suggest a composer or performer to add to the timeline
-labels: ["new person"]
+labels: ['new person']
 body:
   - type: input
     id: name
@@ -54,4 +54,4 @@ body:
     attributes:
       label: Connections
       description: Any teacher/student or other relationships with people already on the timeline.
-      placeholder: "Student of Robert Schumann; teacher of ..."
+      placeholder: 'Student of Robert Schumann; teacher of ...'

@@ -1,4 +1,10 @@
-import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import {
+  AbsoluteFill,
+  interpolate,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+} from 'remotion';
 import { KenBurns } from '../components/KenBurns';
 import { displayFont, bodyFont } from '../fonts';
 import { COLORS } from '../constants';
@@ -8,7 +14,12 @@ export const CTAScene: React.FC = () => {
   const { fps } = useVideoConfig();
 
   const titleEntrance = spring({ frame, fps, config: { damping: 200 } });
-  const urlEntrance = spring({ frame, fps, delay: 15, config: { damping: 200 } });
+  const urlEntrance = spring({
+    frame,
+    fps,
+    delay: 15,
+    config: { damping: 200 },
+  });
 
   const titleOpacity = titleEntrance;
   const urlOpacity = urlEntrance;
@@ -16,7 +27,11 @@ export const CTAScene: React.FC = () => {
 
   return (
     <AbsoluteFill>
-      <KenBurns src="screenshots/hero-clean.png" startScale={1.05} endScale={1.1} />
+      <KenBurns
+        src="screenshots/hero-clean.png"
+        startScale={1.05}
+        endScale={1.1}
+      />
       <AbsoluteFill
         style={{
           background: 'rgba(255,255,255,0.6)',

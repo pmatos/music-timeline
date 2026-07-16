@@ -3,8 +3,15 @@ import { Tooltip } from './Tooltip';
 import type { Person } from '../types';
 
 const person: Person = {
-  id: 'bach', name: 'J.S. Bach', born: 1685, died: 1750, role: 'composer',
-  bio: '', photoUrl: null, wikiUrl: '', websiteUrl: null,
+  id: 'bach',
+  name: 'J.S. Bach',
+  born: 1685,
+  died: 1750,
+  role: 'composer',
+  bio: '',
+  photoUrl: null,
+  wikiUrl: '',
+  websiteUrl: null,
 };
 
 test('renders nothing when person is null', () => {
@@ -19,7 +26,13 @@ test('renders name and years when person is provided', () => {
 });
 
 test('shows present for living person', () => {
-  const living = { ...person, id: 'll', name: 'Lang Lang', born: 1982, died: null };
+  const living = {
+    ...person,
+    id: 'll',
+    name: 'Lang Lang',
+    born: 1982,
+    died: null,
+  };
   render(<Tooltip person={living} x={100} y={50} />);
   expect(screen.getByText('1982\u2013present')).toBeInTheDocument();
 });

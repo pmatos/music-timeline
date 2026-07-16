@@ -33,23 +33,36 @@ function App() {
   }, []);
 
   if (loading) return <div className="loading">Loading...</div>;
-  if (error || !data) return <div className="error">Failed to load data: {error}</div>;
+  if (error || !data)
+    return <div className="error">Failed to load data: {error}</div>;
 
   return (
     <div className="app" onMouseMove={handleMouseMove}>
-      <Header instrument={data.instrument} instruments={INSTRUMENTS} onInstrumentChange={setInstrument} />
-      <TimelineView data={data} selectedPersonId={selectedPerson?.id ?? null}
+      <Header
+        instrument={data.instrument}
+        instruments={INSTRUMENTS}
+        onInstrumentChange={setInstrument}
+      />
+      <TimelineView
+        data={data}
+        selectedPersonId={selectedPerson?.id ?? null}
         hoveredPersonId={hoveredPerson?.id ?? null}
-        onPersonClick={handlePersonClick} onPersonMouseEnter={handlePersonMouseEnter}
-        onPersonMouseLeave={handlePersonMouseLeave} />
+        onPersonClick={handlePersonClick}
+        onPersonMouseEnter={handlePersonMouseEnter}
+        onPersonMouseLeave={handlePersonMouseLeave}
+      />
       <Legend />
       <footer className="footer">
         <span>&copy; 2026 Linki Tools</span>
       </footer>
       <Tooltip person={hoveredPerson} x={tooltipPos.x} y={tooltipPos.y} />
-      <PersonPanel person={selectedPerson} connections={data.connections}
-        people={data.people} onPersonClick={handlePersonClick}
-        onClose={() => setSelectedPerson(null)} />
+      <PersonPanel
+        person={selectedPerson}
+        connections={data.connections}
+        people={data.people}
+        onPersonClick={handlePersonClick}
+        onClose={() => setSelectedPerson(null)}
+      />
     </div>
   );
 }

@@ -15,14 +15,21 @@ interface ConnectionGroupProps {
   onPersonClick: (person: Person) => void;
 }
 
-function ConnectionGroup({ label, people, onPersonClick }: ConnectionGroupProps) {
+function ConnectionGroup({
+  label,
+  people,
+  onPersonClick,
+}: ConnectionGroupProps) {
   return (
     <div>
       <div className="person-panel__conn-label">{label}</div>
       <ul className="person-panel__conn-list">
         {people.map((p) => (
           <li key={p.id}>
-            <button className="person-panel__conn-link" onClick={() => onPersonClick(p)}>
+            <button
+              className="person-panel__conn-link"
+              onClick={() => onPersonClick(p)}
+            >
               {p.name}
             </button>
           </li>
@@ -32,7 +39,13 @@ function ConnectionGroup({ label, people, onPersonClick }: ConnectionGroupProps)
   );
 }
 
-export function PersonPanel({ person, connections, people, onPersonClick, onClose }: PersonPanelProps) {
+export function PersonPanel({
+  person,
+  connections,
+  people,
+  onPersonClick,
+  onClose,
+}: PersonPanelProps) {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -76,23 +89,39 @@ export function PersonPanel({ person, connections, people, onPersonClick, onClos
     }
 
     if (taught.length) result.push({ label: 'Taught', people: taught });
-    if (studentOf.length) result.push({ label: 'Student of', people: studentOf });
-    if (influenced.length) result.push({ label: 'Influenced', people: influenced });
-    if (influencedBy.length) result.push({ label: 'Influenced by', people: influencedBy });
-    if (relatedTo.length) result.push({ label: 'Related to', people: relatedTo });
+    if (studentOf.length)
+      result.push({ label: 'Student of', people: studentOf });
+    if (influenced.length)
+      result.push({ label: 'Influenced', people: influenced });
+    if (influencedBy.length)
+      result.push({ label: 'Influenced by', people: influencedBy });
+    if (relatedTo.length)
+      result.push({ label: 'Related to', people: relatedTo });
 
     return result;
   }, [person, connections, people]);
 
   if (!person) return null;
-  const bornLabel = person.bornEstimated ? `${person.born} (est.)` : `${person.born}`;
+  const bornLabel = person.bornEstimated
+    ? `${person.born} (est.)`
+    : `${person.born}`;
   const years = `${bornLabel}\u2013${person.died ?? 'present'}`;
 
   return (
     <div className="person-panel">
-      <button className="person-panel__close" onClick={onClose} aria-label="Close">&times;</button>
+      <button
+        className="person-panel__close"
+        onClick={onClose}
+        aria-label="Close"
+      >
+        &times;
+      </button>
       {person.photoUrl && (
-        <img className="person-panel__photo" src={`${import.meta.env.BASE_URL}${person.photoUrl.replace(/^\//, '')}`} alt={person.name} />
+        <img
+          className="person-panel__photo"
+          src={`${import.meta.env.BASE_URL}${person.photoUrl.replace(/^\//, '')}`}
+          alt={person.name}
+        />
       )}
       <h2>{person.name}</h2>
       <div className="person-panel__years">{years}</div>
@@ -100,16 +129,25 @@ export function PersonPanel({ person, connections, people, onPersonClick, onClos
       <p className="person-panel__bio">{person.bio}</p>
       <div className="person-panel__links">
         {person.wikiUrl && (
-          <a href={person.wikiUrl} target="_blank" rel="noopener noreferrer">Wikipedia</a>
+          <a href={person.wikiUrl} target="_blank" rel="noopener noreferrer">
+            Wikipedia
+          </a>
         )}
         {person.websiteUrl && (
-          <a href={person.websiteUrl} target="_blank" rel="noopener noreferrer">Website</a>
+          <a href={person.websiteUrl} target="_blank" rel="noopener noreferrer">
+            Website
+          </a>
         )}
       </div>
       {groups.length > 0 && (
         <div className="person-panel__connections">
           {groups.map((g) => (
-            <ConnectionGroup key={g.label} label={g.label} people={g.people} onPersonClick={onPersonClick} />
+            <ConnectionGroup
+              key={g.label}
+              label={g.label}
+              people={g.people}
+              onPersonClick={onPersonClick}
+            />
           ))}
         </div>
       )}

@@ -3,7 +3,17 @@ import App from './App';
 import type { Person, Connection, InstrumentConfig } from './types';
 
 const mockPeople: Person[] = [
-  { id: 'bach', name: 'J.S. Bach', born: 1685, died: 1750, role: 'composer', bio: 'A composer.', photoUrl: null, wikiUrl: '', websiteUrl: null },
+  {
+    id: 'bach',
+    name: 'J.S. Bach',
+    born: 1685,
+    died: 1750,
+    role: 'composer',
+    bio: 'A composer.',
+    photoUrl: null,
+    wikiUrl: '',
+    websiteUrl: null,
+  },
 ];
 
 const mockConnections: Connection[] = [];
@@ -17,12 +27,21 @@ const mockPianoConfig: InstrumentConfig = {
 beforeEach(() => {
   global.fetch = vi.fn().mockImplementation((url: string) => {
     if (url.includes('people.json')) {
-      return Promise.resolve({ ok: true, json: () => Promise.resolve(mockPeople) });
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockPeople),
+      });
     }
     if (url.includes('connections.json')) {
-      return Promise.resolve({ ok: true, json: () => Promise.resolve(mockConnections) });
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockConnections),
+      });
     }
-    return Promise.resolve({ ok: true, json: () => Promise.resolve(mockPianoConfig) });
+    return Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve(mockPianoConfig),
+    });
   });
 });
 

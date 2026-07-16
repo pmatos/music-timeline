@@ -1,4 +1,11 @@
-import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import {
+  AbsoluteFill,
+  Img,
+  interpolate,
+  staticFile,
+  useCurrentFrame,
+  useVideoConfig,
+} from 'remotion';
 
 type KenBurnsProps = {
   src: string;
@@ -22,10 +29,15 @@ export const KenBurns: React.FC<KenBurnsProps> = ({
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
-  const scale = interpolate(frame, [0, durationInFrames], [startScale, endScale], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
+  const scale = interpolate(
+    frame,
+    [0, durationInFrames],
+    [startScale, endScale],
+    {
+      extrapolateLeft: 'clamp',
+      extrapolateRight: 'clamp',
+    },
+  );
 
   const translateX = interpolate(frame, [0, durationInFrames], [startX, endX], {
     extrapolateLeft: 'clamp',

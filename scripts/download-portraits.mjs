@@ -10,76 +10,77 @@ const PORTRAITS_DIR = join(ROOT, 'public', 'images', 'portraits');
 // Map person ID to their Wikipedia article title.
 // The script fetches the article's main image thumbnail via the Wikipedia API.
 const WIKIPEDIA_TITLES = {
-  'corelli': 'Arcangelo_Corelli',
-  'vivaldi': 'Antonio_Vivaldi',
-  'tartini': 'Giuseppe_Tartini',
-  'geminiani': 'Francesco_Geminiani',
-  'locatelli': 'Pietro_Locatelli',
-  'leclair': 'Jean-Marie_Leclair',
-  'viotti': 'Giovanni_Battista_Viotti',
-  'rode': 'Pierre_Rode',
-  'kreutzer': 'Rodolphe_Kreutzer',
-  'baillot': 'Pierre_Baillot',
-  'spohr': 'Louis_Spohr',
-  'paganini': 'Niccolò_Paganini',
-  'vieuxtemps': 'Henri_Vieuxtemps',
-  'wieniawski': 'Henryk_Wieniawski',
-  'sarasate': 'Pablo_de_Sarasate',
-  'joachim': 'Joseph_Joachim',
-  'auer': 'Leopold_Auer',
-  'ysaye': 'Eugène_Ysaÿe',
-  'kreisler': 'Fritz_Kreisler',
-  'heifetz': 'Jascha_Heifetz',
-  'oistrakh': 'David_Oistrakh',
-  'menuhin': 'Yehudi_Menuhin',
-  'milstein': 'Nathan_Milstein',
-  'stern': 'Isaac_Stern',
-  'szeryng': 'Henryk_Szeryng',
-  'grumiaux': 'Arthur_Grumiaux',
-  'kogan': 'Leonid_Kogan',
-  'haendel': 'Ida_Haendel',
-  'perlman': 'Itzhak_Perlman',
-  'zukerman': 'Pinchas_Zukerman',
-  'kremer': 'Gidon_Kremer',
-  'mutter': 'Anne-Sophie_Mutter',
-  'vengerov': 'Maxim_Vengerov',
-  'hahn': 'Hilary_Hahn',
-  'jansen': 'Janine_Jansen',
-  'bell': 'Joshua_Bell',
-  'shaham': 'Gil_Shaham',
-  'chen': 'Ray_Chen_(musician)',
+  corelli: 'Arcangelo_Corelli',
+  vivaldi: 'Antonio_Vivaldi',
+  tartini: 'Giuseppe_Tartini',
+  geminiani: 'Francesco_Geminiani',
+  locatelli: 'Pietro_Locatelli',
+  leclair: 'Jean-Marie_Leclair',
+  viotti: 'Giovanni_Battista_Viotti',
+  rode: 'Pierre_Rode',
+  kreutzer: 'Rodolphe_Kreutzer',
+  baillot: 'Pierre_Baillot',
+  spohr: 'Louis_Spohr',
+  paganini: 'Niccolò_Paganini',
+  vieuxtemps: 'Henri_Vieuxtemps',
+  wieniawski: 'Henryk_Wieniawski',
+  sarasate: 'Pablo_de_Sarasate',
+  joachim: 'Joseph_Joachim',
+  auer: 'Leopold_Auer',
+  ysaye: 'Eugène_Ysaÿe',
+  kreisler: 'Fritz_Kreisler',
+  heifetz: 'Jascha_Heifetz',
+  oistrakh: 'David_Oistrakh',
+  menuhin: 'Yehudi_Menuhin',
+  milstein: 'Nathan_Milstein',
+  stern: 'Isaac_Stern',
+  szeryng: 'Henryk_Szeryng',
+  grumiaux: 'Arthur_Grumiaux',
+  kogan: 'Leonid_Kogan',
+  haendel: 'Ida_Haendel',
+  perlman: 'Itzhak_Perlman',
+  zukerman: 'Pinchas_Zukerman',
+  kremer: 'Gidon_Kremer',
+  mutter: 'Anne-Sophie_Mutter',
+  vengerov: 'Maxim_Vengerov',
+  hahn: 'Hilary_Hahn',
+  jansen: 'Janine_Jansen',
+  bell: 'Joshua_Bell',
+  shaham: 'Gil_Shaham',
+  chen: 'Ray_Chen_(musician)',
   'g-gabrieli': 'Giovanni_Gabrieli',
-  'monteverdi': 'Claudio_Monteverdi',
-  'schutz': 'Heinrich_Schütz',
+  monteverdi: 'Claudio_Monteverdi',
+  schutz: 'Heinrich_Schütz',
   'l-mozart': 'Leopold_Mozart',
-  'albrechtsberger': 'Johann_Georg_Albrechtsberger',
+  albrechtsberger: 'Johann_Georg_Albrechtsberger',
   'm-haydn': 'Michael_Haydn',
   'rimsky-korsakov': 'Nikolai_Rimsky-Korsakov',
-  'pryor': 'Arthur_Pryor',
+  pryor: 'Arthur_Pryor',
   'kid-ory': 'Kid_Ory',
-  'hindemith': 'Paul_Hindemith',
-  'ibert': 'Jacques_Ibert',
+  hindemith: 'Paul_Hindemith',
+  ibert: 'Jacques_Ibert',
   'glenn-miller': 'Glenn_Miller',
-  'teagarden': 'Jack_Teagarden',
+  teagarden: 'Jack_Teagarden',
   'tommy-dorsey': 'Tommy_Dorsey',
   'kai-winding': 'Kai_Winding',
   'jj-johnson': 'J._J._Johnson',
-  'berio': 'Luciano_Berio',
-  'rosolino': 'Frank_Rosolino',
-  'mangelsdorff': 'Albert_Mangelsdorff',
+  berio: 'Luciano_Berio',
+  rosolino: 'Frank_Rosolino',
+  mangelsdorff: 'Albert_Mangelsdorff',
   'curtis-fuller': 'Curtis_Fuller',
   'slide-hampton': 'Slide_Hampton',
   'steve-turre': 'Steve_Turre',
   'nils-landgren': 'Nils_Landgren_(musician)',
-  'lindberg': 'Christian_Lindberg',
-  'alessi': 'Joseph_Alessi',
+  lindberg: 'Christian_Lindberg',
+  alessi: 'Joseph_Alessi',
   'wycliffe-gordon': 'Wycliffe_Gordon',
   'trombone-shorty': 'Trombone_Shorty',
 };
 
 const THUMB_SIZE = 400;
 const DELAY_MS = 2000;
-const USER_AGENT = 'MusicTimelinePortraitDownloader/1.0 (https://github.com/pmatos/music-timeline)';
+const USER_AGENT =
+  'MusicTimelinePortraitDownloader/1.0 (https://github.com/pmatos/music-timeline)';
 
 async function fileExists(path) {
   try {
@@ -91,7 +92,7 @@ async function fileExists(path) {
 }
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function getThumbnailUrl(wikiTitle) {
@@ -139,7 +140,8 @@ async function main() {
   const people = JSON.parse(peopleRaw);
 
   const toDownload = people.filter(
-    p => p.photoUrl?.startsWith('/images/portraits/') && p.id in WIKIPEDIA_TITLES
+    (p) =>
+      p.photoUrl?.startsWith('/images/portraits/') && p.id in WIKIPEDIA_TITLES,
   );
 
   console.log(`Found ${toDownload.length} portraits to check.`);
@@ -174,10 +176,12 @@ async function main() {
     await sleep(DELAY_MS);
   }
 
-  console.log(`\nFinished: ${downloaded} downloaded, ${skipped} skipped, ${failed} failed.`);
+  console.log(
+    `\nFinished: ${downloaded} downloaded, ${skipped} skipped, ${failed} failed.`,
+  );
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error('Fatal error:', err);
   process.exit(1);
 });
