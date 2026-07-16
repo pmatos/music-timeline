@@ -49,6 +49,7 @@ const WIKIPEDIA_TITLES = {
   'bell': 'Joshua_Bell',
   'shaham': 'Gil_Shaham',
   'chen': 'Ray_Chen_(musician)',
+  'ehnes': 'James_Ehnes',
   'g-gabrieli': 'Giovanni_Gabrieli',
   'monteverdi': 'Claudio_Monteverdi',
   'schutz': 'Heinrich_Schütz',
