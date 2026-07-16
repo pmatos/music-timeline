@@ -44,6 +44,7 @@ const WIKIPEDIA_TITLES = {
   'mutter': 'Anne-Sophie_Mutter',
   'vengerov': 'Maxim_Vengerov',
   'hahn': 'Hilary_Hahn',
+  'julia-fischer': 'Julia_Fischer',
   'jansen': 'Janine_Jansen',
   'bell': 'Joshua_Bell',
   'shaham': 'Gil_Shaham',
