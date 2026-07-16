@@ -1,0 +1,42 @@
+# Automated Claude Code review of pull requests.
+#
+# Dormant until an ANTHROPIC_API_KEY repository secret is configured: the guard
+# step below reports "enabled=false" and the review step is skipped, so the job
+# still passes. Add the secret (Settings → Secrets and variables → Actions) to
+# activate. Review anthropics/claude-code-action inputs when enabling.
+name: Claude Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+
+jobs:
+  claude-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Check for ANTHROPIC_API_KEY
+        id: guard
+        env:
+          HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+        run: echo "enabled=$HAS_KEY" >> "$GITHUB_OUTPUT"
+
+      - if: steps.guard.outputs.enabled == 'true'
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+        with:
+          persist-credentials: false
+
+      - name: Claude review
+        if: steps.guard.outputs.enabled == 'true'
+        uses: anthropics/claude-code-action@1298632ce7736903d02a1435002705aa2a594a6c # v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: >-
+            Review this pull request for correctness, data-integrity of
+            public/data JSON, and adherence to the conventions in CLAUDE.md.
+            Leave concise, actionable review comments.

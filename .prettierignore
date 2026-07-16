@@ -1,0 +1,13 @@
+# Build output
+dist
+coverage
+video/out
+
+# Dependencies and lockfiles
+node_modules
+package-lock.json
+video/package-lock.json
+
+# Hand-maintained data (contributor-edited via issue templates; validated by
+# the Zod data-integrity tests, not by formatting)
+public/data
