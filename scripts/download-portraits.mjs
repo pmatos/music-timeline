@@ -59,6 +59,7 @@ const WIKIPEDIA_TITLES = {
   'kid-ory': 'Kid_Ory',
   'hindemith': 'Paul_Hindemith',
   'ibert': 'Jacques_Ibert',
+  'hofmann': 'Josef_Hofmann',
   'glenn-miller': 'Glenn_Miller',
   'teagarden': 'Jack_Teagarden',
   'tommy-dorsey': 'Tommy_Dorsey',
