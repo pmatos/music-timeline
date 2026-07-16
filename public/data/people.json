@@ -814,6 +814,17 @@
     "websiteUrl": null
   },
   {
+    "id": "hofmann",
+    "name": "J. Hofmann",
+    "born": 1876,
+    "died": 1957,
+    "role": "player",
+    "bio": "Polish-American virtuoso regarded as one of the greatest pianists of the early twentieth century and the only private pupil of Anton Rubinstein. A child prodigy who made his American debut at the Metropolitan Opera aged eleven, he later directed the Curtis Institute of Music, and Rachmaninoff dedicated his Third Piano Concerto to him.",
+    "photoUrl": "/images/portraits/hofmann.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Josef_Hofmann",
+    "websiteUrl": null
+  },
+  {
     "id": "vengerova",
     "name": "I. Vengerova",
     "born": 1877,
@@ -2014,6 +2025,17 @@
     "websiteUrl": null
   },
   {
+    "id": "julia-fischer",
+    "name": "J. Fischer",
+    "born": 1983,
+    "died": null,
+    "role": "player",
+    "bio": "German violinist admired for her tonal purity and structural clarity, who won the Yehudi Menuhin Competition at the age of eleven and has since built a leading international career. A serious pianist as well, she performed a Saint-Saens violin concerto and the Grieg piano concerto in a single celebrated 2008 concert.",
+    "photoUrl": "/images/portraits/julia-fischer.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Julia_Fischer",
+    "websiteUrl": null
+  },
+  {
     "id": "chen",
     "name": "R. Chen",
     "born": 1989,
@@ -2022,6 +2044,17 @@
     "bio": "Taiwanese-Australian violinist who won the Queen Elisabeth Competition in 2009, becoming the youngest winner in the competition's history. Known for his vibrant stage presence and engaging social media outreach to new audiences.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Ray_Chen",
+    "websiteUrl": null
+  },
+  {
+    "id": "ehnes",
+    "name": "J. Ehnes",
+    "born": 1976,
+    "died": null,
+    "role": "player",
+    "bio": "Canadian-American violinist celebrated for his flawless technique, refined tone, and an unusually broad repertoire spanning the standard concertos and contemporary works. A multiple Grammy and Juno Award winner, he performs on the 1715 \"ex-Marsick\" Stradivarius and leads the Ehnes Quartet.",
+    "photoUrl": "/images/portraits/ehnes.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/James_Ehnes",
     "websiteUrl": null
   },
   {
@@ -2311,6 +2344,17 @@
     "websiteUrl": null
   },
   {
+    "id": "urbie-green",
+    "name": "U. Green",
+    "born": 1926,
+    "died": 2018,
+    "role": "player",
+    "bio": "American jazz trombonist celebrated for his warm, lyrical tone and effortless technique across an unusually wide range. He rose to prominence with the big bands of Woody Herman and Gene Krupa, appeared on hundreds of recordings alongside artists such as Count Basie and Tony Bennett, and was inducted into the Alabama Jazz Hall of Fame in 1995.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Urbie_Green",
+    "websiteUrl": null
+  },
+  {
     "id": "mangelsdorff",
     "name": "A. Mangelsdorff",
     "born": 1928,
@@ -2352,6 +2396,17 @@
     "bio": "American jazz trombonist, composer, and arranger, born into a family of 12 musicians. One of the few left-handed trombonists, he won Grammy Awards in 1998 and 2005 and was honored as an NEA Jazz Master for his virtuosic playing and masterful arranging.",
     "photoUrl": "/images/portraits/slide-hampton.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Slide_Hampton",
+    "websiteUrl": null
+  },
+  {
+    "id": "roswell-rudd",
+    "name": "R. Rudd",
+    "born": 1935,
+    "died": 2017,
+    "role": "both",
+    "bio": "American jazz trombonist and composer who began in Dixieland with Yale's Eli's Chosen Six before becoming one of the leading voices of free and avant-garde jazz. From 1962 he worked closely with Archie Shepp and the New York Art Quartet, and recorded Thelonious Monk's music alongside soprano saxophonist Steve Lacy. In later years he broadened his reach into world music, collaborating with the Malian kora master Toumani Diabate and Mongolian Buryat musicians.",
+    "photoUrl": "/images/portraits/roswell-rudd.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Roswell_Rudd",
     "websiteUrl": null
   },
   {
@@ -2484,6 +2539,17 @@
     "bio": "American trombonist who has served as Principal Trombone of the New York Philharmonic since 1985. He premiered Christopher Rouse's Pulitzer Prize-winning Trombone Concerto and teaches at The Juilliard School.",
     "photoUrl": "/images/portraits/alessi.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Alessi",
+    "websiteUrl": null
+  },
+  {
+    "id": "conrad-herwig",
+    "name": "C. Herwig",
+    "born": 1959,
+    "died": null,
+    "role": "player",
+    "bio": "American jazz trombonist celebrated for his Afro-Caribbean and Latin jazz work, above all the acclaimed Latin Side of... series that recasts the music of Coltrane, Miles Davis, and others through a Latin lens. A frequent musical director of the Mingus Big Band and collaborator with Eddie Palmieri and Joe Lovano, he was repeatedly voted top trombonist in DownBeat's Critics' Poll and teaches jazz at Rutgers University.",
+    "photoUrl": "/images/portraits/conrad-herwig.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Conrad_Herwig",
     "websiteUrl": null
   },
   {
