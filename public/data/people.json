@@ -814,6 +814,17 @@
     "websiteUrl": null
   },
   {
+    "id": "hofmann",
+    "name": "J. Hofmann",
+    "born": 1876,
+    "died": 1957,
+    "role": "player",
+    "bio": "Polish-American virtuoso regarded as one of the greatest pianists of the early twentieth century and the only private pupil of Anton Rubinstein. A child prodigy who made his American debut at the Metropolitan Opera aged eleven, he later directed the Curtis Institute of Music, and Rachmaninoff dedicated his Third Piano Concerto to him.",
+    "photoUrl": "/images/portraits/hofmann.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Josef_Hofmann",
+    "websiteUrl": null
+  },
+  {
     "id": "vengerova",
     "name": "I. Vengerova",
     "born": 1877,
