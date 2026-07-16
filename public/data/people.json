@@ -2014,6 +2014,17 @@
     "websiteUrl": null
   },
   {
+    "id": "ehnes",
+    "name": "J. Ehnes",
+    "born": 1976,
+    "died": null,
+    "role": "player",
+    "bio": "Canadian-American violinist celebrated for his flawless technique, refined tone, and an unusually broad repertoire spanning the standard concertos and contemporary works. A multiple Grammy and Juno Award winner, he performs on the 1715 \"ex-Marsick\" Stradivarius and leads the Ehnes Quartet.",
+    "photoUrl": "/images/portraits/ehnes.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/James_Ehnes",
+    "websiteUrl": null
+  },
+  {
     "id": "g-gabrieli",
     "name": "G. Gabrieli",
     "born": 1557,
