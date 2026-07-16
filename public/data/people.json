@@ -2366,6 +2366,17 @@
     "websiteUrl": null
   },
   {
+    "id": "roswell-rudd",
+    "name": "R. Rudd",
+    "born": 1935,
+    "died": 2017,
+    "role": "both",
+    "bio": "American jazz trombonist and composer who began in Dixieland with Yale's Eli's Chosen Six before becoming one of the leading voices of free and avant-garde jazz. From 1962 he worked closely with Archie Shepp and the New York Art Quartet, and recorded Thelonious Monk's music alongside soprano saxophonist Steve Lacy. In later years he broadened his reach into world music, collaborating with the Malian kora master Toumani Diabate and Mongolian Buryat musicians.",
+    "photoUrl": "/images/portraits/roswell-rudd.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Roswell_Rudd",
+    "websiteUrl": null
+  },
+  {
     "id": "dempster",
     "name": "S. Dempster",
     "born": 1936,
