@@ -2003,6 +2003,17 @@
     "websiteUrl": null
   },
   {
+    "id": "julia-fischer",
+    "name": "J. Fischer",
+    "born": 1983,
+    "died": null,
+    "role": "player",
+    "bio": "German violinist admired for her tonal purity and structural clarity, who won the Yehudi Menuhin Competition at the age of eleven and has since built a leading international career. A serious pianist as well, she performed a Saint-Saens violin concerto and the Grieg piano concerto in a single celebrated 2008 concert.",
+    "photoUrl": "/images/portraits/julia-fischer.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Julia_Fischer",
+    "websiteUrl": null
+  },
+  {
     "id": "chen",
     "name": "R. Chen",
     "born": 1989,
