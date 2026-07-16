@@ -20,7 +20,7 @@ Tests use vitest with jsdom environment and `globals: true` (no need to import `
 
 `src/data-integrity.test.ts` validates `public/data/*.json` with Zod schemas and referential-integrity checks (the invariants in the Data Integrity section below). Coverage thresholds and the Prettier ignore list live in `vitest.config.ts` and `.prettierignore` (`public/data` is excluded from formatting — it is guarded by the data tests instead).
 
-`.github/workflows/ci.yml` runs lint + typecheck + tests/coverage + build + Prettier on every PR (plus the `video/` build and an actionlint/zizmor pass over the workflows); `codeql.yml` runs CodeQL. GitHub Actions are pinned to commit SHAs. A `Stop` hook (`.claude/settings.json` → `.claude/hooks/verify.sh`) reruns lint/typecheck/tests locally.
+`.github/workflows/ci.yml` runs lint + typecheck + tests/coverage + build + Prettier on every PR (plus the `video/` build and an actionlint/zizmor pass over the workflows); `codeql.yml` runs CodeQL. GitHub Actions are pinned to major-version tags (kept current by Dependabot); `.github/zizmor.yml` sets zizmor's `unpinned-uses` policy to `ref-pin` to allow that. A `Stop` hook (`.claude/settings.json` → `.claude/hooks/verify.sh`) reruns lint/typecheck/tests locally.
 
 ## Architecture
 
