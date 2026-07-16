@@ -11,3 +11,7 @@ video/package-lock.json
 # Hand-maintained data (contributor-edited via issue templates; validated by
 # the Zod data-integrity tests, not by formatting)
 public/data
+
+# Regenerated on every portrait addition; left unformatted to avoid perpetual
+# merge conflicts with main's person-addition PRs.
+scripts/download-portraits.mjs
