@@ -73,6 +73,7 @@ const WIKIPEDIA_TITLES = {
   'nils-landgren': 'Nils_Landgren_(musician)',
   'lindberg': 'Christian_Lindberg',
   'alessi': 'Joseph_Alessi',
+  'conrad-herwig': 'Conrad_Herwig',
   'wycliffe-gordon': 'Wycliffe_Gordon',
   'trombone-shorty': 'Trombone_Shorty',
 };
