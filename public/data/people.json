@@ -2014,6 +2014,17 @@
     "websiteUrl": null
   },
   {
+    "id": "renaud-capucon",
+    "name": "R. Capuçon",
+    "born": 1976,
+    "died": null,
+    "role": "player",
+    "bio": "French violinist admired for his warm, elegant tone and a broad repertoire ranging from Baroque to contemporary music. He performs on the 1737 Guarneri del Gesù \"Panette\" once owned by Isaac Stern and directs several festivals, including the Aix-en-Provence Easter Festival.",
+    "photoUrl": "/images/portraits/renaud-capucon.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Renaud_Capu%C3%A7on",
+    "websiteUrl": null
+  },
+  {
     "id": "jansen",
     "name": "J. Jansen",
     "born": 1978,

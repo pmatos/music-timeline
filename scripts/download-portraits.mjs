@@ -43,6 +43,7 @@ const WIKIPEDIA_TITLES = {
   'kremer': 'Gidon_Kremer',
   'mutter': 'Anne-Sophie_Mutter',
   'vengerov': 'Maxim_Vengerov',
+  'renaud-capucon': 'Renaud_Capuçon',
   'hahn': 'Hilary_Hahn',
   'julia-fischer': 'Julia_Fischer',
   'jansen': 'Janine_Jansen',
