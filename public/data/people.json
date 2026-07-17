@@ -693,6 +693,17 @@
     "websiteUrl": null
   },
   {
+    "id": "janacek",
+    "name": "L. Janáček",
+    "born": 1854,
+    "died": 1928,
+    "role": "composer",
+    "bio": "Czech composer whose piano cycles On an Overgrown Path and In the Mists distill Moravian folk idioms into intimate, speech-inflected miniatures. His Piano Sonata 1.X.1905 stands among the most personal statements in the Czech piano literature.",
+    "photoUrl": "/images/portraits/janacek.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leo%C5%A1_Jan%C3%A1%C4%8Dek",
+    "websiteUrl": null
+  },
+  {
     "id": "albeniz",
     "name": "I. Albeniz",
     "born": 1860,
