@@ -52,6 +52,7 @@ const WIKIPEDIA_TITLES = {
   'chen': 'Ray_Chen_(musician)',
   'ehnes': 'James_Ehnes',
   'hadelich': 'Augustin_Hadelich',
+  'midori': 'Midori_(violinist)',
   'g-gabrieli': 'Giovanni_Gabrieli',
   'monteverdi': 'Claudio_Monteverdi',
   'schutz': 'Heinrich_Schütz',
