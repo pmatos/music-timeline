@@ -451,6 +451,17 @@
     "websiteUrl": null
   },
   {
+    "id": "fanny-mendelssohn",
+    "name": "Fanny Mendelssohn",
+    "born": 1805,
+    "died": 1847,
+    "role": "composer",
+    "bio": "German composer and pianist of the early Romantic era, and the elder sister of Felix Mendelssohn. A prolific talent, she wrote over 460 works spanning songs, piano pieces, and chamber music, some of which appeared under her brother's name during her lifetime.",
+    "photoUrl": "/images/portraits/fanny-mendelssohn.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Fanny_Mendelssohn",
+    "websiteUrl": null
+  },
+  {
     "id": "mendelssohn",
     "name": "F. Mendelssohn",
     "born": 1809,
