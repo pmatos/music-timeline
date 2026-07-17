@@ -825,6 +825,17 @@
     "websiteUrl": null
   },
   {
+    "id": "de-falla",
+    "name": "M. de Falla",
+    "born": 1876,
+    "died": 1946,
+    "role": "composer",
+    "bio": "Spanish composer widely regarded as the greatest of his generation and a leading voice of musical nationalism. His works, including the ballet El amor brujo, Nights in the Gardens of Spain for piano and orchestra, and the solo Fantasía bætica, fuse Andalusian folk idioms with the refinement he absorbed from Debussy and Ravel in Paris.",
+    "photoUrl": "/images/portraits/de-falla.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Manuel_de_Falla",
+    "websiteUrl": null
+  },
+  {
     "id": "vengerova",
     "name": "I. Vengerova",
     "born": 1877,
