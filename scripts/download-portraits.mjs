@@ -68,6 +68,7 @@ const WIKIPEDIA_TITLES = {
   'glenn-miller': 'Glenn_Miller',
   'teagarden': 'Jack_Teagarden',
   'tommy-dorsey': 'Tommy_Dorsey',
+  'vic-dickenson': 'Vic_Dickenson',
   'kai-winding': 'Kai_Winding',
   'jj-johnson': 'J._J._Johnson',
   'berio': 'Luciano_Berio',
