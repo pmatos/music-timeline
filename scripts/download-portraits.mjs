@@ -64,6 +64,7 @@ const WIKIPEDIA_TITLES = {
   'ibert': 'Jacques_Ibert',
   'cortot': 'Alfred_Cortot',
   'hofmann': 'Josef_Hofmann',
+  'de-falla': 'Manuel_de_Falla',
   'grainger': 'Percy_Grainger',
   'glenn-miller': 'Glenn_Miller',
   'teagarden': 'Jack_Teagarden',
