@@ -2454,6 +2454,17 @@
     "websiteUrl": null
   },
   {
+    "id": "fred-wesley",
+    "name": "F. Wesley",
+    "born": 1943,
+    "died": null,
+    "role": "player",
+    "bio": "American funk and jazz trombonist who was a cornerstone of James Brown's band and the leader of the J.B.'s during the 1960s and 1970s. He later served as musical director for Parliament-Funkadelic and joined the Count Basie Orchestra, shaping the horn sound of funk music.",
+    "photoUrl": "/images/portraits/fred-wesley.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Fred_Wesley",
+    "websiteUrl": null
+  },
+  {
     "id": "slokar",
     "name": "B. Slokar",
     "born": 1946,
