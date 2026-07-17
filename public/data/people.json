@@ -2003,6 +2003,17 @@
     "websiteUrl": null
   },
   {
+    "id": "midori",
+    "name": "Midori",
+    "born": 1971,
+    "died": null,
+    "role": "player",
+    "bio": "Japanese-American violinist celebrated for the extraordinary musicianship she displayed as a child prodigy, making her debut with the New York Philharmonic at age eleven. A dedicated educator and United Nations Messenger of Peace, she has combined a distinguished solo career with extensive humanitarian and teaching work.",
+    "photoUrl": "/images/portraits/midori.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Midori_(violinist)",
+    "websiteUrl": null
+  },
+  {
     "id": "vengerov",
     "name": "M. Vengerov",
     "born": 1974,
