@@ -1992,6 +1992,17 @@
     "websiteUrl": null
   },
   {
+    "id": "kavakos",
+    "name": "L. Kavakos",
+    "born": 1967,
+    "died": null,
+    "role": "player",
+    "bio": "Greek violinist and conductor celebrated for his refined tone and interpretive command of the classical and romantic repertoire. He rose to prominence by winning the Sibelius Competition in 1985 and the Paganini Competition in 1988, and has since built a distinguished career as a soloist, chamber musician, and conductor.",
+    "photoUrl": "/images/portraits/kavakos.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leonidas_Kavakos",
+    "websiteUrl": null
+  },
+  {
     "id": "shaham",
     "name": "G. Shaham",
     "born": 1971,
