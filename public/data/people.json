@@ -2355,6 +2355,17 @@
     "websiteUrl": null
   },
   {
+    "id": "bozza",
+    "name": "E. Bozza",
+    "born": 1905,
+    "died": 1991,
+    "role": "composer",
+    "bio": "French composer and conductor who won the Premier Grand Prix de Rome in 1934 and became one of the most prolific creators of chamber music for wind instruments in the 20th century. His Ballade for trombone and piano and other solo works remain staples of the recital repertoire, prized for their lyrical melodies and idiomatic writing.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Bozza",
+    "websiteUrl": null
+  },
+  {
     "id": "creston",
     "name": "P. Creston",
     "born": 1906,
