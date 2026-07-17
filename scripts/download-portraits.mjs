@@ -47,6 +47,7 @@ const WIKIPEDIA_TITLES = {
   'julia-fischer': 'Julia_Fischer',
   'jansen': 'Janine_Jansen',
   'bell': 'Joshua_Bell',
+  'kavakos': 'Leonidas_Kavakos',
   'shaham': 'Gil_Shaham',
   'chen': 'Ray_Chen_(musician)',
   'ehnes': 'James_Ehnes',
