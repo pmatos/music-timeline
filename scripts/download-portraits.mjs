@@ -63,6 +63,7 @@ const WIKIPEDIA_TITLES = {
   'hindemith': 'Paul_Hindemith',
   'ibert': 'Jacques_Ibert',
   'cortot': 'Alfred_Cortot',
+  'fanny-mendelssohn': 'Fanny_Hensel',
   'hofmann': 'Josef_Hofmann',
   'grainger': 'Percy_Grainger',
   'glenn-miller': 'Glenn_Miller',

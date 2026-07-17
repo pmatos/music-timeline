@@ -132,6 +132,12 @@
     "label": "husband/wife"
   },
   {
+    "from": "mendelssohn",
+    "to": "fanny-mendelssohn",
+    "type": "relative",
+    "label": "brother/sister"
+  },
+  {
     "from": "saint-saens",
     "to": "faure",
     "type": "student-teacher",
