@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-17",
+  "title": "Design System: Music Timeline",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Slate Blue",
+        "canonical": "#3d5a80",
+        "tonalRamp": [
+          "#0f172a",
+          "#1e293b",
+          "#2c4160",
+          "#3d5a80",
+          "#5b78a0",
+          "#8299bd",
+          "#b3c2d8",
+          "#dde5ef"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#faf9f7",
+        "tonalRamp": [
+          "#3a3835",
+          "#57544f",
+          "#7a766f",
+          "#a09b92",
+          "#c4bfb6",
+          "#ddd8ce",
+          "#efece5",
+          "#faf9f7"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1a1a1a",
+        "tonalRamp": [
+          "#000000",
+          "#1a1a1a",
+          "#333333",
+          "#4d4d4d",
+          "#666666",
+          "#888888",
+          "#b3b3b3",
+          "#e0e0e0"
+        ]
+      },
+      "role-composer": {
+        "role": "tertiary",
+        "displayName": "Composer Blue",
+        "canonical": "#4a90d9",
+        "tonalRamp": [
+          "#0c2540",
+          "#143a63",
+          "#1f568f",
+          "#2e73b8",
+          "#4a90d9",
+          "#79aee4",
+          "#a9cbee",
+          "#d6e6f7"
+        ]
+      },
+      "role-player": {
+        "role": "tertiary",
+        "displayName": "Player Orange",
+        "canonical": "#e67e22",
+        "tonalRamp": [
+          "#4a2705",
+          "#6e3a08",
+          "#99530c",
+          "#c26a12",
+          "#e67e22",
+          "#ec9b52",
+          "#f2bd8c",
+          "#f8ddc4"
+        ]
+      },
+      "role-both": {
+        "role": "tertiary",
+        "displayName": "Both Purple",
+        "canonical": "#8e44ad",
+        "tonalRamp": [
+          "#2c1436",
+          "#431f52",
+          "#5e2c73",
+          "#7a3894",
+          "#8e44ad",
+          "#a969c1",
+          "#c496d6",
+          "#e0c7ea"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "App/instrument title in the header. Cormorant Garamond serif."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "A person's name in the detail panel and tooltip. Cormorant Garamond serif."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Bios and prose. Karla, capped 65-75ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Role badge and section labels. Karla uppercase, 0.06em tracking. The only sanctioned tracked-uppercase text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-float",
+        "value": "-4px 0 24px rgba(0,0,0,0.08)",
+        "purpose": "Right-edge slide-in person panel, lifting it off the content beneath."
+      },
+      {
+        "name": "tooltip-float",
+        "value": "0 2px 12px rgba(0,0,0,0.12)",
+        "purpose": "Hover tooltip, a small card tracking the cursor."
+      }
+    ],
+    "motion": [
+      {
+        "name": "quick",
+        "value": "0.15s",
+        "purpose": "Hover color/border transitions on controls (selector border, close button)."
+      },
+      {
+        "name": "panel-slide",
+        "value": "transform 0.3s ease",
+        "purpose": "Person panel slide-in from the right. Needs a reduced-motion alternative."
+      }
+    ],
+    "breakpoints": [
+      { "name": "orientation-pivot", "value": "(min-aspect-ratio: 1/1)" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Instrument Selector",
+      "kind": "input",
+      "refersTo": "instrument-select",
+      "description": "Native select that switches the active instrument; quiet warm-bordered control.",
+      "html": "<select class=\"ds-select\"><option>Piano</option><option>Violin</option><option>Trombone</option></select>",
+      "css": ".ds-select { font-family: Karla, sans-serif; font-size: 0.85rem; font-weight: 500; color: #1a1a1a; background: #ffffff; border: 1px solid #e0ddd8; border-radius: 6px; padding: 6px 14px; cursor: pointer; transition: border-color 0.15s; } .ds-select:hover { border-color: #3d5a80; } .ds-select:focus-visible { outline: 2px solid #3d5a80; outline-offset: 2px; }"
+    },
+    {
+      "name": "Role Badge",
+      "kind": "chip",
+      "refersTo": "role-chip",
+      "description": "Spelled-out role that backs up the lifetime bar's color encoding.",
+      "html": "<span class=\"ds-chip\">Composer</span>",
+      "css": ".ds-chip { display: inline-block; font-family: Karla, sans-serif; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555555; background: #f0ede8; border-radius: 12px; padding: 2px 10px; }"
+    },
+    {
+      "name": "Tooltip",
+      "kind": "custom",
+      "refersTo": "tooltip",
+      "description": "Hover card that tracks the cursor; serif name over small sans years.",
+      "html": "<div class=\"ds-tooltip\"><strong>F. Chopin</strong><span>1810 &ndash; 1849</span></div>",
+      "css": ".ds-tooltip { display: inline-block; background: #ffffff; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,0,0,0.12); padding: 8px 12px; font-family: Karla, sans-serif; font-size: 0.8rem; color: #888888; } .ds-tooltip strong { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 0.92rem; font-weight: 600; color: #1a1a1a; }"
+    },
+    {
+      "name": "Header Nav Link",
+      "kind": "nav",
+      "refersTo": "header-link",
+      "description": "Quiet accent text link used for contribution/feedback actions in the header.",
+      "html": "<a class=\"ds-navlink\" href=\"#\">Suggest a person</a>",
+      "css": ".ds-navlink { font-family: Karla, sans-serif; font-size: 0.8rem; font-weight: 500; color: #3d5a80; text-decoration: none; } .ds-navlink:hover { text-decoration: underline; } .ds-navlink:focus-visible { outline: 2px solid #3d5a80; outline-offset: 2px; border-radius: 2px; }"
+    },
+    {
+      "name": "Person Panel (compact)",
+      "kind": "card",
+      "refersTo": "person-panel",
+      "description": "Slide-in detail rail: serif name, years, role badge, bio, links. Shown here as a static compact card.",
+      "html": "<div class=\"ds-panel\"><h2>Fr&eacute;d&eacute;ric Chopin</h2><p class=\"ds-panel-years\">1810 &ndash; 1849</p><span class=\"ds-panel-role\">Composer</span><p class=\"ds-panel-bio\">Polish composer and virtuoso pianist of the Romantic era, celebrated for his solo piano works.</p><a class=\"ds-panel-link\" href=\"#\">Wikipedia</a></div>",
+      "css": ".ds-panel { background: #ffffff; box-shadow: -4px 0 24px rgba(0,0,0,0.08); padding: 28px; max-width: 360px; font-family: Karla, sans-serif; } .ds-panel h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-weight: 700; line-height: 1.2; color: #1a1a1a; } .ds-panel-years { color: #888888; font-size: 0.88rem; margin-top: 2px; } .ds-panel-role { display: inline-block; margin: 8px 0; padding: 2px 10px; border-radius: 12px; background: #f0ede8; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555555; } .ds-panel-bio { line-height: 1.65; color: #555555; font-size: 0.92rem; margin: 16px 0; } .ds-panel-link { color: #3d5a80; text-decoration: none; font-weight: 500; font-size: 0.88rem; } .ds-panel-link:hover { text-decoration: underline; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Illuminated Almanac",
+    "overview": "Music Timeline is a literate almanac of music history rendered as an interactive canvas. It reads like a well-set reference volume that happens to be alive: names set in a warm serif, a paper-toned surface, centuries of composers and performers laid across quiet colored bands you can read at a glance. The register is a product (the timeline serves exploration), but the identity is deliberately editorial: Cormorant Garamond carries the names, Karla carries everything functional, and the palette holds to a single slate-blue accent over warm off-white, with role and era color used as information, never decoration. Depth is nearly absent; the timeline is flat, and shadow appears only where something genuinely floats above the page.",
+    "keyCharacteristics": [
+      "Editorial serif for names/titles, humanist sans for everything else.",
+      "Warm off-white paper surface (#faf9f7), a single slate-blue accent (#3d5a80).",
+      "Color is information: role hues, era bands, connection lines each earn their place.",
+      "Flat by default; soft ambient shadow only on floating overlays.",
+      "Restrained, deferential controls that never compete with the timeline."
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Slate blue (#3d5a80) is for interaction only - links and actionable controls. It never fills a shape and never decorates. Keep it under ~10% of any screen.",
+        "section": "colors"
+      },
+      {
+        "name": "The Quiet Bands Rule",
+        "body": "Era colors live at 30% opacity behind the timeline. They orient the eye across centuries; they never touch text, controls, or foreground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Color-Is-Information Rule",
+        "body": "Every non-neutral hue encodes data (role, relationship, era). No hue is chosen for flavor. If a color can't name what it means, it doesn't belong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif-Is-For-People Rule",
+        "body": "Cormorant Garamond is reserved for names and titles - the human beings the timeline is about. Every functional element is set in Karla. Never set a UI label, button, or data in the display serif.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Eyebrow Rule",
+        "body": "The uppercase tracked label exists once, as the role badge. Do not multiply it into per-section kickers; that is the generic-AI tell this system rejects.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-Timeline Rule",
+        "body": "The timeline is flat. Shadow appears only on genuinely floating overlays (panel, tooltip) and never as decoration on bars, bands, chips, or controls. A shadow on a resting surface is a bug.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reserve Cormorant Garamond for names and titles; set every control, label, datum, and body line in Karla.",
+      "Do hold the slate-blue accent (#3d5a80) to links and interactive affordances, under ~10% of any screen.",
+      "Do render era bands at 30% opacity behind the timeline as orientation only.",
+      "Do back every hue-coded signal with a non-color cue - the spelled-out role badge in the panel, and solid-vs-dashed connection lines - so meaning survives color-blindness.",
+      "Do honor prefers-reduced-motion: replace the 0.3s panel slide and hover transitions with an instant or crossfade alternative.",
+      "Do keep surfaces flat; add shadow only to the floating panel and tooltip."
+    ],
+    "donts": [
+      "Don't turn this into a generic AI/SaaS dashboard - no card grids, no gradient accents, no tiny uppercase tracked eyebrow labels above sections.",
+      "Don't let it become a cluttered infographic - no busy, over-labeled, rainbow-coded chart junk competing with the timeline.",
+      "Don't add childish or gamified edutainment - no cartoon styling, badges, or confetti.",
+      "Don't drift corporate or sterile - warmth is carried by the paper surface (#faf9f7) and serif names; never flatten to cold enterprise gray.",
+      "Don't set UI labels, controls, or data in the display serif, and never multiply the uppercase role label into per-section kickers.",
+      "Don't rely on hue alone to distinguish composer/player/both or relative/teacher connections.",
+      "Don't put shadow on a resting surface (bars, bands, chips, controls); a shadow at rest is a bug."
+    ]
+  }
+}

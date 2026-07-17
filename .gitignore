@@ -13,6 +13,9 @@ dist-ssr
 coverage
 *.local
 
+# impeccable live-mode runtime journal (local recovery state, not source)
+.impeccable/live/sessions/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
