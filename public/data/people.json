@@ -704,6 +704,17 @@
     "websiteUrl": null
   },
   {
+    "id": "janacek",
+    "name": "L. Janáček",
+    "born": 1854,
+    "died": 1928,
+    "role": "composer",
+    "bio": "Czech composer whose piano cycles On an Overgrown Path and In the Mists distill Moravian folk idioms into intimate, speech-inflected miniatures. His Piano Sonata 1.X.1905 stands among the most personal statements in the Czech piano literature.",
+    "photoUrl": "/images/portraits/janacek.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leo%C5%A1_Jan%C3%A1%C4%8Dek",
+    "websiteUrl": null
+  },
+  {
     "id": "albeniz",
     "name": "I. Albeniz",
     "born": 1860,
@@ -833,6 +844,17 @@
     "bio": "Polish-American virtuoso regarded as one of the greatest pianists of the early twentieth century and the only private pupil of Anton Rubinstein. A child prodigy who made his American debut at the Metropolitan Opera aged eleven, he later directed the Curtis Institute of Music, and Rachmaninoff dedicated his Third Piano Concerto to him.",
     "photoUrl": "/images/portraits/hofmann.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Josef_Hofmann",
+    "websiteUrl": null
+  },
+  {
+    "id": "de-falla",
+    "name": "M. de Falla",
+    "born": 1876,
+    "died": 1946,
+    "role": "composer",
+    "bio": "Spanish composer widely regarded as the greatest of his generation and a leading voice of musical nationalism. His works, including the ballet El amor brujo, Nights in the Gardens of Spain for piano and orchestra, and the solo Fantasía bætica, fuse Andalusian folk idioms with the refinement he absorbed from Debussy and Ravel in Paris.",
+    "photoUrl": "/images/portraits/de-falla.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Manuel_de_Falla",
     "websiteUrl": null
   },
   {
@@ -2003,6 +2025,17 @@
     "websiteUrl": null
   },
   {
+    "id": "kavakos",
+    "name": "L. Kavakos",
+    "born": 1967,
+    "died": null,
+    "role": "player",
+    "bio": "Greek violinist and conductor celebrated for his refined tone and interpretive command of the classical and romantic repertoire. He rose to prominence by winning the Sibelius Competition in 1985 and the Paganini Competition in 1988, and has since built a distinguished career as a soloist, chamber musician, and conductor.",
+    "photoUrl": "/images/portraits/kavakos.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leonidas_Kavakos",
+    "websiteUrl": null
+  },
+  {
     "id": "shaham",
     "name": "G. Shaham",
     "born": 1971,
@@ -2014,6 +2047,17 @@
     "websiteUrl": null
   },
   {
+    "id": "midori",
+    "name": "Midori",
+    "born": 1971,
+    "died": null,
+    "role": "player",
+    "bio": "Japanese-American violinist celebrated for the extraordinary musicianship she displayed as a child prodigy, making her debut with the New York Philharmonic at age eleven. A dedicated educator and United Nations Messenger of Peace, she has combined a distinguished solo career with extensive humanitarian and teaching work.",
+    "photoUrl": "/images/portraits/midori.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Midori_(violinist)",
+    "websiteUrl": null
+  },
+  {
     "id": "vengerov",
     "name": "M. Vengerov",
     "born": 1974,
@@ -2022,6 +2066,17 @@
     "bio": "Russian-Israeli violinist and conductor who was a child prodigy winning international competitions from age ten. Considered one of the finest violinists of his generation, he is also an active pedagogue and conductor.",
     "photoUrl": "/images/portraits/vengerov.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Maxim_Vengerov",
+    "websiteUrl": null
+  },
+  {
+    "id": "renaud-capucon",
+    "name": "R. Capuçon",
+    "born": 1976,
+    "died": null,
+    "role": "player",
+    "bio": "French violinist admired for his warm, elegant tone and a broad repertoire ranging from Baroque to contemporary music. He performs on the 1737 Guarneri del Gesù \"Panette\" once owned by Isaac Stern and directs several festivals, including the Aix-en-Provence Easter Festival.",
+    "photoUrl": "/images/portraits/renaud-capucon.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Renaud_Capu%C3%A7on",
     "websiteUrl": null
   },
   {
@@ -2322,6 +2377,17 @@
     "websiteUrl": null
   },
   {
+    "id": "bozza",
+    "name": "E. Bozza",
+    "born": 1905,
+    "died": 1991,
+    "role": "composer",
+    "bio": "French composer and conductor who won the Premier Grand Prix de Rome in 1934 and became one of the most prolific creators of chamber music for wind instruments in the 20th century. His Ballade for trombone and piano and other solo works remain staples of the recital repertoire, prized for their lyrical melodies and idiomatic writing.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Bozza",
+    "websiteUrl": null
+  },
+  {
     "id": "creston",
     "name": "P. Creston",
     "born": 1906,
@@ -2330,6 +2396,17 @@
     "bio": "Self-taught American composer of Sicilian immigrant parentage who wrote in a rhythmically driven style. His Fantasy for Trombone and Orchestra, Op. 42 (1947) is a demanding showpiece that tests range and endurance, and remains a cornerstone of the solo trombone repertoire.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Paul_Creston",
+    "websiteUrl": null
+  },
+  {
+    "id": "vic-dickenson",
+    "name": "V. Dickenson",
+    "born": 1906,
+    "died": 1984,
+    "role": "player",
+    "bio": "American jazz trombonist whose career ran from the 1920s into the 1980s, known for the wit and vocalized, smearing phrasing of his swing and traditional-jazz playing. He recorded and toured with Count Basie, Sidney Bechet, and Earl Hines, and led the acclaimed Vic Dickenson Septet sessions for Vanguard in 1953-54.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vic_Dickenson",
     "websiteUrl": null
   },
   {
@@ -2462,6 +2539,17 @@
     "bio": "American jazz trombonist renowned as a master technician with a mellifluous sound. He played and recorded with Count Basie, Woody Herman, and Quincy Jones, and taught at USC for two decades.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Bill_Watrous",
+    "websiteUrl": null
+  },
+  {
+    "id": "fred-wesley",
+    "name": "F. Wesley",
+    "born": 1943,
+    "died": null,
+    "role": "player",
+    "bio": "American funk and jazz trombonist who served as band leader and musical director of James Brown's band, the J.B.'s, through the first half of the 1970s. After leaving in 1975 he arranged and performed with George Clinton's Parliament-Funkadelic, leading the spin-off Horny Horns, before joining the Count Basie Orchestra in 1978.",
+    "photoUrl": "/images/portraits/fred-wesley.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Fred_Wesley",
     "websiteUrl": null
   },
   {

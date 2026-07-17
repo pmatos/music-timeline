@@ -11,18 +11,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@remotion/cli": "^4.0.427",
+    "@remotion/cli": "^4.0.490",
     "@remotion/google-fonts": "^4.0.427",
     "@remotion/media": "^4.0.427",
     "@remotion/media-utils": "^4.0.427",
     "@remotion/player": "^4.0.427",
     "@remotion/transitions": "^4.0.427",
-    "@types/react": "^18.3.28",
-    "@types/react-dom": "^18.3.7",
-    "puppeteer": "^24.37.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "puppeteer": "^25.3.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "remotion": "^4.0.427",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   }
 }
