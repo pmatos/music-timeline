@@ -968,6 +968,17 @@
     "websiteUrl": null
   },
   {
+    "id": "price",
+    "name": "F. Price",
+    "born": 1887,
+    "died": 1953,
+    "role": "composer",
+    "bio": "American composer who in 1933 became the first Black woman to have a symphony performed by a major American orchestra, when the Chicago Symphony premiered her Symphony No. 1 in E minor. Her piano music, including the Sonata in E minor and numerous character pieces, draws on Romantic idioms alongside African-American spirituals and dance rhythms.",
+    "photoUrl": "/images/portraits/price.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Florence_Price",
+    "websiteUrl": null
+  },
+  {
     "id": "neuhaus",
     "name": "H. Neuhaus",
     "born": 1888,

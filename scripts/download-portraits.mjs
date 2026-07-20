@@ -65,6 +65,7 @@ const WIKIPEDIA_TITLES = {
   'kid-ory': 'Kid_Ory',
   'hindemith': 'Paul_Hindemith',
   'ibert': 'Jacques_Ibert',
+  'price': 'Florence_Price',
   'cortot': 'Alfred_Cortot',
   'fanny-mendelssohn': 'Fanny_Hensel',
   'janacek': 'Leoš_Janáček',
