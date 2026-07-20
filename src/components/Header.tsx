@@ -36,6 +36,7 @@ export function Header({
             className="header__select"
             value={instrument.toLowerCase()}
             onChange={handleChange}
+            aria-label="Select instrument"
           >
             {instruments.map((inst) => (
               <option key={inst} value={inst}>

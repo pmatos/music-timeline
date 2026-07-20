@@ -21,6 +21,8 @@ interface TimelineSVGProps {
   onPersonClick: (person: Person) => void;
   onPersonMouseEnter: (person: Person) => void;
   onPersonMouseLeave: () => void;
+  onPersonFocus: (person: Person, rect: DOMRect) => void;
+  onPersonBlur: () => void;
 }
 
 export function TimelineSVG({
@@ -32,6 +34,8 @@ export function TimelineSVG({
   onPersonClick,
   onPersonMouseEnter,
   onPersonMouseLeave,
+  onPersonFocus,
+  onPersonBlur,
 }: TimelineSVGProps) {
   const laneAssignments = useMemo(
     () => packLanes(data.people, CURRENT_YEAR),
@@ -73,7 +77,12 @@ export function TimelineSVG({
   const endYear = Math.max(...data.eras.map((e) => e.endYear), CURRENT_YEAR);
 
   return (
-    <svg width={totalWidth} height={svgHeight}>
+    <svg
+      width={totalWidth}
+      height={svgHeight}
+      role="group"
+      aria-label={`${data.instrument} timeline: ${data.people.length} composers and performers. Tab through the bars, press Enter to open a person's details.`}
+    >
       <EraBackgrounds
         eras={data.eras}
         yearToPixel={yearToPixel}
@@ -113,6 +122,8 @@ export function TimelineSVG({
             onClick={onPersonClick}
             onMouseEnter={onPersonMouseEnter}
             onMouseLeave={onPersonMouseLeave}
+            onFocus={onPersonFocus}
+            onBlur={onPersonBlur}
           />
         );
       })}

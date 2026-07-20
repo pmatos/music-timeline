@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import type { Person, Connection } from '../types';
 
 interface PersonPanelProps {
@@ -46,6 +46,8 @@ export function PersonPanel({
   onPersonClick,
   onClose,
 }: PersonPanelProps) {
+  const panelRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -53,6 +55,12 @@ export function PersonPanel({
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
   }, [onClose]);
+
+  // Move focus into the panel each time a new person is opened, so screen
+  // readers announce the dialog by the person's name.
+  useEffect(() => {
+    if (person) panelRef.current?.focus();
+  }, [person?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const groups = useMemo(() => {
     if (!person) return [];
@@ -108,11 +116,17 @@ export function PersonPanel({
   const years = `${bornLabel}\u2013${person.died ?? 'present'}`;
 
   return (
-    <div className="person-panel">
+    <div
+      className="person-panel"
+      ref={panelRef}
+      role="dialog"
+      aria-labelledby="person-panel-title"
+      tabIndex={-1}
+    >
       <button
         className="person-panel__close"
         onClick={onClose}
-        aria-label="Close"
+        aria-label="Close details"
       >
         &times;
       </button>
@@ -123,7 +137,7 @@ export function PersonPanel({
           alt={person.fullName ?? person.name}
         />
       )}
-      <h2>{person.fullName ?? person.name}</h2>
+      <h2 id="person-panel-title">{person.fullName ?? person.name}</h2>
       <div className="person-panel__years">{years}</div>
       <span className="person-panel__role">{person.role}</span>
       <p className="person-panel__bio">{person.bio}</p>

@@ -76,7 +76,7 @@ test('renders website link when available', () => {
 test('calls onClose when close button clicked', () => {
   const onClose = vi.fn();
   render(<PersonPanel person={person} {...defaultProps} onClose={onClose} />);
-  fireEvent.click(screen.getByLabelText('Close'));
+  fireEvent.click(screen.getByLabelText('Close details'));
   expect(onClose).toHaveBeenCalled();
 });
 
