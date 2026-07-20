@@ -197,8 +197,12 @@ Controls are **refined and restrained** — precise, quiet, and deferential to t
 
 - **Corner / surface:** panel white, full-height fixed rail on the right (360px, max 90vw), 28px padding.
 - **Elevation:** panel-float shadow (see Elevation).
-- **Motion:** slides in via `transform: translateX` over 0.3s ease. Contains the portrait (8px radius), name in serif title, years in subtle ink, role badge, bio, external links (Wikipedia / website) in accent, and a connections list of accent text-buttons.
+- **Motion:** slides in via `transform: translateX` over 0.3s ease. Contains the portrait (8px radius), name in serif title, years in subtle ink, role badge, an optional gender line (muted-ink, shown only when known), bio, external links (Wikipedia / website) in accent, and a connections list of accent text-buttons.
 - **Close:** a quiet ✕ in subtle ink that darkens to ink on hover.
+
+### Gender Summary
+
+- **Style:** one quiet muted-ink line under the legend giving neutral per-instrument counts (e.g. "213 people · 14 women · 187 men · 12 unrecorded"). Metadata, not a chart — no color, no emphasis, zero categories omitted.
 
 ### Tooltip
 

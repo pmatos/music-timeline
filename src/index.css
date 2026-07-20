@@ -208,6 +208,13 @@ select:focus-visible,
   gap: 8px;
 }
 
+.gender-summary {
+  padding: 0 28px 8px;
+  font-size: 0.78rem;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.01em;
+}
+
 .legend-line {
   display: inline-block;
   width: 24px;
@@ -300,6 +307,12 @@ select:focus-visible,
   letter-spacing: 0.06em;
   color: var(--color-ink-muted);
   margin: 8px 0;
+}
+
+.person-panel__gender {
+  margin-top: 6px;
+  font-size: 0.88rem;
+  color: var(--color-ink-muted);
 }
 
 .person-panel__bio {

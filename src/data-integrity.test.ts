@@ -32,6 +32,7 @@ const personSchema = z.object({
   bornEstimated: z.boolean().optional(),
   died: z.number().int().nullable(),
   role: z.enum(['composer', 'player', 'both']),
+  gender: z.enum(['female', 'male', 'unknown']).optional(),
   bio: z.string(),
   photoUrl: z.string().nullable(),
   wikiUrl: z.string().nullable(),

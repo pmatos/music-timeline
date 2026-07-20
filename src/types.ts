@@ -1,5 +1,7 @@
 export type Role = 'composer' | 'player' | 'both';
 
+export type Gender = 'female' | 'male' | 'unknown';
+
 export type ConnectionType = 'relative' | 'student-teacher';
 
 export interface Era {
@@ -17,6 +19,7 @@ export interface Person {
   bornEstimated?: boolean;
   died: number | null;
   role: Role;
+  gender?: Gender;
   bio: string;
   photoUrl: string | null;
   wikiUrl: string | null;
