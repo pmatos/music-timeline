@@ -4,11 +4,6 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-    ignore:
-      # @vitejs/plugin-react 6 requires vite 8, but the app is on vite 7 — the
-      # 5->6 bump (#21) broke every build. Hold at 5.x until vite 8 migration.
-      - dependency-name: '@vitejs/plugin-react'
-        update-types: ['version-update:semver-major']
   - package-ecosystem: 'npm'
     directory: '/video'
     schedule:
