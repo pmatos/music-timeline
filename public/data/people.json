@@ -649,6 +649,17 @@
     "websiteUrl": null
   },
   {
+    "id": "bruch",
+    "name": "M. Bruch",
+    "born": 1838,
+    "died": 1920,
+    "role": "composer",
+    "bio": "German Romantic composer whose Violin Concerto No. 1 in G minor remains one of the most beloved and frequently performed works in the entire violin repertoire. His Scottish Fantasy and the cello showpiece Kol Nidrei display the lyrical, folk-inflected melodic gift for which he is celebrated.",
+    "photoUrl": "/images/portraits/bruch.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Max_Bruch",
+    "websiteUrl": null
+  },
+  {
     "id": "mussorgsky",
     "name": "M. Mussorgsky",
     "born": 1839,

@@ -29,6 +29,7 @@ const WIKIPEDIA_TITLES = {
   'auer': 'Leopold_Auer',
   'ysaye': 'Eugène_Ysaÿe',
   'kreisler': 'Fritz_Kreisler',
+  'bruch': 'Max_Bruch',
   'heifetz': 'Jascha_Heifetz',
   'oistrakh': 'David_Oistrakh',
   'menuhin': 'Yehudi_Menuhin',
