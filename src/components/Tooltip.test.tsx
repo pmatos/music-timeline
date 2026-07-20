@@ -25,6 +25,19 @@ test('renders name and years when person is provided', () => {
   expect(screen.getByText('1685\u20131750')).toBeInTheDocument();
 });
 
+test('prefers fullName over name when provided', () => {
+  const withFull = {
+    ...person,
+    name: 'J. Bologne',
+    fullName: 'Joseph Bologne, Chevalier de Saint-Georges',
+  };
+  render(<Tooltip person={withFull} x={100} y={50} />);
+  expect(
+    screen.getByText('Joseph Bologne, Chevalier de Saint-Georges'),
+  ).toBeInTheDocument();
+  expect(screen.queryByText('J. Bologne')).not.toBeInTheDocument();
+});
+
 test('shows present for living person', () => {
   const living = {
     ...person,

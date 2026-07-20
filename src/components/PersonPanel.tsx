@@ -120,10 +120,10 @@ export function PersonPanel({
         <img
           className="person-panel__photo"
           src={`${import.meta.env.BASE_URL}${person.photoUrl.replace(/^\//, '')}`}
-          alt={person.name}
+          alt={person.fullName ?? person.name}
         />
       )}
-      <h2>{person.name}</h2>
+      <h2>{person.fullName ?? person.name}</h2>
       <div className="person-panel__years">{years}</div>
       <span className="person-panel__role">{person.role}</span>
       <p className="person-panel__bio">{person.bio}</p>
