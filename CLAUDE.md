@@ -38,6 +38,8 @@ The `useInstrumentData` hook fetches all three, caches people/connections in a `
 
 To add a new instrument: create `public/data/<name>.json` with eras and peopleIds, add new people to `people.json` if needed, and add `'<name>'` to the `INSTRUMENTS` array in `App.tsx`.
 
+Each `Person` has a required `name` — the compact label shown on the timeline bar (first-initial + surname, e.g. `J. Bologne`) — and an optional `fullName` for the detail panel and tooltip (e.g. `Joseph Bologne, Chevalier de Saint-Georges`). Set `fullName` only when the short label hides a widely-known full name; `PersonPanel` and `Tooltip` render `fullName ?? name`, while the width-constrained `PersonBar` always uses `name`.
+
 ### Rendering Pipeline
 
 `App` → `TimelineView` (scrollable container with zoom) → `TimelineSVG` (the SVG):
