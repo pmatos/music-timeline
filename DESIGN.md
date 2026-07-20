@@ -108,7 +108,7 @@ A warm-neutral paper base carries near-black text and a single reserved slate-bl
 
 - **Ink** (`#1a1a1a`): primary text — names, headings, body at full strength.
 - **Muted Ink** (`#555555`): secondary text — bios, legend labels, chip text.
-- **Subtle Ink** (`#888888`): tertiary text — years, subtitles, footer, time-axis labels.
+- **Subtle Ink** (`#888888`): tertiary text — years, subtitles, footer, time-axis labels. **Below AA for normal-size text** (3.54:1 on panel white, 3.37:1 on paper); this mirrors the current code and is a known deviation from the AA commitment, not an endorsed pairing. For small text, darken toward Muted Ink (`#555555`, 7.46:1) or reserve `#888888` for large/non-essential labels; changing the `--color-ink-subtle` token itself is a code follow-up.
 - **Paper** (`#faf9f7`): the warm off-white body surface. The room the timeline lives in.
 - **Panel White** (`#ffffff`): raised surfaces — header, slide-in panel, tooltip, footer.
 - **Border** (`#e0ddd8`): warm hairline dividers and control outlines, tuned to the paper, never gray-cold.
@@ -142,6 +142,8 @@ Semi-transparent bands (Material-50 tints at 30% opacity) sit behind the timelin
 **The Quiet Bands Rule.** Era colors live at 30% opacity _behind_ the timeline. They orient the eye across centuries; they never touch text, controls, or foreground. If a band competes with a person bar for attention, the band is too strong.
 
 **The Color-Is-Information Rule.** Every non-neutral hue encodes data (role, relationship, era). No hue is chosen for flavor. If a color can't name what it means, it doesn't belong.
+
+**The AA-Contrast Rule.** Every text/background pairing meets WCAG 2.1 AA — 4.5:1 for normal-size text, 3:1 for large (≥18px, or bold ≥14px). Values inherited from the current code that fall short are flagged as known deviations pending a code follow-up, not endorsed patterns. The first is Subtle Ink `#888888` used as small text (see above).
 
 ## 3. Typography
 
@@ -220,6 +222,7 @@ Controls are **refined and restrained** — precise, quiet, and deferential to t
 - **Do** render era bands at 30% opacity behind the timeline as orientation only.
 - **Do** back every hue-coded signal with a non-color cue — the spelled-out role badge in the panel, and solid-vs-dashed connection lines — so meaning survives color-blindness.
 - **Do** honor `prefers-reduced-motion`: replace the 0.3s panel slide and hover transitions with an instant or crossfade alternative.
+- **Do** meet WCAG 2.1 AA contrast on text (4.5:1 normal, 3:1 large); the current Subtle-Ink small text is a flagged sub-AA deviation to remediate in code, not a pattern to copy.
 - **Do** keep surfaces flat; add shadow only to the floating panel and tooltip.
 
 ### Don't:
