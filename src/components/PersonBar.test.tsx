@@ -59,7 +59,12 @@ test('displays person name', () => {
     </svg>,
   );
   const text = container.querySelector('text');
-  expect(text?.textContent).toBe('J.S. Bach');
+  expect(text?.textContent).toContain('J.S. Bach');
+});
+
+test('prefixes the name with the role glyph (non-color cue)', () => {
+  const group = renderBar();
+  expect(group.querySelector('text')?.textContent).toContain('✎');
 });
 
 test('calls onClick when clicked', () => {
@@ -117,7 +122,7 @@ test('exposes button semantics and an accessible label', () => {
   expect(group).toHaveAttribute('tabindex', '0');
   const label = group.getAttribute('aria-label') ?? '';
   expect(label).toContain('J.S. Bach');
-  expect(label).toContain('Composer');
+  expect(label).toContain('composer');
   expect(label).toContain('1685');
 });
 

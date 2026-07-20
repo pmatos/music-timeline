@@ -12,7 +12,7 @@
   --font-body: 'Karla', 'Helvetica Neue', sans-serif;
   --color-ink: #1a1a1a;
   --color-ink-muted: #555;
-  --color-ink-subtle: #888;
+  --color-ink-subtle: #6c6c6c;
   --color-accent: #3d5a80;
   --color-border: #e0ddd8;
   --color-bg: #faf9f7;
@@ -205,34 +205,30 @@ select:focus-visible,
 .legend-section {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .legend-line {
   display: inline-block;
-  width: 24px;
-  height: 2px;
+  vertical-align: middle;
 }
 
-.legend-line--relative {
-  background: #e74c3c;
-}
-
-.legend-line--student-teacher {
-  background: repeating-linear-gradient(
-    90deg,
-    #3498db 0,
-    #3498db 6px,
-    transparent 6px,
-    transparent 10px
-  );
-}
-
-.legend-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.legend-swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 14px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
 }
 
 /* Person panel */

@@ -1,16 +1,12 @@
-import type { Person, Role } from '../types';
-
-const ROLE_COLORS: Record<Role, string> = {
-  composer: '#4A90D9',
-  player: '#E67E22',
-  both: '#8E44AD',
-};
-
-const ROLE_LABELS: Record<Role, string> = {
-  composer: 'Composer',
-  player: 'Player',
-  both: 'Composer and player',
-};
+import type { Person } from '../types';
+import {
+  ROLE_COLORS,
+  ROLE_ARIA,
+  ROLE_GLYPHS,
+  BAR_TEXT,
+  BAR_HIGHLIGHT_STROKE,
+  FOCUS_RING,
+} from '../theme';
 
 interface PersonBarProps {
   person: Person;
@@ -49,7 +45,7 @@ export function PersonBar({
     ? `${person.born} (estimated)`
     : `${person.born}`;
   const years = `${bornLabel} to ${person.died ?? 'present'}`;
-  const ariaLabel = `${person.fullName ?? person.name}, ${ROLE_LABELS[person.role]}, ${years}`;
+  const ariaLabel = `${person.fullName ?? person.name}, ${ROLE_ARIA[person.role]}, ${years}`;
 
   const handleKeyDown = (e: React.KeyboardEvent<SVGGElement>) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -85,17 +81,17 @@ export function PersonBar({
         height={height}
         rx={4}
         fill={color}
-        stroke={highlighted ? '#333' : 'none'}
+        stroke={highlighted ? BAR_HIGHLIGHT_STROKE : 'none'}
         strokeWidth={strokeWidth}
       />
       <text
         x={x + 6}
         y={y + height / 2 + 4}
         fontSize={11}
-        fill="#fff"
+        fill={BAR_TEXT}
         fontWeight={500}
       >
-        {person.name}
+        {`${ROLE_GLYPHS[person.role]} ${person.name}`}
       </text>
       <rect
         className="person-bar__focus-ring"
@@ -105,7 +101,7 @@ export function PersonBar({
         height={height + 4}
         rx={6}
         fill="none"
-        stroke="#3d5a80"
+        stroke={FOCUS_RING}
         strokeWidth={2}
         pointerEvents="none"
       />

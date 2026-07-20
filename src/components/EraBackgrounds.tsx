@@ -1,4 +1,5 @@
 import type { Era } from '../types';
+import { ERA_LABEL } from '../theme';
 
 interface EraBackgroundsProps {
   eras: Era[];
@@ -31,7 +32,7 @@ export function EraBackgrounds({
               y={16}
               textAnchor="middle"
               fontSize={11}
-              fill="#666"
+              fill={ERA_LABEL}
               fontWeight={600}
             >
               {era.name}

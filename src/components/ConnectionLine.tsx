@@ -1,9 +1,5 @@
 import type { ConnectionType } from '../types';
-
-const TYPE_STYLES: Record<ConnectionType, { color: string; dash?: string }> = {
-  relative: { color: '#E74C3C' },
-  'student-teacher': { color: '#3498DB', dash: '6 3' },
-};
+import { CONNECTION_STYLES } from '../theme';
 
 interface ConnectionLineProps {
   x1: number;
@@ -24,7 +20,7 @@ export function ConnectionLine({
   highlighted,
   dimmed,
 }: ConnectionLineProps) {
-  const style = TYPE_STYLES[type];
+  const style = CONNECTION_STYLES[type];
   const midX = (x1 + x2) / 2;
   const d = `M ${x1} ${y1} Q ${midX} ${y1} ${midX} ${(y1 + y2) / 2} Q ${midX} ${y2} ${x2} ${y2}`;
   return (

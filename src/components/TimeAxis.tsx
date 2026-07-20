@@ -1,3 +1,5 @@
+import { AXIS_LINE, AXIS_TEXT } from '../theme';
+
 interface TimeAxisProps {
   startYear: number;
   endYear: number;
@@ -24,7 +26,7 @@ export function TimeAxis({
         x2={yearToPixel(endYear)}
         y1={y}
         y2={y}
-        stroke="#ccc"
+        stroke={AXIS_LINE}
         strokeWidth={1}
       />
       {ticks.map((year) => {
@@ -36,7 +38,7 @@ export function TimeAxis({
               x2={x}
               y1={y}
               y2={y + 8}
-              stroke="#ccc"
+              stroke={AXIS_LINE}
               strokeWidth={1}
             />
             <text
@@ -44,7 +46,7 @@ export function TimeAxis({
               y={y + 22}
               textAnchor="middle"
               fontSize={12}
-              fill="#888"
+              fill={AXIS_TEXT}
             >
               {year}
             </text>
