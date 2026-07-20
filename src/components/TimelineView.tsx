@@ -10,6 +10,8 @@ interface TimelineViewProps {
   onPersonClick: (person: Person) => void;
   onPersonMouseEnter: (person: Person) => void;
   onPersonMouseLeave: () => void;
+  onPersonFocus: (person: Person, rect: DOMRect) => void;
+  onPersonBlur: () => void;
 }
 
 export function TimelineView({
@@ -19,6 +21,8 @@ export function TimelineView({
   onPersonClick,
   onPersonMouseEnter,
   onPersonMouseLeave,
+  onPersonFocus,
+  onPersonBlur,
 }: TimelineViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const startYear = Math.min(
@@ -62,6 +66,8 @@ export function TimelineView({
         onPersonClick={onPersonClick}
         onPersonMouseEnter={onPersonMouseEnter}
         onPersonMouseLeave={onPersonMouseLeave}
+        onPersonFocus={onPersonFocus}
+        onPersonBlur={onPersonBlur}
       />
     </div>
   );
