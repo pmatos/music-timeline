@@ -22,7 +22,7 @@ export function Tooltip({ person, x, y }: TooltipProps) {
         pointerEvents: 'none',
       }}
     >
-      <strong>{person.name}</strong>
+      <strong>{person.fullName ?? person.name}</strong>
       <div>{years}</div>
     </div>
   );

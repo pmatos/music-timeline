@@ -1750,6 +1750,18 @@
     "websiteUrl": null
   },
   {
+    "id": "bologne",
+    "name": "J. Bologne",
+    "fullName": "Joseph Bologne, Chevalier de Saint-Georges",
+    "born": 1745,
+    "died": 1799,
+    "role": "both",
+    "bio": "French violinist, composer, and conductor of Guadeloupean descent, among the first known classical composers of African descent. He led leading Parisian orchestras and wrote virtuosic violin concertos and symphonies concertantes that made him a celebrated figure of pre-Revolutionary Paris.",
+    "photoUrl": "/images/portraits/bologne.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Bologne,_Chevalier_de_Saint-Georges",
+    "websiteUrl": null
+  },
+  {
     "id": "viotti",
     "name": "G.B. Viotti",
     "born": 1755,

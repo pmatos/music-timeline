@@ -12,6 +12,7 @@ export interface Era {
 export interface Person {
   id: string;
   name: string;
+  fullName?: string;
   born: number;
   bornEstimated?: boolean;
   died: number | null;

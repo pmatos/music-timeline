@@ -36,6 +36,28 @@ test('renders person details', () => {
   ).toBeInTheDocument();
 });
 
+test('prefers fullName over name in heading and falls back to name', () => {
+  const withFull = {
+    ...person,
+    name: 'J. Bologne',
+    fullName: 'Joseph Bologne, Chevalier de Saint-Georges',
+  };
+  const { rerender } = render(
+    <PersonPanel person={withFull} {...defaultProps} />,
+  );
+  expect(
+    screen.getByRole('heading', {
+      name: 'Joseph Bologne, Chevalier de Saint-Georges',
+    }),
+  ).toBeInTheDocument();
+
+  const withoutFull: Person = { ...person, name: 'J. Bologne' };
+  rerender(<PersonPanel person={withoutFull} {...defaultProps} />);
+  expect(
+    screen.getByRole('heading', { name: 'J. Bologne' }),
+  ).toBeInTheDocument();
+});
+
 test('renders wiki link', () => {
   render(<PersonPanel person={person} {...defaultProps} />);
   const link = screen.getByText('Wikipedia');

@@ -27,6 +27,7 @@ const eraSchema = z.object({
 const personSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  fullName: z.string().min(1).optional(),
   born: z.number().int(),
   bornEstimated: z.boolean().optional(),
   died: z.number().int().nullable(),
