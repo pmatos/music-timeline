@@ -207,6 +207,7 @@ Controls are **refined and restrained** — precise, quiet, and deferential to t
 ### Lifetime Bar (signature component)
 
 - **Style:** an SVG `<rect>`, 4px radius, filled by role color, with the name in 11px white sans inset at the left.
+- **Contrast (known deviation):** 11px white on the composer (`#4a90d9`, 3.34:1) and player (`#e67e22`, 2.85:1) fills is below AA 4.5:1 — this mirrors the current code, not an endorsed pairing. An AA-safe treatment (darker role fills, or a text plate/outline behind the name) is owed here; because white fails composer/player while black fails the purple "both" fill (3.58:1), there is no single-color swap, so the remedy lands with the code follow-up.
 - **States:** default; **highlighted** = 2px `#333` stroke (selected/connected); **dimmed** = 0.3 opacity (de-emphasized when another person is selected). Cursor is a pointer throughout.
 
 ### Connection Line (signature component)
@@ -233,4 +234,5 @@ Controls are **refined and restrained** — precise, quiet, and deferential to t
 - **Don't** drift corporate or sterile — warmth is carried by the paper surface (`#faf9f7`) and serif names; never flatten to cold enterprise gray.
 - **Don't** set UI labels, controls, or data in the display serif, and never multiply the uppercase role label into per-section kickers.
 - **Don't** rely on hue alone to distinguish composer/player/both or relative/teacher connections.
+- **Don't** treat the 11px-white-on-role-fill bar labels as AA-compliant — white clears only the purple "both" fill; composer (3.34:1) and player (2.85:1) are sub-AA and owed a darker-fill or text-plate remedy in the code follow-up.
 - **Don't** put shadow on a resting surface (bars, bands, chips, controls); a shadow at rest is a bug.
