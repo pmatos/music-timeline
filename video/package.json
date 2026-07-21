@@ -22,7 +22,7 @@
     "puppeteer": "^25.3.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "remotion": "^4.0.427",
+    "remotion": "^4.0.496",
     "typescript": "^7.0.2"
   }
 }
