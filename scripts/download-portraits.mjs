@@ -31,6 +31,7 @@ const WIKIPEDIA_TITLES = {
   'ysaye': 'Eugène_Ysaÿe',
   'kreisler': 'Fritz_Kreisler',
   'bruch': 'Max_Bruch',
+  'lalo': 'Édouard_Lalo',
   'heifetz': 'Jascha_Heifetz',
   'oistrakh': 'David_Oistrakh',
   'menuhin': 'Yehudi_Menuhin',
