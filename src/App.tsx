@@ -3,6 +3,7 @@ import { useInstrumentData } from './hooks/useInstrumentData';
 import { Header } from './components/Header';
 import { TimelineView } from './components/TimelineView';
 import { Legend } from './components/Legend';
+import { GenderSummary } from './components/GenderSummary';
 import { PersonPanel } from './components/PersonPanel';
 import { Tooltip } from './components/Tooltip';
 import type { Person } from './types';
@@ -101,6 +102,7 @@ function App() {
         />
         <div id="timeline-legend" tabIndex={-1} aria-label="Timeline legend">
           <Legend />
+          <GenderSummary people={data.people} />
         </div>
       </main>
       <footer className="footer">

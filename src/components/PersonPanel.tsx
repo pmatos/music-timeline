@@ -114,6 +114,12 @@ export function PersonPanel({
     ? `${person.born} (est.)`
     : `${person.born}`;
   const years = `${bornLabel}\u2013${person.died ?? 'present'}`;
+  const genderLabel =
+    person.gender === 'female'
+      ? 'Female'
+      : person.gender === 'male'
+        ? 'Male'
+        : null;
 
   return (
     <div
@@ -140,6 +146,7 @@ export function PersonPanel({
       <h2 id="person-panel-title">{person.fullName ?? person.name}</h2>
       <div className="person-panel__years">{years}</div>
       <span className="person-panel__role">{person.role}</span>
+      {genderLabel && <p className="person-panel__gender">{genderLabel}</p>}
       <p className="person-panel__bio">{person.bio}</p>
       <div className="person-panel__links">
         {person.wikiUrl && (

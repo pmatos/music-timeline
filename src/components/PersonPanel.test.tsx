@@ -73,6 +73,21 @@ test('renders website link when available', () => {
   );
 });
 
+test('shows gender when known', () => {
+  render(
+    <PersonPanel person={{ ...person, gender: 'male' }} {...defaultProps} />,
+  );
+  expect(screen.getByText('Male')).toBeInTheDocument();
+});
+
+test('omits gender when unknown or absent', () => {
+  render(
+    <PersonPanel person={{ ...person, gender: 'unknown' }} {...defaultProps} />,
+  );
+  expect(screen.queryByText('Male')).not.toBeInTheDocument();
+  expect(screen.queryByText('Female')).not.toBeInTheDocument();
+});
+
 test('calls onClose when close button clicked', () => {
   const onClose = vi.fn();
   render(<PersonPanel person={person} {...defaultProps} onClose={onClose} />);
