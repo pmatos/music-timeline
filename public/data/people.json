@@ -2708,6 +2708,17 @@
     "websiteUrl": null
   },
   {
+    "id": "yeo",
+    "name": "D. Yeo",
+    "born": 1955,
+    "died": null,
+    "role": "player",
+    "bio": "American bass trombonist who was principal bass trombone of the Boston Symphony Orchestra from 1985 to 2012, holding the John Moors Cabot Bass Trombone Chair. He is also a scholar of historical brass instruments and has taught at Arizona State University, Wheaton College, and the University of Illinois Urbana-Champaign.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Yeo",
+    "websiteUrl": null
+  },
+  {
     "id": "nils-landgren",
     "name": "N. Landgren",
     "born": 1956,
