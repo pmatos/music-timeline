@@ -561,6 +561,17 @@
     "websiteUrl": null
   },
   {
+    "id": "lalo",
+    "name": "É. Lalo",
+    "born": 1823,
+    "died": 1892,
+    "role": "composer",
+    "bio": "French composer of Spanish descent best known for the Symphonie espagnole, a virtuosic showpiece for violin and orchestra that remains a cornerstone of the Romantic violin repertoire. He also wrote the opera Le roi d'Ys and a cello concerto.",
+    "photoUrl": "/images/portraits/lalo.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/%C3%89douard_Lalo",
+    "websiteUrl": null
+  },
+  {
     "id": "smetana",
     "name": "B. Smetana",
     "born": 1824,
