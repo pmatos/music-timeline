@@ -51,47 +51,47 @@
       },
       "role-composer": {
         "role": "tertiary",
-        "displayName": "Composer Blue",
-        "canonical": "#4a90d9",
+        "displayName": "Deep Composer Blue",
+        "canonical": "#2f6690",
         "tonalRamp": [
-          "#0c2540",
-          "#143a63",
-          "#1f568f",
-          "#2e73b8",
-          "#4a90d9",
-          "#79aee4",
-          "#a9cbee",
-          "#d6e6f7"
+          "#152e41",
+          "#1f425e",
+          "#275476",
+          "#2f6690",
+          "#5985a6",
+          "#86a6bf",
+          "#b6c9d8",
+          "#e0e8ee"
         ]
       },
       "role-player": {
         "role": "tertiary",
-        "displayName": "Player Orange",
-        "canonical": "#e67e22",
+        "displayName": "Deep Player Ochre",
+        "canonical": "#8a5314",
         "tonalRamp": [
-          "#4a2705",
-          "#6e3a08",
-          "#99530c",
-          "#c26a12",
-          "#e67e22",
-          "#ec9b52",
-          "#f2bd8c",
-          "#f8ddc4"
+          "#3e2509",
+          "#5a360d",
+          "#714410",
+          "#8a5314",
+          "#a17543",
+          "#bb9b77",
+          "#d6c3ad",
+          "#ede5dc"
         ]
       },
       "role-both": {
         "role": "tertiary",
-        "displayName": "Both Purple",
-        "canonical": "#8e44ad",
+        "displayName": "Deep Both Plum",
+        "canonical": "#7a3f88",
         "tonalRamp": [
-          "#2c1436",
-          "#431f52",
-          "#5e2c73",
-          "#7a3894",
-          "#8e44ad",
-          "#a969c1",
-          "#c496d6",
-          "#e0c7ea"
+          "#371c3d",
+          "#4f2958",
+          "#643470",
+          "#7a3f88",
+          "#9565a0",
+          "#b290ba",
+          "#d0bcd5",
+          "#ebe2ed"
         ]
       }
     },
@@ -138,7 +138,10 @@
       }
     ],
     "breakpoints": [
-      { "name": "orientation-pivot", "value": "(min-aspect-ratio: 1/1)" }
+      {
+        "name": "orientation-pivot",
+        "value": "(min-aspect-ratio: 1/1)"
+      }
     ]
   },
   "components": [
@@ -223,6 +226,16 @@
         "name": "The Flat-Timeline Rule",
         "body": "The timeline is flat. Shadow appears only on genuinely floating overlays (panel, tooltip) and never as decoration on bars, bands, chips, or controls. A shadow on a resting surface is a bug.",
         "section": "elevation"
+      },
+      {
+        "name": "The Shape-Encodes-Role Rule",
+        "body": "Categorical meaning never rests on hue alone. Role carries a monochrome glyph (composer, player, both) alongside its color; connections carry a line pattern (solid vs dashed). The legend teaches both channels.",
+        "section": "colors"
+      },
+      {
+        "name": "The AA-Contrast Rule",
+        "body": "Every text/background pairing meets WCAG 2.1 AA. Role fills are deep enough that white 11px bar names clear AA; Subtle Ink is #6c6c6c; the time-axis line is #8c8c8c (3:1 non-text).",
+        "section": "colors"
       }
     ],
     "dos": [
@@ -231,7 +244,8 @@
       "Do render era bands at 30% opacity behind the timeline as orientation only.",
       "Do back every hue-coded signal with a non-color cue - the spelled-out role badge in the panel, and solid-vs-dashed connection lines - so meaning survives color-blindness.",
       "Do honor prefers-reduced-motion: replace the 0.3s panel slide and hover transitions with an instant or crossfade alternative.",
-      "Do keep surfaces flat; add shadow only to the floating panel and tooltip."
+      "Do keep surfaces flat; add shadow only to the floating panel and tooltip.",
+      "Do back every hue-coded signal with a non-color cue - the per-bar role glyph, solid-vs-dashed connection lines, and the spelled-out role in the panel."
     ],
     "donts": [
       "Don't turn this into a generic AI/SaaS dashboard - no card grids, no gradient accents, no tiny uppercase tracked eyebrow labels above sections.",
@@ -240,7 +254,8 @@
       "Don't drift corporate or sterile - warmth is carried by the paper surface (#faf9f7) and serif names; never flatten to cold enterprise gray.",
       "Don't set UI labels, controls, or data in the display serif, and never multiply the uppercase role label into per-section kickers.",
       "Don't rely on hue alone to distinguish composer/player/both or relative/teacher connections.",
-      "Don't put shadow on a resting surface (bars, bands, chips, controls); a shadow at rest is a bug."
+      "Don't put shadow on a resting surface (bars, bands, chips, controls); a shadow at rest is a bug.",
+      "Don't lighten the role fills back toward the old bright Material hues - the deep values are what let white bar names clear AA."
     ]
   }
 }

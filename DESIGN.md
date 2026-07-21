@@ -4,17 +4,17 @@ description: An interactive, scholarly timeline of composers and performers acro
 colors:
   ink: '#1a1a1a'
   ink-muted: '#555555'
-  ink-subtle: '#888888'
+  ink-subtle: '#6c6c6c'
   accent: '#3d5a80'
   border: '#e0ddd8'
   bg: '#faf9f7'
   panel-bg: '#ffffff'
   chip-bg: '#f0ede8'
-  role-composer: '#4a90d9'
-  role-player: '#e67e22'
-  role-both: '#8e44ad'
-  connection-relative: '#e74c3c'
-  connection-teacher: '#3498db'
+  role-composer: '#2f6690'
+  role-player: '#8a5314'
+  role-both: '#7a3f88'
+  connection-relative: '#c0392b'
+  connection-teacher: '#2980b9'
   era-baroque: '#e3f2fd'
   era-classical: '#fff3e0'
   era-romantic: '#fce4ec'
@@ -108,7 +108,7 @@ A warm-neutral paper base carries near-black text and a single reserved slate-bl
 
 - **Ink** (`#1a1a1a`): primary text — names, headings, body at full strength.
 - **Muted Ink** (`#555555`): secondary text — bios, legend labels, chip text.
-- **Subtle Ink** (`#888888`): tertiary text — years, subtitles, footer, time-axis labels. **Below AA for normal-size text** (3.54:1 on panel white, 3.37:1 on paper); this mirrors the current code and is a known deviation from the AA commitment, not an endorsed pairing. For small text, darken toward Muted Ink (`#555555`, 7.46:1) or reserve `#888888` for large/non-essential labels; changing the `--color-ink-subtle` token itself is a code follow-up.
+- **Subtle Ink** (`#6c6c6c`): tertiary text — years, subtitles, footer, time-axis labels. The lightest text tier, tuned to sit just above the AA floor (4.99:1 on paper, 5.25:1 on panel white).
 - **Paper** (`#faf9f7`): the warm off-white body surface. The room the timeline lives in.
 - **Panel White** (`#ffffff`): raised surfaces — header, slide-in panel, tooltip, footer.
 - **Border** (`#e0ddd8`): warm hairline dividers and control outlines, tuned to the paper, never gray-cold.
@@ -116,18 +116,18 @@ A warm-neutral paper base carries near-black text and a single reserved slate-bl
 
 ### Tertiary — Role Encoding
 
-Lifetime bars are colored by role. Hue is a _shortcut_, never the sole signal — the person panel always spells the role out in words.
+Lifetime bars are colored by role. Each hue is deep enough that the 11px white bar name clears AA (composer 6.1:1, player 6.3:1, both 7.3:1), and a monochrome **glyph** prefixes the name so role survives color-blindness.
 
-- **Composer Blue** (`#4a90d9`): role = composer.
-- **Player Orange** (`#e67e22`): role = player.
-- **Both Purple** (`#8e44ad`): role = both.
+- **Composer Blue** (`#2f6690`, glyph `✎`): role = composer.
+- **Player Ochre** (`#8a5314`, glyph `♪`): role = player.
+- **Both Plum** (`#7a3f88`, glyph `◆`): role = both.
 
 ### Tertiary — Connection Encoding
 
 Connection lines are distinguished by **line pattern first, color second**, so the relationship survives color-blindness.
 
-- **Relative Red** (`#e74c3c`): family ties — drawn solid.
-- **Teacher Blue** (`#3498db`): student/teacher links — drawn dashed (`6 3`).
+- **Relative Red** (`#c0392b`): family ties — drawn solid.
+- **Teacher Blue** (`#2980b9`): student/teacher links — drawn dashed (`6 3`).
 
 ### Tertiary — Era Bands
 
@@ -143,7 +143,9 @@ Semi-transparent bands (Material-50 tints at 30% opacity) sit behind the timelin
 
 **The Color-Is-Information Rule.** Every non-neutral hue encodes data (role, relationship, era). No hue is chosen for flavor. If a color can't name what it means, it doesn't belong.
 
-**The AA-Contrast Rule.** Every text/background pairing meets WCAG 2.1 AA — 4.5:1 for normal-size text, 3:1 for large (≥18px, or bold ≥14px). Values inherited from the current code that fall short are flagged as known deviations pending a code follow-up, not endorsed patterns. The first is Subtle Ink `#888888` used as small text (see above).
+**The Shape-Encodes-Role Rule.** Categorical meaning never rests on hue alone. Role carries a monochrome glyph (`✎` composer, `♪` player, `◆` both) alongside its color; connections carry a line pattern (solid vs dashed) alongside theirs. The legend teaches both channels.
+
+**The AA-Contrast Rule.** Every text/background pairing meets WCAG 2.1 AA — 4.5:1 for normal-size text, 3:1 for large (≥18px, or bold ≥14px), and 3:1 for meaningful non-text (axis lines). Role fills are deep enough that the white bar names clear AA; Subtle Ink is `#6c6c6c`; the time-axis line is `#8c8c8c`.
 
 ## 3. Typography
 
@@ -210,13 +212,12 @@ Controls are **refined and restrained** — precise, quiet, and deferential to t
 
 ### Lifetime Bar (signature component)
 
-- **Style:** an SVG `<rect>`, 4px radius, filled by role color, with the name in 11px white sans inset at the left.
-- **Contrast (known deviation):** 11px white on the composer (`#4a90d9`, 3.34:1) and player (`#e67e22`, 2.85:1) fills is below AA 4.5:1 — this mirrors the current code, not an endorsed pairing. An AA-safe treatment (darker role fills, or a text plate/outline behind the name) is owed here; because white fails composer/player while black fails the purple "both" fill (3.58:1), there is no single-color swap, so the remedy lands with the code follow-up.
+- **Style:** an SVG `<rect>`, 4px radius, filled by the deep role color, with a role glyph (`✎`/`♪`/`◆`) and the name in 11px white sans inset at the left. White text clears AA on all three fills.
 - **States:** default; **highlighted** = 2px `#333` stroke (selected/connected); **dimmed** = 0.3 opacity (de-emphasized when another person is selected). Cursor is a pointer throughout.
 
 ### Connection Line (signature component)
 
-- **Style:** an SVG bezier curve between two bars. **Relative** = solid red (`#e74c3c`); **student/teacher** = dashed blue (`#3498db`, dash `6 3`). Pattern carries the meaning; color reinforces it.
+- **Style:** an SVG bezier curve between two bars. **Relative** = solid red (`#c0392b`); **student/teacher** = dashed blue (`#2980b9`, dash `6 3`). Pattern carries the meaning; color reinforces it.
 
 ## 6. Do's and Don'ts
 
@@ -225,9 +226,9 @@ Controls are **refined and restrained** — precise, quiet, and deferential to t
 - **Do** reserve Cormorant Garamond for names and titles; set every control, label, datum, and body line in Karla.
 - **Do** hold the slate-blue accent (`#3d5a80`) to links and interactive affordances, under ~10% of any screen.
 - **Do** render era bands at 30% opacity behind the timeline as orientation only.
-- **Do** back every hue-coded signal with a non-color cue — the spelled-out role badge in the panel, and solid-vs-dashed connection lines — so meaning survives color-blindness.
+- **Do** back every hue-coded signal with a non-color cue — the per-bar role glyph (`✎`/`♪`/`◆`), solid-vs-dashed connection lines, and the spelled-out role in the panel — so meaning survives color-blindness.
 - **Do** honor `prefers-reduced-motion`: replace the 0.3s panel slide and hover transitions with an instant or crossfade alternative.
-- **Do** meet WCAG 2.1 AA contrast on text (4.5:1 normal, 3:1 large); the current Subtle-Ink small text is a flagged sub-AA deviation to remediate in code, not a pattern to copy.
+- **Do** keep every text pairing at WCAG 2.1 AA — Subtle Ink is `#6c6c6c`, the role fills are deep enough for white bar names, and the axis line meets the 3:1 non-text threshold.
 - **Do** keep surfaces flat; add shadow only to the floating panel and tooltip.
 
 ### Don't:
@@ -238,5 +239,5 @@ Controls are **refined and restrained** — precise, quiet, and deferential to t
 - **Don't** drift corporate or sterile — warmth is carried by the paper surface (`#faf9f7`) and serif names; never flatten to cold enterprise gray.
 - **Don't** set UI labels, controls, or data in the display serif, and never multiply the uppercase role label into per-section kickers.
 - **Don't** rely on hue alone to distinguish composer/player/both or relative/teacher connections.
-- **Don't** treat the 11px-white-on-role-fill bar labels as AA-compliant — white clears only the purple "both" fill; composer (3.34:1) and player (2.85:1) are sub-AA and owed a darker-fill or text-plate remedy in the code follow-up.
+- **Don't** lighten the role fills back toward the old bright Material hues — the deep values are what let the white bar names clear AA; brightening them breaks contrast.
 - **Don't** put shadow on a resting surface (bars, bands, chips, controls); a shadow at rest is a bug.

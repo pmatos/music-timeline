@@ -1,10 +1,5 @@
-import type { Person, Role } from '../types';
-
-const ROLE_LABELS: Record<Role, string> = {
-  composer: 'Composer',
-  player: 'Player',
-  both: 'Composer & player',
-};
+import type { Person } from '../types';
+import { ROLE_LABELS, ROLE_GLYPHS } from '../theme';
 
 interface TooltipProps {
   person: Person | null;
@@ -31,7 +26,9 @@ export function Tooltip({ person, x, y }: TooltipProps) {
     >
       <strong>{person.fullName ?? person.name}</strong>
       <div className="tooltip__years">{years}</div>
-      <div className="tooltip__role">{ROLE_LABELS[person.role]}</div>
+      <div className="tooltip__role">
+        {ROLE_GLYPHS[person.role]} {ROLE_LABELS[person.role]}
+      </div>
     </div>
   );
 }
