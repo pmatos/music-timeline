@@ -2136,6 +2136,17 @@
     "websiteUrl": null
   },
   {
+    "id": "chang",
+    "name": "S. Chang",
+    "born": 1980,
+    "died": null,
+    "role": "player",
+    "bio": "American violinist who was one of the most celebrated child prodigies of the late 20th century, debuting with the New York Philharmonic and Philadelphia Orchestra at age eight. She signed a long-term recording contract with EMI Classics before turning nine and studied at the Juilliard School under Dorothy DeLay.",
+    "photoUrl": "/images/portraits/chang.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sarah_Chang",
+    "websiteUrl": null
+  },
+  {
     "id": "julia-fischer",
     "name": "J. Fischer",
     "born": 1983,
