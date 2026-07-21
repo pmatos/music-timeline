@@ -2609,6 +2609,17 @@
     "websiteUrl": null
   },
   {
+    "id": "bourgeois",
+    "name": "D. Bourgeois",
+    "born": 1941,
+    "died": 2017,
+    "role": "composer",
+    "bio": "Extraordinarily prolific English composer of 116 symphonies and extensive brass and wind band repertoire, including a Trombone Concerto (1988) and a Concerto for Bass Trombone and Band (2006). He served as director of the National Youth Orchestra (1984-1993) and director of music at St Paul's Girls' School (1994-2002).",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Derek_Bourgeois",
+    "websiteUrl": null
+  },
+  {
     "id": "fred-wesley",
     "name": "F. Wesley",
     "born": 1943,
