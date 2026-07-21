@@ -814,6 +814,17 @@
     "websiteUrl": null
   },
   {
+    "id": "godowsky",
+    "name": "L. Godowsky",
+    "born": 1870,
+    "died": 1938,
+    "role": "both",
+    "bio": "Polish-American pianist and composer renowned for a transcendent, orchestral keyboard technique. His 53 Studies on Chopin's Etudes recompose the originals with staggering polyphonic and technical complexity, among the most demanding works in the piano repertoire.",
+    "photoUrl": "/images/portraits/godowsky.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leopold_Godowsky",
+    "websiteUrl": null
+  },
+  {
     "id": "scriabin",
     "name": "A. Scriabin",
     "born": 1872,
