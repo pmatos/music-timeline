@@ -715,6 +715,17 @@
     "websiteUrl": null
   },
   {
+    "id": "carreno",
+    "name": "T. Carreño",
+    "born": 1853,
+    "died": 1917,
+    "role": "both",
+    "bio": "Venezuelan pianist, composer, and conductor nicknamed the \"Valkyrie of the Piano\" for her commanding virtuosic technique. A child prodigy who performed for Abraham Lincoln at the White House, she toured internationally for decades and composed piano works alongside the official arrangement of the Venezuelan national anthem.",
+    "photoUrl": "/images/portraits/carreno.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Teresa_Carre%C3%B1o",
+    "websiteUrl": null
+  },
+  {
     "id": "janacek",
     "name": "L. Janáček",
     "born": 1854,

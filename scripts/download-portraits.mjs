@@ -94,6 +94,7 @@ const WIKIPEDIA_TITLES = {
   'conrad-herwig': 'Conrad_Herwig',
   'wycliffe-gordon': 'Wycliffe_Gordon',
   'trombone-shorty': 'Trombone_Shorty',
+  'carreno': 'Teresa_Carreño',
 };
 
 const THUMB_SIZE = 400;
