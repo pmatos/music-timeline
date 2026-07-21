@@ -47,6 +47,7 @@ const WIKIPEDIA_TITLES = {
   'vengerov': 'Maxim_Vengerov',
   'renaud-capucon': 'Renaud_Capuçon',
   'hahn': 'Hilary_Hahn',
+  'chang': 'Sarah_Chang',
   'julia-fischer': 'Julia_Fischer',
   'jansen': 'Janine_Jansen',
   'bell': 'Joshua_Bell',
