@@ -6,3 +6,16 @@ rules:
     config:
       policies:
         '*': ref-pin
+  # lint-pr-title.yml intentionally uses pull_request_target so a malicious PR
+  # can't disable its own title check by editing the workflow file. It never
+  # checks out PR code and only has pull-requests: read — the canonical safe
+  # use of this trigger.
+  dangerous-triggers:
+    ignore:
+      - lint-pr-title.yml
+  # commitlint.yml installs commitlint ad hoc rather than via the app's
+  # package-lock.json: it's a CI-only lint tool, unrelated to the app's
+  # runtime/build dependency graph.
+  adhoc-packages:
+    ignore:
+      - commitlint.yml
