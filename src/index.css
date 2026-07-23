@@ -526,7 +526,9 @@ select:focus-visible,
   }
 
   .person-panel__conn-link {
-    padding: 6px 0;
+    display: flex;
+    min-height: 44px;
+    align-items: center;
   }
 
   .person-panel__close {
