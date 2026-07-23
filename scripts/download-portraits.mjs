@@ -99,6 +99,7 @@ const WIKIPEDIA_TITLES = {
   'trombone-shorty': 'Trombone_Shorty',
   'carreno': 'Teresa_Carreño',
   'sibelius': 'Jean_Sibelius',
+  'szymanowski': 'Karol_Szymanowski',
 };
 
 const THUMB_SIZE = 400;

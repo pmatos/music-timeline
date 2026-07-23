@@ -1053,6 +1053,18 @@
     "websiteUrl": null
   },
   {
+    "id": "szymanowski",
+    "name": "K. Szymanowski",
+    "born": 1882,
+    "died": 1937,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Polish composer widely regarded as the country's most significant between Chopin and the 20th-century avant-garde, whose richly chromatic, impressionist-influenced piano works include the Métopes and Masques suites. He served as director of the Warsaw Conservatory and helped shape a modern Polish national style.",
+    "photoUrl": "/images/portraits/szymanowski.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Karol_Szymanowski",
+    "websiteUrl": null
+  },
+  {
     "id": "stravinsky",
     "name": "I. Stravinsky",
     "born": 1882,
