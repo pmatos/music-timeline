@@ -7,7 +7,7 @@ import prettier from 'eslint-config-prettier/flat';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
-  globalIgnores(['dist', 'coverage']),
+  globalIgnores(['dist', 'coverage', '.claude']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -20,6 +20,12 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        // Pin the root explicitly: without this, typescript-eslint auto-detects
+        // and fails ("multiple candidate TSConfigRootDirs") when the repo has
+        // nested git worktrees under .claude/worktrees, each carrying a tsconfig.
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
   },
 ]);
