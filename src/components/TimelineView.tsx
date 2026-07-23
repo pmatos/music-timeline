@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { memo, useRef, useEffect } from 'react';
 import type { InstrumentData, Person } from '../types';
 import { useTimelineScale } from '../hooks/useTimelineScale';
 import { TimelineSVG } from './TimelineSVG';
@@ -14,7 +14,7 @@ interface TimelineViewProps {
   onPersonBlur: () => void;
 }
 
-export function TimelineView({
+export const TimelineView = memo(function TimelineView({
   data,
   selectedPersonId,
   hoveredPersonId,
@@ -71,4 +71,4 @@ export function TimelineView({
       />
     </div>
   );
-}
+});
