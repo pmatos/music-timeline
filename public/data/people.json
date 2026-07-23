@@ -862,6 +862,18 @@
     "websiteUrl": null
   },
   {
+    "id": "sibelius",
+    "name": "J. Sibelius",
+    "born": 1865,
+    "died": 1957,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Finnish composer of the late Romantic and early modern periods, celebrated for his tone poem Finlandia and his Violin Concerto in D minor (1904, revised 1905), one of the most demanding and beloved works in the violin repertoire. His seven symphonies established him as Finland's foremost composer and a defining voice in Nordic musical nationalism.",
+    "photoUrl": "/images/portraits/sibelius.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jean_Sibelius",
+    "websiteUrl": null
+  },
+  {
     "id": "busoni",
     "name": "F. Busoni",
     "born": 1866,
