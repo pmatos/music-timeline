@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { ConnectionType } from '../types';
 import { CONNECTION_STYLES } from '../theme';
 
@@ -11,7 +12,7 @@ interface ConnectionLineProps {
   dimmed: boolean;
 }
 
-export function ConnectionLine({
+export const ConnectionLine = memo(function ConnectionLine({
   x1,
   y1,
   x2,
@@ -33,4 +34,4 @@ export function ConnectionLine({
       opacity={dimmed ? 0.15 : highlighted ? 1 : 0.5}
     />
   );
-}
+});

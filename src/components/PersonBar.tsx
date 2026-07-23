@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { Person } from '../types';
 import {
   ROLE_COLORS,
@@ -23,7 +24,7 @@ interface PersonBarProps {
   onBlur: () => void;
 }
 
-export function PersonBar({
+export const PersonBar = memo(function PersonBar({
   person,
   x,
   width,
@@ -107,4 +108,4 @@ export function PersonBar({
       />
     </g>
   );
-}
+});

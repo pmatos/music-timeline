@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { Era } from '../types';
 import { ERA_LABEL } from '../theme';
 
@@ -7,7 +8,7 @@ interface EraBackgroundsProps {
   height: number;
 }
 
-export function EraBackgrounds({
+export const EraBackgrounds = memo(function EraBackgrounds({
   eras,
   yearToPixel,
   height,
@@ -42,4 +43,4 @@ export function EraBackgrounds({
       })}
     </g>
   );
-}
+});
