@@ -2649,6 +2649,18 @@
     "websiteUrl": null
   },
   {
+    "id": "jacob",
+    "name": "G. Jacob",
+    "born": 1895,
+    "died": 1984,
+    "role": "composer",
+    "gender": "male",
+    "bio": "English composer and teacher renowned for his substantial output of wind band and brass music, including a Trombone Concerto (1956) that remains part of the standard repertoire. He taught composition and orchestration at the Royal College of Music from 1926 to 1966, mentoring generations of British composers.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Gordon_Jacob",
+    "websiteUrl": null
+  },
+  {
     "id": "tomasi",
     "name": "H. Tomasi",
     "born": 1901,

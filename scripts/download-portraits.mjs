@@ -100,6 +100,7 @@ const WIKIPEDIA_TITLES = {
   'carreno': 'Teresa_Carreño',
   'sibelius': 'Jean_Sibelius',
   'szymanowski': 'Karol_Szymanowski',
+  'jacob': 'Gordon_Jacob',
 };
 
 const THUMB_SIZE = 400;
