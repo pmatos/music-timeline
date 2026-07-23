@@ -98,6 +98,7 @@ const WIKIPEDIA_TITLES = {
   'wycliffe-gordon': 'Wycliffe_Gordon',
   'trombone-shorty': 'Trombone_Shorty',
   'carreno': 'Teresa_Carreño',
+  'sibelius': 'Jean_Sibelius',
 };
 
 const THUMB_SIZE = 400;
