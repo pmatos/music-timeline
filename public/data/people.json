@@ -1209,6 +1209,18 @@
     "websiteUrl": null
   },
   {
+    "id": "korngold",
+    "name": "E. Korngold",
+    "born": 1897,
+    "died": 1957,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Austrian-American composer and child prodigy whose lush late-Romantic style shaped both the concert hall and Hollywood film scoring. His Violin Concerto in D major, drawn from his own film themes, became a staple of the 20th-century repertoire.",
+    "photoUrl": "/images/portraits/korngold.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Erich_Wolfgang_Korngold",
+    "websiteUrl": null
+  },
+  {
     "id": "gershwin",
     "name": "G. Gershwin",
     "born": 1898,
