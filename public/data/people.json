@@ -2745,6 +2745,18 @@
     "websiteUrl": null
   },
   {
+    "id": "koetsier",
+    "name": "J. Koetsier",
+    "born": 1911,
+    "died": 2006,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Dutch conductor and composer who led the Bavarian Radio Symphony Orchestra and taught conducting at the Munich Hochschule. He wrote a substantial body of brass chamber and solo music, including a widely performed trombone concerto and numerous trombone quartets.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jan_Koetsier",
+    "websiteUrl": null
+  },
+  {
     "id": "kai-winding",
     "name": "K. Winding",
     "born": 1922,
