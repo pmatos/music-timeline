@@ -103,6 +103,7 @@ const WIKIPEDIA_TITLES = {
   'jacob': 'Gordon_Jacob',
   'koetsier': 'Jan_Koetsier',
   'still': 'William_Grant_Still',
+  'korngold': 'Erich_Wolfgang_Korngold',
 };
 
 const THUMB_SIZE = 400;
