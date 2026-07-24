@@ -1197,6 +1197,18 @@
     "websiteUrl": null
   },
   {
+    "id": "still",
+    "name": "W. Still",
+    "born": 1895,
+    "died": 1978,
+    "role": "composer",
+    "gender": "male",
+    "bio": "American composer known as the \"Dean of African American Composers,\" whose Afro-American Symphony (1931) was the first symphony by a Black composer performed by a major American orchestra. He was also the first African American to conduct a major U.S. symphony orchestra and to have an opera staged by a major American opera company.",
+    "photoUrl": "/images/portraits/still.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/William_Grant_Still",
+    "websiteUrl": null
+  },
+  {
     "id": "gershwin",
     "name": "G. Gershwin",
     "born": 1898,

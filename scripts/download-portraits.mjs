@@ -102,6 +102,7 @@ const WIKIPEDIA_TITLES = {
   'szymanowski': 'Karol_Szymanowski',
   'jacob': 'Gordon_Jacob',
   'koetsier': 'Jan_Koetsier',
+  'still': 'William_Grant_Still',
 };
 
 const THUMB_SIZE = 400;
