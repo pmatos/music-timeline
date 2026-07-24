@@ -101,6 +101,7 @@ const WIKIPEDIA_TITLES = {
   'sibelius': 'Jean_Sibelius',
   'szymanowski': 'Karol_Szymanowski',
   'jacob': 'Gordon_Jacob',
+  'koetsier': 'Jan_Koetsier',
 };
 
 const THUMB_SIZE = 400;
