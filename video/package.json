@@ -14,7 +14,7 @@
     "@remotion/cli": "^4.0.490",
     "@remotion/google-fonts": "^4.0.496",
     "@remotion/media": "^4.0.496",
-    "@remotion/media-utils": "^4.0.427",
+    "@remotion/media-utils": "^4.0.499",
     "@remotion/player": "^4.0.427",
     "@remotion/transitions": "^4.0.490",
     "@types/react": "^19.2.17",
