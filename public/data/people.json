@@ -2793,6 +2793,18 @@
     "websiteUrl": null
   },
   {
+    "id": "arutiunian",
+    "name": "A. Arutiunian",
+    "born": 1920,
+    "died": 2012,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Armenian composer whose Trumpet Concerto (1950) became a cornerstone of the brass repertoire. He chaired the Armenian Composers' Union and wrote a Trombone Concerto and other brass works blending Armenian folk idioms with late-Romantic harmony.",
+    "photoUrl": "/images/portraits/arutiunian.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alexander_Arutiunian",
+    "websiteUrl": null
+  },
+  {
     "id": "kai-winding",
     "name": "K. Winding",
     "born": 1922,
