@@ -106,6 +106,7 @@ const WIKIPEDIA_TITLES = {
   'korngold': 'Erich_Wolfgang_Korngold',
   'farrenc': 'Louise_Farrenc',
   'arutiunian': 'Alexander_Arutiunian',
+  'enescu': 'George_Enescu',
 };
 
 const THUMB_SIZE = 400;
