@@ -107,6 +107,7 @@ const WIKIPEDIA_TITLES = {
   'farrenc': 'Louise_Farrenc',
   'arutiunian': 'Alexander_Arutiunian',
   'enescu': 'George_Enescu',
+  'globokar': 'Vinko_Globokar',
 };
 
 const THUMB_SIZE = 400;
