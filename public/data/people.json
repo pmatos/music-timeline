@@ -2685,6 +2685,18 @@
     "websiteUrl": null
   },
   {
+    "id": "milhaud",
+    "name": "D. Milhaud",
+    "born": 1892,
+    "died": 1974,
+    "role": "composer",
+    "gender": "male",
+    "bio": "French composer and member of Les Six, prolific across nearly every genre with over 400 works blending polytonality with jazz and Brazilian influences. His Concertino d'hiver for trombone and string orchestra is a staple of the trombone repertoire.",
+    "photoUrl": "/images/portraits/milhaud.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Darius_Milhaud",
+    "websiteUrl": null
+  },
+  {
     "id": "hindemith",
     "name": "P. Hindemith",
     "born": 1895,
