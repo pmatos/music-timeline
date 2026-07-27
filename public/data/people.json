@@ -1053,6 +1053,18 @@
     "websiteUrl": null
   },
   {
+    "id": "enescu",
+    "name": "G. Enescu",
+    "born": 1881,
+    "died": 1955,
+    "role": "both",
+    "gender": "male",
+    "bio": "Romanian composer, violinist, and conductor widely regarded as his country's most important musician. His Romanian Rhapsodies and opera Oedipe drew on folk material, and he mentored violinists including Yehudi Menuhin.",
+    "photoUrl": "/images/portraits/enescu.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/George_Enescu",
+    "websiteUrl": null
+  },
+  {
     "id": "bartok",
     "name": "B. Bartók",
     "born": 1881,
