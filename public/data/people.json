@@ -826,6 +826,18 @@
     "websiteUrl": null
   },
   {
+    "id": "chaminade",
+    "name": "C. Chaminade",
+    "born": 1857,
+    "died": 1944,
+    "role": "both",
+    "gender": "female",
+    "bio": "French composer and pianist whose salon and character pieces, including the popular Flute Concertino, made her one of the most commercially successful composers of her era. She toured widely as a pianist performing her own works and became the first woman composer awarded the Légion d'honneur.",
+    "photoUrl": "/images/portraits/chaminade.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/C%C3%A9cile_Chaminade",
+    "websiteUrl": null
+  },
+  {
     "id": "albeniz",
     "name": "I. Albeniz",
     "born": 1860,

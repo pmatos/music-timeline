@@ -110,6 +110,7 @@ const WIKIPEDIA_TITLES = {
   'globokar': 'Vinko_Globokar',
   'milhaud': 'Darius_Milhaud',
   'glazunov': 'Alexander_Glazunov',
+  'chaminade': 'Cécile_Chaminade',
 };
 
 const THUMB_SIZE = 400;
