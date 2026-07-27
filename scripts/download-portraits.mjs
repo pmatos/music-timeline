@@ -104,6 +104,7 @@ const WIKIPEDIA_TITLES = {
   'koetsier': 'Jan_Koetsier',
   'still': 'William_Grant_Still',
   'korngold': 'Erich_Wolfgang_Korngold',
+  'farrenc': 'Louise_Farrenc',
 };
 
 const THUMB_SIZE = 400;

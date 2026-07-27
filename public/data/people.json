@@ -492,6 +492,18 @@
     "websiteUrl": null
   },
   {
+    "id": "farrenc",
+    "name": "L. Farrenc",
+    "born": 1804,
+    "died": 1875,
+    "role": "both",
+    "gender": "female",
+    "bio": "French composer, pianist, and pedagogue who held the piano professorship at the Paris Conservatoire for three decades. Her three symphonies and chamber works, especially the Nonet for winds and strings, helped her win equal pay to her male colleagues in 1850.",
+    "photoUrl": "/images/portraits/farrenc.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Louise_Farrenc",
+    "websiteUrl": null
+  },
+  {
     "id": "fanny-mendelssohn",
     "name": "Fanny Mendelssohn",
     "born": 1805,
