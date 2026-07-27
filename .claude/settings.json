@@ -9,6 +9,26 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-pr-title.mjs\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__plugin_github_github__(create|update)_pull_request",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-pr-title.mjs\""
+          }
+        ]
+      }
     ]
   }
 }

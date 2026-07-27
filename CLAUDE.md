@@ -22,6 +22,8 @@ Tests use vitest with jsdom environment and `globals: true` (no need to import `
 
 `.github/workflows/ci.yml` runs lint + typecheck + tests/coverage + build + Prettier on every PR (plus the `video/` build and an actionlint/zizmor pass over the workflows); `codeql.yml` runs CodeQL. GitHub Actions are pinned to major-version tags (kept current by Dependabot); `.github/zizmor.yml` sets zizmor's `unpinned-uses` policy to `ref-pin` to allow that. A `Stop` hook (`.claude/settings.json` → `.claude/hooks/verify.sh`) reruns lint/typecheck/tests locally.
 
+PR titles must follow Conventional Commits — `type(scope): subject`, type one of `build`/`chore`/`ci`/`docs`/`feat`/`fix`/`perf`/`refactor`/`revert`/`style`/`test` (see `commitlint.config.cjs`) — since GitHub's squash-merge uses the PR title as the commit subject on `main`. `lint-pr-title.yml` enforces this on every PR and `commitlint.yml` re-checks the squashed commit on push to `main`; a `PreToolUse` hook (`.claude/hooks/check-pr-title.mjs`) blocks `gh pr create`/`edit` and the GitHub MCP tools from submitting a non-conforming title in the first place.
+
 ## Architecture
 
 Static site deployed to **musiker.page** via GitHub Actions on push to `main`. Displays an interactive SVG timeline of composers/players per instrument.
