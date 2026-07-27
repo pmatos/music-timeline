@@ -874,6 +874,18 @@
     "websiteUrl": null
   },
   {
+    "id": "glazunov",
+    "name": "A. Glazunov",
+    "born": 1865,
+    "died": 1936,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Russian composer, conductor, and long-serving director of the St Petersburg Conservatory who bridged the nationalist tradition of Rimsky-Korsakov with early 20th-century Romanticism. His Violin Concerto in A minor (1904) remains a cornerstone of the repertoire.",
+    "photoUrl": "/images/portraits/glazunov.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alexander_Glazunov",
+    "websiteUrl": null
+  },
+  {
     "id": "sibelius",
     "name": "J. Sibelius",
     "born": 1865,
