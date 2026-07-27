@@ -108,6 +108,7 @@ const WIKIPEDIA_TITLES = {
   'arutiunian': 'Alexander_Arutiunian',
   'enescu': 'George_Enescu',
   'globokar': 'Vinko_Globokar',
+  'milhaud': 'Darius_Milhaud',
 };
 
 const THUMB_SIZE = 400;
