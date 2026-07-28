@@ -60,6 +60,7 @@ const WIKIPEDIA_TITLES = {
   'midori': 'Midori_(violinist)',
   'g-gabrieli': 'Giovanni_Gabrieli',
   'monteverdi': 'Claudio_Monteverdi',
+  'gibbons': 'Orlando_Gibbons',
   'schutz': 'Heinrich_Schütz',
   'l-mozart': 'Leopold_Mozart',
   'albrechtsberger': 'Johann_Georg_Albrechtsberger',
