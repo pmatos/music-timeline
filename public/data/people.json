@@ -480,6 +480,18 @@
     "websiteUrl": null
   },
   {
+    "id": "moscheles",
+    "name": "I. Moscheles",
+    "born": 1794,
+    "died": 1870,
+    "role": "both",
+    "gender": "male",
+    "bio": "Bohemian-born pianist and composer, a leading figure of European concert life before joining Mendelssohn at the Leipzig Conservatory. His concert etudes bridged Classical technique and Romantic expression, influencing Chopin and Schumann.",
+    "photoUrl": "/images/portraits/moscheles.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ignaz_Moscheles",
+    "websiteUrl": null
+  },
+  {
     "id": "schubert",
     "name": "F. Schubert",
     "born": 1797,
