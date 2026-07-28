@@ -1,0 +1,510 @@
+#!/usr/bin/env node
+// PreToolUse guard: blocks non-Conventional-Commits PR titles (see commitlint.config.cjs)
+// before they reach GitHub, catching what lint-pr-title.yml would otherwise only catch
+// after the PR is already opened. Covers both `gh pr create/edit` (Bash) and the GitHub
+// MCP create/update_pull_request tools. Fails open (exit 0) whenever it can't confidently
+// find a title — a missed check is better than a false block.
+
+const TYPES = [
+  'build',
+  'chore',
+  'ci',
+  'docs',
+  'feat',
+  'fix',
+  'perf',
+  'refactor',
+  'revert',
+  'style',
+  'test',
+];
+// Scope must be lowercase: commitlint.config.cjs extends config-conventional, whose
+// scope-case rule is not disabled.
+const TITLE_RE = new RegExp(
+  `^(${TYPES.join('|')})(\\((?![^()]*[A-Z])[^()]+\\))?!?: .+`,
+);
+
+function fail(title, source) {
+  process.stderr.write(
+    `PR title check: "${title}" (from ${source}) doesn't follow Conventional Commits.\n` +
+      `Use "type(scope): subject" with type one of: ${TYPES.join(', ')}.\n` +
+      `Example: "feat(violin): add Erich Wolfgang Korngold to timeline"\n`,
+  );
+  process.exit(2);
+}
+
+// Blanks heredoc bodies (<<'EOF' ... EOF) and shell comments (# at word start through
+// end of line) in a single quote-aware scan, so prose inside a --body (the normal
+// PR-body style here is `--body "$(cat <<'EOF' ... Korngold's ... EOF)"`) can't be
+// mistaken for flags or gh invocations, and comment text can't be mistaken for flags,
+// separators, commands, or a heredoc operator. One scan because the two interact:
+// heredoc bodies are jumped (never quote/comment-scanned — an unmatched quote in a body
+// must not leak state past the terminator), and comment text is never heredoc-scanned.
+// Newlines are kept so bodies and comments still terminate the command for the segment
+// splitter.
+// Reads the heredoc delimiter word starting at `start`: a concatenation of bare
+// segments, single/double-quoted parts, and backslash escapes, with quotes and escapes
+// removed the way bash forms the delimiter (no expansion). Mixed forms like
+// E'ND'-MARKER yield END-MARKER. Returns { word, end } or null for an unterminated word.
+function readHeredocWord(command, start) {
+  let word = '';
+  let i = start;
+  while (i < command.length) {
+    const c = command[i];
+    if (c === "'") {
+      const end = command.indexOf("'", i + 1);
+      if (end === -1) return null;
+      word += command.slice(i + 1, end);
+      i = end + 1;
+    } else if (c === '"') {
+      i++;
+      while (i < command.length && command[i] !== '"') {
+        if (
+          command[i] === '\\' &&
+          i + 1 < command.length &&
+          '"\\$`'.includes(command[i + 1])
+        ) {
+          word += command[i + 1];
+          i += 2;
+        } else {
+          word += command[i];
+          i++;
+        }
+      }
+      if (i >= command.length) return null;
+      i++;
+    } else if (c === '\\' && i + 1 < command.length) {
+      word += command[i + 1];
+      i += 2;
+    } else if (/[\s;&|()<>`]/.test(c)) {
+      break;
+    } else {
+      word += c;
+      i++;
+    }
+  }
+  return word ? { word, end: i } : null;
+}
+
+function stripInert(command) {
+  const chars = [...command];
+  const skips = new Map(); // heredoc body start -> end, jumped without scanning
+  let quote = null;
+  let atWordStart = true;
+  for (let i = 0; i < chars.length; i++) {
+    const skipEnd = skips.get(i);
+    if (skipEnd !== undefined) {
+      for (let j = i; j < skipEnd; j++) if (chars[j] !== '\n') chars[j] = ' ';
+      i = skipEnd - 1;
+      atWordStart = true;
+      continue;
+    }
+    const c = chars[i];
+    if (c === '\\' && quote !== "'" && i + 1 < chars.length) {
+      // A backslash-newline continuation is removed, so it doesn't move word start.
+      if (chars[i + 1] !== '\n') atWordStart = false;
+      i++;
+      continue;
+    }
+    if (quote) {
+      if (c === quote) quote = null;
+      continue;
+    }
+    if (c === "'" || c === '"') {
+      quote = c;
+      atWordStart = false;
+      continue;
+    }
+    if (c === '#' && atWordStart) {
+      while (i < chars.length && chars[i] !== '\n') chars[i++] = ' ';
+      atWordStart = true;
+      continue;
+    }
+    if (c === '<' && chars[i + 1] === '<') {
+      // The delimiter must be on the operator's own line — horizontal whitespace only.
+      const op = /^<<(-?)[ \t]*/.exec(command.slice(i));
+      const parsed = op && readHeredocWord(command, i + op[0].length);
+      if (parsed) {
+        const bodyStart = command.indexOf('\n', i);
+        if (bodyStart !== -1) {
+          // Bash terminator rules: << requires the delimiter alone on the line; <<-
+          // strips leading tabs only. Anything else (spaces, trailing text) stays body.
+          // The delimiter may contain regex metacharacters — it is literal text here.
+          const literal = parsed.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const close = (
+            op[1] === '-'
+              ? new RegExp(`^\\t*${literal}$`, 'm')
+              : new RegExp(`^${literal}$`, 'm')
+          ).exec(command.slice(bodyStart + 1));
+          const end = close
+            ? bodyStart + 1 + close.index + close[0].length
+            : chars.length;
+          skips.set(bodyStart, Math.max(end, skips.get(bodyStart) ?? 0));
+          i = parsed.end - 1; // operator and delimiter word (their quotes are inert)
+          atWordStart = false;
+          continue;
+        }
+      }
+    }
+    atWordStart = /[\s;&|()]/.test(c);
+  }
+  return chars.join('');
+}
+
+// Splits on command separators outside quotes, so each segment holds at most one simple
+// command and a --title can't leak across chained invocations.
+function splitSegments(command) {
+  const segments = [];
+  let current = '';
+  let quote = null;
+  let atCommandStart = true;
+  let substDepth = 0;
+  for (let i = 0; i < command.length; i++) {
+    const c = command[i];
+    // Outside single quotes a backslash escapes the next character, so an escaped quote
+    // (\" inside a double-quoted --body) is not a quote boundary and what follows it
+    // can't be a real separator. A continuation (escaped newline) is empty.
+    if (c === '\\' && quote !== "'" && i + 1 < command.length) {
+      if (command[i + 1] !== '\n') atCommandStart = false;
+      current += c + command[++i];
+      continue;
+    }
+    if (quote) {
+      if (c === quote) quote = null;
+      current += c;
+      continue;
+    }
+    if (c === "'" || c === '"') {
+      quote = c;
+      current += c;
+      atCommandStart = false;
+      continue;
+    }
+    // $(…), <(…), and >(…) nest parens that belong to the current command, so track
+    // depth instead of splitting — otherwise a --title after --body-file <(gen) would
+    // detach from its invocation. A bare ( or ) outside those is a control operator.
+    if (
+      quote === null &&
+      c === '(' &&
+      (substDepth > 0 || (i > 0 && '$<>'.includes(command[i - 1])))
+    ) {
+      substDepth++;
+      current += c;
+      atCommandStart = false;
+      continue;
+    }
+    if (quote === null && c === ')' && substDepth > 0) {
+      substDepth--;
+      current += c;
+      continue;
+    }
+    // ( ) are control operators anywhere unquoted; { } only at command position, so an
+    // argument like `echo {` stays literal.
+    if (
+      c === '\n' ||
+      c === ';' ||
+      c === '&' ||
+      c === '|' ||
+      c === '(' ||
+      c === ')' ||
+      ((c === '{' || c === '}') && atCommandStart)
+    ) {
+      segments.push(current);
+      current = '';
+      atCommandStart = true;
+      if ((c === '&' || c === '|') && command[i + 1] === c) i++;
+      continue;
+    }
+    current += c;
+    if (!/\s/.test(c)) atCommandStart = false;
+  }
+  segments.push(current);
+  return segments;
+}
+
+// Characters that can follow $ to start a shell expansion: $(…), ${…}, $VAR, $5,
+// $@/*/#/?/!/-, and the locale $"…" form. ANSI-C $'…' is excluded: it is deterministic
+// quoting, lexed literally below.
+const EXPANSION_NEXT = /[({A-Za-z0-9_@*#?!"$-]/;
+
+// Single-letter escapes in ANSI-C $'…' quoting (plus \xHH handled separately).
+const ANSIC_ESCAPES = {
+  n: '\n',
+  t: '\t',
+  r: '\r',
+  a: '\x07',
+  b: '\b',
+  f: '\f',
+  v: '\v',
+  e: '\x1b',
+  '\\': '\\',
+  "'": "'",
+  '"': '"',
+  '?': '?',
+};
+
+// Minimal shell-word lexer: splits on unquoted whitespace and keeps quoted content
+// inside its token, so flag-looking text inside a quoted --body stays payload, never an
+// argv entry. Each token records whether it contains a real substitution ($(…), `…`, or
+// a $-expansion outside single quotes) — the value we see then differs from what the
+// shell will pass, which the caller fails open on. Literal $/backticks (single-quoted or
+// escaped) do not count.
+function lexShellWords(input) {
+  const tokens = [];
+  let current = '';
+  let started = false;
+  let expansion = false;
+  let quote = null;
+  for (let i = 0; i < input.length; i++) {
+    const c = input[i];
+    if (quote === "'") {
+      if (c === "'") quote = null;
+      else current += c;
+      continue;
+    }
+    if (quote === '"') {
+      if (c === '"') quote = null;
+      else if (c === '\\' && input[i + 1] === '\n')
+        i++; // continuation: pair removed
+      else if (c === '\\' && '"\\$`'.includes(input[i + 1]))
+        current += input[++i];
+      else {
+        if (c === '`' || (c === '$' && EXPANSION_NEXT.test(input[i + 1] ?? '')))
+          expansion = true;
+        current += c;
+      }
+      continue;
+    }
+    if (c === '$' && input[i + 1] === "'") {
+      // ANSI-C $'…': a deterministic quoted literal — decode its escapes instead of
+      // treating it as an unknown substitution.
+      started = true;
+      i += 2;
+      while (i < input.length && input[i] !== "'") {
+        if (input[i] === '\\' && i + 1 < input.length) {
+          const e = input[++i];
+          if (e === 'x') {
+            const hex = /^[0-9A-Fa-f]{1,2}/.exec(input.slice(i + 1));
+            if (hex) {
+              current += String.fromCharCode(parseInt(hex[0], 16));
+              i += hex[0].length;
+            } else current += 'x';
+          } else current += ANSIC_ESCAPES[e] ?? '\\' + e;
+        } else current += input[i];
+        i++;
+      }
+    } else if (c === "'" || c === '"') {
+      quote = c;
+      started = true;
+    } else if (c === '\\' && i + 1 < input.length) {
+      if (input[i + 1] === '\n')
+        i++; // continuation: pair removed, word continues
+      else {
+        current += input[++i];
+        started = true;
+      }
+    } else if (/\s/.test(c)) {
+      if (started) {
+        tokens.push({ text: current, expansion });
+        current = '';
+        started = false;
+        expansion = false;
+      }
+    } else {
+      if (c === '`' || (c === '$' && EXPANSION_NEXT.test(input[i + 1] ?? '')))
+        expansion = true;
+      current += c;
+      started = true;
+    }
+  }
+  if (started) tokens.push({ text: current, expansion });
+  return tokens;
+}
+
+// Reserved words after which a command position follows (compound commands and
+// pipelines), e.g. `if true; then gh ...`, `while …; do gh …`, `! gh …`.
+const RESERVED_BEFORE_COMMAND = new Set([
+  'if',
+  'then',
+  'else',
+  'elif',
+  'while',
+  'until',
+  'do',
+  'done',
+  'for',
+  'select',
+  'case',
+  'time',
+  '!',
+  'coproc',
+]);
+
+// Index of the `gh` binary when it heads the simple command — after any leading
+// reserved words, NAME=value assignments, and command/env wrappers — else -1, so another
+// command's arguments (e.g. `echo gh pr create ...`) are never mistaken for an invocation.
+function ghInvocationIndex(tokens) {
+  const ASSIGN = /^[A-Za-z_][A-Za-z0-9_]*=/;
+  const text = (i) => tokens[i]?.text;
+  let i = 0;
+  while (RESERVED_BEFORE_COMMAND.has(text(i))) i++;
+  while (i < tokens.length && ASSIGN.test(text(i))) i++;
+  while (text(i) === 'command' || text(i) === 'env') {
+    const wrapper = text(i++);
+    // env takes options (some with operands) before NAME=value pairs: env -i,
+    // env -u NAME, env -C DIR, env -S STRING, --unset=NAME, etc. (GNU env).
+    if (wrapper === 'env') {
+      while (/^-/.test(text(i) ?? '')) {
+        if (/^(?:-[uCS]|--(?:unset|chdir|split-string))$/.test(text(i))) i += 2;
+        else i += 1;
+      }
+    }
+    while (i < tokens.length && ASSIGN.test(text(i))) i++;
+  }
+  return text(i) === 'gh' ? i : -1;
+}
+
+// Yields the inner text of every executable substitution ($(…), <(…), >(…), and
+// backticks) outside single quotes — those run their own commands, which can themselves
+// be gh invocations (e.g. url=$(gh pr create ...)). Backslash escapes are masked first
+// so an escaped opener can't be mistaken for a real one.
+function substitutionBodies(command) {
+  const masked = [...command];
+  let single = false;
+  let dbl = false;
+  for (let i = 0; i < masked.length; i++) {
+    const c = masked[i];
+    if (single) {
+      if (c === "'") single = false;
+      continue;
+    }
+    if (c === '\\' && i + 1 < masked.length) {
+      masked[i] = masked[i + 1] = ' ';
+      i++;
+      continue;
+    }
+    if (!dbl && c === "'") single = true;
+    else if (c === '"') dbl = !dbl;
+  }
+  const bodies = [];
+  single = dbl = false;
+  for (let i = 0; i < masked.length; i++) {
+    const c = masked[i];
+    if (single) {
+      if (c === "'") single = false;
+      continue;
+    }
+    if (!dbl && c === "'") {
+      single = true;
+      continue;
+    }
+    if (c === '"') {
+      dbl = !dbl;
+      continue;
+    }
+    if (c === '`') {
+      const end = masked.indexOf('`', i + 1);
+      if (end === -1) break;
+      bodies.push(masked.slice(i + 1, end).join(''));
+      i = end;
+      continue;
+    }
+    if (c === '(' && i > 0 && '$<>'.includes(masked[i - 1])) {
+      let depth = 1;
+      let j = i + 1;
+      for (; j < masked.length && depth > 0; j++) {
+        if (masked[j] === '(') depth++;
+        else if (masked[j] === ')') depth--;
+      }
+      bodies.push(masked.slice(i + 1, j - 1).join(''));
+      i = j - 1;
+    }
+  }
+  return bodies;
+}
+
+// Yields the --title/-t value of every actual `gh pr create`/`edit` invocation in the
+// command: heredoc bodies are blanked, the rest is split into simple commands, and only
+// argv tokens following each `gh pr create`/`edit` are inspected — title-looking text in
+// quoted bodies or neighbouring commands in a chain is never matched. Substitutions are
+// scanned recursively since their commands execute too.
+function titlesFromCommand(command, depth = 0) {
+  if (depth > 10) return [];
+  const titles = [];
+  const cleaned = stripInert(command);
+  for (const segment of splitSegments(cleaned)) {
+    const tokens = lexShellWords(segment);
+    const gh = ghInvocationIndex(tokens);
+    if (gh === -1) continue;
+    // gh accepts inherited flags between the binary and the subcommand: -R/--repo with
+    // a separate value, joined with =, or attached (-Rowner/repo) per pflag.
+    let pr = gh + 1;
+    for (;;) {
+      const t = tokens[pr]?.text;
+      if (t === '-R' || t === '--repo') pr += 2;
+      else if (/^(?:-R=|--repo=)/.test(t ?? '')) pr += 1;
+      else if (/^-R.+/.test(t ?? '')) pr += 1;
+      else break;
+    }
+    if (tokens[pr]?.text !== 'pr') continue;
+    if (tokens[pr + 1]?.text !== 'create' && tokens[pr + 1]?.text !== 'edit')
+      continue;
+    for (let i = pr + 2; i < tokens.length; i++) {
+      const token = tokens[i];
+      const inline = /^(?:--title|-t)=(.*)$/.exec(token.text);
+      // pflag also accepts the value attached directly to the short option: -tTitle.
+      const attached = /^-t(.+)$/.exec(token.text);
+      if (inline) titles.push({ value: inline[1], expansion: token.expansion });
+      else if (attached)
+        titles.push({ value: attached[1], expansion: token.expansion });
+      else if (
+        (token.text === '--title' || token.text === '-t') &&
+        i + 1 < tokens.length
+      ) {
+        const next = tokens[++i];
+        titles.push({ value: next.text, expansion: next.expansion });
+      }
+    }
+  }
+  for (const body of substitutionBodies(cleaned))
+    titles.push(...titlesFromCommand(body, depth + 1));
+  return titles;
+}
+
+let raw = '';
+for await (const chunk of process.stdin) raw += chunk;
+
+let input;
+try {
+  input = JSON.parse(raw);
+} catch {
+  process.exit(0);
+}
+
+const toolName = input.tool_name;
+const toolInput = input.tool_input ?? {};
+
+if (toolName === 'Bash') {
+  const command = toolInput.command ?? '';
+  // Cheap prefilter only: inherited flags (-R/--repo) may sit between gh and pr, and
+  // body prose may mention gh, so the precise invocation check lives in the lexer.
+  if (/\bgh\b/.test(command)) {
+    for (const title of titlesFromCommand(command)) {
+      // Fails open only when the title contains a real shell substitution ($(…), `…`,
+      // or a $-expansion outside single quotes): we then see the source text, not the
+      // value the shell will pass. A literal $ or backtick is still validated.
+      if (!title.expansion && !TITLE_RE.test(title.value))
+        fail(title.value, 'gh pr command');
+    }
+  }
+} else if (
+  /^mcp__plugin_github_github__(create|update)_pull_request$/.test(
+    toolName ?? '',
+  )
+) {
+  const title = toolInput.title;
+  if (title && !TITLE_RE.test(title))
+    fail(title, 'MCP create/update_pull_request');
+}
+
+process.exit(0);

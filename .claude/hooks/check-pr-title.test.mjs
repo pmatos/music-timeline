@@ -1,0 +1,180 @@
+// Regression tests for check-pr-title.mjs: spawns the hook with PreToolUse-style JSON
+// on stdin and asserts the exit code (0 = allow, 2 = block).
+import { spawnSync } from 'node:child_process';
+import { resolve } from 'node:path';
+import { describe, expect, test } from 'vitest';
+
+const HOOK = resolve(process.cwd(), '.claude/hooks/check-pr-title.mjs');
+
+const bash = (command) =>
+  spawnSync(process.execPath, [HOOK], {
+    input: JSON.stringify({
+      tool_name: 'Bash',
+      tool_input: { command },
+    }),
+  }).status;
+
+const heredocWithFakeTitle = `gh pr create --body "$(cat <<'EOF'
+Documents \`gh pr create --title "bad example"\` as an anti-pattern; see Korngold's piece.
+EOF
+)" --title "docs: document hook"`;
+
+describe('check-pr-title hook', () => {
+  test.each([
+    // Core allow/block behaviour.
+    ['allows a conforming title', 'gh pr create --title "feat: add x"', 0],
+    ['blocks a non-conforming title', 'gh pr create --title "Add x (#1)"', 2],
+    ['fails open on --fill', 'gh pr create --fill', 0],
+    // A --body documenting a bad title must not block the real invocation,
+    // whether the body is a heredoc or a plain quoted string.
+    ['ignores title-looking text in a heredoc body', heredocWithFakeTitle, 0],
+    [
+      'ignores title-looking text in a quoted body',
+      `gh pr create --body 'example: --title "bad"' -t "feat: ok"`,
+      0,
+    ],
+    // Every invocation in a chain is validated, not just the first match.
+    [
+      'blocks a bad title in a later chained command',
+      'gh pr create --title "feat: ok" && gh pr edit 5 --title "bad"',
+      2,
+    ],
+    // gh-looking words in another command's arguments are not an invocation.
+    ['ignores gh-looking echo arguments', 'echo gh pr create --title "bad"', 0],
+    // Fail-open applies only to real substitutions: a single-quoted $ is literal and
+    // the title is fully known, so it is validated.
+    [
+      'blocks a literal $ in a single-quoted title',
+      `gh pr create --title 'Add $5 tier'`,
+      2,
+    ],
+    // In double quotes $5 is a positional expansion — the value is unknown, fail open.
+    [
+      'fails open on a substituted title',
+      'gh pr create --title "Add $5 tier"',
+      0,
+    ],
+    // An unquoted # begins a shell comment: title-like text after it is ignored.
+    [
+      'ignores title-looking text in a comment',
+      'gh pr create --title "feat: ok" # avoid --title "bad"',
+      0,
+    ],
+    [
+      'comment ends at newline, later command still validated',
+      'gh pr create --title "feat: ok" # c\ngh pr edit 5 --title bad',
+      2,
+    ],
+    // gh's inherited flags may sit between the binary and the subcommand.
+    [
+      'blocks a bad title with an inherited -R flag',
+      'gh -R owner/repo pr create --title "Bad title"',
+      2,
+    ],
+    [
+      'passes a conforming title with an inherited --repo flag',
+      'gh --repo owner/repo pr edit 5 --title "fix: ok"',
+      0,
+    ],
+    // A backslash-newline continuation is removed before tokenizing.
+    [
+      'blocks a bad title after a line continuation',
+      'gh pr \\\n  create --title "Bad title"',
+      2,
+    ],
+    // gh inside compound commands is still an invocation.
+    [
+      'blocks a bad title inside a brace group',
+      '{ gh pr create --title "Bad title"; }',
+      2,
+    ],
+    [
+      'blocks a bad title inside a subshell',
+      '(gh pr create --title "Bad title")',
+      2,
+    ],
+    [
+      'blocks a bad title inside an if compound',
+      'if true; then gh pr create --title "Bad title"; fi',
+      2,
+    ],
+    // Process substitution keeps later flags attached to the invocation.
+    [
+      'blocks a bad title after a process-substitution body file',
+      'gh pr create --body-file <(generate-body) --title "Bad title"',
+      2,
+    ],
+    // pflag accepts the value attached directly to the short option.
+    ['blocks a bad title attached to -t', 'gh pr create -t"Bad title"', 2],
+    // A gh command inside a substitution still executes and is validated.
+    [
+      'blocks a bad title inside a captured substitution',
+      'url=$(gh pr create --title "Bad title")',
+      2,
+    ],
+    [
+      'blocks a bad title inside backticks',
+      'url=`gh pr create --title bad`',
+      2,
+    ],
+    // A space-indented line is not a << terminator, so the fake command stays body.
+    [
+      'ignores a fake command after a space-indented heredoc line',
+      `gh pr create --body-file - --title "feat: ok" <<'EOF'\nBody\n  EOF\ngh pr create --title "bad"\nEOF`,
+      0,
+    ],
+    // pflag accepts the inherited repo flag attached to -R.
+    [
+      'blocks a bad title with an attached -R value',
+      'gh -Rowner/repo pr create --title "Bad title"',
+      2,
+    ],
+    // <<EOF inside a comment or quoted string is not a heredoc operator.
+    [
+      'validates a command after heredoc-like text in a comment',
+      '# example: <<EOF\ngh pr create --title "Bad title"',
+      2,
+    ],
+    // env options and their operands are skipped before locating the command.
+    [
+      'blocks a bad title behind env -i',
+      'env -i gh pr create --title "Bad title"',
+      2,
+    ],
+    // commitlint's scope-case rule (not disabled) requires lowercase scopes.
+    [
+      'blocks an uppercase scope',
+      'gh pr create --title "feat(UI): add filters"',
+      2,
+    ],
+    // Heredoc delimiters are full shell words: dashes, metacharacters, mixed quotes.
+    [
+      'validates a command after a dashed-delimiter heredoc',
+      `cat <<'END-MARKER'\nbody\nEND-MARKER\ngh pr create --title "Bad title"`,
+      2,
+    ],
+    [
+      'validates a command after a mixed-quote-delimiter heredoc',
+      `cat <<E'ND'-MARKER\nbody\nEND-MARKER\ngh pr create --title bad`,
+      2,
+    ],
+    // ANSI-C quoting is a deterministic literal, decoded and validated.
+    [
+      'blocks an ANSI-C quoted bad title',
+      `gh pr create --title $'Bad title'`,
+      2,
+    ],
+  ])('%s', (_name, command, want) => {
+    expect(bash(command)).toBe(want);
+  });
+
+  test('blocks a non-conforming MCP title', () => {
+    const status = spawnSync(process.execPath, [HOOK], {
+      input: JSON.stringify({
+        tool_name: 'mcp__plugin_github_github__create_pull_request',
+        tool_input: { title: 'Add endpoint' },
+      }),
+    }).status;
+    expect(status).toBe(2);
+  });
+});
