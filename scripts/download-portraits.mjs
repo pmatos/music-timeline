@@ -18,6 +18,7 @@ const WIKIPEDIA_TITLES = {
   'leclair': 'Jean-Marie_Leclair',
   'bologne': 'Chevalier_de_Saint-Georges',
   'viotti': 'Giovanni_Battista_Viotti',
+  'montgeroult': 'Hélène_de_Montgeroult',
   'rode': 'Pierre_Rode',
   'kreutzer': 'Rodolphe_Kreutzer',
   'baillot': 'Pierre_Baillot',
