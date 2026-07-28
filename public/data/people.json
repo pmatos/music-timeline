@@ -2182,6 +2182,18 @@
     "websiteUrl": null
   },
   {
+    "id": "backer-grondahl",
+    "name": "A. Backer Grøndahl",
+    "born": 1847,
+    "died": 1907,
+    "role": "both",
+    "gender": "female",
+    "bio": "Norwegian pianist and composer, a celebrated interpreter of Grieg and one of Scandinavia's foremost concert artists. Her playing won the admiration of Bülow and Liszt, and her concert etudes and piano pieces made her a central figure in Norwegian musical life.",
+    "photoUrl": "/images/portraits/backer-grondahl.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Agathe_Backer_Gr%C3%B8ndahl",
+    "websiteUrl": null
+  },
+  {
     "id": "ysaye",
     "name": "E. Ysaÿe",
     "born": 1858,
