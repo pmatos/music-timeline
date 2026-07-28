@@ -82,6 +82,7 @@ const WIKIPEDIA_TITLES = {
   'tommy-dorsey': 'Tommy_Dorsey',
   'vic-dickenson': 'Vic_Dickenson',
   'kai-winding': 'Kai_Winding',
+  'walker': 'George_Walker_(composer)',
   'jj-johnson': 'J._J._Johnson',
   'berio': 'Luciano_Berio',
   'rosolino': 'Frank_Rosolino',
