@@ -42,6 +42,50 @@ function fail(title, source) {
 // must not leak state past the terminator), and comment text is never heredoc-scanned.
 // Newlines are kept so bodies and comments still terminate the command for the segment
 // splitter.
+// Reads the heredoc delimiter word starting at `start`: a concatenation of bare
+// segments, single/double-quoted parts, and backslash escapes, with quotes and escapes
+// removed the way bash forms the delimiter (no expansion). Mixed forms like
+// E'ND'-MARKER yield END-MARKER. Returns { word, end } or null for an unterminated word.
+function readHeredocWord(command, start) {
+  let word = '';
+  let i = start;
+  while (i < command.length) {
+    const c = command[i];
+    if (c === "'") {
+      const end = command.indexOf("'", i + 1);
+      if (end === -1) return null;
+      word += command.slice(i + 1, end);
+      i = end + 1;
+    } else if (c === '"') {
+      i++;
+      while (i < command.length && command[i] !== '"') {
+        if (
+          command[i] === '\\' &&
+          i + 1 < command.length &&
+          '"\\$`'.includes(command[i + 1])
+        ) {
+          word += command[i + 1];
+          i += 2;
+        } else {
+          word += command[i];
+          i++;
+        }
+      }
+      if (i >= command.length) return null;
+      i++;
+    } else if (c === '\\' && i + 1 < command.length) {
+      word += command[i + 1];
+      i += 2;
+    } else if (/[\s;&|()<>`]/.test(c)) {
+      break;
+    } else {
+      word += c;
+      i++;
+    }
+  }
+  return word ? { word, end: i } : null;
+}
+
 function stripInert(command) {
   const chars = [...command];
   const skips = new Map(); // heredoc body start -> end, jumped without scanning
@@ -77,24 +121,26 @@ function stripInert(command) {
       continue;
     }
     if (c === '<' && chars[i + 1] === '<') {
-      const m = /^<<(-?)\s*['"]?([A-Za-z_][A-Za-z0-9_]*)['"]?/.exec(
-        command.slice(i),
-      );
-      if (m) {
+      // The delimiter must be on the operator's own line — horizontal whitespace only.
+      const op = /^<<(-?)[ \t]*/.exec(command.slice(i));
+      const parsed = op && readHeredocWord(command, i + op[0].length);
+      if (parsed) {
         const bodyStart = command.indexOf('\n', i);
         if (bodyStart !== -1) {
           // Bash terminator rules: << requires the delimiter alone on the line; <<-
           // strips leading tabs only. Anything else (spaces, trailing text) stays body.
+          // The delimiter may contain regex metacharacters — it is literal text here.
+          const literal = parsed.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
           const close = (
-            m[1] === '-'
-              ? new RegExp(`^\\t*${m[2]}$`, 'm')
-              : new RegExp(`^${m[2]}$`, 'm')
+            op[1] === '-'
+              ? new RegExp(`^\\t*${literal}$`, 'm')
+              : new RegExp(`^${literal}$`, 'm')
           ).exec(command.slice(bodyStart + 1));
           const end = close
             ? bodyStart + 1 + close.index + close[0].length
             : chars.length;
           skips.set(bodyStart, Math.max(end, skips.get(bodyStart) ?? 0));
-          i += m[0].length - 1; // the operator token itself (its quotes are inert)
+          i = parsed.end - 1; // operator and delimiter word (their quotes are inert)
           atWordStart = false;
           continue;
         }
@@ -177,8 +223,25 @@ function splitSegments(command) {
 }
 
 // Characters that can follow $ to start a shell expansion: $(…), ${…}, $VAR, $5,
-// $@/*/#/?/!/-, and the $'…'/"$…" quoting forms.
-const EXPANSION_NEXT = /[({A-Za-z0-9_@*#?!'"$-]/;
+// $@/*/#/?/!/-, and the locale $"…" form. ANSI-C $'…' is excluded: it is deterministic
+// quoting, lexed literally below.
+const EXPANSION_NEXT = /[({A-Za-z0-9_@*#?!"$-]/;
+
+// Single-letter escapes in ANSI-C $'…' quoting (plus \xHH handled separately).
+const ANSIC_ESCAPES = {
+  n: '\n',
+  t: '\t',
+  r: '\r',
+  a: '\x07',
+  b: '\b',
+  f: '\f',
+  v: '\v',
+  e: '\x1b',
+  '\\': '\\',
+  "'": "'",
+  '"': '"',
+  '?': '?',
+};
 
 // Minimal shell-word lexer: splits on unquoted whitespace and keeps quoted content
 // inside its token, so flag-looking text inside a quoted --body stays payload, never an
@@ -212,7 +275,25 @@ function lexShellWords(input) {
       }
       continue;
     }
-    if (c === "'" || c === '"') {
+    if (c === '$' && input[i + 1] === "'") {
+      // ANSI-C $'…': a deterministic quoted literal — decode its escapes instead of
+      // treating it as an unknown substitution.
+      started = true;
+      i += 2;
+      while (i < input.length && input[i] !== "'") {
+        if (input[i] === '\\' && i + 1 < input.length) {
+          const e = input[++i];
+          if (e === 'x') {
+            const hex = /^[0-9A-Fa-f]{1,2}/.exec(input.slice(i + 1));
+            if (hex) {
+              current += String.fromCharCode(parseInt(hex[0], 16));
+              i += hex[0].length;
+            } else current += 'x';
+          } else current += ANSIC_ESCAPES[e] ?? '\\' + e;
+        } else current += input[i];
+        i++;
+      }
+    } else if (c === "'" || c === '"') {
       quote = c;
       started = true;
     } else if (c === '\\' && i + 1 < input.length) {

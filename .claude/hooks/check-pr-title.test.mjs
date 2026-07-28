@@ -147,6 +147,23 @@ describe('check-pr-title hook', () => {
       'gh pr create --title "feat(UI): add filters"',
       2,
     ],
+    // Heredoc delimiters are full shell words: dashes, metacharacters, mixed quotes.
+    [
+      'validates a command after a dashed-delimiter heredoc',
+      `cat <<'END-MARKER'\nbody\nEND-MARKER\ngh pr create --title "Bad title"`,
+      2,
+    ],
+    [
+      'validates a command after a mixed-quote-delimiter heredoc',
+      `cat <<E'ND'-MARKER\nbody\nEND-MARKER\ngh pr create --title bad`,
+      2,
+    ],
+    // ANSI-C quoting is a deterministic literal, decoded and validated.
+    [
+      'blocks an ANSI-C quoted bad title',
+      `gh pr create --title $'Bad title'`,
+      2,
+    ],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });
