@@ -2925,6 +2925,18 @@
     "websiteUrl": null
   },
   {
+    "id": "kurtag",
+    "name": "G. Kurtág",
+    "born": 1926,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "Hungarian composer and pianist whose aphoristic miniatures distill entire worlds into a few bars. His Játékok ('Games'), an ever-growing series of piano pieces, reimagines musical education and memory.",
+    "photoUrl": "/images/portraits/kurtag.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Gy%C3%B6rgy_Kurt%C3%A1g",
+    "websiteUrl": null
+  },
+  {
     "id": "mangelsdorff",
     "name": "A. Mangelsdorff",
     "born": 1928,
