@@ -84,6 +84,18 @@
     "websiteUrl": null
   },
   {
+    "id": "krieger",
+    "name": "J. Krieger",
+    "born": 1651,
+    "died": 1735,
+    "role": "both",
+    "gender": "male",
+    "bio": "German composer and organist who directed church music in Zittau for over half a century. Mattheson ranked his fugues beside Handel's, and Handel studied his Anmuthige Clavier-Übung and took a copy to England.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Krieger",
+    "websiteUrl": null
+  },
+  {
     "id": "pachelbel",
     "name": "J. Pachelbel",
     "born": 1653,
