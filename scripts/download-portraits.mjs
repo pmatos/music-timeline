@@ -29,6 +29,7 @@ const WIKIPEDIA_TITLES = {
   'joachim': 'Joseph_Joachim',
   'auer': 'Leopold_Auer',
   'ysaye': 'Eugène_Ysaÿe',
+  'mel-bonis': 'Mel_Bonis',
   'kreisler': 'Fritz_Kreisler',
   'bruch': 'Max_Bruch',
   'lalo': 'Édouard_Lalo',
