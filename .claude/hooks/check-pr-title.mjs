@@ -94,6 +94,7 @@ function splitSegments(command) {
   let current = '';
   let quote = null;
   let atCommandStart = true;
+  let substDepth = 0;
   for (let i = 0; i < command.length; i++) {
     const c = command[i];
     // Outside single quotes a backslash escapes the next character, so an escaped quote
@@ -113,6 +114,24 @@ function splitSegments(command) {
       quote = c;
       current += c;
       atCommandStart = false;
+      continue;
+    }
+    // $(…), <(…), and >(…) nest parens that belong to the current command, so track
+    // depth instead of splitting — otherwise a --title after --body-file <(gen) would
+    // detach from its invocation. A bare ( or ) outside those is a control operator.
+    if (
+      quote === null &&
+      c === '(' &&
+      (substDepth > 0 || (i > 0 && '$<>'.includes(command[i - 1])))
+    ) {
+      substDepth++;
+      current += c;
+      atCommandStart = false;
+      continue;
+    }
+    if (quote === null && c === ')' && substDepth > 0) {
+      substDepth--;
+      current += c;
       continue;
     }
     // ( ) are control operators anywhere unquoted; { } only at command position, so an
@@ -263,7 +282,11 @@ function titlesFromCommand(command) {
     for (let i = pr + 2; i < tokens.length; i++) {
       const token = tokens[i];
       const inline = /^(?:--title|-t)=(.*)$/.exec(token.text);
+      // pflag also accepts the value attached directly to the short option: -tTitle.
+      const attached = /^-t(.+)$/.exec(token.text);
       if (inline) titles.push({ value: inline[1], expansion: token.expansion });
+      else if (attached)
+        titles.push({ value: attached[1], expansion: token.expansion });
       else if (
         (token.text === '--title' || token.text === '-t') &&
         i + 1 < tokens.length

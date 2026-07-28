@@ -98,6 +98,14 @@ describe('check-pr-title hook', () => {
       'if true; then gh pr create --title "Bad title"; fi',
       2,
     ],
+    // Process substitution keeps later flags attached to the invocation.
+    [
+      'blocks a bad title after a process-substitution body file',
+      'gh pr create --body-file <(generate-body) --title "Bad title"',
+      2,
+    ],
+    // pflag accepts the value attached directly to the short option.
+    ['blocks a bad title attached to -t', 'gh pr create -t"Bad title"', 2],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });
