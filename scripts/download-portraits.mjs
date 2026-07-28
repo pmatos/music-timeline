@@ -112,6 +112,7 @@ const WIKIPEDIA_TITLES = {
   'glazunov': 'Alexander_Glazunov',
   'chaminade': 'Cécile_Chaminade',
   'larsson': 'Lars-Erik_Larsson',
+  'bacewicz': 'Grażyna_Bacewicz',
 };
 
 const THUMB_SIZE = 400;
