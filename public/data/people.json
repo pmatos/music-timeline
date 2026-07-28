@@ -216,6 +216,18 @@
     "websiteUrl": null
   },
   {
+    "id": "walther",
+    "name": "J.G. Walther",
+    "born": 1684,
+    "died": 1748,
+    "role": "both",
+    "gender": "male",
+    "bio": "German organist, composer, and lexicographer, a friend and cousin of J.S. Bach. His organ chorale preludes and his Musicalisches Lexicon (1732), the first German music dictionary, made him a central figure of the late Baroque.",
+    "photoUrl": "/images/portraits/walther.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Gottfried_Walther",
+    "websiteUrl": null
+  },
+  {
     "id": "bach",
     "name": "J.S. Bach",
     "born": 1685,
