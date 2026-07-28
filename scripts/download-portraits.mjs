@@ -89,6 +89,7 @@ const WIKIPEDIA_TITLES = {
   'curtis-fuller': 'Curtis_Fuller',
   'slide-hampton': 'Slide_Hampton',
   'roswell-rudd': 'Roswell_Rudd',
+  'silvestrov': 'Valentyn_Silvestrov',
   'fred-wesley': 'Fred_Wesley',
   'steve-turre': 'Steve_Turre',
   'nils-landgren': 'Nils_Landgren_(musician)',
