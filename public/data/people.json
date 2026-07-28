@@ -1833,6 +1833,19 @@
     "websiteUrl": "https://stephenhough.com"
   },
   {
+    "id": "unsuk-chin",
+    "name": "U. Chin",
+    "fullName": "Unsuk Chin",
+    "born": 1961,
+    "died": null,
+    "role": "composer",
+    "gender": "female",
+    "bio": "South Korean composer based in Berlin, a pupil of Ligeti and a leading contemporary composer. Her six Piano Etudes extend the virtuoso tradition with glittering, unpredictable invention.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Unsuk_Chin",
+    "websiteUrl": null
+  },
+  {
     "id": "grimaud",
     "name": "H. Grimaud",
     "born": 1969,
