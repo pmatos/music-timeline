@@ -103,6 +103,7 @@ const WIKIPEDIA_TITLES = {
   'jacob': 'Gordon_Jacob',
   'koetsier': 'Jan_Koetsier',
   'still': 'William_Grant_Still',
+  'lecuona': 'Ernesto_Lecuona',
   'korngold': 'Erich_Wolfgang_Korngold',
   'farrenc': 'Louise_Farrenc',
   'arutiunian': 'Alexander_Arutiunian',
