@@ -59,6 +59,7 @@ const WIKIPEDIA_TITLES = {
   'hadelich': 'Augustin_Hadelich',
   'midori': 'Midori_(violinist)',
   'g-gabrieli': 'Giovanni_Gabrieli',
+  'bull': 'John_Bull_(composer)',
   'monteverdi': 'Claudio_Monteverdi',
   'schutz': 'Heinrich_Schütz',
   'l-mozart': 'Leopold_Mozart',
