@@ -958,6 +958,19 @@
     "websiteUrl": null
   },
   {
+    "id": "joplin",
+    "name": "S. Joplin",
+    "born": 1868,
+    "bornEstimated": true,
+    "died": 1917,
+    "role": "both",
+    "gender": "male",
+    "bio": "American composer and pianist whose Maple Leaf Rag made ragtime a national sensation. His carefully notated rags, waltzes, and the opera Treemonisha brought lasting distinction, and in 1976 he received a posthumous special Pulitzer award for his contribution to American music.",
+    "photoUrl": "/images/portraits/joplin.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Scott_Joplin",
+    "websiteUrl": null
+  },
+  {
     "id": "godowsky",
     "name": "L. Godowsky",
     "born": 1870,

@@ -110,6 +110,7 @@ const WIKIPEDIA_TITLES = {
   'globokar': 'Vinko_Globokar',
   'milhaud': 'Darius_Milhaud',
   'glazunov': 'Alexander_Glazunov',
+  'joplin': 'Scott_Joplin',
   'chaminade': 'Cécile_Chaminade',
   'larsson': 'Lars-Erik_Larsson',
 };
