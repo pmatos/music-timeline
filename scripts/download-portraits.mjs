@@ -100,6 +100,7 @@ const WIKIPEDIA_TITLES = {
   'carreno': 'Teresa_Carreño',
   'sibelius': 'Jean_Sibelius',
   'szymanowski': 'Karol_Szymanowski',
+  'dett': 'Robert_Nathaniel_Dett',
   'jacob': 'Gordon_Jacob',
   'koetsier': 'Jan_Koetsier',
   'still': 'William_Grant_Still',

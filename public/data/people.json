@@ -1149,6 +1149,19 @@
     "websiteUrl": null
   },
   {
+    "id": "dett",
+    "name": "R.N. Dett",
+    "fullName": "R. Nathaniel Dett",
+    "born": 1882,
+    "died": 1943,
+    "role": "both",
+    "gender": "male",
+    "bio": "Canadian-born American composer, pianist, and choral conductor who wove African-American spirituals into concert forms. His piano suite In the Bottoms, with its irresistible 'Juba Dance,' is a classic of the repertoire.",
+    "photoUrl": "/images/portraits/dett.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Nathaniel_Dett",
+    "websiteUrl": null
+  },
+  {
     "id": "arthur-rubinstein",
     "name": "A. Rubinstein",
     "born": 1887,
