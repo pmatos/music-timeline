@@ -54,6 +54,17 @@ describe('check-pr-title hook', () => {
       'gh pr create --title "Add $5 tier"',
       0,
     ],
+    // An unquoted # begins a shell comment: title-like text after it is ignored.
+    [
+      'ignores title-looking text in a comment',
+      'gh pr create --title "feat: ok" # avoid --title "bad"',
+      0,
+    ],
+    [
+      'comment ends at newline, later command still validated',
+      'gh pr create --title "feat: ok" # c\ngh pr edit 5 --title bad',
+      2,
+    ],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });

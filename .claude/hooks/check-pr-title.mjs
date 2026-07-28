@@ -53,6 +53,39 @@ function stripHeredocs(command) {
   return chars.join('');
 }
 
+// Blanks unquoted shell comments (# at the start of a word, through end of line) to
+// spaces, so comment prose can't be mistaken for flags, separators, or commands.
+// Newlines are kept: they still terminate the command for the segment splitter.
+function stripComments(command) {
+  const chars = [...command];
+  let quote = null;
+  let atWordStart = true;
+  for (let i = 0; i < chars.length; i++) {
+    const c = chars[i];
+    if (c === '\\' && quote !== "'" && i + 1 < chars.length) {
+      i++;
+      atWordStart = false;
+      continue;
+    }
+    if (quote) {
+      if (c === quote) quote = null;
+      continue;
+    }
+    if (c === "'" || c === '"') {
+      quote = c;
+      atWordStart = false;
+      continue;
+    }
+    if (c === '#' && atWordStart) {
+      while (i < chars.length && chars[i] !== '\n') chars[i++] = ' ';
+      atWordStart = true;
+      continue;
+    }
+    atWordStart = /[\s;&|]/.test(c);
+  }
+  return chars.join('');
+}
+
 // Splits on command separators outside quotes, so each segment holds at most one simple
 // command and a --title can't leak across chained invocations.
 function splitSegments(command) {
@@ -163,7 +196,7 @@ function ghInvocationIndex(tokens) {
 // quoted bodies or neighbouring commands in a chain is never matched.
 function titlesFromCommand(command) {
   const titles = [];
-  for (const segment of splitSegments(stripHeredocs(command))) {
+  for (const segment of splitSegments(stripComments(stripHeredocs(command)))) {
     const tokens = lexShellWords(segment);
     const gh = ghInvocationIndex(tokens);
     if (gh === -1 || tokens[gh + 1]?.text !== 'pr') continue;
