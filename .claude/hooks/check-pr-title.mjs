@@ -199,10 +199,20 @@ function titlesFromCommand(command) {
   for (const segment of splitSegments(stripComments(stripHeredocs(command)))) {
     const tokens = lexShellWords(segment);
     const gh = ghInvocationIndex(tokens);
-    if (gh === -1 || tokens[gh + 1]?.text !== 'pr') continue;
-    if (tokens[gh + 2]?.text !== 'create' && tokens[gh + 2]?.text !== 'edit')
+    if (gh === -1) continue;
+    // gh accepts inherited flags between the binary and the subcommand:
+    // -R/--repo with a separate value or joined with =.
+    let pr = gh + 1;
+    for (;;) {
+      const t = tokens[pr]?.text;
+      if (t === '-R' || t === '--repo') pr += 2;
+      else if (/^(?:-R=|--repo=)/.test(t ?? '')) pr += 1;
+      else break;
+    }
+    if (tokens[pr]?.text !== 'pr') continue;
+    if (tokens[pr + 1]?.text !== 'create' && tokens[pr + 1]?.text !== 'edit')
       continue;
-    for (let i = gh + 3; i < tokens.length; i++) {
+    for (let i = pr + 2; i < tokens.length; i++) {
       const token = tokens[i];
       const inline = /^(?:--title|-t)=(.*)$/.exec(token.text);
       if (inline) titles.push({ value: inline[1], expansion: token.expansion });
@@ -233,7 +243,9 @@ const toolInput = input.tool_input ?? {};
 
 if (toolName === 'Bash') {
   const command = toolInput.command ?? '';
-  if (/\bgh\s+pr\s+(create|edit)\b/.test(command)) {
+  // Cheap prefilter only: inherited flags (-R/--repo) may sit between gh and pr, and
+  // body prose may mention gh, so the precise invocation check lives in the lexer.
+  if (/\bgh\b/.test(command)) {
     for (const title of titlesFromCommand(command)) {
       // Fails open only when the title contains a real shell substitution ($(…), `…`,
       // or a $-expansion outside single quotes): we then see the source text, not the

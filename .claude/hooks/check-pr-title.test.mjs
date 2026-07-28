@@ -65,6 +65,17 @@ describe('check-pr-title hook', () => {
       'gh pr create --title "feat: ok" # c\ngh pr edit 5 --title bad',
       2,
     ],
+    // gh's inherited flags may sit between the binary and the subcommand.
+    [
+      'blocks a bad title with an inherited -R flag',
+      'gh -R owner/repo pr create --title "Bad title"',
+      2,
+    ],
+    [
+      'passes a conforming title with an inherited --repo flag',
+      'gh --repo owner/repo pr edit 5 --title "fix: ok"',
+      0,
+    ],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });
