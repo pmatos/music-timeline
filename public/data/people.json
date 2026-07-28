@@ -1053,6 +1053,18 @@
     "websiteUrl": null
   },
   {
+    "id": "dohnanyi",
+    "name": "E. Dohnányi",
+    "born": 1877,
+    "died": 1960,
+    "role": "both",
+    "gender": "male",
+    "bio": "Hungarian pianist, composer, and conductor, a central figure of his country's musical life. His Variations on a Nursery Tune displays Brahmsian craft, while Ruralia Hungarica draws on Hungarian folk material.",
+    "photoUrl": "/images/portraits/dohnanyi.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ernst_von_Dohn%C3%A1nyi",
+    "websiteUrl": null
+  },
+  {
     "id": "medtner",
     "name": "N. Medtner",
     "born": 1880,

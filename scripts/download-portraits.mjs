@@ -72,6 +72,7 @@ const WIKIPEDIA_TITLES = {
   'godowsky': 'Leopold_Godowsky',
   'price': 'Florence_Price',
   'cortot': 'Alfred_Cortot',
+  'dohnanyi': 'Ernst_von_Dohnányi',
   'fanny-mendelssohn': 'Fanny_Hensel',
   'janacek': 'Leoš_Janáček',
   'hofmann': 'Josef_Hofmann',
