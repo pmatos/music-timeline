@@ -2829,6 +2829,18 @@
     "websiteUrl": null
   },
   {
+    "id": "larsson",
+    "name": "L.-E. Larsson",
+    "born": 1908,
+    "died": 1986,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Swedish composer and conductor whose eclectic style ranged from late Romanticism to the twelve-note techniques he was the first Swede to employ. His Concertino for trombone and string orchestra, one of a series of twelve concertinos for solo instruments, is a staple of the trombone repertoire.",
+    "photoUrl": "/images/portraits/larsson.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Lars-Erik_Larsson",
+    "websiteUrl": null
+  },
+  {
     "id": "koetsier",
     "name": "J. Koetsier",
     "born": 1911,

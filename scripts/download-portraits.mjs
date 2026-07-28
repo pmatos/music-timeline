@@ -111,6 +111,7 @@ const WIKIPEDIA_TITLES = {
   'milhaud': 'Darius_Milhaud',
   'glazunov': 'Alexander_Glazunov',
   'chaminade': 'Cécile_Chaminade',
+  'larsson': 'Lars-Erik_Larsson',
 };
 
 const THUMB_SIZE = 400;
