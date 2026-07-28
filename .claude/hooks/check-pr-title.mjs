@@ -33,14 +33,18 @@ function fail(title, source) {
 // prose inside a --body (e.g. `--body "$(cat <<'EOF' ... Korngold's ... EOF)"`, the
 // normal PR-body style in this repo) can't be mistaken for flags or gh invocations.
 function stripHeredocs(command) {
-  const re = /<<-?\s*['"]?([A-Za-z_][A-Za-z0-9_]*)['"]?/g;
+  const re = /<<(-?)\s*['"]?([A-Za-z_][A-Za-z0-9_]*)['"]?/g;
   const spans = [];
   for (const m of command.matchAll(re)) {
     const bodyStart = command.indexOf('\n', m.index);
     if (bodyStart === -1) continue;
-    const close = new RegExp(`^\\s*${m[1]}\\s*$`, 'm').exec(
-      command.slice(bodyStart + 1),
-    );
+    // Bash terminator rules: << requires the delimiter alone on the line; <<- strips
+    // leading tabs only. Anything else (spaces, trailing text) stays body.
+    const close = (
+      m[1] === '-'
+        ? new RegExp(`^\\t*${m[2]}$`, 'm')
+        : new RegExp(`^${m[2]}$`, 'm')
+    ).exec(command.slice(bodyStart + 1));
     spans.push([
       bodyStart,
       close ? bodyStart + 1 + close.index + close[0].length : command.length,
@@ -257,23 +261,86 @@ function ghInvocationIndex(tokens) {
   return text(i) === 'gh' ? i : -1;
 }
 
+// Yields the inner text of every executable substitution ($(…), <(…), >(…), and
+// backticks) outside single quotes — those run their own commands, which can themselves
+// be gh invocations (e.g. url=$(gh pr create ...)). Backslash escapes are masked first
+// so an escaped opener can't be mistaken for a real one.
+function substitutionBodies(command) {
+  const masked = [...command];
+  let single = false;
+  let dbl = false;
+  for (let i = 0; i < masked.length; i++) {
+    const c = masked[i];
+    if (single) {
+      if (c === "'") single = false;
+      continue;
+    }
+    if (c === '\\' && i + 1 < masked.length) {
+      masked[i] = masked[i + 1] = ' ';
+      i++;
+      continue;
+    }
+    if (!dbl && c === "'") single = true;
+    else if (c === '"') dbl = !dbl;
+  }
+  const bodies = [];
+  single = dbl = false;
+  for (let i = 0; i < masked.length; i++) {
+    const c = masked[i];
+    if (single) {
+      if (c === "'") single = false;
+      continue;
+    }
+    if (!dbl && c === "'") {
+      single = true;
+      continue;
+    }
+    if (c === '"') {
+      dbl = !dbl;
+      continue;
+    }
+    if (c === '`') {
+      const end = masked.indexOf('`', i + 1);
+      if (end === -1) break;
+      bodies.push(masked.slice(i + 1, end).join(''));
+      i = end;
+      continue;
+    }
+    if (c === '(' && i > 0 && '$<>'.includes(masked[i - 1])) {
+      let depth = 1;
+      let j = i + 1;
+      for (; j < masked.length && depth > 0; j++) {
+        if (masked[j] === '(') depth++;
+        else if (masked[j] === ')') depth--;
+      }
+      bodies.push(masked.slice(i + 1, j - 1).join(''));
+      i = j - 1;
+    }
+  }
+  return bodies;
+}
+
 // Yields the --title/-t value of every actual `gh pr create`/`edit` invocation in the
 // command: heredoc bodies are blanked, the rest is split into simple commands, and only
 // argv tokens following each `gh pr create`/`edit` are inspected — title-looking text in
-// quoted bodies or neighbouring commands in a chain is never matched.
-function titlesFromCommand(command) {
+// quoted bodies or neighbouring commands in a chain is never matched. Substitutions are
+// scanned recursively since their commands execute too.
+function titlesFromCommand(command, depth = 0) {
+  if (depth > 10) return [];
   const titles = [];
-  for (const segment of splitSegments(stripComments(stripHeredocs(command)))) {
+  const cleaned = stripComments(stripHeredocs(command));
+  for (const segment of splitSegments(cleaned)) {
     const tokens = lexShellWords(segment);
     const gh = ghInvocationIndex(tokens);
     if (gh === -1) continue;
-    // gh accepts inherited flags between the binary and the subcommand:
-    // -R/--repo with a separate value or joined with =.
+    // gh accepts inherited flags between the binary and the subcommand: -R/--repo with
+    // a separate value, joined with =, or attached (-Rowner/repo) per pflag.
     let pr = gh + 1;
     for (;;) {
       const t = tokens[pr]?.text;
       if (t === '-R' || t === '--repo') pr += 2;
       else if (/^(?:-R=|--repo=)/.test(t ?? '')) pr += 1;
+      else if (/^-R.+/.test(t ?? '')) pr += 1;
       else break;
     }
     if (tokens[pr]?.text !== 'pr') continue;
@@ -296,6 +363,8 @@ function titlesFromCommand(command) {
       }
     }
   }
+  for (const body of substitutionBodies(cleaned))
+    titles.push(...titlesFromCommand(body, depth + 1));
   return titles;
 }
 

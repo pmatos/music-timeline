@@ -106,6 +106,29 @@ describe('check-pr-title hook', () => {
     ],
     // pflag accepts the value attached directly to the short option.
     ['blocks a bad title attached to -t', 'gh pr create -t"Bad title"', 2],
+    // A gh command inside a substitution still executes and is validated.
+    [
+      'blocks a bad title inside a captured substitution',
+      'url=$(gh pr create --title "Bad title")',
+      2,
+    ],
+    [
+      'blocks a bad title inside backticks',
+      'url=`gh pr create --title bad`',
+      2,
+    ],
+    // A space-indented line is not a << terminator, so the fake command stays body.
+    [
+      'ignores a fake command after a space-indented heredoc line',
+      `gh pr create --body-file - --title "feat: ok" <<'EOF'\nBody\n  EOF\ngh pr create --title "bad"\nEOF`,
+      0,
+    ],
+    // pflag accepts the inherited repo flag attached to -R.
+    [
+      'blocks a bad title with an attached -R value',
+      'gh -Rowner/repo pr create --title "Bad title"',
+      2,
+    ],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });
