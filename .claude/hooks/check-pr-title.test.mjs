@@ -129,6 +129,24 @@ describe('check-pr-title hook', () => {
       'gh -Rowner/repo pr create --title "Bad title"',
       2,
     ],
+    // <<EOF inside a comment or quoted string is not a heredoc operator.
+    [
+      'validates a command after heredoc-like text in a comment',
+      '# example: <<EOF\ngh pr create --title "Bad title"',
+      2,
+    ],
+    // env options and their operands are skipped before locating the command.
+    [
+      'blocks a bad title behind env -i',
+      'env -i gh pr create --title "Bad title"',
+      2,
+    ],
+    // commitlint's scope-case rule (not disabled) requires lowercase scopes.
+    [
+      'blocks an uppercase scope',
+      'gh pr create --title "feat(UI): add filters"',
+      2,
+    ],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });

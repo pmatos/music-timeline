@@ -18,7 +18,11 @@ const TYPES = [
   'style',
   'test',
 ];
-const TITLE_RE = new RegExp(`^(${TYPES.join('|')})(\\([^)]+\\))?!?: .+`);
+// Scope must be lowercase: commitlint.config.cjs extends config-conventional, whose
+// scope-case rule is not disabled.
+const TITLE_RE = new RegExp(
+  `^(${TYPES.join('|')})(\\((?![^()]*[A-Z])[^()]+\\))?!?: .+`,
+);
 
 function fail(title, source) {
   process.stderr.write(
@@ -29,42 +33,28 @@ function fail(title, source) {
   process.exit(2);
 }
 
-// Blanks heredoc bodies (<<'EOF' ... EOF) to spaces, keeping newlines and indices, so
-// prose inside a --body (e.g. `--body "$(cat <<'EOF' ... Korngold's ... EOF)"`, the
-// normal PR-body style in this repo) can't be mistaken for flags or gh invocations.
-function stripHeredocs(command) {
-  const re = /<<(-?)\s*['"]?([A-Za-z_][A-Za-z0-9_]*)['"]?/g;
-  const spans = [];
-  for (const m of command.matchAll(re)) {
-    const bodyStart = command.indexOf('\n', m.index);
-    if (bodyStart === -1) continue;
-    // Bash terminator rules: << requires the delimiter alone on the line; <<- strips
-    // leading tabs only. Anything else (spaces, trailing text) stays body.
-    const close = (
-      m[1] === '-'
-        ? new RegExp(`^\\t*${m[2]}$`, 'm')
-        : new RegExp(`^${m[2]}$`, 'm')
-    ).exec(command.slice(bodyStart + 1));
-    spans.push([
-      bodyStart,
-      close ? bodyStart + 1 + close.index + close[0].length : command.length,
-    ]);
-  }
-  if (!spans.length) return command;
+// Blanks heredoc bodies (<<'EOF' ... EOF) and shell comments (# at word start through
+// end of line) in a single quote-aware scan, so prose inside a --body (the normal
+// PR-body style here is `--body "$(cat <<'EOF' ... Korngold's ... EOF)"`) can't be
+// mistaken for flags or gh invocations, and comment text can't be mistaken for flags,
+// separators, commands, or a heredoc operator. One scan because the two interact:
+// heredoc bodies are jumped (never quote/comment-scanned — an unmatched quote in a body
+// must not leak state past the terminator), and comment text is never heredoc-scanned.
+// Newlines are kept so bodies and comments still terminate the command for the segment
+// splitter.
+function stripInert(command) {
   const chars = [...command];
-  for (const [start, end] of spans)
-    for (let i = start; i < end; i++) if (chars[i] !== '\n') chars[i] = ' ';
-  return chars.join('');
-}
-
-// Blanks unquoted shell comments (# at the start of a word, through end of line) to
-// spaces, so comment prose can't be mistaken for flags, separators, or commands.
-// Newlines are kept: they still terminate the command for the segment splitter.
-function stripComments(command) {
-  const chars = [...command];
+  const skips = new Map(); // heredoc body start -> end, jumped without scanning
   let quote = null;
   let atWordStart = true;
   for (let i = 0; i < chars.length; i++) {
+    const skipEnd = skips.get(i);
+    if (skipEnd !== undefined) {
+      for (let j = i; j < skipEnd; j++) if (chars[j] !== '\n') chars[j] = ' ';
+      i = skipEnd - 1;
+      atWordStart = true;
+      continue;
+    }
     const c = chars[i];
     if (c === '\\' && quote !== "'" && i + 1 < chars.length) {
       // A backslash-newline continuation is removed, so it doesn't move word start.
@@ -86,7 +76,31 @@ function stripComments(command) {
       atWordStart = true;
       continue;
     }
-    atWordStart = /[\s;&|]/.test(c);
+    if (c === '<' && chars[i + 1] === '<') {
+      const m = /^<<(-?)\s*['"]?([A-Za-z_][A-Za-z0-9_]*)['"]?/.exec(
+        command.slice(i),
+      );
+      if (m) {
+        const bodyStart = command.indexOf('\n', i);
+        if (bodyStart !== -1) {
+          // Bash terminator rules: << requires the delimiter alone on the line; <<-
+          // strips leading tabs only. Anything else (spaces, trailing text) stays body.
+          const close = (
+            m[1] === '-'
+              ? new RegExp(`^\\t*${m[2]}$`, 'm')
+              : new RegExp(`^${m[2]}$`, 'm')
+          ).exec(command.slice(bodyStart + 1));
+          const end = close
+            ? bodyStart + 1 + close.index + close[0].length
+            : chars.length;
+          skips.set(bodyStart, Math.max(end, skips.get(bodyStart) ?? 0));
+          i += m[0].length - 1; // the operator token itself (its quotes are inert)
+          atWordStart = false;
+          continue;
+        }
+      }
+    }
+    atWordStart = /[\s;&|()]/.test(c);
   }
   return chars.join('');
 }
@@ -255,7 +269,15 @@ function ghInvocationIndex(tokens) {
   while (RESERVED_BEFORE_COMMAND.has(text(i))) i++;
   while (i < tokens.length && ASSIGN.test(text(i))) i++;
   while (text(i) === 'command' || text(i) === 'env') {
-    i++;
+    const wrapper = text(i++);
+    // env takes options (some with operands) before NAME=value pairs: env -i,
+    // env -u NAME, env -C DIR, env -S STRING, --unset=NAME, etc. (GNU env).
+    if (wrapper === 'env') {
+      while (/^-/.test(text(i) ?? '')) {
+        if (/^(?:-[uCS]|--(?:unset|chdir|split-string))$/.test(text(i))) i += 2;
+        else i += 1;
+      }
+    }
     while (i < tokens.length && ASSIGN.test(text(i))) i++;
   }
   return text(i) === 'gh' ? i : -1;
@@ -328,7 +350,7 @@ function substitutionBodies(command) {
 function titlesFromCommand(command, depth = 0) {
   if (depth > 10) return [];
   const titles = [];
-  const cleaned = stripComments(stripHeredocs(command));
+  const cleaned = stripInert(command);
   for (const segment of splitSegments(cleaned)) {
     const tokens = lexShellWords(segment);
     const gh = ghInvocationIndex(tokens);
