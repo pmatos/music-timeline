@@ -588,6 +588,18 @@
     "websiteUrl": null
   },
   {
+    "id": "heller",
+    "name": "S. Heller",
+    "born": 1813,
+    "died": 1888,
+    "role": "both",
+    "gender": "male",
+    "bio": "Hungarian pianist and composer who settled in Paris, where Schumann and Chopin admired his refined miniatures. His etudes and character pieces remain staples of the teaching repertoire.",
+    "photoUrl": "/images/portraits/heller.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Stephen_Heller",
+    "websiteUrl": null
+  },
+  {
     "id": "henselt",
     "name": "A. von Henselt",
     "born": 1814,
