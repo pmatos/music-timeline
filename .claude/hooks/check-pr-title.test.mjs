@@ -41,6 +41,19 @@ describe('check-pr-title hook', () => {
     ],
     // gh-looking words in another command's arguments are not an invocation.
     ['ignores gh-looking echo arguments', 'echo gh pr create --title "bad"', 0],
+    // Fail-open applies only to real substitutions: a single-quoted $ is literal and
+    // the title is fully known, so it is validated.
+    [
+      'blocks a literal $ in a single-quoted title',
+      `gh pr create --title 'Add $5 tier'`,
+      2,
+    ],
+    // In double quotes $5 is a positional expansion — the value is unknown, fail open.
+    [
+      'fails open on a substituted title',
+      'gh pr create --title "Add $5 tier"',
+      0,
+    ],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });

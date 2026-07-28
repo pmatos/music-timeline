@@ -84,14 +84,21 @@ function splitSegments(command) {
   return segments;
 }
 
+// Characters that can follow $ to start a shell expansion: $(…), ${…}, $VAR, $5,
+// $@/*/#/?/!/-, and the $'…'/"$…" quoting forms.
+const EXPANSION_NEXT = /[({A-Za-z0-9_@*#?!'"$-]/;
+
 // Minimal shell-word lexer: splits on unquoted whitespace and keeps quoted content
 // inside its token, so flag-looking text inside a quoted --body stays payload, never an
-// argv entry. Not a full shell grammar — substitutions stay literal, which the caller
-// already fails open on.
+// argv entry. Each token records whether it contains a real substitution ($(…), `…`, or
+// a $-expansion outside single quotes) — the value we see then differs from what the
+// shell will pass, which the caller fails open on. Literal $/backticks (single-quoted or
+// escaped) do not count.
 function lexShellWords(input) {
   const tokens = [];
   let current = '';
   let started = false;
+  let expansion = false;
   let quote = null;
   for (let i = 0; i < input.length; i++) {
     const c = input[i];
@@ -104,7 +111,11 @@ function lexShellWords(input) {
       if (c === '"') quote = null;
       else if (c === '\\' && '"\\$`'.includes(input[i + 1]))
         current += input[++i];
-      else current += c;
+      else {
+        if (c === '`' || (c === '$' && EXPANSION_NEXT.test(input[i + 1] ?? '')))
+          expansion = true;
+        current += c;
+      }
       continue;
     }
     if (c === "'" || c === '"') {
@@ -115,16 +126,19 @@ function lexShellWords(input) {
       started = true;
     } else if (/\s/.test(c)) {
       if (started) {
-        tokens.push(current);
+        tokens.push({ text: current, expansion });
         current = '';
         started = false;
+        expansion = false;
       }
     } else {
+      if (c === '`' || (c === '$' && EXPANSION_NEXT.test(input[i + 1] ?? '')))
+        expansion = true;
       current += c;
       started = true;
     }
   }
-  if (started) tokens.push(current);
+  if (started) tokens.push({ text: current, expansion });
   return tokens;
 }
 
@@ -133,13 +147,14 @@ function lexShellWords(input) {
 // arguments (e.g. `echo gh pr create ...`) are never mistaken for an invocation.
 function ghInvocationIndex(tokens) {
   const ASSIGN = /^[A-Za-z_][A-Za-z0-9_]*=/;
+  const text = (i) => tokens[i]?.text;
   let i = 0;
-  while (i < tokens.length && ASSIGN.test(tokens[i])) i++;
-  while (tokens[i] === 'command' || tokens[i] === 'env') {
+  while (i < tokens.length && ASSIGN.test(text(i))) i++;
+  while (text(i) === 'command' || text(i) === 'env') {
     i++;
-    while (i < tokens.length && ASSIGN.test(tokens[i])) i++;
+    while (i < tokens.length && ASSIGN.test(text(i))) i++;
   }
-  return tokens[i] === 'gh' ? i : -1;
+  return text(i) === 'gh' ? i : -1;
 }
 
 // Yields the --title/-t value of every actual `gh pr create`/`edit` invocation in the
@@ -151,14 +166,20 @@ function titlesFromCommand(command) {
   for (const segment of splitSegments(stripHeredocs(command))) {
     const tokens = lexShellWords(segment);
     const gh = ghInvocationIndex(tokens);
-    if (gh === -1 || tokens[gh + 1] !== 'pr') continue;
-    if (tokens[gh + 2] !== 'create' && tokens[gh + 2] !== 'edit') continue;
+    if (gh === -1 || tokens[gh + 1]?.text !== 'pr') continue;
+    if (tokens[gh + 2]?.text !== 'create' && tokens[gh + 2]?.text !== 'edit')
+      continue;
     for (let i = gh + 3; i < tokens.length; i++) {
       const token = tokens[i];
-      const inline = /^(?:--title|-t)=(.*)$/.exec(token);
-      if (inline) titles.push(inline[1]);
-      else if ((token === '--title' || token === '-t') && i + 1 < tokens.length)
-        titles.push(tokens[++i]);
+      const inline = /^(?:--title|-t)=(.*)$/.exec(token.text);
+      if (inline) titles.push({ value: inline[1], expansion: token.expansion });
+      else if (
+        (token.text === '--title' || token.text === '-t') &&
+        i + 1 < tokens.length
+      ) {
+        const next = tokens[++i];
+        titles.push({ value: next.text, expansion: next.expansion });
+      }
     }
   }
   return titles;
@@ -181,10 +202,11 @@ if (toolName === 'Bash') {
   const command = toolInput.command ?? '';
   if (/\bgh\s+pr\s+(create|edit)\b/.test(command)) {
     for (const title of titlesFromCommand(command)) {
-      // Skip anything that looks like unexpanded shell substitution ($(...), `...`) —
-      // we only see the literal command text, not its expansion, so we can't judge it.
-      if (!/[$`]/.test(title) && !TITLE_RE.test(title))
-        fail(title, 'gh pr command');
+      // Fails open only when the title contains a real shell substitution ($(…), `…`,
+      // or a $-expansion outside single quotes): we then see the source text, not the
+      // value the shell will pass. A literal $ or backtick is still validated.
+      if (!title.expansion && !TITLE_RE.test(title.value))
+        fail(title.value, 'gh pr command');
     }
   }
 } else if (
