@@ -36,6 +36,7 @@ const WIKIPEDIA_TITLES = {
   'oistrakh': 'David_Oistrakh',
   'menuhin': 'Yehudi_Menuhin',
   'milstein': 'Nathan_Milstein',
+  'khachaturian': 'Aram_Khachaturian',
   'stern': 'Isaac_Stern',
   'szeryng': 'Henryk_Szeryng',
   'grumiaux': 'Arthur_Grumiaux',
