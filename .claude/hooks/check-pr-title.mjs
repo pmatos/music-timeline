@@ -63,8 +63,9 @@ function stripComments(command) {
   for (let i = 0; i < chars.length; i++) {
     const c = chars[i];
     if (c === '\\' && quote !== "'" && i + 1 < chars.length) {
+      // A backslash-newline continuation is removed, so it doesn't move word start.
+      if (chars[i + 1] !== '\n') atWordStart = false;
       i++;
-      atWordStart = false;
       continue;
     }
     if (quote) {
@@ -92,26 +93,47 @@ function splitSegments(command) {
   const segments = [];
   let current = '';
   let quote = null;
+  let atCommandStart = true;
   for (let i = 0; i < command.length; i++) {
     const c = command[i];
     // Outside single quotes a backslash escapes the next character, so an escaped quote
     // (\" inside a double-quoted --body) is not a quote boundary and what follows it
-    // can't be a real separator.
+    // can't be a real separator. A continuation (escaped newline) is empty.
     if (c === '\\' && quote !== "'" && i + 1 < command.length) {
+      if (command[i + 1] !== '\n') atCommandStart = false;
       current += c + command[++i];
       continue;
     }
     if (quote) {
       if (c === quote) quote = null;
-    } else if (c === "'" || c === '"') {
+      current += c;
+      continue;
+    }
+    if (c === "'" || c === '"') {
       quote = c;
-    } else if (c === '\n' || c === ';' || c === '&' || c === '|') {
+      current += c;
+      atCommandStart = false;
+      continue;
+    }
+    // ( ) are control operators anywhere unquoted; { } only at command position, so an
+    // argument like `echo {` stays literal.
+    if (
+      c === '\n' ||
+      c === ';' ||
+      c === '&' ||
+      c === '|' ||
+      c === '(' ||
+      c === ')' ||
+      ((c === '{' || c === '}') && atCommandStart)
+    ) {
       segments.push(current);
       current = '';
+      atCommandStart = true;
       if ((c === '&' || c === '|') && command[i + 1] === c) i++;
       continue;
     }
     current += c;
+    if (!/\s/.test(c)) atCommandStart = false;
   }
   segments.push(current);
   return segments;
@@ -142,6 +164,8 @@ function lexShellWords(input) {
     }
     if (quote === '"') {
       if (c === '"') quote = null;
+      else if (c === '\\' && input[i + 1] === '\n')
+        i++; // continuation: pair removed
       else if (c === '\\' && '"\\$`'.includes(input[i + 1]))
         current += input[++i];
       else {
@@ -155,8 +179,12 @@ function lexShellWords(input) {
       quote = c;
       started = true;
     } else if (c === '\\' && i + 1 < input.length) {
-      current += input[++i];
-      started = true;
+      if (input[i + 1] === '\n')
+        i++; // continuation: pair removed, word continues
+      else {
+        current += input[++i];
+        started = true;
+      }
     } else if (/\s/.test(c)) {
       if (started) {
         tokens.push({ text: current, expansion });
@@ -175,13 +203,33 @@ function lexShellWords(input) {
   return tokens;
 }
 
+// Reserved words after which a command position follows (compound commands and
+// pipelines), e.g. `if true; then gh ...`, `while …; do gh …`, `! gh …`.
+const RESERVED_BEFORE_COMMAND = new Set([
+  'if',
+  'then',
+  'else',
+  'elif',
+  'while',
+  'until',
+  'do',
+  'done',
+  'for',
+  'select',
+  'case',
+  'time',
+  '!',
+  'coproc',
+]);
+
 // Index of the `gh` binary when it heads the simple command — after any leading
-// NAME=value assignments and command/env wrappers — else -1, so another command's
-// arguments (e.g. `echo gh pr create ...`) are never mistaken for an invocation.
+// reserved words, NAME=value assignments, and command/env wrappers — else -1, so another
+// command's arguments (e.g. `echo gh pr create ...`) are never mistaken for an invocation.
 function ghInvocationIndex(tokens) {
   const ASSIGN = /^[A-Za-z_][A-Za-z0-9_]*=/;
   const text = (i) => tokens[i]?.text;
   let i = 0;
+  while (RESERVED_BEFORE_COMMAND.has(text(i))) i++;
   while (i < tokens.length && ASSIGN.test(text(i))) i++;
   while (text(i) === 'command' || text(i) === 'env') {
     i++;

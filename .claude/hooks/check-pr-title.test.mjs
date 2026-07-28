@@ -76,6 +76,28 @@ describe('check-pr-title hook', () => {
       'gh --repo owner/repo pr edit 5 --title "fix: ok"',
       0,
     ],
+    // A backslash-newline continuation is removed before tokenizing.
+    [
+      'blocks a bad title after a line continuation',
+      'gh pr \\\n  create --title "Bad title"',
+      2,
+    ],
+    // gh inside compound commands is still an invocation.
+    [
+      'blocks a bad title inside a brace group',
+      '{ gh pr create --title "Bad title"; }',
+      2,
+    ],
+    [
+      'blocks a bad title inside a subshell',
+      '(gh pr create --title "Bad title")',
+      2,
+    ],
+    [
+      'blocks a bad title inside an if compound',
+      'if true; then gh pr create --title "Bad title"; fi',
+      2,
+    ],
   ])('%s', (_name, command, want) => {
     expect(bash(command)).toBe(want);
   });
