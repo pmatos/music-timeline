@@ -492,6 +492,18 @@
     "websiteUrl": null
   },
   {
+    "id": "farrenc",
+    "name": "L. Farrenc",
+    "born": 1804,
+    "died": 1875,
+    "role": "both",
+    "gender": "female",
+    "bio": "French composer, pianist, and pedagogue who held the piano professorship at the Paris Conservatoire for three decades. Her three symphonies and chamber works, especially the Nonet for winds and strings, helped her win equal pay to her male colleagues in 1850.",
+    "photoUrl": "/images/portraits/farrenc.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Louise_Farrenc",
+    "websiteUrl": null
+  },
+  {
     "id": "fanny-mendelssohn",
     "name": "Fanny Mendelssohn",
     "born": 1805,
@@ -814,6 +826,18 @@
     "websiteUrl": null
   },
   {
+    "id": "chaminade",
+    "name": "C. Chaminade",
+    "born": 1857,
+    "died": 1944,
+    "role": "both",
+    "gender": "female",
+    "bio": "French composer and pianist whose salon and character pieces, including the popular Flute Concertino, made her one of the most commercially successful composers of her era. She toured widely as a pianist performing her own works and became the first woman composer awarded the Légion d'honneur.",
+    "photoUrl": "/images/portraits/chaminade.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/C%C3%A9cile_Chaminade",
+    "websiteUrl": null
+  },
+  {
     "id": "albeniz",
     "name": "I. Albeniz",
     "born": 1860,
@@ -859,6 +883,18 @@
     "bio": "French composer who was a leading figure of Impressionist music, though he rejected the term. His piano works, including Clair de Lune and the Preludes, introduced innovative harmonic structures and tonal colors.",
     "photoUrl": "/images/portraits/debussy.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Claude_Debussy",
+    "websiteUrl": null
+  },
+  {
+    "id": "glazunov",
+    "name": "A. Glazunov",
+    "born": 1865,
+    "died": 1936,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Russian composer, conductor, and long-serving director of the St Petersburg Conservatory who bridged the nationalist tradition of Rimsky-Korsakov with early 20th-century Romanticism. His Violin Concerto in A minor (1904) remains a cornerstone of the repertoire.",
+    "photoUrl": "/images/portraits/glazunov.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alexander_Glazunov",
     "websiteUrl": null
   },
   {
@@ -1038,6 +1074,18 @@
     "bio": "Russian-American pianist and legendary pedagogue who taught at the Juilliard School for over 50 years. A gold medalist of the Moscow Conservatory, her students included Van Cliburn, John Browning, and Garrick Ohlsson.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Rosina_Lh%C3%A9vinne",
+    "websiteUrl": null
+  },
+  {
+    "id": "enescu",
+    "name": "G. Enescu",
+    "born": 1881,
+    "died": 1955,
+    "role": "both",
+    "gender": "male",
+    "bio": "Romanian composer, violinist, and conductor widely regarded as his country's most important musician. His Romanian Rhapsodies and opera Oedipe drew on folk material, and he mentored violinists including Yehudi Menuhin.",
+    "photoUrl": "/images/portraits/enescu.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/George_Enescu",
     "websiteUrl": null
   },
   {
@@ -2661,6 +2709,18 @@
     "websiteUrl": null
   },
   {
+    "id": "milhaud",
+    "name": "D. Milhaud",
+    "born": 1892,
+    "died": 1974,
+    "role": "composer",
+    "gender": "male",
+    "bio": "French composer and member of Les Six, prolific across nearly every genre with over 400 works blending polytonality with jazz and Brazilian influences. His Concertino d'hiver for trombone and string orchestra is a staple of the trombone repertoire.",
+    "photoUrl": "/images/portraits/milhaud.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Darius_Milhaud",
+    "websiteUrl": null
+  },
+  {
     "id": "hindemith",
     "name": "P. Hindemith",
     "born": 1895,
@@ -2769,6 +2829,18 @@
     "websiteUrl": null
   },
   {
+    "id": "larsson",
+    "name": "L.-E. Larsson",
+    "born": 1908,
+    "died": 1986,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Swedish composer and conductor whose eclectic style ranged from late Romanticism to the twelve-note techniques he was the first Swede to employ. His Concertino for trombone and string orchestra, one of a series of twelve concertinos for solo instruments, is a staple of the trombone repertoire.",
+    "photoUrl": "/images/portraits/larsson.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Lars-Erik_Larsson",
+    "websiteUrl": null
+  },
+  {
     "id": "koetsier",
     "name": "J. Koetsier",
     "born": 1911,
@@ -2778,6 +2850,18 @@
     "bio": "Dutch conductor and composer who led the Bavarian Radio Symphony Orchestra and taught conducting at the Munich Hochschule. He wrote a substantial body of brass chamber and solo music, including a widely performed trombone concerto and numerous trombone quartets.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Jan_Koetsier",
+    "websiteUrl": null
+  },
+  {
+    "id": "arutiunian",
+    "name": "A. Arutiunian",
+    "born": 1920,
+    "died": 2012,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Armenian composer whose Trumpet Concerto (1950) became a cornerstone of the brass repertoire. He chaired the Armenian Composers' Union and wrote a Trombone Concerto and other brass works blending Armenian folk idioms with late-Romantic harmony.",
+    "photoUrl": "/images/portraits/arutiunian.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alexander_Arutiunian",
     "websiteUrl": null
   },
   {
@@ -2886,6 +2970,18 @@
     "bio": "American jazz trombonist, composer, and arranger, born into a family of 12 musicians. One of the few left-handed trombonists, he won Grammy Awards in 1998 and 2005 and was honored as an NEA Jazz Master for his virtuosic playing and masterful arranging.",
     "photoUrl": "/images/portraits/slide-hampton.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Slide_Hampton",
+    "websiteUrl": null
+  },
+  {
+    "id": "globokar",
+    "name": "V. Globokar",
+    "born": 1934,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "Slovenian-French composer, trombonist, and improviser central to the postwar avant-garde. His works, including Discours II for trombone octet, pioneered extended techniques and theatrical, improvisation-driven notation.",
+    "photoUrl": "/images/portraits/globokar.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vinko_Globokar",
     "websiteUrl": null
   },
   {

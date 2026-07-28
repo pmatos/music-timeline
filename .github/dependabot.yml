@@ -5,16 +5,21 @@ updates:
     schedule:
       interval: 'weekly'
     commit-message:
-      prefix: 'chore'
+      prefix: 'fix'
+      prefix-development: 'chore'
+      include: 'scope'
   - package-ecosystem: 'npm'
     directory: '/video'
     schedule:
       interval: 'weekly'
     commit-message:
-      prefix: 'chore'
+      prefix: 'fix'
+      prefix-development: 'chore'
+      include: 'scope'
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'weekly'
     commit-message:
-      prefix: 'ci'
+      prefix: 'chore'
+      include: 'scope'

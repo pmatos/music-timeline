@@ -104,6 +104,14 @@ const WIKIPEDIA_TITLES = {
   'koetsier': 'Jan_Koetsier',
   'still': 'William_Grant_Still',
   'korngold': 'Erich_Wolfgang_Korngold',
+  'farrenc': 'Louise_Farrenc',
+  'arutiunian': 'Alexander_Arutiunian',
+  'enescu': 'George_Enescu',
+  'globokar': 'Vinko_Globokar',
+  'milhaud': 'Darius_Milhaud',
+  'glazunov': 'Alexander_Glazunov',
+  'chaminade': 'Cécile_Chaminade',
+  'larsson': 'Lars-Erik_Larsson',
 };
 
 const THUMB_SIZE = 400;
