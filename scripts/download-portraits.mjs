@@ -86,6 +86,7 @@ const WIKIPEDIA_TITLES = {
   'berio': 'Luciano_Berio',
   'rosolino': 'Frank_Rosolino',
   'mangelsdorff': 'Albert_Mangelsdorff',
+  'crumb': 'George_Crumb',
   'curtis-fuller': 'Curtis_Fuller',
   'slide-hampton': 'Slide_Hampton',
   'roswell-rudd': 'Roswell_Rudd',
