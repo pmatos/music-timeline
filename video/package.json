@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@remotion/cli": "^4.0.490",
+    "@remotion/cli": "^4.0.499",
     "@remotion/google-fonts": "^4.0.496",
     "@remotion/media": "^4.0.496",
     "@remotion/media-utils": "^4.0.499",
