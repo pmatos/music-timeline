@@ -3133,6 +3133,18 @@
     "websiteUrl": null
   },
   {
+    "id": "schulhoff",
+    "name": "E. Schulhoff",
+    "born": 1894,
+    "died": 1942,
+    "role": "both",
+    "gender": "male",
+    "bio": "Czech composer and pianist who fused jazz, Dada, and neoclassicism during the interwar years. His piano etudes, sonatas, and jazz-inspired suites thrived until the Nazis suppressed his music; he died in Wülzburg concentration camp.",
+    "photoUrl": "/images/portraits/schulhoff.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Erwin_Schulhoff",
+    "websiteUrl": null
+  },
+  {
     "id": "hindemith",
     "name": "P. Hindemith",
     "born": 1895,
