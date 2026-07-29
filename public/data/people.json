@@ -3591,6 +3591,18 @@
     "websiteUrl": null
   },
   {
+    "id": "eastman",
+    "name": "J. Eastman",
+    "born": 1940,
+    "died": 1990,
+    "role": "both",
+    "gender": "male",
+    "bio": "American composer, pianist, and vocalist whose fierce post-minimalist works for multiple pianos confront race, sexuality, and power. Nearly lost after his death, pieces like Gay Guerrilla have been triumphantly revived.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Julius_Eastman",
+    "websiteUrl": null
+  },
+  {
     "id": "bourgeois",
     "name": "D. Bourgeois",
     "born": 1941,
