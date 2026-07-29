@@ -3483,6 +3483,18 @@
     "websiteUrl": null
   },
   {
+    "id": "gubaidulina",
+    "name": "S. Gubaidulina",
+    "born": 1931,
+    "died": 2025,
+    "role": "composer",
+    "gender": "female",
+    "bio": "Russian composer of Tatar heritage whose mystical, structurally daring music faced official condemnation in the Soviet Union. Her Chaconne and Musical Toys are modern classics of the piano repertoire.",
+    "photoUrl": "/images/portraits/gubaidulina.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sofia_Gubaidulina",
+    "websiteUrl": null
+  },
+  {
     "id": "curtis-fuller",
     "name": "C. Fuller",
     "born": 1932,
