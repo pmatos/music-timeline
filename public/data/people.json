@@ -1549,6 +1549,18 @@
     "websiteUrl": null
   },
   {
+    "id": "cowell",
+    "name": "H. Cowell",
+    "born": 1897,
+    "died": 1965,
+    "role": "both",
+    "gender": "male",
+    "bio": "American composer and pianist whose tone clusters, played with fists, palms, and forearms, reinvented piano sonority. A tireless advocate of the world's music, he taught and championed composers including John Cage.",
+    "photoUrl": "/images/portraits/cowell.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Henry_Cowell",
+    "websiteUrl": null
+  },
+  {
     "id": "gershwin",
     "name": "G. Gershwin",
     "born": 1898,

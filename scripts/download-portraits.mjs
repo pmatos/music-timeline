@@ -134,6 +134,7 @@ const WIKIPEDIA_TITLES = {
   'still': 'William_Grant_Still',
   'lecuona': 'Ernesto_Lecuona',
   'korngold': 'Erich_Wolfgang_Korngold',
+  'cowell': 'Henry_Cowell',
   'farrenc': 'Louise_Farrenc',
   'arutiunian': 'Alexander_Arutiunian',
   'enescu': 'George_Enescu',
