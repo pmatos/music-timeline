@@ -1669,6 +1669,19 @@
     "websiteUrl": null
   },
   {
+    "id": "mary-lou-williams",
+    "name": "M.L. Williams",
+    "fullName": "Mary Lou Williams",
+    "born": 1910,
+    "died": 1981,
+    "role": "both",
+    "gender": "female",
+    "bio": "American jazz pianist and composer who wrote for and mentored generations of modernists, from swing bands to bebop pioneers. Her Zodiac Suite and sacred jazz works crowned a career spanning every era of jazz.",
+    "photoUrl": "/images/portraits/mary-lou-williams.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Mary_Lou_Williams",
+    "websiteUrl": null
+  },
+  {
     "id": "cage",
     "name": "J. Cage",
     "born": 1912,
