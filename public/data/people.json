@@ -24,6 +24,19 @@
     "websiteUrl": null
   },
   {
+    "id": "bull",
+    "name": "J. Bull",
+    "born": 1562,
+    "bornEstimated": true,
+    "died": 1628,
+    "role": "both",
+    "gender": "male",
+    "bio": "English keyboard virtuoso and composer whose dazzling works for the virginals, preserved in the Fitzwilliam Virginal Book, stretched the instrument's technique to new extremes. He spent his final years in the Spanish Netherlands as organist of Antwerp Cathedral.",
+    "photoUrl": "/images/portraits/bull.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/John_Bull_(composer)",
+    "websiteUrl": null
+  },
+  {
     "id": "frescobaldi",
     "name": "G. Frescobaldi",
     "born": 1583,
