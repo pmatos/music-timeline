@@ -148,6 +148,7 @@ const WIKIPEDIA_TITLES = {
   'chaminade': 'Cécile_Chaminade',
   'larsson': 'Lars-Erik_Larsson',
   'bacewicz': 'Grażyna_Bacewicz',
+  'mary-lou-williams': 'Mary_Lou_Williams',
 };
 
 const THUMB_SIZE = 400;
