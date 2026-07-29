@@ -35,6 +35,7 @@ const WIKIPEDIA_TITLES = {
   'sarasate': 'Pablo_de_Sarasate',
   'joachim': 'Joseph_Joachim',
   'auer': 'Leopold_Auer',
+  'backer-grondahl': 'Agathe_Backer_Grøndahl',
   'ysaye': 'Eugène_Ysaÿe',
   'kreisler': 'Fritz_Kreisler',
   'bruch': 'Max_Bruch',
