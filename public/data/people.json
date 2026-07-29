@@ -482,6 +482,18 @@
     "websiteUrl": null
   },
   {
+    "id": "montgeroult",
+    "name": "H. de Montgeroult",
+    "born": 1764,
+    "died": 1836,
+    "role": "both",
+    "gender": "female",
+    "bio": "French composer and pianist, recognized as one of the finest fortepiano performers and improvisers of her time. A professor at the Paris Conservatoire, the first woman to teach a male class there, she published a landmark piano course containing 114 études.",
+    "photoUrl": "/images/portraits/montgeroult.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/H%C3%A9l%C3%A8ne_de_Montgeroult",
+    "websiteUrl": null
+  },
+  {
     "id": "steibelt",
     "name": "D. Steibelt",
     "born": 1765,
