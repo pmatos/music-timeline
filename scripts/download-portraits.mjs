@@ -118,6 +118,7 @@ const WIKIPEDIA_TITLES = {
   'kurtag': 'György_Kurtág',
   'mangelsdorff': 'Albert_Mangelsdorff',
   'crumb': 'George_Crumb',
+  'gubaidulina': 'Sofia_Gubaidulina',
   'curtis-fuller': 'Curtis_Fuller',
   'slide-hampton': 'Slide_Hampton',
   'roswell-rudd': 'Roswell_Rudd',
