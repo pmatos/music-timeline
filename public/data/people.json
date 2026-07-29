@@ -97,6 +97,18 @@
     "websiteUrl": null
   },
   {
+    "id": "danglebert",
+    "name": "J. d'Anglebert",
+    "born": 1629,
+    "died": 1691,
+    "role": "both",
+    "gender": "male",
+    "bio": "French harpsichordist and composer who succeeded Chambonnières as harpsichordist to Louis XIV. His 1689 book of harpsichord pieces, with its lavish ornament tables, is a cornerstone of the French clavecin tradition.",
+    "photoUrl": "/images/portraits/danglebert.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jean-Henri_d'Anglebert",
+    "websiteUrl": null
+  },
+  {
     "id": "buxtehude",
     "name": "D. Buxtehude",
     "born": 1637,

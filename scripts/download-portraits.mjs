@@ -66,6 +66,7 @@ const WIKIPEDIA_TITLES = {
   'schutz': 'Heinrich_Schütz',
   'scheidt': 'Samuel_Scheidt',
   'kerll': 'Johann_Caspar_Kerll',
+  'danglebert': 'Jean-Henri_d\'Anglebert',
   'l-mozart': 'Leopold_Mozart',
   'albrechtsberger': 'Johann_Georg_Albrechtsberger',
   'm-haydn': 'Michael_Haydn',
