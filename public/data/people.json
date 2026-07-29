@@ -925,6 +925,18 @@
     "websiteUrl": null
   },
   {
+    "id": "tausig",
+    "name": "C. Tausig",
+    "born": 1841,
+    "died": 1871,
+    "role": "both",
+    "gender": "male",
+    "bio": "Polish piano virtuoso, Liszt's most brilliant pupil, famed for flawless technique. His transcriptions and demanding studies stretched pianism to new limits before his death at twenty-nine.",
+    "photoUrl": "/images/portraits/tausig.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Karl_Tausig",
+    "websiteUrl": null
+  },
+  {
     "id": "grieg",
     "name": "E. Grieg",
     "born": 1843,
