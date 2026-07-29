@@ -16,6 +16,7 @@ const WIKIPEDIA_TITLES = {
   'geminiani': 'Francesco_Geminiani',
   'locatelli': 'Pietro_Locatelli',
   'leclair': 'Jean-Marie_Leclair',
+  'seixas': 'Carlos_Seixas',
   'bologne': 'Chevalier_de_Saint-Georges',
   'viotti': 'Giovanni_Battista_Viotti',
   'rode': 'Pierre_Rode',

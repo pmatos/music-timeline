@@ -2110,6 +2110,18 @@
     "websiteUrl": null
   },
   {
+    "id": "seixas",
+    "name": "C. de Seixas",
+    "born": 1704,
+    "died": 1742,
+    "role": "both",
+    "gender": "male",
+    "bio": "Portuguese composer and organist, appointed to the royal chapel in Lisbon while still a teenager. Of his hundreds of credited keyboard sonatas about a hundred survive, fusing Scarlatti's influence with a distinctly Iberian idiom.",
+    "photoUrl": "/images/portraits/seixas.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Carlos_Seixas",
+    "websiteUrl": null
+  },
+  {
     "id": "bologne",
     "name": "J. Bologne",
     "fullName": "Joseph Bologne, Chevalier de Saint-Georges",
