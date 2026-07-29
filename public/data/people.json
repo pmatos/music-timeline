@@ -2412,6 +2412,18 @@
     "websiteUrl": null
   },
   {
+    "id": "mel-bonis",
+    "name": "M. Bonis",
+    "born": 1858,
+    "died": 1937,
+    "role": "both",
+    "gender": "female",
+    "bio": "French composer and pianist, a classmate of Debussy at the Paris Conservatoire, who published under the androgynous name 'Mel Bonis' to escape prejudice. Her three hundred works, many for piano, have only recently received their due.",
+    "photoUrl": "/images/portraits/mel-bonis.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Mel_Bonis",
+    "websiteUrl": null
+  },
+  {
     "id": "kreisler",
     "name": "F. Kreisler",
     "born": 1875,

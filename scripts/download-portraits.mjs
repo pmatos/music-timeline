@@ -37,6 +37,7 @@ const WIKIPEDIA_TITLES = {
   'auer': 'Leopold_Auer',
   'backer-grondahl': 'Agathe_Backer_Grøndahl',
   'ysaye': 'Eugène_Ysaÿe',
+  'mel-bonis': 'Mel_Bonis',
   'kreisler': 'Fritz_Kreisler',
   'bruch': 'Max_Bruch',
   'tausig': 'Karl_Tausig',
