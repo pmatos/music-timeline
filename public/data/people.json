@@ -1200,6 +1200,18 @@
     "websiteUrl": null
   },
   {
+    "id": "ives",
+    "name": "C. Ives",
+    "born": 1874,
+    "died": 1954,
+    "role": "composer",
+    "gender": "male",
+    "bio": "American composer and insurance executive whose radical experiments in polytonality and collage anticipated much of the twentieth century. His Concord Sonata, a vast portrait of Transcendentalist writers, is a landmark of the piano literature.",
+    "photoUrl": "/images/portraits/ives.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Charles_Ives",
+    "websiteUrl": null
+  },
+  {
     "id": "ravel",
     "name": "M. Ravel",
     "born": 1875,

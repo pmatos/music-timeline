@@ -90,6 +90,7 @@ const WIKIPEDIA_TITLES = {
   'hindemith': 'Paul_Hindemith',
   'ibert': 'Jacques_Ibert',
   'godowsky': 'Leopold_Godowsky',
+  'ives': 'Charles_Ives',
   'price': 'Florence_Price',
   'cortot': 'Alfred_Cortot',
   'fanny-mendelssohn': 'Fanny_Hensel',
