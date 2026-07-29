@@ -2272,6 +2272,19 @@
     "websiteUrl": null
   },
   {
+    "id": "tigran-hamasyan",
+    "name": "T. Hamasyan",
+    "fullName": "Tigran Hamasyan",
+    "born": 1987,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "Armenian pianist and composer who fuses jazz improvisation with Armenian folk melody and metal-driven rhythm. A winner of the Thelonious Monk competition, he is among the most original keyboard voices of his generation.",
+    "photoUrl": "/images/portraits/tigran-hamasyan.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Tigran_Hamasyan",
+    "websiteUrl": null
+  },
+  {
     "id": "trifonov",
     "name": "D. Trifonov",
     "born": 1991,

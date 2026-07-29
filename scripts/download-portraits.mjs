@@ -131,6 +131,7 @@ const WIKIPEDIA_TITLES = {
   'conrad-herwig': 'Conrad_Herwig',
   'wycliffe-gordon': 'Wycliffe_Gordon',
   'trombone-shorty': 'Trombone_Shorty',
+  'tigran-hamasyan': 'Tigran_Hamasyan',
   'carreno': 'Teresa_Carreño',
   'sibelius': 'Jean_Sibelius',
   'szymanowski': 'Karol_Szymanowski',
