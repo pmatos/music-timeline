@@ -47,6 +47,7 @@ const WIKIPEDIA_TITLES = {
   'heifetz': 'Jascha_Heifetz',
   'oistrakh': 'David_Oistrakh',
   'menuhin': 'Yehudi_Menuhin',
+  'monk': 'Thelonious_Monk',
   'milstein': 'Nathan_Milstein',
   'khachaturian': 'Aram_Khachaturian',
   'stern': 'Isaac_Stern',

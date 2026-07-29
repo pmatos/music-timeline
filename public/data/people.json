@@ -1754,6 +1754,19 @@
     "websiteUrl": null
   },
   {
+    "id": "monk",
+    "name": "T. Monk",
+    "fullName": "Thelonious Monk",
+    "born": 1917,
+    "died": 1982,
+    "role": "both",
+    "gender": "male",
+    "bio": "American pianist and composer whose angular melodies and dissonant voicings made him a founding father of bebop and modern jazz. 'Round Midnight is among the most recorded standards in jazz.",
+    "photoUrl": "/images/portraits/monk.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Thelonious_Monk",
+    "websiteUrl": null
+  },
+  {
     "id": "michelangeli",
     "name": "A.B. Michelangeli",
     "born": 1920,
