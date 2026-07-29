@@ -2566,6 +2566,18 @@
     "websiteUrl": null
   },
   {
+    "id": "tomkins",
+    "name": "T. Tomkins",
+    "born": 1572,
+    "died": 1656,
+    "role": "both",
+    "gender": "male",
+    "bio": "Welsh-born composer and organist, a pupil of Byrd, who served Worcester Cathedral and the Chapel Royal. His keyboard fugues, variations, and dances, preserved in a manuscript he copied in his final years, rank among the finest of the English virginal school.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Thomas_Tomkins",
+    "websiteUrl": null
+  },
+  {
     "id": "schutz",
     "name": "H. Schütz",
     "born": 1585,
