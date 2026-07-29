@@ -2759,6 +2759,18 @@
     "websiteUrl": null
   },
   {
+    "id": "martinez",
+    "name": "M. Martines",
+    "born": 1744,
+    "died": 1812,
+    "role": "both",
+    "gender": "female",
+    "bio": "Austrian composer, singer, and pianist who hosted Vienna's leading musical salon. A pupil of Haydn and friend of Mozart, with whom she played four-hand sonatas, she wrote keyboard concertos and sonatas admired across Europe.",
+    "photoUrl": "/images/portraits/martinez.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Marianna_Martines",
+    "websiteUrl": null
+  },
+  {
     "id": "belcke",
     "name": "F.A. Belcke",
     "born": 1795,
