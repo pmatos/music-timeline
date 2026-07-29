@@ -2594,6 +2594,18 @@
     "websiteUrl": null
   },
   {
+    "id": "khachaturian",
+    "name": "A. Khachaturian",
+    "born": 1903,
+    "died": 1978,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Armenian composer whose ballet Gayane, with its Sabre Dance, made him world-famous. His virtuosic Piano Concerto and Toccata remain favorites of the repertoire.",
+    "photoUrl": "/images/portraits/khachaturian.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Aram_Khachaturian",
+    "websiteUrl": null
+  },
+  {
     "id": "oistrakh",
     "name": "D. Oistrakh",
     "born": 1908,
