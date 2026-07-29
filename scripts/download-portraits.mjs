@@ -69,6 +69,7 @@ const WIKIPEDIA_TITLES = {
   'kerll': 'Johann_Caspar_Kerll',
   'danglebert': 'Jean-Henri_d\'Anglebert',
   'l-mozart': 'Leopold_Mozart',
+  'schobert': 'Johann_Schobert',
   'albrechtsberger': 'Johann_Georg_Albrechtsberger',
   'm-haydn': 'Michael_Haydn',
   'rimsky-korsakov': 'Nikolai_Rimsky-Korsakov',

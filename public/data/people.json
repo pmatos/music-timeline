@@ -409,6 +409,19 @@
     "websiteUrl": null
   },
   {
+    "id": "schobert",
+    "name": "J. Schobert",
+    "born": 1735,
+    "bornEstimated": true,
+    "died": 1767,
+    "role": "both",
+    "gender": "male",
+    "bio": "German harpsichordist and composer active in Paris whose dramatic keyboard concertos and sonatas influenced the young Mozart. He died with most of his family after eating poisonous mushrooms.",
+    "photoUrl": "/images/portraits/schobert.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Schobert",
+    "websiteUrl": null
+  },
+  {
     "id": "cimarosa",
     "name": "D. Cimarosa",
     "born": 1749,
