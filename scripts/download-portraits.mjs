@@ -127,6 +127,7 @@ const WIKIPEDIA_TITLES = {
   'sibelius': 'Jean_Sibelius',
   'szymanowski': 'Karol_Szymanowski',
   'dett': 'Robert_Nathaniel_Dett',
+  'casella': 'Alfredo_Casella',
   'jacob': 'Gordon_Jacob',
   'koetsier': 'Jan_Koetsier',
   'still': 'William_Grant_Still',

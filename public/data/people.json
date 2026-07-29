@@ -1405,6 +1405,18 @@
     "websiteUrl": null
   },
   {
+    "id": "casella",
+    "name": "A. Casella",
+    "born": 1883,
+    "died": 1947,
+    "role": "both",
+    "gender": "male",
+    "bio": "Italian composer, pianist, and conductor who led the modernist renewal of Italian instrumental music. His substantial piano output, from the early Toccata to the neoclassical Scarlattiana, spans the styles of a turbulent era.",
+    "photoUrl": "/images/portraits/casella.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alfredo_Casella",
+    "websiteUrl": null
+  },
+  {
     "id": "arthur-rubinstein",
     "name": "A. Rubinstein",
     "born": 1887,
