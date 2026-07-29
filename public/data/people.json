@@ -3375,6 +3375,18 @@
     "websiteUrl": null
   },
   {
+    "id": "walker",
+    "name": "G. Walker",
+    "born": 1922,
+    "died": 2018,
+    "role": "both",
+    "gender": "male",
+    "bio": "American composer and pianist, the first Black graduate of the Curtis Institute and the first African American to win the Pulitzer Prize for Music. His five piano sonatas marry Romantic breadth to structural rigor.",
+    "photoUrl": "/images/portraits/walker.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/George_Walker_(composer)",
+    "websiteUrl": null
+  },
+  {
     "id": "jj-johnson",
     "name": "J.J. Johnson",
     "born": 1924,
