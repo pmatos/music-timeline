@@ -3169,6 +3169,18 @@
     "websiteUrl": null
   },
   {
+    "id": "lecuona",
+    "name": "E. Lecuona",
+    "born": 1895,
+    "died": 1963,
+    "role": "both",
+    "gender": "male",
+    "bio": "Cuban composer and pianist whose Malagueña and Andalucía became worldwide standards. Leading his own dance orchestra, he brought Cuban rhythms to the concert stage and to Hollywood.",
+    "photoUrl": "/images/portraits/lecuona.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ernesto_Lecuona",
+    "websiteUrl": null
+  },
+  {
     "id": "tomasi",
     "name": "H. Tomasi",
     "born": 1901,
