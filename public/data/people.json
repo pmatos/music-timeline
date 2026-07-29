@@ -996,6 +996,18 @@
     "websiteUrl": null
   },
   {
+    "id": "lyadov",
+    "name": "A. Lyadov",
+    "born": 1855,
+    "died": 1914,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Russian composer and teacher associated with the nationalist Belyayev circle in Saint Petersburg. His finely wrought preludes, mazurkas, and Musical Snuffbox made the piano miniature his characteristic form; he also composed the orchestral tone poems Baba-Yaga and The Enchanted Lake.",
+    "photoUrl": "/images/portraits/lyadov.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Anatoly_Lyadov",
+    "websiteUrl": null
+  },
+  {
     "id": "chaminade",
     "name": "C. Chaminade",
     "born": 1857,
