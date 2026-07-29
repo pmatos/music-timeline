@@ -39,6 +39,7 @@ const WIKIPEDIA_TITLES = {
   'ysaye': 'Eugène_Ysaÿe',
   'mel-bonis': 'Mel_Bonis',
   'lyapunov': 'Sergei_Lyapunov',
+  'nazareth': 'Ernesto_Nazareth',
   'kreisler': 'Fritz_Kreisler',
   'bruch': 'Max_Bruch',
   'tausig': 'Karl_Tausig',

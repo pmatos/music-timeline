@@ -1056,6 +1056,18 @@
     "websiteUrl": null
   },
   {
+    "id": "nazareth",
+    "name": "E. Nazareth",
+    "born": 1863,
+    "died": 1934,
+    "role": "both",
+    "gender": "male",
+    "bio": "Brazilian pianist and composer who fused European dances with Afro-Brazilian rhythms into a national piano idiom. His tangos brasileiros and waltzes influenced Villa-Lobos and remain beloved in Brazil.",
+    "photoUrl": "/images/portraits/nazareth.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ernesto_Nazareth",
+    "websiteUrl": null
+  },
+  {
     "id": "glazunov",
     "name": "A. Glazunov",
     "born": 1865,
