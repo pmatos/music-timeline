@@ -1489,6 +1489,18 @@
     "websiteUrl": null
   },
   {
+    "id": "martinu",
+    "name": "B. Martinů",
+    "born": 1890,
+    "died": 1959,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Czech composer who settled in Paris and later the United States, one of the most prolific voices of his century. His piano works, from jazz-tinged Esquisses to the Fantaisie et toccata, mirror his cosmopolitan path.",
+    "photoUrl": "/images/portraits/martinu.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bohuslav_Martin%C5%AF",
+    "websiteUrl": null
+  },
+  {
     "id": "prokofiev",
     "name": "S. Prokofiev",
     "born": 1891,

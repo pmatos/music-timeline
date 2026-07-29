@@ -89,6 +89,7 @@ const WIKIPEDIA_TITLES = {
   'kid-ory': 'Kid_Ory',
   'hindemith': 'Paul_Hindemith',
   'ibert': 'Jacques_Ibert',
+  'martinu': 'Bohuslav_Martinů',
   'godowsky': 'Leopold_Godowsky',
   'ives': 'Charles_Ives',
   'price': 'Florence_Price',
