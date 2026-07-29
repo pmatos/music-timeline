@@ -96,6 +96,7 @@ const WIKIPEDIA_TITLES = {
   'heller': 'Stephen_Heller',
   'janacek': 'Leoš_Janáček',
   'moszkowski': 'Moritz_Moszkowski',
+  'lyadov': 'Anatoly_Lyadov',
   'hofmann': 'Josef_Hofmann',
   'de-falla': 'Manuel_de_Falla',
   'grainger': 'Percy_Grainger',
