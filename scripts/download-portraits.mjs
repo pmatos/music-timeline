@@ -22,6 +22,7 @@ const WIKIPEDIA_TITLES = {
   'kreutzer': 'Rodolphe_Kreutzer',
   'baillot': 'Pierre_Baillot',
   'spohr': 'Louis_Spohr',
+  'moscheles': 'Ignaz_Moscheles',
   'paganini': 'Niccolò_Paganini',
   'vieuxtemps': 'Henri_Vieuxtemps',
   'wieniawski': 'Henryk_Wieniawski',
