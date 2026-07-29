@@ -2160,6 +2160,18 @@
     "websiteUrl": null
   },
   {
+    "id": "kozeluch",
+    "name": "L. Koželuch",
+    "born": 1747,
+    "died": 1818,
+    "role": "both",
+    "gender": "male",
+    "bio": "Bohemian composer and pianist who succeeded Mozart as imperial chamber composer in Vienna. His roughly fifty piano sonatas and twenty concertos were widely published, and his song arrangements circulated across Europe.",
+    "photoUrl": "/images/portraits/kozeluch.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leopold_Ko%C5%BEeluch",
+    "websiteUrl": null
+  },
+  {
     "id": "viotti",
     "name": "G.B. Viotti",
     "born": 1755,
