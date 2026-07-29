@@ -88,6 +88,7 @@ const WIKIPEDIA_TITLES = {
   'price': 'Florence_Price',
   'cortot': 'Alfred_Cortot',
   'fanny-mendelssohn': 'Fanny_Hensel',
+  'heller': 'Stephen_Heller',
   'janacek': 'Leoš_Janáček',
   'hofmann': 'Josef_Hofmann',
   'de-falla': 'Manuel_de_Falla',
