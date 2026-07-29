@@ -554,6 +554,18 @@
     "websiteUrl": null
   },
   {
+    "id": "szymanowska",
+    "name": "M. Szymanowska",
+    "born": 1789,
+    "died": 1831,
+    "role": "both",
+    "gender": "female",
+    "bio": "Polish pianist and composer admired by Goethe, who addressed a poem to her after hearing her play. Her St. Petersburg salon drew the literary elite, and her etudes, nocturnes, and mazurkas anticipated idioms later associated with Chopin.",
+    "photoUrl": "/images/portraits/szymanowska.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Maria_Szymanowska",
+    "websiteUrl": null
+  },
+  {
     "id": "czerny",
     "name": "C. Czerny",
     "born": 1791,
