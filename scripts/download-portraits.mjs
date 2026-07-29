@@ -72,6 +72,7 @@ const WIKIPEDIA_TITLES = {
   'schobert': 'Johann_Schobert',
   'albrechtsberger': 'Johann_Georg_Albrechtsberger',
   'm-haydn': 'Michael_Haydn',
+  'vanhal': 'Johann_Baptist_Wanhal',
   'rimsky-korsakov': 'Nikolai_Rimsky-Korsakov',
   'pryor': 'Arthur_Pryor',
   'kid-ory': 'Kid_Ory',

@@ -2747,6 +2747,18 @@
     "websiteUrl": null
   },
   {
+    "id": "vanhal",
+    "name": "J.B. Vanhal",
+    "born": 1739,
+    "died": 1813,
+    "role": "both",
+    "gender": "male",
+    "bio": "Bohemian-born composer and keyboard teacher active in Vienna alongside Haydn and Mozart. His prolific piano sonatas and didactic pieces circulated across Europe and helped shape Viennese Classical keyboard style.",
+    "photoUrl": "/images/portraits/vanhal.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Baptist_Wanhal",
+    "websiteUrl": null
+  },
+  {
     "id": "belcke",
     "name": "F.A. Belcke",
     "born": 1795,
