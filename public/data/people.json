@@ -3459,6 +3459,18 @@
     "websiteUrl": null
   },
   {
+    "id": "crumb",
+    "name": "G. Crumb",
+    "born": 1929,
+    "died": 2022,
+    "role": "composer",
+    "gender": "male",
+    "bio": "American composer whose theatrical sound worlds won a Pulitzer Prize and a Grammy. His Makrokosmos volumes, played both on the keys and inside the piano, are landmarks of twentieth-century keyboard music.",
+    "photoUrl": "/images/portraits/crumb.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/George_Crumb",
+    "websiteUrl": null
+  },
+  {
     "id": "denis-wick",
     "name": "D. Wick",
     "born": 1931,
