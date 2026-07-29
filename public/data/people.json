@@ -1284,6 +1284,18 @@
     "websiteUrl": null
   },
   {
+    "id": "bortkiewicz",
+    "name": "S. Bortkiewicz",
+    "born": 1877,
+    "died": 1952,
+    "role": "both",
+    "gender": "male",
+    "bio": "Ukrainian-born composer and pianist who settled in Vienna after the Russian Revolution. His unabashedly Romantic piano concertos and miniatures, long neglected, have found devoted new audiences.",
+    "photoUrl": "/images/portraits/bortkiewicz.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Bortkiewicz",
+    "websiteUrl": null
+  },
+  {
     "id": "medtner",
     "name": "N. Medtner",
     "born": 1880,
