@@ -578,6 +578,18 @@
     "websiteUrl": null
   },
   {
+    "id": "vorisek",
+    "name": "J.V. Voříšek",
+    "born": 1791,
+    "died": 1825,
+    "role": "both",
+    "gender": "male",
+    "bio": "Bohemian composer and pianist active in Vienna, admired by Beethoven and close to Schubert's circle. His Impromptus, Op. 7 helped found a genre that Schubert would make famous.",
+    "photoUrl": "/images/portraits/vorisek.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jan_V%C3%A1clav_Vo%C5%99%C3%AD%C5%A1ek",
+    "websiteUrl": null
+  },
+  {
     "id": "moscheles",
     "name": "I. Moscheles",
     "born": 1794,

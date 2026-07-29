@@ -26,6 +26,7 @@ const WIKIPEDIA_TITLES = {
   'spohr': 'Louis_Spohr',
   'ries': 'Ferdinand_Ries',
   'szymanowska': 'Maria_Szymanowska',
+  'vorisek': 'Jan_Václav_Voříšek',
   'moscheles': 'Ignaz_Moscheles',
   'paganini': 'Niccolò_Paganini',
   'vieuxtemps': 'Henri_Vieuxtemps',
