@@ -93,6 +93,7 @@ const WIKIPEDIA_TITLES = {
   'ives': 'Charles_Ives',
   'price': 'Florence_Price',
   'cortot': 'Alfred_Cortot',
+  'dohnanyi': 'Ernst_von_Dohnányi',
   'fanny-mendelssohn': 'Fanny_Hensel',
   'heller': 'Stephen_Heller',
   'janacek': 'Leoš_Janáček',
