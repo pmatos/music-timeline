@@ -64,6 +64,7 @@ const WIKIPEDIA_TITLES = {
   'monteverdi': 'Claudio_Monteverdi',
   'gibbons': 'Orlando_Gibbons',
   'schutz': 'Heinrich_Schütz',
+  'scheidt': 'Samuel_Scheidt',
   'l-mozart': 'Leopold_Mozart',
   'albrechtsberger': 'Johann_Georg_Albrechtsberger',
   'm-haydn': 'Michael_Haydn',
