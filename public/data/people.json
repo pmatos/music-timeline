@@ -984,6 +984,18 @@
     "websiteUrl": null
   },
   {
+    "id": "moszkowski",
+    "name": "M. Moszkowski",
+    "born": 1854,
+    "died": 1925,
+    "role": "both",
+    "gender": "male",
+    "bio": "Polish-German pianist and composer whose Spanish Dances and scintillating salon pieces, above all Étincelles, delighted Europe. Based in Berlin and Paris, he was also one of the most sought-after piano teachers of his time.",
+    "photoUrl": "/images/portraits/moszkowski.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Moritz_Moszkowski",
+    "websiteUrl": null
+  },
+  {
     "id": "chaminade",
     "name": "C. Chaminade",
     "born": 1857,

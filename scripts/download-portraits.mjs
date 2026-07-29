@@ -92,6 +92,7 @@ const WIKIPEDIA_TITLES = {
   'fanny-mendelssohn': 'Fanny_Hensel',
   'heller': 'Stephen_Heller',
   'janacek': 'Leoš_Janáček',
+  'moszkowski': 'Moritz_Moszkowski',
   'hofmann': 'Josef_Hofmann',
   'de-falla': 'Manuel_de_Falla',
   'grainger': 'Percy_Grainger',
