@@ -2424,6 +2424,18 @@
     "websiteUrl": null
   },
   {
+    "id": "lyapunov",
+    "name": "S. Lyapunov",
+    "born": 1859,
+    "died": 1924,
+    "role": "both",
+    "gender": "male",
+    "bio": "Russian composer and pianist, Balakirev's last disciple and a champion of the nationalist school. His twelve Transcendental Etudes complete the circle of keys Liszt left untouched.",
+    "photoUrl": "/images/portraits/lyapunov.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Lyapunov",
+    "websiteUrl": null
+  },
+  {
     "id": "kreisler",
     "name": "F. Kreisler",
     "born": 1875,
