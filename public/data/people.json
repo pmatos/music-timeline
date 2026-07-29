@@ -49,6 +49,18 @@
     "websiteUrl": null
   },
   {
+    "id": "gibbons",
+    "name": "O. Gibbons",
+    "born": 1583,
+    "died": 1625,
+    "role": "both",
+    "gender": "male",
+    "bio": "English composer and keyboard player, a contributor to Parthenia, the first printed collection of English virginal music. Organist of Westminster Abbey and the Chapel Royal, he was admired as the finest keyboard performer of his generation.",
+    "photoUrl": "/images/portraits/gibbons.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Orlando_Gibbons",
+    "websiteUrl": null
+  },
+  {
     "id": "froberger",
     "name": "J.J. Froberger",
     "born": 1616,

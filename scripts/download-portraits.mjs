@@ -62,6 +62,7 @@ const WIKIPEDIA_TITLES = {
   'g-gabrieli': 'Giovanni_Gabrieli',
   'bull': 'John_Bull_(composer)',
   'monteverdi': 'Claudio_Monteverdi',
+  'gibbons': 'Orlando_Gibbons',
   'schutz': 'Heinrich_Schütz',
   'l-mozart': 'Leopold_Mozart',
   'albrechtsberger': 'Johann_Georg_Albrechtsberger',
