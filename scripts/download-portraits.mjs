@@ -115,6 +115,7 @@ const WIKIPEDIA_TITLES = {
   'jj-johnson': 'J._J._Johnson',
   'berio': 'Luciano_Berio',
   'rosolino': 'Frank_Rosolino',
+  'kurtag': 'György_Kurtág',
   'mangelsdorff': 'Albert_Mangelsdorff',
   'curtis-fuller': 'Curtis_Fuller',
   'slide-hampton': 'Slide_Hampton',
