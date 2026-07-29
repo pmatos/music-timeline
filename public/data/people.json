@@ -2602,6 +2602,18 @@
     "websiteUrl": null
   },
   {
+    "id": "scheidt",
+    "name": "S. Scheidt",
+    "born": 1587,
+    "died": 1654,
+    "role": "both",
+    "gender": "male",
+    "bio": "German organist and composer whose Tabulatura Nova (1624) reformed keyboard notation and variation technique. A pupil of Sweelinck, he served as Kapellmeister in Halle for over three decades.",
+    "photoUrl": "/images/portraits/scheidt.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Samuel_Scheidt",
+    "websiteUrl": null
+  },
+  {
     "id": "speer",
     "name": "D. Speer",
     "born": 1636,
