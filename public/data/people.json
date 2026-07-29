@@ -1971,6 +1971,18 @@
     "websiteUrl": null
   },
   {
+    "id": "silvestrov",
+    "name": "V. Silvestrov",
+    "born": 1937,
+    "died": null,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Ukrainian composer who moved from Soviet avant-garde experiment to a serene, elegiac late style. His Bagatelles and Kitsch-Music for piano exemplify that lyric intimacy.",
+    "photoUrl": "/images/portraits/silvestrov.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Valentyn_Silvestrov",
+    "websiteUrl": null
+  },
+  {
     "id": "argerich",
     "name": "M. Argerich",
     "born": 1941,
