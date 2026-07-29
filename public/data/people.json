@@ -85,6 +85,18 @@
     "websiteUrl": null
   },
   {
+    "id": "kerll",
+    "name": "J.C. Kerll",
+    "born": 1627,
+    "died": 1693,
+    "role": "both",
+    "gender": "male",
+    "bio": "German organist and composer whose toccatas and canzonas shaped the South German keyboard style inherited by Bach. He worked at the Munich and Vienna courts and was famed for improvising on given themes.",
+    "photoUrl": "/images/portraits/kerll.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Caspar_Kerll",
+    "websiteUrl": null
+  },
+  {
     "id": "buxtehude",
     "name": "D. Buxtehude",
     "born": 1637,
