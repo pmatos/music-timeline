@@ -1983,6 +1983,18 @@
     "websiteUrl": null
   },
   {
+    "id": "rzewski",
+    "name": "F. Rzewski",
+    "born": 1938,
+    "died": 2021,
+    "role": "both",
+    "gender": "male",
+    "bio": "American composer-pianist whose hour-long variations The People United Will Never Be Defeated! are a monument of political art music. A virtuoso performer, he premiered works from Stockhausen to his own.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Frederic_Rzewski",
+    "websiteUrl": null
+  },
+  {
     "id": "argerich",
     "name": "M. Argerich",
     "born": 1941,
