@@ -2244,6 +2244,18 @@
     "websiteUrl": null
   },
   {
+    "id": "ries",
+    "name": "F. Ries",
+    "born": 1784,
+    "died": 1838,
+    "role": "both",
+    "gender": "male",
+    "bio": "German pianist and composer, Beethoven's pupil, copyist, and later his biographer. He toured Europe performing his own piano concertos before becoming a director of the Lower Rhine Music Festival.",
+    "photoUrl": "/images/portraits/ries.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ferdinand_Ries",
+    "websiteUrl": null
+  },
+  {
     "id": "vieuxtemps",
     "name": "H. Vieuxtemps",
     "born": 1820,
