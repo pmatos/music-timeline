@@ -138,6 +138,7 @@ const WIKIPEDIA_TITLES = {
   'enescu': 'George_Enescu',
   'globokar': 'Vinko_Globokar',
   'milhaud': 'Darius_Milhaud',
+  'mompou': 'Federico_Mompou',
   'glazunov': 'Alexander_Glazunov',
   'joplin': 'Scott_Joplin',
   'chaminade': 'Cécile_Chaminade',

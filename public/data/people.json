@@ -3121,6 +3121,18 @@
     "websiteUrl": null
   },
   {
+    "id": "mompou",
+    "name": "F. Mompou",
+    "born": 1893,
+    "died": 1987,
+    "role": "both",
+    "gender": "male",
+    "bio": "Catalan composer and pianist whose intimate Música callada and Cançons i danses evoke a world of bells and Catalan song. He cultivated an aesthetic of silence and concentrated expression.",
+    "photoUrl": "/images/portraits/mompou.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Federico_Mompou",
+    "websiteUrl": null
+  },
+  {
     "id": "hindemith",
     "name": "P. Hindemith",
     "born": 1895,
