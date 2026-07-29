@@ -3301,6 +3301,18 @@
     "websiteUrl": null
   },
   {
+    "id": "bacewicz",
+    "name": "G. Bacewicz",
+    "born": 1909,
+    "died": 1969,
+    "role": "composer",
+    "gender": "female",
+    "bio": "Polish composer and violinist, a leading voice of postwar Polish modernism. Her piano sonatas and concert etudes combine neoclassical drive with Polish folk rhythm.",
+    "photoUrl": "/images/portraits/bacewicz.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Gra%C5%BCyna_Bacewicz",
+    "websiteUrl": null
+  },
+  {
     "id": "koetsier",
     "name": "J. Koetsier",
     "born": 1911,

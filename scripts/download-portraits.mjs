@@ -147,6 +147,7 @@ const WIKIPEDIA_TITLES = {
   'joplin': 'Scott_Joplin',
   'chaminade': 'Cécile_Chaminade',
   'larsson': 'Lars-Erik_Larsson',
+  'bacewicz': 'Grażyna_Bacewicz',
 };
 
 const THUMB_SIZE = 400;
