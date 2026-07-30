@@ -161,6 +161,7 @@ const WIKIPEDIA_TITLES = {
   'powell': 'Maud_Powell',
   'frahm': 'Nils_Frahm',
   'saariaho': 'Kaija_Saariaho',
+  'schnittke': 'Alfred_Schnittke',
 };
 
 const THUMB_SIZE = 400;

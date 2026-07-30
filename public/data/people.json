@@ -1911,6 +1911,18 @@
     "websiteUrl": null
   },
   {
+    "id": "schnittke",
+    "name": "A. Schnittke",
+    "born": 1934,
+    "died": 1998,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Russian-German composer known for his 'polystylism,' freely juxtaposing tonal, atonal, and popular idioms within a single work. His symphonies, concerti grossi, and chamber music remain central to late-20th-century Soviet and post-Soviet repertoire.",
+    "photoUrl": "/images/portraits/schnittke.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alfred_Schnittke",
+    "websiteUrl": null
+  },
+  {
     "id": "part",
     "name": "A. Pärt",
     "born": 1935,
