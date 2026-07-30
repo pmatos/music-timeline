@@ -3473,6 +3473,18 @@
     "websiteUrl": null
   },
   {
+    "id": "liston",
+    "name": "M. Liston",
+    "born": 1926,
+    "died": 1999,
+    "role": "both",
+    "gender": "female",
+    "bio": "American jazz trombonist, composer, and arranger who was among the first women to achieve prominence as an instrumentalist in a male-dominated field, touring with Dizzy Gillespie's big band in the 1940s. She became a celebrated arranger, forming a decades-long creative partnership with pianist Randy Weston and also writing for Quincy Jones and Duke Ellington.",
+    "photoUrl": "/images/portraits/liston.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Melba_Liston",
+    "websiteUrl": null
+  },
+  {
     "id": "rosolino",
     "name": "F. Rosolino",
     "born": 1926,
