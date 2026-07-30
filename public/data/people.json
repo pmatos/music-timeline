@@ -2248,6 +2248,18 @@
     "websiteUrl": "https://www.langlangofficial.com"
   },
   {
+    "id": "frahm",
+    "name": "N. Frahm",
+    "born": 1982,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "German pianist and composer who blends classical piano writing with electronic production and ambient textures, often performing on modified and prepared pianos. Albums such as Spaces and Screws helped establish him as a central figure in contemporary neoclassical and ambient music.",
+    "photoUrl": "/images/portraits/frahm.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nils_Frahm",
+    "websiteUrl": null
+  },
+  {
     "id": "wang",
     "name": "Y. Wang",
     "born": 1987,

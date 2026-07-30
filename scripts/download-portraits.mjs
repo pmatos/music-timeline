@@ -159,6 +159,7 @@ const WIKIPEDIA_TITLES = {
   'max-richter': 'Max_Richter',
   'liston': 'Melba_Liston',
   'powell': 'Maud_Powell',
+  'frahm': 'Nils_Frahm',
 };
 
 const THUMB_SIZE = 400;
