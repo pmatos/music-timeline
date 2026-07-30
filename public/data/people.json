@@ -2934,6 +2934,18 @@
     "websiteUrl": null
   },
   {
+    "id": "repin",
+    "name": "V. Repin",
+    "born": 1971,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "Russian violinist who, at age 17, became the youngest-ever winner of the violin section of the Queen Elisabeth Competition in Brussels, launching an international career built on virtuosic command of the Romantic concerto repertoire. He has performed on a 1733 Stradivarius known as the 'Rode' since 2015 and is also active as a chamber musician and conductor.",
+    "photoUrl": "/images/portraits/repin.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vadim_Repin",
+    "websiteUrl": null
+  },
+  {
     "id": "midori",
     "name": "Midori",
     "born": 1971,

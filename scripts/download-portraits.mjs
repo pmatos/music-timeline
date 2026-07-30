@@ -164,6 +164,7 @@ const WIKIPEDIA_TITLES = {
   'schnittke': 'Alfred_Schnittke',
   'olafsson': 'Víkingur_Ólafsson',
   'tetzlaff': 'Christian_Tetzlaff',
+  'repin': 'Vadim_Repin',
 };
 
 const THUMB_SIZE = 400;
