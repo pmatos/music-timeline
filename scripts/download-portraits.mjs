@@ -163,6 +163,7 @@ const WIKIPEDIA_TITLES = {
   'saariaho': 'Kaija_Saariaho',
   'schnittke': 'Alfred_Schnittke',
   'olafsson': 'Víkingur_Ólafsson',
+  'tetzlaff': 'Christian_Tetzlaff',
 };
 
 const THUMB_SIZE = 400;
