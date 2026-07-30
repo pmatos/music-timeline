@@ -2910,6 +2910,18 @@
     "websiteUrl": null
   },
   {
+    "id": "tetzlaff",
+    "name": "C. Tetzlaff",
+    "born": 1966,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "German violinist known for intense, analytically rigorous interpretations of the core repertoire, often performing from memory to foreground direct communication with the music. He leads his own Tetzlaff Quartet and is a noted advocate for solo and chamber works alongside the standard concerto repertoire.",
+    "photoUrl": "/images/portraits/tetzlaff.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Christian_Tetzlaff",
+    "websiteUrl": null
+  },
+  {
     "id": "shaham",
     "name": "G. Shaham",
     "born": 1971,
