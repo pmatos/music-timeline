@@ -156,6 +156,7 @@ const WIKIPEDIA_TITLES = {
   'larsson': 'Lars-Erik_Larsson',
   'bacewicz': 'Grażyna_Bacewicz',
   'mary-lou-williams': 'Mary_Lou_Williams',
+  'max-richter': 'Max_Richter',
 };
 
 const THUMB_SIZE = 400;
