@@ -157,6 +157,7 @@ const WIKIPEDIA_TITLES = {
   'bacewicz': 'Grażyna_Bacewicz',
   'mary-lou-williams': 'Mary_Lou_Williams',
   'max-richter': 'Max_Richter',
+  'liston': 'Melba_Liston',
 };
 
 const THUMB_SIZE = 400;
