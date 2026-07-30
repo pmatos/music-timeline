@@ -2188,6 +2188,18 @@
     "websiteUrl": null
   },
   {
+    "id": "max-richter",
+    "name": "Max Richter",
+    "born": 1966,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "German-born British composer and pianist whose fusion of minimalist classical technique with electronics and ambient textures has made him one of the most streamed composers of his generation. He is best known for The Blue Notebooks, the eight-hour Sleep, and his Recomposed reworking of Vivaldi's Four Seasons.",
+    "photoUrl": "/images/portraits/max-richter.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Max_Richter",
+    "websiteUrl": null
+  },
+  {
     "id": "grimaud",
     "name": "H. Grimaud",
     "born": 1969,
