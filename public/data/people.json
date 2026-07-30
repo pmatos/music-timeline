@@ -3593,6 +3593,18 @@
     "websiteUrl": null
   },
   {
+    "id": "hidas",
+    "name": "F. Hidas",
+    "born": 1928,
+    "died": 2007,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Hungarian composer who served as music director of Budapest's National Theatre and later its Operetta Theatre before becoming a freelance composer. He became one of the foremost names in contemporary wind and brass repertoire, writing extensively for concert band and contributing concertos across the brass family, including for trombone.",
+    "photoUrl": "/images/portraits/hidas.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Frigyes_Hidas",
+    "websiteUrl": null
+  },
+  {
     "id": "kurtag",
     "name": "G. Kurtág",
     "born": 1926,

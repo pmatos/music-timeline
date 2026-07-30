@@ -165,6 +165,7 @@ const WIKIPEDIA_TITLES = {
   'olafsson': 'Víkingur_Ólafsson',
   'tetzlaff': 'Christian_Tetzlaff',
   'repin': 'Vadim_Repin',
+  'hidas': 'Frigyes_Hidas',
 };
 
 const THUMB_SIZE = 400;
