@@ -158,6 +158,7 @@ const WIKIPEDIA_TITLES = {
   'mary-lou-williams': 'Mary_Lou_Williams',
   'max-richter': 'Max_Richter',
   'liston': 'Melba_Liston',
+  'powell': 'Maud_Powell',
 };
 
 const THUMB_SIZE = 400;

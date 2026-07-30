@@ -2646,6 +2646,18 @@
     "websiteUrl": null
   },
   {
+    "id": "powell",
+    "name": "M. Powell",
+    "born": 1867,
+    "died": 1920,
+    "role": "player",
+    "gender": "female",
+    "bio": "American violinist and the first internationally acclaimed American-born violin virtuoso, celebrated for her technical brilliance and rich, singing tone. She was the first solo instrumentalist to record for the Victor Talking Machine Company and tirelessly championed new works by Dvořák, Sibelius, and Tchaikovsky before American audiences.",
+    "photoUrl": "/images/portraits/powell.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Maud_Powell",
+    "websiteUrl": null
+  },
+  {
     "id": "kreisler",
     "name": "F. Kreisler",
     "born": 1875,
