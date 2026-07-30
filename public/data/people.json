@@ -2284,6 +2284,18 @@
     "websiteUrl": null
   },
   {
+    "id": "olafsson",
+    "name": "V. Ólafsson",
+    "born": 1984,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "Icelandic pianist known for cerebral, crystalline interpretations of Bach, Rameau, and Philip Glass, often described as 'Iceland's Glenn Gould.' His recital programs frequently juxtapose Baroque and contemporary works to reveal unexpected connections.",
+    "photoUrl": "/images/portraits/olafsson.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/V%C3%ADkingur_%C3%93lafsson",
+    "websiteUrl": null
+  },
+  {
     "id": "wang",
     "name": "Y. Wang",
     "born": 1987,

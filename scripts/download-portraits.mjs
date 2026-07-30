@@ -162,6 +162,7 @@ const WIKIPEDIA_TITLES = {
   'frahm': 'Nils_Frahm',
   'saariaho': 'Kaija_Saariaho',
   'schnittke': 'Alfred_Schnittke',
+  'olafsson': 'Víkingur_Ólafsson',
 };
 
 const THUMB_SIZE = 400;
