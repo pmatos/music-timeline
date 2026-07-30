@@ -2115,6 +2115,18 @@
     "websiteUrl": null
   },
   {
+    "id": "saariaho",
+    "name": "K. Saariaho",
+    "born": 1952,
+    "died": 2023,
+    "role": "composer",
+    "gender": "female",
+    "bio": "Finnish composer celebrated for richly textured, spectral music exploring timbre and color, developed in part at IRCAM in Paris. Her opera L'Amour de loin made her the first woman in over a century to have a new work staged at the Metropolitan Opera.",
+    "photoUrl": "/images/portraits/saariaho.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kaija_Saariaho",
+    "websiteUrl": null
+  },
+  {
     "id": "einaudi",
     "name": "L. Einaudi",
     "born": 1955,

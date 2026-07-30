@@ -160,6 +160,7 @@ const WIKIPEDIA_TITLES = {
   'liston': 'Melba_Liston',
   'powell': 'Maud_Powell',
   'frahm': 'Nils_Frahm',
+  'saariaho': 'Kaija_Saariaho',
 };
 
 const THUMB_SIZE = 400;
