@@ -13,7 +13,7 @@
   "dependencies": {
     "@remotion/cli": "^4.0.500",
     "@remotion/google-fonts": "^4.0.500",
-    "@remotion/media": "^4.0.500",
+    "@remotion/media": "^4.0.506",
     "@remotion/media-utils": "^4.0.499",
     "@remotion/player": "^4.0.427",
     "@remotion/transitions": "^4.0.500",
