@@ -1,5 +1,17 @@
 [
   {
+    "id": "cabezon",
+    "name": "A. de Cabezón",
+    "born": 1510,
+    "died": 1566,
+    "role": "both",
+    "gender": "male",
+    "bio": "Spanish Renaissance composer and organist, blind from childhood, who served as court musician to Isabella of Portugal and later Philip II, traveling with the royal court through Italy, the Netherlands, and England. His tientos and diferencias (keyboard variation sets) mark him as the most influential Iberian keyboard composer of the 16th century.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Antonio_de_Cabez%C3%B3n",
+    "websiteUrl": null
+  },
+  {
     "id": "byrd",
     "name": "W. Byrd",
     "born": 1540,
@@ -3137,6 +3149,18 @@
     "websiteUrl": null
   },
   {
+    "id": "pezel",
+    "name": "J.C. Pezel",
+    "born": 1639,
+    "died": 1694,
+    "role": "composer",
+    "gender": "male",
+    "bio": "German Baroque composer and Stadtpfeifer (town musician) in Leipzig and Bautzen, best known for his brass ensemble music including the Hora decima sonatas and Turmmusik written for tower musicians. His works for cornetts and trombones are foundational to the early brass ensemble repertoire.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Christoph_Pezel",
+    "websiteUrl": null
+  },
+  {
     "id": "wagenseil",
     "name": "G.C. Wagenseil",
     "born": 1715,
@@ -3254,6 +3278,18 @@
     "bio": "German violinist, composer, and conductor who served as concertmaster at the Leipzig Gewandhaus under Mendelssohn. His Concertino for Trombone and Orchestra, Op. 4 (1837), written for Karl Traugott Queisser, became the most frequently performed 19th-century solo trombone work.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Ferdinand_David_(musician)",
+    "websiteUrl": null
+  },
+  {
+    "id": "guilmant",
+    "name": "A. Guilmant",
+    "born": 1837,
+    "died": 1911,
+    "role": "composer",
+    "gender": "male",
+    "bio": "French organist and composer, one of the leading concert organists of his era and a co-founder of the Paris Schola Cantorum, celebrated for his eight organ symphonies. His Morceau symphonique, Op. 88 (1902), for trombone and orchestra has become a cornerstone of the trombone repertoire.",
+    "photoUrl": "/images/portraits/guilmant.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alexandre_Guilmant",
     "websiteUrl": null
   },
   {

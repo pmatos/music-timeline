@@ -166,6 +166,9 @@ const WIKIPEDIA_TITLES = {
   'tetzlaff': 'Christian_Tetzlaff',
   'repin': 'Vadim_Repin',
   'hidas': 'Frigyes_Hidas',
+  'cabezon': 'Antonio_de_Cabezón',
+  'pezel': 'Johann_Christoph_Pezel',
+  'guilmant': 'Alexandre_Guilmant',
 };
 
 const THUMB_SIZE = 400;
