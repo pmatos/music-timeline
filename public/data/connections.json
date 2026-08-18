@@ -538,5 +538,11 @@
     "to": "becquet",
     "type": "student-teacher",
     "label": "influence"
+  },
+  {
+    "from": "josef-lhevinne",
+    "to": "rosina-lhevinne",
+    "type": "relative",
+    "label": "husband/wife"
   }
 ]
