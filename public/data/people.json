@@ -1224,6 +1224,18 @@
     "websiteUrl": null
   },
   {
+    "id": "josef-lhevinne",
+    "name": "J. Lhévinne",
+    "born": 1874,
+    "died": 1944,
+    "role": "player",
+    "gender": "male",
+    "bio": "Russian-American pianist renowned for his phenomenal octave technique and glittering virtuosity, particularly in Liszt and Chopin. He and his wife Rosina Lhévinne became legendary duo-piano partners and influential teachers at the Juilliard School.",
+    "photoUrl": "/images/portraits/josef-lhevinne.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Josef_Lh%C3%A9vinne",
+    "websiteUrl": null
+  },
+  {
     "id": "ravel",
     "name": "M. Ravel",
     "born": 1875,
@@ -1429,6 +1441,18 @@
     "websiteUrl": null
   },
   {
+    "id": "backhaus",
+    "name": "W. Backhaus",
+    "born": 1884,
+    "died": 1969,
+    "role": "player",
+    "gender": "male",
+    "bio": "German pianist and pupil of Eugen d'Albert who won the Anton Rubinstein Competition in 1905 and, in 1928, became the first pianist to record Chopin's complete Études. Renowned above all for his authoritative Beethoven, whose piano sonatas he recorded complete in the 1950s and '60s, he maintained an active concert career for nearly seven decades despite his controversial support for the Nazi regime in the 1930s.",
+    "photoUrl": "/images/portraits/backhaus.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Wilhelm_Backhaus",
+    "websiteUrl": null
+  },
+  {
     "id": "arthur-rubinstein",
     "name": "A. Rubinstein",
     "born": 1887,
@@ -1522,6 +1546,18 @@
     "bio": "Russian composer and pianist whose nine piano sonatas and five piano concertos combine biting rhythmic energy, lyrical beauty, and sardonic wit. He was himself a formidable performer.",
     "photoUrl": "/images/portraits/prokofiev.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Prokofiev",
+    "websiteUrl": null
+  },
+  {
+    "id": "haskil",
+    "name": "C. Haskil",
+    "born": 1895,
+    "died": 1960,
+    "role": "player",
+    "gender": "female",
+    "bio": "Romanian pianist celebrated above all as one of the twentieth century's foremost interpreters of Mozart, prized for the clarity, poise, and unaffected naturalness of her playing. Despite lifelong ill health, she achieved international acclaim late in life, notably through her celebrated recordings and recitals with violinist Arthur Grumiaux.",
+    "photoUrl": "/images/portraits/haskil.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Clara_Haskil",
     "websiteUrl": null
   },
   {
@@ -2730,6 +2766,18 @@
     "websiteUrl": null
   },
   {
+    "id": "elman",
+    "name": "M. Elman",
+    "born": 1891,
+    "died": 1967,
+    "role": "player",
+    "gender": "male",
+    "bio": "Russian-American violinist and pupil of Leopold Auer, celebrated for the lush, singing quality of his sound known simply as the \"Elman tone.\" A child prodigy who made his Berlin debut at thirteen, he became one of the most prolific recording violinists of the early 20th century.",
+    "photoUrl": "/images/portraits/elman.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Mischa_Elman",
+    "websiteUrl": null
+  },
+  {
     "id": "heifetz",
     "name": "J. Heifetz",
     "born": 1901,
@@ -2739,6 +2787,18 @@
     "bio": "Lithuanian-born American violinist widely regarded as the greatest violinist of the 20th century. A pupil of Leopold Auer, his flawless intonation, dazzling technique, and intense tone set a standard that continues to define modern violin playing.",
     "photoUrl": "/images/portraits/heifetz.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Jascha_Heifetz",
+    "websiteUrl": null
+  },
+  {
+    "id": "morini",
+    "name": "E. Morini",
+    "born": 1904,
+    "died": 1995,
+    "role": "player",
+    "gender": "female",
+    "bio": "Austrian-American violinist and pupil of Otakar Ševčík at the Vienna Conservatory, who made her sensational debut with the Berlin Philharmonic under Arthur Nikisch at age twelve. She enjoyed a major international career spanning six decades, performing on a celebrated 1727 Stradivarius that was stolen from her New York apartment shortly before her death.",
+    "photoUrl": "/images/portraits/morini.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Erica_Morini",
     "websiteUrl": null
   },
   {
@@ -2787,6 +2847,18 @@
     "bio": "American-born British violinist and conductor who was one of the greatest child prodigies in music history, performing the Mendelssohn Concerto at age seven. He later became a tireless humanitarian and advocate for music education worldwide.",
     "photoUrl": "/images/portraits/menuhin.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Yehudi_Menuhin",
+    "websiteUrl": null
+  },
+  {
+    "id": "ricci",
+    "name": "R. Ricci",
+    "born": 1918,
+    "died": 2012,
+    "role": "player",
+    "gender": "male",
+    "bio": "American violinist and child prodigy, renowned above all for his lifelong association with the works of Paganini, whose 24 Caprices he was the first violinist to record in their entirety. His restless virtuosity and appetite for rare and modern repertoire made him one of the most recorded violinists of the 20th century.",
+    "photoUrl": "/images/portraits/ricci.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ruggiero_Ricci",
     "websiteUrl": null
   },
   {
@@ -2847,6 +2919,18 @@
     "bio": "Polish-born British violinist who was a child prodigy and became one of the most respected violinists of the 20th century. Her recordings of the Sibelius, Elgar, and Brahms concertos are prized for their commanding authority and warmth.",
     "photoUrl": "/images/portraits/haendel.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ida_Haendel",
+    "websiteUrl": null
+  },
+  {
+    "id": "ferras",
+    "name": "C. Ferras",
+    "born": 1933,
+    "died": 1982,
+    "role": "player",
+    "gender": "male",
+    "bio": "French violinist celebrated for the intensity and refined lyricism of his playing, particularly in the German Romantic repertoire. He formed a celebrated lifelong recital partnership with pianist Pierre Barbizet and recorded landmark performances of the Beethoven and Brahms violin concertos with Herbert von Karajan and the Berlin Philharmonic.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Christian_Ferras",
     "websiteUrl": null
   },
   {
@@ -3074,6 +3158,18 @@
     "bio": "German-American violinist, born in Italy, who won the gold medal at the 2006 International Violin Competition of Indianapolis and rose to international prominence as a soloist with the world's leading orchestras. Celebrated for his radiant tone and expansive repertoire, he won a 2016 Grammy Award for his recording of Dutilleux's L'arbre des songes with the Seattle Symphony and is a noted champion of contemporary music.",
     "photoUrl": "/images/portraits/hadelich.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Augustin_Hadelich",
+    "websiteUrl": null
+  },
+  {
+    "id": "benedetti",
+    "name": "N. Benedetti",
+    "born": 1987,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "Scottish violinist who won BBC Young Musician of the Year at sixteen and has since become one of classical music's most prominent advocates for music education. In 2022 she became the first woman to serve as Director of the Edinburgh International Festival.",
+    "photoUrl": "/images/portraits/benedetti.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nicola_Benedetti",
     "websiteUrl": null
   },
   {
@@ -3662,6 +3758,18 @@
     "bio": "German jazz trombonist from Frankfurt who pioneered free jazz in Europe and innovated multiphonics, enabling the trombone to sound multiple notes simultaneously. He was among the first post-war European jazz musicians to create original music independent of American models.",
     "photoUrl": "/images/portraits/mangelsdorff.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Albert_Mangelsdorff",
+    "websiteUrl": null
+  },
+  {
+    "id": "george-roberts",
+    "name": "G. Roberts",
+    "born": 1928,
+    "died": 2014,
+    "role": "player",
+    "gender": "male",
+    "bio": "American bass trombonist nicknamed \"Mr. Bass Trombone,\" a first-call Los Angeles studio musician whose warm low-register sound graced recordings by Frank Sinatra, Nelson Riddle, and Henry Mancini as well as film scores including Jaws and Close Encounters of the Third Kind. Over a decades-long session career he played on more than 6,000 recordings, redefining the bass trombone's role as a solo and melodic voice.",
+    "photoUrl": "/images/portraits/george-roberts.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/George_Roberts_(trombonist)",
     "websiteUrl": null
   },
   {

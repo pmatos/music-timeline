@@ -169,6 +169,15 @@ const WIKIPEDIA_TITLES = {
   'cabezon': 'Antonio_de_Cabezón',
   'pezel': 'Johann_Christoph_Pezel',
   'guilmant': 'Alexandre_Guilmant',
+  'josef-lhevinne': 'Josef_Lhévinne',
+  'ricci': 'Ruggiero_Ricci',
+  'george-roberts': 'George_Roberts_(trombonist)',
+  'elman': 'Mischa_Elman',
+  'benedetti': 'Nicola_Benedetti',
+  'haskil': 'Clara_Haskil',
+  'backhaus': 'Wilhelm_Backhaus',
+  'ferras': 'Christian_Ferras',
+  'morini': 'Erika_Morini',
 };
 
 const THUMB_SIZE = 400;
