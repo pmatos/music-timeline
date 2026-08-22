@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@remotion/cli": "^4.0.512",
-    "@remotion/google-fonts": "^4.0.500",
+    "@remotion/google-fonts": "^4.0.513",
     "@remotion/media": "^4.0.509",
     "@remotion/media-utils": "^4.0.499",
     "@remotion/player": "^4.0.509",
