@@ -178,6 +178,23 @@ const WIKIPEDIA_TITLES = {
   'backhaus': 'Wilhelm_Backhaus',
   'ferras': 'Christian_Ferras',
   'morini': 'Erika_Morini',
+  'friedman': 'Ignaz_Friedman',
+  'lili-boulanger': 'Lili_Boulanger',
+  'ax': 'Emanuel_Ax',
+  'schiff': 'András_Schiff',
+  'bronfman': 'Yefim_Bronfman',
+  'hewitt': 'Angela_Hewitt',
+  'chung': 'Kyung_Wha_Chung',
+  'mullova': 'Viktoria_Mullova',
+  'meyers': 'Anne_Akiko_Meyers',
+  'josefowicz': 'Leila_Josefowicz',
+  'mole': 'Miff_Mole',
+  'rota': 'Nino_Rota',
+  'bill-harris': 'Bill_Harris_(trombonist)',
+  'al-grey': 'Al_Grey',
+  'knepper': 'Jimmy_Knepper',
+  'fontana': 'Carl_Fontana',
+  'brookmeyer': 'Bob_Brookmeyer',
 };
 
 const THUMB_SIZE = 400;
