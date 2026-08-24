@@ -1429,6 +1429,18 @@
     "websiteUrl": null
   },
   {
+    "id": "friedman",
+    "name": "I. Friedman",
+    "born": 1882,
+    "died": 1948,
+    "role": "both",
+    "gender": "male",
+    "bio": "Polish virtuoso and one of Theodor Leschetizky's most gifted students, celebrated for his Chopin mazurkas and a tone of extraordinary colour. He gave thousands of concerts, edited Chopin's works for Breitkopf & Härtel, and composed around 100 pieces of his own.",
+    "photoUrl": "/images/portraits/friedman.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ignaz_Friedman",
+    "websiteUrl": null
+  },
+  {
     "id": "casella",
     "name": "A. Casella",
     "born": 1883,
@@ -2151,6 +2163,18 @@
     "websiteUrl": null
   },
   {
+    "id": "ax",
+    "name": "E. Ax",
+    "born": 1949,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "Polish-born American pianist who won the inaugural Arthur Rubinstein International Piano Competition in 1974. Long admired as a Mozart and Brahms interpreter, he has won multiple Grammy Awards, several of them for chamber recordings with Yo-Yo Ma.",
+    "photoUrl": "/images/portraits/ax.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Emanuel_Ax",
+    "websiteUrl": null
+  },
+  {
     "id": "sokolov",
     "name": "G. Sokolov",
     "born": 1950,
@@ -2187,6 +2211,18 @@
     "websiteUrl": null
   },
   {
+    "id": "schiff",
+    "name": "A. Schiff",
+    "born": 1953,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "Hungarian-born British pianist and conductor renowned for his Bach, Haydn, Mozart, and Schubert. He founded the chamber orchestra Cappella Andrea Barca in 1999 and recorded the complete Beethoven sonatas live in concert.",
+    "photoUrl": "/images/portraits/schiff.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Andr%C3%A1s_Schiff",
+    "websiteUrl": null
+  },
+  {
     "id": "einaudi",
     "name": "L. Einaudi",
     "born": 1955,
@@ -2220,6 +2256,30 @@
     "bio": "Croatian pianist whose controversial elimination from the 1980 Chopin Competition prompted Martha Argerich to resign from the jury in protest. His unorthodox interpretations continue to provoke debate.",
     "photoUrl": "/images/portraits/pogorelich.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ivo_Pogoreli%C4%87",
+    "websiteUrl": null
+  },
+  {
+    "id": "bronfman",
+    "name": "Y. Bronfman",
+    "born": 1958,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "Soviet-born American pianist celebrated for a powerful, big-boned technique in the Russian romantic repertoire. He studied with Rudolf Firkušný, Leon Fleisher, and Rudolf Serkin, and has premiered concertos written for him by Esa-Pekka Salonen and Magnus Lindberg.",
+    "photoUrl": "/images/portraits/bronfman.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Yefim_Bronfman",
+    "websiteUrl": null
+  },
+  {
+    "id": "hewitt",
+    "name": "A. Hewitt",
+    "born": 1958,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "Canadian pianist best known for her survey of Bach's keyboard works, recorded over more than a decade for Hyperion. She won the Toronto International Bach Piano Competition in 1985 and has toured her multi-recital Bach Odyssey worldwide.",
+    "photoUrl": "/images/portraits/hewitt.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Angela_Hewitt",
     "websiteUrl": null
   },
   {
@@ -2958,6 +3018,31 @@
     "websiteUrl": null
   },
   {
+    "id": "chung",
+    "name": "K. Chung",
+    "fullName": "Kyung-Wha Chung",
+    "born": 1948,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "Korean violinist who shared first prize at the 1967 Leventritt Competition and launched an international career with her 1970 London debut. Her recordings of the Tchaikovsky, Sibelius, and Bruch concertos remain benchmarks of the repertoire.",
+    "photoUrl": "/images/portraits/chung.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kyung-Wha_Chung",
+    "websiteUrl": null
+  },
+  {
+    "id": "mullova",
+    "name": "V. Mullova",
+    "born": 1959,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "Soviet-born violinist who won the 1980 Sibelius Competition and the 1982 Tchaikovsky Competition before defecting to the West the following year. Her repertoire ranges from period-instrument Bach to jazz and world-music collaborations.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Viktoria_Mullova",
+    "websiteUrl": null
+  },
+  {
     "id": "zukerman",
     "name": "P. Zukerman",
     "born": 1948,
@@ -3054,6 +3139,19 @@
     "websiteUrl": null
   },
   {
+    "id": "meyers",
+    "name": "A. Meyers",
+    "fullName": "Anne Akiko Meyers",
+    "born": 1970,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "American violinist whose wide discography spans Bach to newly commissioned works, including concertos and solo pieces written for her by Mason Bates, John Corigliano, and Jakub Ciupiński. She performs on the 1741 \"Vieuxtemps\" Guarneri del Gesù, lent to her for life.",
+    "photoUrl": "/images/portraits/meyers.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Anne_Akiko_Meyers",
+    "websiteUrl": null
+  },
+  {
     "id": "vengerov",
     "name": "M. Vengerov",
     "born": 1974,
@@ -3146,6 +3244,18 @@
     "bio": "Canadian-American violinist celebrated for his flawless technique, refined tone, and an unusually broad repertoire spanning the standard concertos and contemporary works. A multiple Grammy and Juno Award winner, he performs on the 1715 \"ex-Marsick\" Stradivarius and leads the Ehnes Quartet.",
     "photoUrl": "/images/portraits/ehnes.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/James_Ehnes",
+    "websiteUrl": null
+  },
+  {
+    "id": "josefowicz",
+    "name": "L. Josefowicz",
+    "born": 1977,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "Canadian-born American violinist devoted to contemporary music, with major concertos written for her by John Adams, Esa-Pekka Salonen, and Steven Mackey. She received a MacArthur Fellowship in 2008 in recognition of that advocacy.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Leila_Josefowicz",
     "websiteUrl": null
   },
   {
@@ -3461,6 +3571,18 @@
     "websiteUrl": null
   },
   {
+    "id": "lili-boulanger",
+    "name": "L. Boulanger",
+    "born": 1893,
+    "died": 1918,
+    "role": "composer",
+    "gender": "female",
+    "bio": "French composer who in 1913 became the first woman to win the Prix de Rome, with the cantata Faust et Hélène. Chronically ill from childhood, she died at 24, leaving works of striking harmonic boldness; her sister Nadia became the century’s most influential composition teacher.",
+    "photoUrl": "/images/portraits/lili-boulanger.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Lili_Boulanger",
+    "websiteUrl": null
+  },
+  {
     "id": "schulhoff",
     "name": "E. Schulhoff",
     "born": 1894,
@@ -3494,6 +3616,18 @@
     "bio": "English composer and teacher renowned for his substantial output of wind band and brass music, including a Trombone Concerto (1956) that remains part of the standard repertoire. He taught composition and orchestration at the Royal College of Music from 1926 to 1966, mentoring generations of British composers.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Gordon_Jacob",
+    "websiteUrl": null
+  },
+  {
+    "id": "mole",
+    "name": "Miff Mole",
+    "born": 1898,
+    "died": 1961,
+    "role": "player",
+    "gender": "male",
+    "bio": "American trombonist who transformed the instrument's role in jazz during the 1920s, trading tailgate slides for a clean, agile solo style. His records with Red Nichols and the Original Memphis Five, and his later work in the NBC studio orchestra, influenced nearly every trombonist who followed.",
+    "photoUrl": "/images/portraits/mole.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Miff_Mole",
     "websiteUrl": null
   },
   {
@@ -3629,6 +3763,30 @@
     "websiteUrl": null
   },
   {
+    "id": "rota",
+    "name": "N. Rota",
+    "born": 1911,
+    "died": 1979,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Italian composer best known for his film scores for Federico Fellini and for The Godfather, alongside a large body of concert music. His 1966 Trombone Concerto has become a staple of the instrument’s solo repertoire.",
+    "photoUrl": "/images/portraits/rota.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nino_Rota",
+    "websiteUrl": null
+  },
+  {
+    "id": "bill-harris",
+    "name": "B. Harris",
+    "born": 1916,
+    "died": 1973,
+    "role": "player",
+    "gender": "male",
+    "bio": "American trombonist whose broad, vibrato-rich sound and rhythmic bite made him a star of Woody Herman's First and Second Herds. He recorded widely with Herman and with Jazz at the Philharmonic before settling into club and studio work in Florida.",
+    "photoUrl": "/images/portraits/bill-harris.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bill_Harris_(trombonist)",
+    "websiteUrl": null
+  },
+  {
     "id": "arutiunian",
     "name": "A. Arutiunian",
     "born": 1920,
@@ -3689,6 +3847,18 @@
     "websiteUrl": null
   },
   {
+    "id": "al-grey",
+    "name": "A. Grey",
+    "born": 1925,
+    "died": 2000,
+    "role": "player",
+    "gender": "male",
+    "bio": "American trombonist known as a master of the plunger mute, whose growling, vocal style became a signature sound of the Count Basie Orchestra. He also played with Benny Carter, Lionel Hampton, and Dizzy Gillespie, and led his own groups into the 1990s.",
+    "photoUrl": "/images/portraits/al-grey.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Al_Grey",
+    "websiteUrl": null
+  },
+  {
     "id": "liston",
     "name": "M. Liston",
     "born": 1926,
@@ -3722,6 +3892,18 @@
     "bio": "American jazz trombonist celebrated for his warm, lyrical tone and effortless technique across an unusually wide range. He rose to prominence with the big bands of Woody Herman and Gene Krupa, appeared on hundreds of recordings alongside artists such as Count Basie and Tony Bennett, and was inducted into the Alabama Jazz Hall of Fame in 1995.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Urbie_Green",
+    "websiteUrl": null
+  },
+  {
+    "id": "knepper",
+    "name": "J. Knepper",
+    "born": 1927,
+    "died": 2003,
+    "role": "player",
+    "gender": "male",
+    "bio": "American trombonist and arranger whose angular, harmonically adventurous playing was central to Charles Mingus's most celebrated bands. He also worked with Stan Kenton, Benny Goodman, and the Thad Jones/Mel Lewis Orchestra.",
+    "photoUrl": "/images/portraits/knepper.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jimmy_Knepper",
     "websiteUrl": null
   },
   {
@@ -3770,6 +3952,30 @@
     "bio": "American bass trombonist nicknamed \"Mr. Bass Trombone,\" a first-call Los Angeles studio musician whose warm low-register sound graced recordings by Frank Sinatra, Nelson Riddle, and Henry Mancini as well as film scores including Jaws and Close Encounters of the Third Kind. Over a decades-long session career he played on more than 6,000 recordings, redefining the bass trombone's role as a solo and melodic voice.",
     "photoUrl": "/images/portraits/george-roberts.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/George_Roberts_(trombonist)",
+    "websiteUrl": null
+  },
+  {
+    "id": "fontana",
+    "name": "C. Fontana",
+    "born": 1928,
+    "died": 2003,
+    "role": "player",
+    "gender": "male",
+    "bio": "American trombonist admired for a fluid, seemingly effortless technique that made him a model for generations of players. He came to notice with Woody Herman's band and spent much of his career in Las Vegas show and studio orchestras.",
+    "photoUrl": "/images/portraits/fontana.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Carl_Fontana",
+    "websiteUrl": null
+  },
+  {
+    "id": "brookmeyer",
+    "name": "B. Brookmeyer",
+    "born": 1929,
+    "died": 2011,
+    "role": "both",
+    "gender": "male",
+    "bio": "American valve trombonist, pianist, and arranger who co-led a celebrated quintet with Clark Terry and shaped the sound of the Thad Jones/Mel Lewis Orchestra. His writing made him one of the most influential jazz composer-arrangers of the postwar era.",
+    "photoUrl": "/images/portraits/brookmeyer.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bob_Brookmeyer",
     "websiteUrl": null
   },
   {
