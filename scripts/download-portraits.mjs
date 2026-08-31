@@ -195,6 +195,11 @@ const WIKIPEDIA_TITLES = {
   'knepper': 'Jimmy_Knepper',
   'fontana': 'Carl_Fontana',
   'brookmeyer': 'Bob_Brookmeyer',
+  'elgar': 'Edward_Elgar',
+  'sulek': 'Stjepan_Šulek',
+  'hisaishi': 'Joe_Hisaishi',
+  'zimmermann': 'Frank_Peter_Zimmermann',
+  'tiersen': 'Yann_Tiersen',
 };
 
 const THUMB_SIZE = 400;

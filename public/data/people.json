@@ -1032,6 +1032,18 @@
     "websiteUrl": null
   },
   {
+    "id": "elgar",
+    "name": "E. Elgar",
+    "born": 1857,
+    "died": 1934,
+    "role": "composer",
+    "gender": "male",
+    "bio": "English composer, largely self-taught, whose Enigma Variations (1899) and oratorio The Dream of Gerontius (1900) established him as the leading British composer of his generation. A working violinist and violin teacher in Worcester long before that success, he wrote the Violin Concerto in B minor (1910) for Fritz Kreisler and the Violin Sonata in E minor (1918).",
+    "photoUrl": "/images/portraits/elgar.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Edward_Elgar",
+    "websiteUrl": null
+  },
+  {
     "id": "albeniz",
     "name": "I. Albeniz",
     "born": 1860,
@@ -2187,6 +2199,19 @@
     "websiteUrl": null
   },
   {
+    "id": "hisaishi",
+    "name": "J. Hisaishi",
+    "fullName": "Joe Hisaishi",
+    "born": 1950,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "Japanese composer, conductor, and pianist, born Mamoru Fujisawa, best known for his scores for Hayao Miyazaki's Studio Ghibli films including My Neighbor Totoro, Princess Mononoke, and Spirited Away. He also scored several Takeshi Kitano films and tours widely performing his own music from the piano and the podium.",
+    "photoUrl": "/images/portraits/hisaishi.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Joe_Hisaishi",
+    "websiteUrl": null
+  },
+  {
     "id": "sakamoto",
     "name": "R. Sakamoto",
     "born": 1952,
@@ -2320,6 +2345,19 @@
     "websiteUrl": null
   },
   {
+    "id": "zimmermann",
+    "name": "F.P. Zimmermann",
+    "fullName": "Frank Peter Zimmermann",
+    "born": 1965,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "German violinist admired for unmannered, classically proportioned playing across a repertoire running from Mozart and Beethoven to Ligeti and Magnus Lindberg. He has recorded the complete Bach sonatas and partitas and plays the 1711 \"Lady Inchiquin\" Stradivari once owned by Fritz Kreisler.",
+    "photoUrl": "/images/portraits/zimmermann.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Frank_Peter_Zimmermann",
+    "websiteUrl": null
+  },
+  {
     "id": "max-richter",
     "name": "Max Richter",
     "born": 1966,
@@ -2341,6 +2379,19 @@
     "bio": "French pianist known for her intensely personal performances of Brahms, Rachmaninoff, and Beethoven. Also a published author and wildlife advocate who founded the Wolf Conservation Center.",
     "photoUrl": "/images/portraits/grimaud.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/H%C3%A9l%C3%A8ne_Grimaud",
+    "websiteUrl": null
+  },
+  {
+    "id": "tiersen",
+    "name": "Y. Tiersen",
+    "fullName": "Yann Tiersen",
+    "born": 1970,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "French composer and multi-instrumentalist whose spare piano miniatures reached a worldwide audience through his score for the film Amélie (2001). Conservatory-trained on violin and piano in Rennes, Nantes, and Boulogne, he now writes and records from his own studio on the Breton island of Ushant.",
+    "photoUrl": "/images/portraits/tiersen.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Yann_Tiersen",
     "websiteUrl": null
   },
   {
@@ -3772,6 +3823,18 @@
     "bio": "Italian composer best known for his film scores for Federico Fellini and for The Godfather, alongside a large body of concert music. His 1966 Trombone Concerto has become a staple of the instrument’s solo repertoire.",
     "photoUrl": "/images/portraits/rota.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Nino_Rota",
+    "websiteUrl": null
+  },
+  {
+    "id": "sulek",
+    "name": "S. Šulek",
+    "born": 1914,
+    "died": 1986,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Croatian composer, conductor, and violinist who taught composition at the Zagreb Academy of Music for four decades. His Vox Gabrieli (1973) for trombone and piano is a cornerstone of the modern trombone repertoire.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Stjepan_%C5%A0ulek",
     "websiteUrl": null
   },
   {
