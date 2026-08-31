@@ -15,7 +15,7 @@
     "@remotion/google-fonts": "^4.0.513",
     "@remotion/media": "^4.0.509",
     "@remotion/media-utils": "^4.0.514",
-    "@remotion/player": "^4.0.513",
+    "@remotion/player": "^4.0.517",
     "@remotion/transitions": "^4.0.500",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.5",
