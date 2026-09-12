@@ -200,6 +200,16 @@ const WIKIPEDIA_TITLES = {
   'hisaishi': 'Joe_Hisaishi',
   'zimmermann': 'Frank_Peter_Zimmermann',
   'tiersen': 'Yann_Tiersen',
+  'biber': 'Heinrich_Ignaz_Franz_Biber',
+  'bazzini': 'Antonio_Bazzini',
+  'berg': 'Alban_Berg',
+  'hope': 'Daniel_Hope',
+  'barton-pine': 'Rachel_Barton_Pine',
+  'trummy-young': 'Trummy_Young',
+  'dutilleux': 'Henri_Dutilleux',
+  'serocki': 'Kazimierz_Serocki',
+  'tull': 'Fisher_Tull',
+  'bonds': 'Margaret_Bonds',
 };
 
 const THUMB_SIZE = 400;
