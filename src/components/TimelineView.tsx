@@ -47,13 +47,14 @@ export const TimelineView = memo(function TimelineView({
 
     const style = getComputedStyle(el);
     const paddingX =
-      parseFloat(style.paddingLeft || '0') + parseFloat(style.paddingRight || '0');
+      parseFloat(style.paddingLeft || '0') +
+      parseFloat(style.paddingRight || '0');
     const initialWidth = el.clientWidth - paddingX;
     if (initialWidth > 0) setContainerWidth(initialWidth);
 
     const observer = new ResizeObserver((entries) => {
       const width = entries[0]?.contentRect.width;
-      if (width && width > 0) setContainerWidth(width);
+      if (width > 0) setContainerWidth(width);
     });
     observer.observe(el);
     return () => observer.disconnect();

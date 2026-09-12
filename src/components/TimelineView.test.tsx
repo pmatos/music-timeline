@@ -52,27 +52,29 @@ test('stretches the SVG to match the container width reported by ResizeObserver'
   globalThis.ResizeObserver =
     MockResizeObserver as unknown as typeof ResizeObserver;
 
-  const { container } = render(
-    <TimelineView
-      data={data}
-      selectedPersonId={null}
-      hoveredPersonId={null}
-      onPersonClick={() => {}}
-      onPersonMouseEnter={() => {}}
-      onPersonMouseLeave={() => {}}
-      onPersonFocus={() => {}}
-      onPersonBlur={() => {}}
-    />,
-  );
-
-  act(() => {
-    resizeCallback?.(
-      [{ contentRect: { width: 900 } } as ResizeObserverEntry],
-      {} as ResizeObserver,
+  try {
+    const { container } = render(
+      <TimelineView
+        data={data}
+        selectedPersonId={null}
+        hoveredPersonId={null}
+        onPersonClick={() => {}}
+        onPersonMouseEnter={() => {}}
+        onPersonMouseLeave={() => {}}
+        onPersonFocus={() => {}}
+        onPersonBlur={() => {}}
+      />,
     );
-  });
 
-  expect(container.querySelector('svg')).toHaveAttribute('width', '900');
+    act(() => {
+      resizeCallback?.(
+        [{ contentRect: { width: 900 } } as ResizeObserverEntry],
+        {} as ResizeObserver,
+      );
+    });
 
-  globalThis.ResizeObserver = originalResizeObserver;
+    expect(container.querySelector('svg')).toHaveAttribute('width', '900');
+  } finally {
+    globalThis.ResizeObserver = originalResizeObserver;
+  }
 });
