@@ -1,4 +1,4 @@
-import { memo, useRef, useEffect } from 'react';
+import { memo, useRef, useEffect, useLayoutEffect, useState } from 'react';
 import type { InstrumentData, Person } from '../types';
 import { useTimelineScale } from '../hooks/useTimelineScale';
 import { TimelineSVG } from './TimelineSVG';
@@ -33,13 +33,31 @@ export const TimelineView = memo(function TimelineView({
     ...data.eras.map((e) => e.endYear),
     new Date().getFullYear(),
   );
-  const containerWidth = 1200;
+  const [containerWidth, setContainerWidth] = useState(1200);
 
   const { yearToPixel, totalWidth, setZoom } = useTimelineScale({
     startYear,
     endYear,
     containerWidth,
   });
+
+  useLayoutEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const style = getComputedStyle(el);
+    const paddingX =
+      parseFloat(style.paddingLeft || '0') + parseFloat(style.paddingRight || '0');
+    const initialWidth = el.clientWidth - paddingX;
+    if (initialWidth > 0) setContainerWidth(initialWidth);
+
+    const observer = new ResizeObserver((entries) => {
+      const width = entries[0]?.contentRect.width;
+      if (width && width > 0) setContainerWidth(width);
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -48,7 +66,7 @@ export const TimelineView = memo(function TimelineView({
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       const delta = e.deltaY > 0 ? 0.9 : 1.1;
-      setZoom((z: number) => Math.max(0.5, Math.min(10, z * delta)));
+      setZoom((z: number) => Math.max(1, Math.min(10, z * delta)));
     };
 
     el.addEventListener('wheel', handleWheel, { passive: false });

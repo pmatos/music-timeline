@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { TimelineView } from './TimelineView';
 import type { InstrumentData } from '../types';
 
@@ -30,8 +30,49 @@ test('renders a scrollable container with the SVG', () => {
       onPersonClick={() => {}}
       onPersonMouseEnter={() => {}}
       onPersonMouseLeave={() => {}}
+      onPersonFocus={() => {}}
+      onPersonBlur={() => {}}
     />,
   );
   expect(container.querySelector('.timeline-view')).toBeInTheDocument();
   expect(container.querySelector('svg')).toBeInTheDocument();
+});
+
+test('stretches the SVG to match the container width reported by ResizeObserver', () => {
+  let resizeCallback: ResizeObserverCallback | undefined;
+  const originalResizeObserver = globalThis.ResizeObserver;
+  class MockResizeObserver {
+    constructor(callback: ResizeObserverCallback) {
+      resizeCallback = callback;
+    }
+    observe = () => {};
+    unobserve = () => {};
+    disconnect = () => {};
+  }
+  globalThis.ResizeObserver =
+    MockResizeObserver as unknown as typeof ResizeObserver;
+
+  const { container } = render(
+    <TimelineView
+      data={data}
+      selectedPersonId={null}
+      hoveredPersonId={null}
+      onPersonClick={() => {}}
+      onPersonMouseEnter={() => {}}
+      onPersonMouseLeave={() => {}}
+      onPersonFocus={() => {}}
+      onPersonBlur={() => {}}
+    />,
+  );
+
+  act(() => {
+    resizeCallback?.(
+      [{ contentRect: { width: 900 } } as ResizeObserverEntry],
+      {} as ResizeObserver,
+    );
+  });
+
+  expect(container.querySelector('svg')).toHaveAttribute('width', '900');
+
+  globalThis.ResizeObserver = originalResizeObserver;
 });
