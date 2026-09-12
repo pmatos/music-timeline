@@ -1766,6 +1766,18 @@
     "websiteUrl": null
   },
   {
+    "id": "bonds",
+    "name": "M. Bonds",
+    "born": 1913,
+    "died": 1972,
+    "role": "both",
+    "gender": "female",
+    "bio": "American composer and pianist who became one of the first Black classical musicians to gain wide recognition, known especially for her arrangements of African American spirituals and frequent collaborations with poet Langston Hughes. Her major works include The Ballad of the Brown King and settings of Hughes's poetry for voice and piano.",
+    "photoUrl": "/images/portraits/bonds.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Margaret_Bonds",
+    "websiteUrl": null
+  },
+  {
     "id": "britten",
     "name": "B. Britten",
     "born": 1913,
@@ -2552,6 +2564,19 @@
     "websiteUrl": "https://takako-ono.com/"
   },
   {
+    "id": "biber",
+    "name": "H. Biber",
+    "fullName": "Heinrich Ignaz Franz Biber",
+    "born": 1644,
+    "died": 1704,
+    "role": "both",
+    "gender": "male",
+    "bio": "Bohemian-born composer and violinist active mainly in Salzburg, celebrated as one of the greatest violin virtuosos of the Baroque era. He expanded the instrument's technique through high positions, multiple stops, and elaborate scordatura tunings, most famously in his Mystery Sonatas.",
+    "photoUrl": "/images/portraits/biber.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Heinrich_Ignaz_Franz_Biber",
+    "websiteUrl": null
+  },
+  {
     "id": "corelli",
     "name": "A. Corelli",
     "born": 1653,
@@ -2745,6 +2770,18 @@
     "websiteUrl": null
   },
   {
+    "id": "bazzini",
+    "name": "A. Bazzini",
+    "born": 1818,
+    "died": 1897,
+    "role": "both",
+    "gender": "male",
+    "bio": "Italian violinist described as one of the finest concert virtuosos of the nineteenth century, who built a lasting reputation through chamber music that helped drive Italy's instrumental renaissance. His compositions include six string quartets, several concertos, and two operas.",
+    "photoUrl": "/images/portraits/bazzini.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Antonio_Bazzini",
+    "websiteUrl": null
+  },
+  {
     "id": "vieuxtemps",
     "name": "H. Vieuxtemps",
     "born": 1820,
@@ -2874,6 +2911,18 @@
     "bio": "Austrian-born American violinist and composer whose warm tone and elegant style defined violin playing in the early 20th century. His short character pieces and cadenzas for the Beethoven and Brahms concertos remain in the repertoire of every violinist.",
     "photoUrl": "/images/portraits/kreisler.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Fritz_Kreisler",
+    "websiteUrl": null
+  },
+  {
+    "id": "berg",
+    "name": "A. Berg",
+    "born": 1885,
+    "died": 1935,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Austrian composer of the Second Viennese School who combined Romantic lyricism with twelve-tone technique. Best known for the operas Wozzeck and Lulu, he also wrote an elegiac Violin Concerto that remains one of his most frequently performed works.",
+    "photoUrl": "/images/portraits/berg.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Alban_Berg",
     "websiteUrl": null
   },
   {
@@ -3200,6 +3249,30 @@
     "bio": "American violinist whose wide discography spans Bach to newly commissioned works, including concertos and solo pieces written for her by Mason Bates, John Corigliano, and Jakub Ciupiński. She performs on the 1741 \"Vieuxtemps\" Guarneri del Gesù, lent to her for life.",
     "photoUrl": "/images/portraits/meyers.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Anne_Akiko_Meyers",
+    "websiteUrl": null
+  },
+  {
+    "id": "hope",
+    "name": "D. Hope",
+    "born": 1973,
+    "died": null,
+    "role": "player",
+    "gender": "male",
+    "bio": "South African-born violinist of Irish and German heritage who has been an exclusive Deutsche Grammophon artist since 2007. He has built a wide-ranging career as concerto soloist and chamber musician, and serves as artistic director of ensembles including the Zurich Chamber Orchestra.",
+    "photoUrl": "/images/portraits/hope.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Daniel_Hope_(violinist)",
+    "websiteUrl": null
+  },
+  {
+    "id": "barton-pine",
+    "name": "R. Barton Pine",
+    "born": 1974,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "American violinist who debuted with the Chicago Symphony Orchestra at age ten and became the first American and youngest-ever gold medalist at the International J.S. Bach Competition. She maintains an active performing career while championing works by Black composers through her own foundation.",
+    "photoUrl": "/images/portraits/barton-pine.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Rachel_Barton_Pine",
     "websiteUrl": null
   },
   {
@@ -3826,6 +3899,18 @@
     "websiteUrl": null
   },
   {
+    "id": "trummy-young",
+    "name": "Trummy Young",
+    "born": 1912,
+    "died": 1984,
+    "role": "both",
+    "gender": "male",
+    "bio": "American jazz trombonist who became a star during twelve years with Louis Armstrong's All Stars. He also worked with Jimmie Lunceford and Benny Goodman, and co-wrote the standard \"'Tain't What You Do (It's the Way That You Do It)\".",
+    "photoUrl": "/images/portraits/trummy-young.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Trummy_Young",
+    "websiteUrl": null
+  },
+  {
     "id": "sulek",
     "name": "S. Šulek",
     "born": 1914,
@@ -3850,6 +3935,18 @@
     "websiteUrl": null
   },
   {
+    "id": "dutilleux",
+    "name": "H. Dutilleux",
+    "born": 1916,
+    "died": 2013,
+    "role": "composer",
+    "gender": "male",
+    "bio": "French composer whose refined, meticulously crafted works extended the legacies of Debussy and Ravel while developing a wholly individual voice. His Choral, Cadence et Fugato for trombone and piano (1950) has become a staple of the trombone competition repertoire.",
+    "photoUrl": "/images/portraits/dutilleux.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Henri_Dutilleux",
+    "websiteUrl": null
+  },
+  {
     "id": "arutiunian",
     "name": "A. Arutiunian",
     "born": 1920,
@@ -3871,6 +3968,18 @@
     "bio": "Danish-born American jazz trombonist best known for his collaboration with J.J. Johnson as the Jay and Kai Quintet, which helped develop the cool jazz style. His version of More reached number eight on the Billboard Hot 100 in 1963.",
     "photoUrl": "/images/portraits/kai-winding.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Kai_Winding",
+    "websiteUrl": null
+  },
+  {
+    "id": "serocki",
+    "name": "K. Serocki",
+    "born": 1922,
+    "died": 1981,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Polish composer born in Toruń and co-founder of the Warsaw Autumn festival for contemporary music. His Concerto for Trombone and Orchestra (1953) and Sonatina for Trombone and Piano (1954) are staples of the modern trombone repertoire.",
+    "photoUrl": "/images/portraits/serocki.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kazimierz_Serocki",
     "websiteUrl": null
   },
   {
@@ -4111,6 +4220,18 @@
     "bio": "Slovenian-French composer, trombonist, and improviser central to the postwar avant-garde. His works, including Discours II for trombone octet, pioneered extended techniques and theatrical, improvisation-driven notation.",
     "photoUrl": "/images/portraits/globokar.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Vinko_Globokar",
+    "websiteUrl": null
+  },
+  {
+    "id": "tull",
+    "name": "F. Tull",
+    "born": 1934,
+    "died": 1994,
+    "role": "composer",
+    "gender": "male",
+    "bio": "American composer, arranger, and trumpeter whose more than eighty published works, issued largely by Boosey & Hawkes, remain staples of the concert band and brass repertoire. Several of his pieces appeared through the International Trombone Association's Manuscript Press, reflecting his standing among brass composers of his generation.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Fisher_Tull",
     "websiteUrl": null
   },
   {
