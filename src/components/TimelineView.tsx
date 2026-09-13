@@ -1,6 +1,7 @@
 import { memo, useRef, useEffect } from 'react';
 import type { InstrumentData, Person } from '../types';
 import { useTimelineScale } from '../hooks/useTimelineScale';
+import { useElementWidth } from '../hooks/useElementWidth';
 import { TimelineSVG } from './TimelineSVG';
 
 interface TimelineViewProps {
@@ -33,7 +34,7 @@ export const TimelineView = memo(function TimelineView({
     ...data.eras.map((e) => e.endYear),
     new Date().getFullYear(),
   );
-  const containerWidth = 1200;
+  const containerWidth = useElementWidth(containerRef, 1200);
 
   const { yearToPixel, totalWidth, setZoom } = useTimelineScale({
     startYear,
@@ -48,7 +49,7 @@ export const TimelineView = memo(function TimelineView({
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       const delta = e.deltaY > 0 ? 0.9 : 1.1;
-      setZoom((z: number) => Math.max(0.5, Math.min(10, z * delta)));
+      setZoom((z: number) => Math.max(1, Math.min(10, z * delta)));
     };
 
     el.addEventListener('wheel', handleWheel, { passive: false });
