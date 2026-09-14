@@ -8,6 +8,11 @@ updates:
       prefix: 'fix'
       prefix-development: 'chore'
       include: 'scope'
+    groups:
+      vitest:
+        patterns:
+          - 'vitest'
+          - '@vitest/*'
   - package-ecosystem: 'npm'
     directory: '/video'
     schedule:
