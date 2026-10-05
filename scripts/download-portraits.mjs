@@ -210,6 +210,16 @@ const WIKIPEDIA_TITLES = {
   'serocki': 'Kazimierz_Serocki',
   'tull': 'Fisher_Tull',
   'bonds': 'Margaret_Bonds',
+  'tatum': 'Art_Tatum',
+  'bud-powell': 'Bud_Powell',
+  'ellington': 'Duke_Ellington',
+  'peterson': 'Oscar_Peterson',
+  'pires': 'Maria_João_Pires',
+  'torelli': 'Giuseppe_Torelli',
+  'montgomery': 'Jessie_Montgomery',
+  'frang': 'Vilde_Frang',
+  'ray-anderson': 'Ray_Anderson_(musician)',
+  'blaser': 'Samuel_Blaser',
 };
 
 const THUMB_SIZE = 400;
