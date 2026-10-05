@@ -181,6 +181,18 @@
     "websiteUrl": null
   },
   {
+    "id": "torelli",
+    "name": "G. Torelli",
+    "born": 1658,
+    "died": 1709,
+    "role": "both",
+    "gender": "male",
+    "bio": "Italian violinist and composer of the Bolognese school, one of the founders of the Baroque concerto. His Op. 8 concertos, including the Christmas Concerto, helped establish the three-movement solo concerto form that Vivaldi later perfected.",
+    "photoUrl": "/images/portraits/torelli.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Giuseppe_Torelli",
+    "websiteUrl": null
+  },
+  {
     "id": "purcell",
     "name": "H. Purcell",
     "born": 1659,
@@ -1657,6 +1669,18 @@
     "websiteUrl": null
   },
   {
+    "id": "ellington",
+    "name": "D. Ellington",
+    "born": 1899,
+    "died": 1974,
+    "role": "both",
+    "gender": "male",
+    "bio": "American pianist, composer and bandleader who led his orchestra for half a century and turned jazz into a vehicle for extended composition. Standards such as Mood Indigo, Sophisticated Lady and Take the A Train sit beside suites like Black, Brown and Beige.",
+    "photoUrl": "/images/portraits/ellington.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Duke_Ellington",
+    "websiteUrl": null
+  },
+  {
     "id": "copland",
     "name": "A. Copland",
     "born": 1900,
@@ -1726,6 +1750,18 @@
     "bio": "French composer and organist whose piano works, including Vingt regards sur l'enfant-Jésus, drew on birdsong, Catholic theology, and innovative rhythmic techniques. Enormously influential as a teacher of Boulez and Stockhausen.",
     "photoUrl": "/images/portraits/messiaen.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Olivier_Messiaen",
+    "websiteUrl": null
+  },
+  {
+    "id": "tatum",
+    "name": "A. Tatum",
+    "born": 1909,
+    "died": 1956,
+    "role": "player",
+    "gender": "male",
+    "bio": "American jazz pianist whose blistering virtuosity, harmonic daring and rhythmic freedom set a standard few have matched. Nearly blind from childhood, he reshaped stride piano and influenced generations of pianists from Oscar Peterson to Bud Powell.",
+    "photoUrl": "/images/portraits/tatum.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Art_Tatum",
     "websiteUrl": null
   },
   {
@@ -1887,6 +1923,18 @@
     "websiteUrl": null
   },
   {
+    "id": "bud-powell",
+    "name": "B. Powell",
+    "born": 1924,
+    "died": 1966,
+    "role": "both",
+    "gender": "male",
+    "bio": "American jazz pianist and composer, the foremost pianist of bebop, who carried Charlie Parker's single-line phrasing to the right hand of the piano. His compositions, including Un Poco Loco and Dance of the Infidels, became bebop standards.",
+    "photoUrl": "/images/portraits/bud-powell.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bud_Powell",
+    "websiteUrl": null
+  },
+  {
     "id": "boulez",
     "name": "P. Boulez",
     "born": 1925,
@@ -1896,6 +1944,18 @@
     "bio": "French composer, conductor, and writer who was a central figure in post-war musical modernism. His piano sonatas, especially the Second and Third, are landmark works of total serialism.",
     "photoUrl": "/images/portraits/boulez.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Pierre_Boulez",
+    "websiteUrl": null
+  },
+  {
+    "id": "peterson",
+    "name": "O. Peterson",
+    "born": 1925,
+    "died": 2007,
+    "role": "both",
+    "gender": "male",
+    "bio": "Canadian jazz pianist and composer admired for his dazzling technique, swing and speed, with a touch rooted in Art Tatum and Nat King Cole. His Canadiana Suite and Night Train, and his long-running trio recordings, made him one of the most recorded jazz pianists.",
+    "photoUrl": "/images/portraits/peterson.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Oscar_Peterson",
     "websiteUrl": null
   },
   {
@@ -2127,6 +2187,18 @@
     "websiteUrl": null
   },
   {
+    "id": "pires",
+    "name": "M. J. Pires",
+    "born": 1944,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "Portuguese pianist known for intimate, unforced interpretations of Mozart, Schubert, Chopin and Beethoven. A child prodigy in Lisbon, she has built a career on chamber music and teaching in addition to her celebrated recordings.",
+    "photoUrl": "/images/portraits/pires.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Maria_Jo%C3%A3o_Pires",
+    "websiteUrl": null
+  },
+  {
     "id": "lupu",
     "name": "R. Lupu",
     "born": 1945,
@@ -2245,6 +2317,18 @@
     "bio": "Finnish composer celebrated for richly textured, spectral music exploring timbre and color, developed in part at IRCAM in Paris. Her opera L'Amour de loin made her the first woman in over a century to have a new work staged at the Metropolitan Opera.",
     "photoUrl": "/images/portraits/saariaho.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Kaija_Saariaho",
+    "websiteUrl": null
+  },
+  {
+    "id": "ray-anderson",
+    "name": "R. Anderson",
+    "born": 1952,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "American jazz trombonist and composer whose raucous humor, extended techniques and wide-ranging bands, including the Slickaphonics and the Pocket Brass Band, defined a distinctive voice in the avant-garde. He has recorded prolifically as a leader and as a sideman.",
+    "photoUrl": "/images/portraits/ray-anderson.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ray_Anderson_(musician)",
     "websiteUrl": null
   },
   {
@@ -2431,6 +2515,30 @@
     "websiteUrl": null
   },
   {
+    "id": "montgomery",
+    "name": "J. Montgomery",
+    "born": 1981,
+    "died": null,
+    "role": "both",
+    "gender": "female",
+    "bio": "American violinist and composer whose works blend classical tradition with vernacular music, improvisation and the sounds of her native New York. Her string orchestra piece Strum is among the most performed new American works of recent years.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jessie_Montgomery",
+    "websiteUrl": null
+  },
+  {
+    "id": "blaser",
+    "name": "S. Blaser",
+    "born": 1981,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "Swiss jazz trombonist and composer known for a lyrical, technically fearless sound and a restless curiosity across free jazz, blues and early music. He has led projects exploring the works of Monteverdi and Frescobaldi and has recorded widely for European labels.",
+    "photoUrl": "/images/portraits/blaser.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Samuel_Blaser",
+    "websiteUrl": null
+  },
+  {
     "id": "lang-lang",
     "name": "Lang Lang",
     "born": 1982,
@@ -2464,6 +2572,18 @@
     "bio": "Icelandic pianist known for cerebral, crystalline interpretations of Bach, Rameau, and Philip Glass, often described as 'Iceland's Glenn Gould.' His recital programs frequently juxtapose Baroque and contemporary works to reveal unexpected connections.",
     "photoUrl": "/images/portraits/olafsson.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/V%C3%ADkingur_%C3%93lafsson",
+    "websiteUrl": null
+  },
+  {
+    "id": "frang",
+    "name": "V. Frang",
+    "born": 1986,
+    "died": null,
+    "role": "player",
+    "gender": "female",
+    "bio": "Norwegian violinist praised for her lyrical tone and fearless musicianship, with a repertoire stretching from Bach and Beethoven to Britten and Szymanowski. A protégée of Kolja Blacher and Ana Chumachenco, she records widely and performs with leading orchestras.",
+    "photoUrl": "/images/portraits/frang.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vilde_Frang",
     "websiteUrl": null
   },
   {
