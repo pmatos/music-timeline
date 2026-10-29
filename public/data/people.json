@@ -488,7 +488,7 @@
     "died": 1827,
     "role": "both",
     "gender": "male",
-    "bio": "Italian violinist and composer who studied with Nardini and led the Gewandhaus orchestra in Leipzig. His Caprices for solo viola and his violin method are standard pedagogical works.",
+    "bio": "Italian violinist and composer who studied with Nardini and led the Gewandhaus orchestra in Leipzig. He wrote Caprices for solo viola and a violin method.",
     "photoUrl": "/images/portraits/campagnoli.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Bartolomeo_Campagnoli",
     "websiteUrl": null
@@ -692,7 +692,7 @@
     "died": 1870,
     "role": "both",
     "gender": "male",
-    "bio": "Belgian violinist and composer who founded the Franco-Belgian school of violin playing. He wrote ten violin concertos and many showpieces, taught at the Brussels Conservatoire, and was the husband of the mezzo-soprano Maria Malibran.",
+    "bio": "Belgian violinist and composer who founded the Franco-Belgian school of violin playing. He wrote ten violin concertos, taught at the Brussels Conservatoire, and was the husband of the mezzo-soprano Maria Malibran.",
     "photoUrl": "/images/portraits/de-beriot.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Charles_Auguste_de_Bériot",
     "websiteUrl": null
@@ -1302,7 +1302,7 @@
     "died": 1953,
     "role": "composer",
     "gender": "male",
-    "bio": "Belgian composer and organist who taught at the Brussels Conservatoire and later directed it. His Symphonie concertante for organ and orchestra is his best-known work, and his Aria et Polonaise for trombone is a popular competition piece.",
+    "bio": "Belgian composer and organist who taught at the Brussels Conservatoire and later directed it. His Symphonie concertante is for organ and orchestra, and his Aria et Polonaise for trombone is a competition piece.",
     "photoUrl": "/images/portraits/jongen.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Jongen",
     "websiteUrl": null
@@ -1492,9 +1492,9 @@
     "name": "A. Jørgensen",
     "born": 1881,
     "died": 1947,
-    "role": "composer",
+    "role": "both",
     "gender": "male",
-    "bio": "Danish composer and violist, solo violist of the Royal Danish Orchestra from 1932, who wrote chiefly for brass as well as orchestral, chamber and vocal music. His Romance, Op. 21, and Suite, Op. 22, for trombone have a lasting place in the trombone repertoire.",
+    "bio": "Danish composer and violist, solo violist of the Royal Danish Orchestra from 1932, who wrote chiefly for brass as well as orchestral, chamber and vocal music. His works include a Romance, Op. 21, and a Suite, Op. 22, for trombone.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Axel_Jørgensen",
     "websiteUrl": null
@@ -1603,7 +1603,7 @@
     "died": 1961,
     "role": "both",
     "gender": "male",
-    "bio": "English composer and pianist who studied at the Royal Academy of Music under Tobias Matthay and later taught there. Sometimes dubbed the 'English Rachmaninoff', he wrote four piano concertos and an extensive body of solo piano music.",
+    "bio": "English composer and pianist who studied at the Royal Academy of Music under Tobias Matthay and later taught there. Sometimes dubbed the 'English Rachmaninoff', he wrote four piano concertos.",
     "photoUrl": "/images/portraits/bowen.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/York_Bowen",
     "websiteUrl": null
@@ -1615,7 +1615,7 @@
     "died": 1923,
     "role": "both",
     "gender": "female",
-    "bio": "Croatian composer and pianist, a leading figure of Croatian musical modernism. She wrote the first Croatian piano concerto (1913), a Symphony in F-sharp minor regarded as the first modern Croatian symphony, and two violin sonatas.",
+    "bio": "Croatian composer and pianist. She wrote the first Croatian piano concerto (1913), a Symphony in F-sharp minor regarded as the first modern Croatian symphony, and two violin sonatas.",
     "photoUrl": "/images/portraits/pejacevic.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Dora_Pejačević",
     "websiteUrl": null
@@ -1723,7 +1723,7 @@
     "died": 1974,
     "role": "composer",
     "gender": "male",
-    "bio": "Swiss composer who developed a personal approach to twelve-tone technique. His output includes concertos for piano and violin, and his Ballade for trombone and piano is a cornerstone of the instrument's repertoire.",
+    "bio": "Swiss composer who developed a personal approach to twelve-tone technique. His output includes concertos for piano and violin, and he wrote a Ballade for trombone and piano.",
     "photoUrl": "/images/portraits/frank-martin.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Frank_Martin_(composer)",
     "websiteUrl": null
@@ -1915,7 +1915,7 @@
     "died": 1983,
     "role": "both",
     "gender": "male",
-    "bio": "American jazz pianist and bandleader whose trumpet-style right-hand lines helped define modern jazz piano. He recorded duets with Louis Armstrong in the late 1920s, and led his own big band for over a decade.",
+    "bio": "American jazz pianist and bandleader noted for his trumpet-style right-hand lines. He recorded duets with Louis Armstrong in the late 1920s and led his own big band for over a decade.",
     "photoUrl": "/images/portraits/earl-hines.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Earl_Hines",
     "websiteUrl": null
@@ -2109,7 +2109,7 @@
     "died": 2001,
     "role": "composer",
     "gender": "male",
-    "bio": "Greek-French composer, architect and engineer who pioneered stochastic and computer-aided composition. His uncompromising solo works, such as Evryali for piano and Mikka for violin, are among the most demanding in each instrument's repertoire.",
+    "bio": "Greek-French composer, architect and engineer who pioneered stochastic composition. Evryali is a solo work for piano, and Mikka is a solo work for violin.",
     "photoUrl": "/images/portraits/xenakis.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Iannis_Xenakis",
     "websiteUrl": null
@@ -2193,7 +2193,7 @@
     "died": 2016,
     "role": "composer",
     "gender": "male",
-    "bio": "American composer and longtime professor at SUNY Fredonia who wrote prolifically for wind and brass instruments. His Sonata Concertante for trombone and piano is a staple of the instrument's teaching repertoire, and he also wrote the Sonata Breve for bass trombone.",
+    "bio": "American composer and longtime professor at SUNY Fredonia who wrote prolifically for wind and brass instruments. His works include the Sonata Concertante for trombone and piano and the Sonata Breve for bass trombone.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Walter_S._Hartley",
     "websiteUrl": null
@@ -2602,7 +2602,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "Dutch composer, conductor and trombonist best known for his wind-band music. His Symphony No. 1 'The Lord of the Rings' is one of the best-known works in the wind-band repertoire and won the 1989 Sudler Composition Award.",
+    "bio": "Dutch composer, conductor and trombonist best known for his wind-band music. His Symphony No. 1 'The Lord of the Rings', for wind band, won the 1989 Sudler Composition Award.",
     "photoUrl": "/images/portraits/de-meij.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Johan_de_Meij",
     "websiteUrl": null
