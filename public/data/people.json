@@ -397,6 +397,18 @@
     "websiteUrl": null
   },
   {
+    "id": "nardini",
+    "name": "P. Nardini",
+    "born": 1722,
+    "died": 1793,
+    "role": "both",
+    "gender": "male",
+    "bio": "Italian violinist and composer who studied with Giuseppe Tartini and became the leading violinist of the Italian court at Stuttgart. He was known for the singing, expressive quality of his playing and wrote violin concertos and sonatas.",
+    "photoUrl": "/images/portraits/nardini.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Pietro_Nardini",
+    "websiteUrl": null
+  },
+  {
     "id": "soler",
     "name": "A. Soler",
     "born": 1729,
@@ -446,6 +458,18 @@
     "websiteUrl": null
   },
   {
+    "id": "sirmen",
+    "name": "M. L. Sirmen",
+    "born": 1745,
+    "died": 1818,
+    "role": "both",
+    "gender": "female",
+    "bio": "Italian violinist and composer who trained at the Ospedale dei Mendicanti in Venice and studied with Tartini. She toured across Europe as a soloist and published string quartets and violin concertos.",
+    "photoUrl": "/images/portraits/sirmen.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Maddalena_Laura_Sirmen",
+    "websiteUrl": null
+  },
+  {
     "id": "cimarosa",
     "name": "D. Cimarosa",
     "born": 1749,
@@ -455,6 +479,18 @@
     "bio": "Italian Classical composer best known for comic operas, who was also an accomplished keyboard player. His 88 keyboard sonatas, written for harpsichord or early piano, are prized for their sparkling wit and melodic invention.",
     "photoUrl": "/images/portraits/cimarosa.png",
     "wikiUrl": "https://en.wikipedia.org/wiki/Domenico_Cimarosa",
+    "websiteUrl": null
+  },
+  {
+    "id": "campagnoli",
+    "name": "B. Campagnoli",
+    "born": 1751,
+    "died": 1827,
+    "role": "both",
+    "gender": "male",
+    "bio": "Italian violinist and composer who studied with Nardini and led the Gewandhaus orchestra in Leipzig. His Caprices for solo viola and his violin method are standard pedagogical works.",
+    "photoUrl": "/images/portraits/campagnoli.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bartolomeo_Campagnoli",
     "websiteUrl": null
   },
   {
@@ -647,6 +683,18 @@
     "bio": "Austrian composer of the late Classical and early Romantic eras whose piano sonatas, impromptus, and Moments Musicaux are treasured for their melodic beauty and harmonic richness.",
     "photoUrl": "/images/portraits/schubert.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Franz_Schubert",
+    "websiteUrl": null
+  },
+  {
+    "id": "de-beriot",
+    "name": "C. de Bériot",
+    "born": 1802,
+    "died": 1870,
+    "role": "both",
+    "gender": "male",
+    "bio": "Belgian violinist and composer who founded the Franco-Belgian school of violin playing. He wrote ten violin concertos and many showpieces, taught at the Brussels Conservatoire, and was the husband of the mezzo-soprano Maria Malibran.",
+    "photoUrl": "/images/portraits/de-beriot.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Charles_Auguste_de_Bériot",
     "websiteUrl": null
   },
   {
@@ -1212,6 +1260,18 @@
     "websiteUrl": null
   },
   {
+    "id": "stojowski",
+    "name": "Z. Stojowski",
+    "born": 1870,
+    "died": 1946,
+    "role": "both",
+    "gender": "male",
+    "bio": "Polish composer and pianist who studied with Paderewski and Delibes, and emigrated to the United States in 1905. He taught at the Institute of Musical Art in New York and wrote concertos for piano and violin as well as chamber music.",
+    "photoUrl": "/images/portraits/stojowski.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Zygmunt_Stojowski",
+    "websiteUrl": null
+  },
+  {
     "id": "scriabin",
     "name": "A. Scriabin",
     "born": 1872,
@@ -1233,6 +1293,18 @@
     "bio": "Russian composer, virtuoso pianist, and conductor of the late Romantic era. His piano concertos and preludes are renowned for their sweeping melodies, technical brilliance, and emotional intensity.",
     "photoUrl": "/images/portraits/rachmaninoff.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff",
+    "websiteUrl": null
+  },
+  {
+    "id": "jongen",
+    "name": "J. Jongen",
+    "born": 1873,
+    "died": 1953,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Belgian composer and organist who taught at the Brussels Conservatoire and later directed it. His Symphonie concertante for organ and orchestra is his best-known work, and his Aria et Polonaise for trombone is a popular competition piece.",
+    "photoUrl": "/images/portraits/jongen.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Jongen",
     "websiteUrl": null
   },
   {
@@ -1368,6 +1440,18 @@
     "websiteUrl": null
   },
   {
+    "id": "bloch",
+    "name": "E. Bloch",
+    "born": 1880,
+    "died": 1959,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Swiss-born American composer whose music draws on Jewish themes and traditions. Best known for Schelomo for cello and orchestra, he also wrote a violin concerto, a piano quintet and the Symphony for Trombone and Orchestra.",
+    "photoUrl": "/images/portraits/bloch.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ernest_Bloch",
+    "websiteUrl": null
+  },
+  {
     "id": "enescu",
     "name": "G. Enescu",
     "born": 1881,
@@ -1389,6 +1473,30 @@
     "bio": "Hungarian composer, pianist, and ethnomusicologist who integrated folk music into modernist composition. His Mikrokosmos and three piano concertos expanded the percussive and timbral possibilities of the instrument.",
     "photoUrl": "/images/portraits/bartok.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/B%C3%A9la_Bart%C3%B3k",
+    "websiteUrl": null
+  },
+  {
+    "id": "blazhevich",
+    "name": "V. Blazhevich",
+    "born": 1881,
+    "died": 1942,
+    "role": "both",
+    "gender": "male",
+    "bio": "Russian trombonist and teacher who played in the Bolshoi Theatre orchestra and taught at the Moscow Conservatory. His Clef Studies are standard material for learning tenor and alto clef.",
+    "photoUrl": "/images/portraits/blazhevich.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vladislav_Blazhevich",
+    "websiteUrl": null
+  },
+  {
+    "id": "jorgensen",
+    "name": "A. Jørgensen",
+    "born": 1881,
+    "died": 1947,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Danish composer and organist who wrote for organ, chamber ensemble and voice. His Romance for trombone and piano is a staple of the instrument's repertoire.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Axel_Jørgensen",
     "websiteUrl": null
   },
   {
@@ -1489,6 +1597,42 @@
     "websiteUrl": null
   },
   {
+    "id": "bowen",
+    "name": "Y. Bowen",
+    "born": 1884,
+    "died": 1961,
+    "role": "both",
+    "gender": "male",
+    "bio": "English composer and pianist who studied at the Royal Academy of Music under Tobias Matthay and later taught there. Often called the 'English Rachmaninoff', he wrote four piano concertos and an extensive body of solo piano music.",
+    "photoUrl": "/images/portraits/bowen.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/York_Bowen",
+    "websiteUrl": null
+  },
+  {
+    "id": "pejacevic",
+    "name": "D. Pejačević",
+    "born": 1885,
+    "died": 1923,
+    "role": "both",
+    "gender": "female",
+    "bio": "Croatian composer and pianist, regarded as the first major Croatian woman composer and a pioneer of musical modernism in her country. She wrote a Piano Concerto, a Symphony in F-sharp minor and two violin sonatas, and often played in her own chamber works.",
+    "photoUrl": "/images/portraits/pejacevic.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Dora_Pejačević",
+    "websiteUrl": null
+  },
+  {
+    "id": "achron",
+    "name": "J. Achron",
+    "born": 1886,
+    "died": 1943,
+    "role": "both",
+    "gender": "male",
+    "bio": "Russian-born violinist and composer who studied with Leopold Auer and became a leading figure of the Jewish national school. He settled in the United States in 1925 and is best remembered for his Hebrew Melody for violin and piano.",
+    "photoUrl": "/images/portraits/achron.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Achron",
+    "websiteUrl": null
+  },
+  {
     "id": "arthur-rubinstein",
     "name": "A. Rubinstein",
     "born": 1887,
@@ -1573,6 +1717,18 @@
     "websiteUrl": null
   },
   {
+    "id": "frank-martin",
+    "name": "F. Martin",
+    "born": 1890,
+    "died": 1974,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Swiss composer who developed a personal approach to twelve-tone technique. His output includes concertos for piano and violin, and his Ballade for trombone and piano is a cornerstone of the instrument's repertoire.",
+    "photoUrl": "/images/portraits/frank-martin.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Frank_Martin_(composer)",
+    "websiteUrl": null
+  },
+  {
     "id": "prokofiev",
     "name": "S. Prokofiev",
     "born": 1891,
@@ -1582,6 +1738,18 @@
     "bio": "Russian composer and pianist whose nine piano sonatas and five piano concertos combine biting rhythmic energy, lyrical beauty, and sardonic wit. He was himself a formidable performer.",
     "photoUrl": "/images/portraits/prokofiev.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Prokofiev",
+    "websiteUrl": null
+  },
+  {
+    "id": "vecsey",
+    "name": "F. von Vecsey",
+    "born": 1893,
+    "died": 1935,
+    "role": "both",
+    "gender": "male",
+    "bio": "Hungarian violin prodigy who studied with Joseph Joachim and Jenő Hubay and made his debut in Berlin at age ten. He toured Europe as a virtuoso and composed a Concerto in F-sharp minor, a Valse triste and other works for violin.",
+    "photoUrl": "/images/portraits/vecsey.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Franz_von_Vecsey",
     "websiteUrl": null
   },
   {
@@ -1693,6 +1861,18 @@
     "websiteUrl": null
   },
   {
+    "id": "tizol",
+    "name": "J. Tizol",
+    "born": 1900,
+    "died": 1984,
+    "role": "both",
+    "gender": "male",
+    "bio": "Puerto Rican valve trombonist and composer who played in Duke Ellington's orchestra for many years. He wrote Caravan and Perdido, which became jazz standards.",
+    "photoUrl": "/images/portraits/tizol.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Juan_Tizol",
+    "websiteUrl": null
+  },
+  {
     "id": "horowitz",
     "name": "V. Horowitz",
     "born": 1903,
@@ -1729,6 +1909,18 @@
     "websiteUrl": null
   },
   {
+    "id": "earl-hines",
+    "name": "E. Hines",
+    "born": 1903,
+    "died": 1983,
+    "role": "both",
+    "gender": "male",
+    "bio": "American jazz pianist and bandleader whose trumpet-style right-hand lines helped define modern jazz piano. He recorded duets with Louis Armstrong in the late 1920s, and led his own big band for over a decade.",
+    "photoUrl": "/images/portraits/earl-hines.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Earl_Hines",
+    "websiteUrl": null
+  },
+  {
     "id": "shostakovich",
     "name": "D. Shostakovich",
     "born": 1906,
@@ -1762,6 +1954,18 @@
     "bio": "American jazz pianist whose blistering virtuosity, harmonic daring and rhythmic freedom set a standard few have matched. Nearly blind from childhood, he reshaped stride piano and influenced generations of pianists from Oscar Peterson to Bud Powell.",
     "photoUrl": "/images/portraits/tatum.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Art_Tatum",
+    "websiteUrl": null
+  },
+  {
+    "id": "holmboe",
+    "name": "V. Holmboe",
+    "born": 1909,
+    "died": 1996,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Danish composer whose music is known for its technique of 'metamorphosis' of motifs. He wrote thirteen symphonies and a large number of string quartets, and his writing for brass is a notable part of his late output.",
+    "photoUrl": "/images/portraits/holmboe.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vagn_Holmboe",
     "websiteUrl": null
   },
   {
@@ -1899,6 +2103,18 @@
     "websiteUrl": null
   },
   {
+    "id": "xenakis",
+    "name": "I. Xenakis",
+    "born": 1922,
+    "died": 2001,
+    "role": "composer",
+    "gender": "male",
+    "bio": "Greek-French composer, architect and engineer who pioneered stochastic and computer-aided composition. His uncompromising works, such as Evryali for piano, Mikka for violin and Keren for trombone, are among the most demanding in each instrument's repertoire.",
+    "photoUrl": "/images/portraits/xenakis.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Iannis_Xenakis",
+    "websiteUrl": null
+  },
+  {
     "id": "ligeti",
     "name": "G. Ligeti",
     "born": 1923,
@@ -1956,6 +2172,30 @@
     "bio": "Canadian jazz pianist and composer admired for his dazzling technique, swing and speed, with a touch rooted in Art Tatum and Nat King Cole. His Canadiana Suite and Night Train, and his long-running trio recordings, made him one of the most recorded jazz pianists.",
     "photoUrl": "/images/portraits/peterson.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Oscar_Peterson",
+    "websiteUrl": null
+  },
+  {
+    "id": "casterede",
+    "name": "J. Castérède",
+    "born": 1926,
+    "died": 2014,
+    "role": "both",
+    "gender": "male",
+    "bio": "French composer and pianist who studied at the Paris Conservatoire with Messiaen and Milhaud. He later taught there and wrote widely for wind instruments, including a Fantasia concertante for trombone.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jacques_Castérède",
+    "websiteUrl": null
+  },
+  {
+    "id": "hartley",
+    "name": "W. S. Hartley",
+    "born": 1927,
+    "died": 2016,
+    "role": "composer",
+    "gender": "male",
+    "bio": "American composer and longtime professor at SUNY Fredonia who wrote prolifically for wind and brass instruments. His Sonata Concertante and Sonatina for trombone are staples of the instrument's teaching repertoire.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Walter_S._Hartley",
     "websiteUrl": null
   },
   {
@@ -2077,6 +2317,18 @@
     "photoUrl": "/images/portraits/part.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Arvo_P%C3%A4rt",
     "websiteUrl": "https://www.arvopart.ee"
+  },
+  {
+    "id": "rabe",
+    "name": "F. Rabe",
+    "born": 1935,
+    "died": 2017,
+    "role": "both",
+    "gender": "male",
+    "bio": "Swedish composer and trombonist who moved from jazz to experimental electronic and sound-mass music. His orchestral work Rondes is a landmark of Swedish sound-mass writing, and he was a professor at the Royal College of Music in Stockholm.",
+    "photoUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Folke_Rabe",
+    "websiteUrl": null
   },
   {
     "id": "reich",
@@ -2341,6 +2593,18 @@
     "bio": "Hungarian-born British pianist and conductor renowned for his Bach, Haydn, Mozart, and Schubert. He founded the chamber orchestra Cappella Andrea Barca in 1999 and recorded the complete Beethoven sonatas live in concert.",
     "photoUrl": "/images/portraits/schiff.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Andr%C3%A1s_Schiff",
+    "websiteUrl": null
+  },
+  {
+    "id": "de-meij",
+    "name": "J. de Meij",
+    "born": 1953,
+    "died": null,
+    "role": "both",
+    "gender": "male",
+    "bio": "Dutch composer, conductor and trombonist best known for his wind-band music. His Symphony No. 1 'The Lord of the Rings' is one of the most performed works in the wind-band repertoire.",
+    "photoUrl": "/images/portraits/de-meij.jpg",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Johan_de_Meij",
     "websiteUrl": null
   },
   {
