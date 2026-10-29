@@ -6,7 +6,7 @@
     "died": 1566,
     "role": "both",
     "gender": "male",
-    "bio": "Spanish Renaissance composer and organist, blind from childhood, who served as court musician to Isabella of Portugal and later Philip II, traveling with the royal court through Italy, the Netherlands, and England. His tientos and diferencias (keyboard variation sets) mark him as the most influential Iberian keyboard composer of the 16th century.",
+    "bio": "Spanish Renaissance composer and organist, blind from childhood, who served as court musician to Isabella of Portugal and later Philip II, traveling with the royal court through Italy, the Netherlands, and England. His tientos and diferencias (keyboard variation sets) mark him as the first major Iberian keyboard composer and one of the most important composers of his time.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Antonio_de_Cabez%C3%B3n",
     "websiteUrl": null
@@ -15,10 +15,11 @@
     "id": "byrd",
     "name": "W. Byrd",
     "born": 1540,
+    "bornEstimated": true,
     "died": 1623,
     "role": "both",
     "gender": "male",
-    "bio": "English composer and organist who brought the virginals repertoire to its highest level in the Renaissance. His keyboard works in the Fitzwilliam Virginal Book and My Ladye Nevells Booke remain cornerstones of early keyboard literature.",
+    "bio": "English Renaissance composer and organist, a Gentleman of the Chapel Royal best known for his Latin sacred vocal music and consort works. His keyboard works in the Fitzwilliam Virginal Book and My Ladye Nevells Booke remain cornerstones of early keyboard literature.",
     "photoUrl": "/images/portraits/byrd.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/William_Byrd",
     "websiteUrl": null
@@ -88,6 +89,7 @@
     "id": "louis-couperin",
     "name": "L. Couperin",
     "born": 1626,
+    "bornEstimated": true,
     "died": 1661,
     "role": "both",
     "gender": "male",
@@ -139,7 +141,7 @@
     "died": 1710,
     "role": "both",
     "gender": "male",
-    "bio": "Italian composer and renowned harpsichord virtuoso who was the most important Italian keyboard composer between Frescobaldi and Domenico Scarlatti. He composed some 200 keyboard works during his career as organist at Santa Maria in Vallicella in Rome.",
+    "bio": "Italian composer and renowned harpsichord virtuoso, one of the most important Italian composers for harpsichord between Frescobaldi and Domenico Scarlatti. He was organist at Santa Maria in Vallicella from 1657, then at Santa Maria Maggiore and Santa Maria in Aracoeli in Rome from 1664, and left a large body of keyboard music, mostly preserved in manuscript.",
     "photoUrl": "/images/portraits/pasquini.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Bernardo_Pasquini",
     "websiteUrl": null
@@ -199,7 +201,7 @@
     "died": 1695,
     "role": "both",
     "gender": "male",
-    "bio": "English composer and harpsichordist who was the foremost English composer of the Baroque era. Appointed court harpsichordist to James II, his keyboard suites and ground-bass pieces represent the finest English keyboard music of the 17th century.",
+    "bio": "English Baroque composer and harpsichordist, generally considered one of the greatest English composers. Organist of Westminster Abbey from 1679 and later court harpsichordist to James II, he left only a small body of keyboard music, chiefly harpsichord suites and organ pieces.",
     "photoUrl": "/images/portraits/purcell.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Henry_Purcell",
     "websiteUrl": null
@@ -271,7 +273,7 @@
     "died": 1732,
     "role": "both",
     "gender": "male",
-    "bio": "French organist, harpsichordist, and composer who was one of the foremost keyboard virtuosos in France. He famously fled before a planned keyboard contest with J.S. Bach in Dresden in 1717.",
+    "bio": "French organist, harpsichordist, and composer who was one of the foremost keyboard virtuosos in France. According to later German accounts, he left Dresden in 1717 rather than face a planned keyboard contest with J.S. Bach, a story found in no French documents and generally doubted.",
     "photoUrl": "/images/portraits/marchand.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Louis_Marchand",
     "websiteUrl": null
@@ -355,7 +357,7 @@
     "died": 1726,
     "role": "both",
     "gender": "male",
-    "bio": "Italian Baroque composer and organist who became a Jesuit missionary in South America. His Sonate d'intavolatura per organo e cimbalo (1716) is a landmark of Italian keyboard music and was widely disseminated in the New World.",
+    "bio": "Italian Baroque composer and organist who became a Jesuit missionary in South America. His Sonate d'intavolatura per organo e cimbalo (1716) is a landmark of Italian keyboard music, and his music soon spread across South America, from Paraguay to Bolivia and Peru.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Domenico_Zipoli",
     "websiteUrl": null
@@ -415,7 +417,7 @@
     "died": 1783,
     "role": "both",
     "gender": "male",
-    "bio": "Spanish composer and organist at the monastery of El Escorial, and the most important Spanish keyboard composer of the late 18th century. He composed over 150 keyboard sonatas, many written for the Infante Don Gabriel, continuing the tradition of Domenico Scarlatti.",
+    "bio": "Spanish composer and organist at the monastery of El Escorial, and one of the most important figures in 18th-century Spanish keyboard music. He composed around 150 keyboard sonatas, many believed to have been written for the Infante Don Gabriel, which are comparable to those of Domenico Scarlatti.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Antonio_Soler_(composer)",
     "websiteUrl": null
@@ -548,7 +550,7 @@
     "died": 1836,
     "role": "both",
     "gender": "female",
-    "bio": "French composer and pianist, recognized as one of the finest fortepiano performers and improvisers of her time. A professor at the Paris Conservatoire, the first woman to teach a male class there, she published a landmark piano course containing 114 études.",
+    "bio": "French composer and pianist, recognized as one of the finest fortepiano performers and improvisers of her time. In 1795 she became a first-class piano professor at the Paris Conservatoire, teaching the men's class and the only woman given that rank in that period, before resigning in 1798; her published piano course contains 114 études.",
     "photoUrl": "/images/portraits/montgeroult.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/H%C3%A9l%C3%A8ne_de_Montgeroult",
     "websiteUrl": null
@@ -608,7 +610,7 @@
     "died": 1837,
     "role": "both",
     "gender": "male",
-    "bio": "Irish pianist and composer who invented the nocturne as a musical form. His lyrical piano style and 18 nocturnes directly influenced Chopin, Mendelssohn, Liszt, and other Romantic composers.",
+    "bio": "Irish pianist and composer credited with originating the piano nocturne as a lyrical character piece. His lyrical piano style and 18 nocturnes influenced Chopin, Mendelssohn, Liszt, and other Romantic composers.",
     "photoUrl": "/images/portraits/field.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/John_Field_(composer)",
     "websiteUrl": null
@@ -620,7 +622,7 @@
     "died": 1826,
     "role": "both",
     "gender": "male",
-    "bio": "German composer, conductor, and virtuoso pianist who was one of the first significant Romantic composers. His Konzertstueck and Invitation to the Dance influenced Chopin, Liszt, and Mendelssohn.",
+    "bio": "German composer, conductor, and virtuoso pianist, a crucial figure in the development of German Romantic opera. His Konzertstück in F minor inspired Chopin, Liszt, and Mendelssohn, and his Invitation to the Dance was an early and influential Romantic concert waltz.",
     "photoUrl": "/images/portraits/weber.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Carl_Maria_von_Weber",
     "websiteUrl": null
@@ -656,7 +658,7 @@
     "died": 1825,
     "role": "both",
     "gender": "male",
-    "bio": "Bohemian composer and pianist active in Vienna, admired by Beethoven and close to Schubert's circle. His Impromptus, Op. 7 helped found a genre that Schubert would make famous.",
+    "bio": "Bohemian composer and pianist active in Vienna, who met Beethoven there in 1814 and became a close friend of Schubert. His Impromptus, Op. 7 (1822) are among the earliest pieces to carry that title and anticipated the genre Schubert later made famous.",
     "photoUrl": "/images/portraits/vorisek.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Jan_V%C3%A1clav_Vo%C5%99%C3%AD%C5%A1ek",
     "websiteUrl": null
@@ -764,7 +766,7 @@
     "died": 1886,
     "role": "both",
     "gender": "male",
-    "bio": "Hungarian composer and the foremost piano virtuoso of his time. He invented the solo piano recital, pushed the boundaries of technique and harmonic language, and influenced generations of pianists as a teacher.",
+    "bio": "Hungarian composer and the foremost piano virtuoso of his time. He is credited as the first pianist to give solo recitals in the modern sense, pushed the boundaries of technique and harmonic language, and influenced generations of pianists as a teacher.",
     "photoUrl": "/images/portraits/liszt.png",
     "wikiUrl": "https://en.wikipedia.org/wiki/Franz_Liszt",
     "websiteUrl": null
@@ -800,7 +802,7 @@
     "died": 1888,
     "role": "both",
     "gender": "male",
-    "bio": "Hungarian pianist and composer who settled in Paris, where Schumann and Chopin admired his refined miniatures. His etudes and character pieces remain staples of the teaching repertoire.",
+    "bio": "Hungarian pianist and composer who settled in Paris, where he befriended Chopin, Berlioz and Liszt and was favorably judged by Schumann. His etudes remain popular with piano teachers and students.",
     "photoUrl": "/images/portraits/heller.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Stephen_Heller",
     "websiteUrl": null
@@ -847,6 +849,7 @@
     "born": 1823,
     "died": 1892,
     "role": "composer",
+    "gender": "male",
     "bio": "French composer of Spanish descent best known for the Symphonie espagnole, a virtuosic showpiece for violin and orchestra that remains a cornerstone of the Romantic violin repertoire. He also wrote the opera Le roi d'Ys and a cello concerto.",
     "photoUrl": "/images/portraits/lalo.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/%C3%89douard_Lalo",
@@ -907,7 +910,7 @@
     "died": 1915,
     "role": "both",
     "gender": "male",
-    "bio": "Polish pianist, composer, and one of the most influential piano teachers of all time. Over 1,200 students studied with him in Vienna, including Schnabel, Friedman, and Paderewski, establishing a major pedagogical lineage.",
+    "bio": "Polish pianist, composer, and one of the most influential piano teachers of all time. Many pianists studied with him in Vienna, including Schnabel, Friedman, and Paderewski, establishing a major pedagogical lineage.",
     "photoUrl": "/images/portraits/leschetizky.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Theodor_Leschetizky",
     "websiteUrl": null
@@ -967,7 +970,7 @@
     "died": 1881,
     "role": "composer",
     "gender": "male",
-    "bio": "Russian composer whose Pictures at an Exhibition is one of the most celebrated and virtuosic works for solo piano. A member of The Five, his bold harmonic language was decades ahead of its time.",
+    "bio": "Russian composer whose Pictures at an Exhibition is one of the most celebrated and virtuosic works for solo piano. A member of The Five, he was an innovator who often defied Western conventions and wrote vocal lines that imitate natural speech, inspiring later Russian composers such as Shostakovich and Prokofiev.",
     "photoUrl": "/images/portraits/mussorgsky.png",
     "wikiUrl": "https://en.wikipedia.org/wiki/Modest_Mussorgsky",
     "websiteUrl": null
@@ -1022,12 +1025,12 @@
   },
   {
     "id": "faure",
-    "name": "G. Faure",
+    "name": "G. Fauré",
     "born": 1845,
     "died": 1924,
     "role": "composer",
     "gender": "male",
-    "bio": "French composer whose refined piano works, including nocturnes, barcarolles, and impromptus, bridged the Romantic and Modern eras. His subtle harmonic language profoundly influenced Ravel and Debussy.",
+    "bio": "French composer whose refined piano works, including nocturnes, barcarolles, and impromptus, bridged the Romantic and Modern eras. His subtle harmonic language, with its unresolved mild discords and colouristic effects, anticipated Impressionism; Ravel was among his pupils.",
     "photoUrl": "/images/portraits/faure.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Gabriel_Faur%C3%A9",
     "websiteUrl": null
@@ -1038,7 +1041,8 @@
     "born": 1853,
     "died": 1917,
     "role": "both",
-    "bio": "Venezuelan pianist, composer, and conductor nicknamed the \"Valkyrie of the Piano\" for her commanding virtuosic technique. A child prodigy who performed for Abraham Lincoln at the White House, she toured internationally for decades as a leading concert pianist and composed piano works, songs, and a festival hymn for the Venezuelan government.",
+    "gender": "female",
+    "bio": "Venezuelan pianist, composer, and conductor nicknamed the \"Valkyrie of the Piano\" for her commanding virtuosic technique. A child prodigy who performed for Abraham Lincoln at the White House, she toured internationally for decades as a leading concert pianist and composed about 75 works, including piano pieces, works for voice and piano, and choral hymns such as the Himno a Bolívar, performed in Caracas in 1885.",
     "photoUrl": "/images/portraits/carreno.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Teresa_Carre%C3%B1o",
     "websiteUrl": null
@@ -1050,7 +1054,7 @@
     "died": 1928,
     "role": "composer",
     "gender": "male",
-    "bio": "Czech composer whose piano cycles On an Overgrown Path and In the Mists distill Moravian folk idioms into intimate, speech-inflected miniatures. His Piano Sonata 1.X.1905 stands among the most personal statements in the Czech piano literature.",
+    "bio": "Czech composer whose piano cycles On an Overgrown Path (its first volume built on Moravian folk melodies) and In the Mists are collections of short piano pieces. His Piano Sonata 1.X.1905, written in memory of a worker killed in a 1905 Brno demonstration, survives only through a copy owned by the pianist Ludmila Tučková, after he burned one movement and threw the rest into the Vltava.",
     "photoUrl": "/images/portraits/janacek.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Leo%C5%A1_Jan%C3%A1%C4%8Dek",
     "websiteUrl": null
@@ -1110,7 +1114,7 @@
     "died": 1909,
     "role": "both",
     "gender": "male",
-    "bio": "Spanish pianist and composer whose masterwork Iberia is one of the most challenging and evocative suites in the piano literature. A child prodigy, he toured internationally from age eight and helped define the Spanish piano school.",
+    "bio": "Spanish pianist and composer whose masterwork Iberia is one of the most challenging and evocative suites in the piano literature. A child prodigy who first performed in public at age four, he began touring northern Spain at nine with his father and sister, and helped define the Spanish piano school.",
     "photoUrl": "/images/portraits/albeniz.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Isaac_Alb%C3%A9niz",
     "websiteUrl": null
@@ -1122,7 +1126,7 @@
     "died": 1941,
     "role": "both",
     "gender": "male",
-    "bio": "Polish pianist, composer, and statesman who became one of the most famous pianists of his era. He also served as Prime Minister of Poland in 1919, a unique distinction among concert pianists.",
+    "bio": "Polish pianist, composer, and statesman who became one of the most famous pianists of his era. He also served as Prime Minister and Foreign Minister of Poland in 1919 and signed the Treaty of Versailles, an unusual second career for a concert pianist.",
     "photoUrl": "/images/portraits/paderewski.png",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ignacy_Jan_Paderewski",
     "websiteUrl": null
@@ -1134,7 +1138,7 @@
     "died": 1908,
     "role": "both",
     "gender": "male",
-    "bio": "American composer and pianist who was the first internationally successful American art-music composer. His Woodland Sketches, including To a Wild Rose, and two piano concertos brought American Romanticism to the world stage.",
+    "bio": "American composer and pianist who was one of the first American composers to win international recognition. His Woodland Sketches, including To a Wild Rose, and two piano concertos brought American Romanticism to the world stage.",
     "photoUrl": "/images/portraits/macdowell.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Edward_MacDowell",
     "websiteUrl": null
@@ -1206,7 +1210,7 @@
     "died": 1925,
     "role": "both",
     "gender": "male",
-    "bio": "French composer and pianist whose deceptively simple, witty piano pieces such as the Gymnopédies and Gnossiennes anticipated minimalism and profoundly influenced Debussy, Ravel, and later avant-garde composers.",
+    "bio": "French composer and pianist whose deceptively simple, witty piano pieces such as the Gymnopédies and Gnossiennes helped steer French music toward a leaner style, influenced Ravel and Debussy, and are seen by some writers as an influence on minimalism and later composers such as John Cage.",
     "photoUrl": "/images/portraits/satie.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Erik_Satie",
     "websiteUrl": null
@@ -1254,6 +1258,7 @@
     "born": 1870,
     "died": 1938,
     "role": "both",
+    "gender": "male",
     "bio": "Polish-American pianist and composer renowned for a transcendent, orchestral keyboard technique. His 53 Studies on Chopin's Etudes recompose the originals with staggering polyphonic and technical complexity, among the most demanding works in the piano repertoire.",
     "photoUrl": "/images/portraits/godowsky.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Leopold_Godowsky",
@@ -1362,7 +1367,7 @@
     "died": 1946,
     "role": "composer",
     "gender": "male",
-    "bio": "Spanish composer widely regarded as the greatest of his generation and a leading voice of musical nationalism. His works, including the ballet El amor brujo, Nights in the Gardens of Spain for piano and orchestra, and the solo Fantasía bætica, fuse Andalusian folk idioms with the refinement he absorbed from Debussy and Ravel in Paris.",
+    "bio": "Spanish composer widely regarded as one of the most important Spanish composers of the twentieth century and a leading voice of musical nationalism. His works, including the ballet El amor brujo, Nights in the Gardens of Spain for piano and orchestra, and the solo Fantasía bætica, fuse Andalusian folk idioms with the refinement he absorbed from Debussy and Ravel in Paris.",
     "photoUrl": "/images/portraits/de-falla.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Manuel_de_Falla",
     "websiteUrl": null
@@ -1384,9 +1389,9 @@
     "name": "A. Cortot",
     "born": 1877,
     "died": 1962,
-    "role": "both",
+    "role": "player",
     "gender": "male",
-    "bio": "Franco-Swiss pianist, conductor, and teacher counted among the foremost musicians of the twentieth century. Celebrated above all for his poetic, freely expressive readings of Chopin and Schumann, he formed a legendary trio with violinist Jacques Thibaud and cellist Pablo Casals and co-founded the École Normale de Musique de Paris. He also left a substantial body of transcriptions, cadenzas, and widely used annotated editions of the Romantic piano repertoire.",
+    "bio": "Franco-Swiss pianist, conductor, and teacher counted among the foremost musicians of the twentieth century. Celebrated above all for his poetic, freely expressive readings of Chopin and Schumann, he formed a legendary trio with violinist Jacques Thibaud and cellist Pablo Casals and co-founded the École Normale de Musique de Paris. He also made piano transcriptions and published widely used annotated editions of the Romantic piano repertoire.",
     "photoUrl": "/images/portraits/cortot.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Alfred_Cortot",
     "websiteUrl": null
@@ -1398,7 +1403,7 @@
     "died": 1960,
     "role": "both",
     "gender": "male",
-    "bio": "Hungarian pianist, composer, and conductor, a central figure of his country's musical life. His Variations on a Nursery Tune displays Brahmsian craft, while Ruralia Hungarica draws on Hungarian folk material.",
+    "bio": "Hungarian pianist, composer, and conductor, a central figure of his country's musical life. His witty Variations on a Nursery Tune for piano and orchestra parodies many composers of his day, while Ruralia Hungarica draws on Hungarian folk material.",
     "photoUrl": "/images/portraits/dohnanyi.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ernst_von_Dohn%C3%A1nyi",
     "websiteUrl": null
@@ -1518,7 +1523,7 @@
     "died": 1971,
     "role": "composer",
     "gender": "male",
-    "bio": "Russian-born composer who revolutionized 20th-century music through constantly evolving styles. His piano works include Petrouchka, the Concerto for Piano and Wind Instruments, and Movements for Piano and Orchestra.",
+    "bio": "Russian-born composer who revolutionized 20th-century music through constantly evolving styles. His piano works include Three Movements from Petrushka, the Concerto for Piano and Wind Instruments, and Movements for Piano and Orchestra.",
     "photoUrl": "/images/portraits/stravinsky.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Igor_Stravinsky",
     "websiteUrl": null
@@ -1579,7 +1584,7 @@
     "died": 1947,
     "role": "both",
     "gender": "male",
-    "bio": "Italian composer, pianist, and conductor who led the modernist renewal of Italian instrumental music. His substantial piano output, from the early Toccata to the neoclassical Scarlattiana, spans the styles of a turbulent era.",
+    "bio": "Italian composer, pianist, and conductor who helped renew Italian instrumental music. His piano output ranges from the early solo Toccata, Op. 6 to later works such as the Nove pezzi and Sei studi, alongside neoclassical works like Scarlattiana for piano and orchestra.",
     "photoUrl": "/images/portraits/casella.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Alfredo_Casella",
     "websiteUrl": null
@@ -1891,7 +1896,7 @@
     "died": 1991,
     "role": "player",
     "gender": "male",
-    "bio": "Chilean-American pianist acclaimed for deeply intellectual and emotionally profound interpretations. His recordings of Beethoven, Chopin, Liszt, and Brahms are considered definitive.",
+    "bio": "Chilean-American pianist widely considered one of the greatest pianists of the twentieth century, known for intellectual and deeply reflective interpretations. A leading authority on Beethoven, he was also famous for his recordings of Schubert, Brahms and Debussy, and recorded much of the piano music of Schumann, Chopin and Liszt.",
     "photoUrl": "/images/portraits/arrau.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Claudio_Arrau",
     "websiteUrl": null
@@ -2000,7 +2005,7 @@
     "died": 1992,
     "role": "composer",
     "gender": "male",
-    "bio": "American avant-garde composer who radically redefined the piano through prepared piano works such as Sonatas and Interludes and the silent piece 4'33\". His ideas about chance and indeterminacy profoundly influenced all subsequent music.",
+    "bio": "American avant-garde composer who invented the prepared piano and wrote Sonatas and Interludes for it. His silent piece 4'33\" (written for any instrument, premiered at the piano by David Tudor in 1952) is his most famous work, and his chance-based, indeterminate music influenced countless later composers, artists and writers.",
     "photoUrl": "/images/portraits/cage.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/John_Cage",
     "websiteUrl": null
@@ -2024,7 +2029,7 @@
     "died": 1976,
     "role": "both",
     "gender": "male",
-    "bio": "English composer, conductor, and pianist whose Piano Concerto and chamber works demonstrate his brilliant command of keyboard writing. He was also celebrated as an accompanist in partnership with tenor Peter Pears.",
+    "bio": "English composer, conductor, and pianist who was the soloist at the premiere of his own Piano Concerto (1938). He was also celebrated as an accompanist, above all in his recital partnership with the tenor Peter Pears.",
     "photoUrl": "/images/portraits/britten.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Benjamin_Britten",
     "websiteUrl": null
@@ -2036,7 +2041,7 @@
     "died": 1997,
     "role": "player",
     "gender": "male",
-    "bio": "Soviet pianist regarded as one of the greatest of all time, celebrated for his vast repertoire spanning Bach to Prokofiev. His performances were marked by intellectual rigor and visionary intensity.",
+    "bio": "Soviet pianist widely considered one of the greatest pianists of the 20th century, celebrated for his vast repertoire spanning Bach to Prokofiev. He was praised for the depth of his interpretations and his virtuoso technique.",
     "photoUrl": "/images/portraits/richter.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sviatoslav_Richter",
     "websiteUrl": null
@@ -2048,7 +2053,7 @@
     "died": 1983,
     "role": "composer",
     "gender": "male",
-    "bio": "Argentine composer whose piano works, including the Danzas argentinas and two piano sonatas, fuse fierce rhythmic energy with Argentine folk elements. One of the most important 20th-century composers of the Americas.",
+    "bio": "Argentine composer whose piano works, including the Danzas argentinas and three piano sonatas, fuse fierce rhythmic energy with Argentine folk elements. One of the most important 20th-century composers of the Americas.",
     "photoUrl": "/images/portraits/ginastera.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Alberto_Ginastera",
     "websiteUrl": null
@@ -2157,7 +2162,7 @@
     "died": 2016,
     "role": "composer",
     "gender": "male",
-    "bio": "French composer, conductor, and writer who was a central figure in post-war musical modernism. His piano sonatas, especially the Second and Third, are landmark works of total serialism.",
+    "bio": "French composer, conductor, and writer who was a central figure in post-war musical modernism. His piano sonatas, especially the Second and the Third (which uses open form and controlled chance), are landmark works of the modernist piano repertoire; Structures for two pianos is his key total-serialist work.",
     "photoUrl": "/images/portraits/boulez.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Pierre_Boulez",
     "websiteUrl": null
@@ -2265,7 +2270,7 @@
     "died": 2025,
     "role": "player",
     "gender": "male",
-    "bio": "Czech-born Austrian pianist, poet, and author who was the first to record the complete Beethoven piano sonatas. His intellectually rigorous interpretations of the Viennese Classical masters set new standards.",
+    "bio": "Czech-born Austrian pianist, poet, and author, and the first pianist to record Beethoven's complete works for solo piano. He made three recordings of the 32 sonatas, one for Vox and two for Philips, and performed series of music by Haydn, Mozart, Beethoven, Schubert, and Liszt in a style sometimes described as cerebral.",
     "photoUrl": "/images/portraits/brendel.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Alfred_Brendel",
     "websiteUrl": null
@@ -2337,7 +2342,7 @@
     "died": null,
     "role": "composer",
     "gender": "male",
-    "bio": "American composer and a pioneer of minimal music, using techniques such as phasing and repetitive patterns. His Piano Phase and Six Pianos have profoundly shaped contemporary composition.",
+    "bio": "American composer and a pioneer of minimal music, using techniques such as phasing and repetitive patterns. His works include Piano Phase (1967) and Six Pianos (1973), and his style has influenced many contemporary composers.",
     "photoUrl": "/images/portraits/reich.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Steve_Reich",
     "websiteUrl": "https://stevereich.com"
@@ -2457,7 +2462,7 @@
     "died": 2022,
     "role": "player",
     "gender": "male",
-    "bio": "Romanian pianist revered for profoundly poetic and introspective interpretations of Beethoven, Schubert, Brahms, and Mozart. Camera-shy and rarely recorded, his concerts were legendary for their transcendent quality.",
+    "bio": "Romanian pianist acclaimed for his interpretations of Beethoven, Schubert, Brahms, and Mozart. A famously reclusive artist who often refused interviews and usually did not allow radio broadcasts, he recorded extensively for Decca from 1970 and won an Edison Award and a Grammy.",
     "photoUrl": "/images/portraits/lupu.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Radu_Lupu",
     "websiteUrl": null
@@ -2517,7 +2522,7 @@
     "died": null,
     "role": "player",
     "gender": "male",
-    "bio": "Polish-born American pianist who won the inaugural Arthur Rubinstein International Piano Competition in 1974. Long admired as a Mozart and Brahms interpreter, he has won multiple Grammy Awards, several of them for chamber recordings with Yo-Yo Ma.",
+    "bio": "Polish-American pianist, born in Lviv, who won the inaugural Arthur Rubinstein International Piano Competition in 1974. Long admired as a Mozart and Brahms interpreter, he has won multiple Grammy Awards, several of them for chamber recordings with Yo-Yo Ma.",
     "photoUrl": "/images/portraits/ax.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Emanuel_Ax",
     "websiteUrl": null
@@ -2554,7 +2559,7 @@
     "died": 2023,
     "role": "both",
     "gender": "male",
-    "bio": "Japanese composer, pianist, and electronic music pioneer who won the Academy Award for The Last Emperor. His solo piano albums blended classical, electronic, and world music influences.",
+    "bio": "Japanese composer, pianist, and electronic music pioneer who shared the Academy Award for Best Original Score for The Last Emperor with David Byrne and Cong Su. His solo piano albums blended classical, electronic, and world music influences.",
     "photoUrl": "/images/portraits/sakamoto.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ryuichi_Sakamoto",
     "websiteUrl": null
@@ -2566,7 +2571,7 @@
     "died": 2023,
     "role": "composer",
     "gender": "female",
-    "bio": "Finnish composer celebrated for richly textured, spectral music exploring timbre and color, developed in part at IRCAM in Paris. Her opera L'Amour de loin made her the first woman in over a century to have a new work staged at the Metropolitan Opera.",
+    "bio": "Finnish composer celebrated for richly textured, spectral music exploring timbre and color, developed in part at IRCAM in Paris. Her opera L'Amour de loin, staged at the Metropolitan Opera in 2016, was the first opera by a woman there since 1903.",
     "photoUrl": "/images/portraits/saariaho.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Kaija_Saariaho",
     "websiteUrl": null
@@ -2785,7 +2790,7 @@
     "died": null,
     "role": "both",
     "gender": "female",
-    "bio": "American violinist and composer whose works blend classical tradition with vernacular music, improvisation and the sounds of her native New York. Her string orchestra piece Strum is among the most performed new American works of recent years.",
+    "bio": "American violinist and composer whose works blend classical tradition with vernacular music, improvisation and the sounds of her native New York. Her string work Strum (2006, rev. 2012), available for string quartet, quintet or string orchestra, was named one of the 15 most significant string works of the 21st century by Strings magazine.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Jessie_Montgomery",
     "websiteUrl": null
@@ -2797,7 +2802,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "Swiss jazz trombonist and composer known for a lyrical, technically fearless sound and a restless curiosity across free jazz, blues and early music. He has led projects exploring the works of Monteverdi and Frescobaldi and has recorded widely for European labels.",
+    "bio": "Swiss jazz trombonist and composer known for a lyrical, technically fearless sound and a restless curiosity across blues, classical and early music. He has led projects exploring the works of Monteverdi and Frescobaldi and has recorded widely for European labels.",
     "photoUrl": "/images/portraits/blaser.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Samuel_Blaser",
     "websiteUrl": null
@@ -2821,7 +2826,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "German pianist and composer who blends classical piano writing with electronic production and ambient textures, often performing on modified and prepared pianos. Albums such as Spaces and Screws helped establish him as a central figure in contemporary neoclassical and ambient music.",
+    "bio": "German pianist and composer who blends classical piano writing with electronic production and ambient textures, often performing on felt-muted and custom-built Klavins pianos. Albums such as Felt and Spaces earned critical acclaim and helped establish him as a central figure in contemporary neoclassical and ambient music.",
     "photoUrl": "/images/portraits/frahm.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Nils_Frahm",
     "websiteUrl": null
@@ -2845,7 +2850,7 @@
     "died": null,
     "role": "player",
     "gender": "female",
-    "bio": "Norwegian violinist praised for her lyrical tone and fearless musicianship, with a repertoire stretching from Bach and Beethoven to Britten and Szymanowski. A protégée of Kolja Blacher and Ana Chumachenco, she records widely and performs with leading orchestras.",
+    "bio": "Norwegian violinist praised for her lyrical tone, with a repertoire stretching from Beethoven and Mendelssohn to Britten, Korngold and Elgar. She studied with Kolja Blacher and Ana Chumachenco and was mentored by Anne-Sophie Mutter; she records widely for Warner Classics and performs with leading orchestras.",
     "photoUrl": "/images/portraits/frang.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Vilde_Frang",
     "websiteUrl": null
@@ -2857,7 +2862,7 @@
     "died": null,
     "role": "player",
     "gender": "female",
-    "bio": "Chinese-born pianist celebrated for breathtaking virtuosity, fearless programming, and charismatic stage presence. She performs with leading orchestras worldwide and has earned Grammy nominations.",
+    "bio": "Chinese-born pianist celebrated for breathtaking virtuosity, fearless programming, and charismatic stage presence. She performs with leading orchestras worldwide and is a Grammy winner (Best Classical Instrumental Solo, 2024) with several further nominations.",
     "photoUrl": "/images/portraits/wang.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Yuja_Wang",
     "websiteUrl": "https://yujawang.com"
@@ -2942,7 +2947,8 @@
     "bornEstimated": true,
     "died": null,
     "role": "both",
-    "bio": "Japanese pianist and composer based in Germany who studied at TOHO Music College Tokyo before moving to Germany in 1999, completing her concert exam with distinction at the Hochschule für Musik in Nuremberg. Her compositions include the orchestral work 5 Elements and JIKU-Timeline Op.25, selected as a compulsory piece for the Friedrich Kuhlau International Flute Competition. She directs the concert series Kunst trifft Komposition and leads the ensemble Lunata.",
+    "gender": "female",
+    "bio": "Japanese pianist and composer based in Germany who studied at TOHO Music College Tokyo before moving to Germany in 1999, completing her concert exam with distinction at the Hochschule für Musik in Nuremberg. Her compositions include the piano and orchestra work 5 Elements and JIKU-Timeline Op.25, selected as a compulsory piece for the Friedrich Kuhlau International Flute Competition. She organizes the concert series Kunst trifft Komposition and performs in the duo Ensemble Lunata as pianist and composer.",
     "photoUrl": null,
     "wikiUrl": null,
     "websiteUrl": "https://takako-ono.com/"
@@ -2967,7 +2973,7 @@
     "died": 1713,
     "role": "both",
     "gender": "male",
-    "bio": "Italian violinist and composer who established the concerto grosso form and set the standard for violin technique in the Baroque era. His twelve concerti grossi and sonatas for violin became foundational works, influencing Vivaldi, Handel, and Bach.",
+    "bio": "Italian violinist and composer who was a key figure in establishing the concerto grosso and helped place the violin among the most prestigious solo instruments in the Baroque era. His twelve concerti grossi and sonatas for violin became foundational works, influencing Vivaldi, Handel, and Bach.",
     "photoUrl": "/images/portraits/corelli.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Arcangelo_Corelli",
     "websiteUrl": null
@@ -2991,7 +2997,7 @@
     "died": 1762,
     "role": "both",
     "gender": "male",
-    "bio": "Italian violinist and composer who studied with Corelli and became one of the leading violin virtuosos in London. His treatise The Art of Playing on the Violin (1751) was the first comprehensive method for the instrument.",
+    "bio": "Italian violinist and composer who studied with Corelli and became one of the leading violin virtuosos in London. His treatise The Art of Playing on the Violin (1751) is the best-known summation of the 18th-century Italian method of violin playing.",
     "photoUrl": "/images/portraits/geminiani.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Francesco_Geminiani",
     "websiteUrl": null
@@ -3015,7 +3021,7 @@
     "died": 1764,
     "role": "both",
     "gender": "male",
-    "bio": "Italian Baroque violinist and composer who studied with Corelli and pushed violin technique to unprecedented extremes. His L'Arte del Violino concertos contain virtuosic cadenzas that anticipated the Romantic era by a century.",
+    "bio": "Italian Baroque violinist and composer who studied in Rome, probably with Montanari or Valentini and perhaps briefly with Corelli, and pushed violin technique to extremes. His L'Arte del Violino (1733) pairs twelve concertos with 24 capriccios of extraordinary difficulty that anticipated Paganini's Caprices.",
     "photoUrl": "/images/portraits/locatelli.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Pietro_Locatelli",
     "websiteUrl": null
@@ -3027,7 +3033,7 @@
     "died": 1764,
     "role": "both",
     "gender": "male",
-    "bio": "French violinist and composer who founded the French violin school by synthesizing Italian virtuosity with French elegance. His violin sonatas and concertos remain the finest French contributions to Baroque violin literature.",
+    "bio": "French Baroque violinist and composer who is considered to have founded the French violin school. He was renowned as both a violinist and a composer, and is best known for his violin sonatas and concertos.",
     "photoUrl": "/images/portraits/leclair.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Jean-Marie_Leclair",
     "websiteUrl": null
@@ -3052,7 +3058,7 @@
     "died": 1799,
     "role": "both",
     "gender": "male",
-    "bio": "French violinist, composer, and conductor of Guadeloupean descent, among the first known classical composers of African descent. He led leading Parisian orchestras and wrote virtuosic violin concertos and symphonies concertantes that made him a celebrated figure of pre-Revolutionary Paris.",
+    "bio": "French violinist, composer, and conductor, born in Guadeloupe to a French planter father and an enslaved African mother, among the first known classical composers of African descent. He conducted the Concert des Amateurs and led the Concert de la Loge Olympique in Paris, and wrote violin concertos and symphonies concertantes.",
     "photoUrl": "/images/portraits/bologne.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Joseph_Bologne,_Chevalier_de_Saint-Georges",
     "websiteUrl": null
@@ -3064,7 +3070,7 @@
     "died": 1818,
     "role": "both",
     "gender": "male",
-    "bio": "Bohemian composer and pianist who succeeded Mozart as imperial chamber composer in Vienna. His roughly fifty piano sonatas and twenty concertos were widely published, and his song arrangements circulated across Europe.",
+    "bio": "Bohemian composer and pianist who succeeded Mozart as court composer in Vienna. His roughly fifty piano sonatas and twenty-two surviving keyboard concertos were widely published, and he arranged Scottish, Irish and Welsh folk songs for the publisher George Thomson.",
     "photoUrl": "/images/portraits/kozeluch.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Leopold_Ko%C5%BEeluch",
     "websiteUrl": null
@@ -3124,7 +3130,7 @@
     "died": 1840,
     "role": "both",
     "gender": "male",
-    "bio": "Italian violinist and composer whose astonishing technical wizardry made him the most legendary virtuoso in music history. His 24 Caprices for solo violin remain the ultimate test of violin technique, inspiring Liszt, Schumann, Brahms, and Rachmaninoff.",
+    "bio": "Italian violinist and composer, the most celebrated violin virtuoso of his time and one of the pillars of modern violin technique. His 24 Caprices for solo violin are among his best-known works and inspired pieces by Liszt, Schumann, Brahms and Rachmaninoff.",
     "photoUrl": "/images/portraits/paganini.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Paganini",
     "websiteUrl": null
@@ -3136,7 +3142,7 @@
     "died": 1859,
     "role": "both",
     "gender": "male",
-    "bio": "German violinist, composer, and conductor who was one of the most celebrated musicians of the early Romantic period. He composed 15 violin concertos and invented the chin rest, fundamentally changing violin technique.",
+    "bio": "German violinist, composer, and conductor who was one of the most celebrated musicians of the early Romantic period. He composed eighteen violin concertos and invented the violin chin rest around 1820.",
     "photoUrl": "/images/portraits/spohr.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Louis_Spohr",
     "websiteUrl": null
@@ -3160,7 +3166,7 @@
     "died": 1897,
     "role": "both",
     "gender": "male",
-    "bio": "Italian violinist described as one of the finest concert virtuosos of the nineteenth century, who built a lasting reputation through chamber music that helped drive Italy's instrumental renaissance. His compositions include six string quartets, several concertos, and two operas.",
+    "bio": "Italian violinist and composer, regarded as one of the finest concert violinists of the nineteenth century, whose chamber music is his most enduring work and earned him a central place in Italy's instrumental renaissance. His compositions include six string quartets, several concertos, and two operas, and he became director of the Milan Conservatory in 1882.",
     "photoUrl": "/images/portraits/bazzini.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Antonio_Bazzini",
     "websiteUrl": null
@@ -3206,9 +3212,9 @@
     "name": "P. de Sarasate",
     "born": 1844,
     "died": 1908,
-    "role": "player",
+    "role": "both",
     "gender": "male",
-    "bio": "Spanish violin virtuoso whose flawless technique and singing tone made him the most celebrated violinist of his era. His showpieces, including Zigeunerweisen and Carmen Fantasy, remain among the most popular violin works.",
+    "bio": "Spanish violin virtuoso and composer, one of the most famous violinists of his day, admired for the purity of his tone and the effortless ease of his technique. His showpieces, including Zigeunerweisen and the Carmen Fantasy, remain among the most popular violin works.",
     "photoUrl": "/images/portraits/sarasate.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Pablo_de_Sarasate",
     "websiteUrl": null
@@ -3232,7 +3238,7 @@
     "died": 1907,
     "role": "both",
     "gender": "female",
-    "bio": "Norwegian pianist and composer, a celebrated interpreter of Grieg and one of Scandinavia's foremost concert artists. Her playing won the admiration of Bülow and Liszt, and her concert etudes and piano pieces made her a central figure in Norwegian musical life.",
+    "bio": "Norwegian pianist and composer, a celebrated interpreter of Grieg's piano concerto who toured widely in Scandinavia and Britain. She studied with Bülow and Liszt, drew high praise from George Bernard Shaw in 1889-90, and her concert etudes, piano pieces and songs made her a major figure in Norwegian musical life.",
     "photoUrl": "/images/portraits/backer-grondahl.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Agathe_Backer_Gr%C3%B8ndahl",
     "websiteUrl": null
@@ -3268,7 +3274,7 @@
     "died": 1924,
     "role": "both",
     "gender": "male",
-    "bio": "Russian composer and pianist, Balakirev's last disciple and a champion of the nationalist school. His twelve Transcendental Etudes complete the circle of keys Liszt left untouched.",
+    "bio": "Russian composer and pianist, the most important member of Balakirev's later circle and a champion of the nationalist school. His twelve Transcendental Etudes complete the circle of keys Liszt left untouched.",
     "photoUrl": "/images/portraits/lyapunov.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sergei_Lyapunov",
     "websiteUrl": null
@@ -3280,7 +3286,7 @@
     "died": 1920,
     "role": "player",
     "gender": "female",
-    "bio": "American violinist and the first internationally acclaimed American-born violin virtuoso, celebrated for her technical brilliance and rich, singing tone. She was the first solo instrumentalist to record for the Victor Talking Machine Company and tirelessly championed new works by Dvořák, Sibelius, and Tchaikovsky before American audiences.",
+    "bio": "American violinist, the first American violinist to achieve international rank, celebrated for her skill and virtuosity. She was one of the first instrumentalists to make Red Seal records for the Victor Talking Machine Company and championed the violin concertos of Dvořák, Sibelius, and Tchaikovsky before American audiences.",
     "photoUrl": "/images/portraits/powell.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Maud_Powell",
     "websiteUrl": null
@@ -3292,7 +3298,7 @@
     "died": 1962,
     "role": "both",
     "gender": "male",
-    "bio": "Austrian-born American violinist and composer whose warm tone and elegant style defined violin playing in the early 20th century. His short character pieces and cadenzas for the Beethoven and Brahms concertos remain in the repertoire of every violinist.",
+    "bio": "Austrian-born American violinist and composer whose warm tone and elegant style defined violin playing in the early 20th century. His short character pieces and cadenzas for the Beethoven and Brahms concertos remain staples of the violin repertoire.",
     "photoUrl": "/images/portraits/kreisler.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Fritz_Kreisler",
     "websiteUrl": null
@@ -3328,7 +3334,7 @@
     "died": 1987,
     "role": "player",
     "gender": "male",
-    "bio": "Lithuanian-born American violinist widely regarded as the greatest violinist of the 20th century. A pupil of Leopold Auer, his flawless intonation, dazzling technique, and intense tone set a standard that continues to define modern violin playing.",
+    "bio": "Lithuanian-born American violinist widely regarded as one of the greatest violinists of all time. A pupil of Leopold Auer, his dazzling virtuosity and intense tone set standards that strongly influenced how modern violinists approach the instrument.",
     "photoUrl": "/images/portraits/heifetz.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Jascha_Heifetz",
     "websiteUrl": null
@@ -3348,11 +3354,11 @@
   {
     "id": "milstein",
     "name": "N. Milstein",
-    "born": 1903,
+    "born": 1904,
     "died": 1992,
     "role": "player",
     "gender": "male",
-    "bio": "Ukrainian-born American violinist who studied with Leopold Auer and Eugène Ysaÿe. Known for his aristocratic elegance and silvery tone, his interpretations of the Bach solo sonatas and partitas are considered benchmarks.",
+    "bio": "Ukrainian-born American violinist who studied first with Pyotr Stolyarsky in Odessa, then with Leopold Auer, and worked informally with Eugène Ysaÿe. Known for his impeccable technique and burnished tone, his interpretations of the Bach solo sonatas and partitas are regarded as definitive.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Nathan_Milstein",
     "websiteUrl": null
@@ -3400,7 +3406,7 @@
     "died": 2012,
     "role": "player",
     "gender": "male",
-    "bio": "American violinist and child prodigy, renowned above all for his lifelong association with the works of Paganini, whose 24 Caprices he was the first violinist to record in their entirety. His restless virtuosity and appetite for rare and modern repertoire made him one of the most recorded violinists of the 20th century.",
+    "bio": "American violinist and child prodigy, renowned for his association with the works of Paganini, whose 24 Caprices he was the first violinist to record in their original unaccompanied form (1947). His restless virtuosity and appetite for rare and modern repertoire are reflected in a discography of more than 500 recordings.",
     "photoUrl": "/images/portraits/ricci.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Ruggiero_Ricci",
     "websiteUrl": null
@@ -3642,7 +3648,7 @@
     "died": null,
     "role": "player",
     "gender": "male",
-    "bio": "South African-born violinist of Irish and German heritage who has been an exclusive Deutsche Grammophon artist since 2007. He has built a wide-ranging career as concerto soloist and chamber musician, and serves as artistic director of ensembles including the Zurich Chamber Orchestra.",
+    "bio": "South African-born violinist of Irish and German heritage who has been an exclusive Deutsche Grammophon artist since 2007. He has built a wide-ranging career as concerto soloist and chamber musician, and serves as music director of the Zurich Chamber Orchestra and the New Century Chamber Orchestra and as artistic director of the Frauenkirche Dresden.",
     "photoUrl": "/images/portraits/hope.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Daniel_Hope_(violinist)",
     "websiteUrl": null
@@ -3713,6 +3719,7 @@
     "born": 1980,
     "died": null,
     "role": "player",
+    "gender": "female",
     "bio": "American violinist who was one of the most celebrated child prodigies of the late 20th century, debuting with the New York Philharmonic and Philadelphia Orchestra at age eight. She released her first album on EMI Classics at age eleven and studied at the Juilliard School under Dorothy DeLay.",
     "photoUrl": "/images/portraits/chang.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sarah_Chang",
@@ -3737,7 +3744,7 @@
     "died": null,
     "role": "player",
     "gender": "male",
-    "bio": "Taiwanese-Australian violinist who won the Queen Elisabeth Competition in 2009, becoming the youngest winner in the competition's history. Known for his vibrant stage presence and engaging social media outreach to new audiences.",
+    "bio": "Taiwanese-Australian violinist who won the Queen Elisabeth Competition in 2009, where he was the youngest participant, after winning first prize in the senior division of the Yehudi Menuhin International Competition in 2008. Known as one of the first classical musicians of his stature to embrace social media.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Ray_Chen",
     "websiteUrl": null
@@ -3797,7 +3804,7 @@
     "died": 1612,
     "role": "composer",
     "gender": "male",
-    "bio": "Italian composer and organist at St. Mark's Basilica in Venice, whose polychoral works for brass ensembles including sackbuts defined the Venetian School. His Sonata pian' e forte was among the first compositions to specify dynamics and detailed instrumentation for brass.",
+    "bio": "Italian composer and organist at St. Mark's Basilica in Venice, whose polychoral works for voices and instruments, including brass ensembles with sackbuts, defined the Venetian School. His Sonata pian' e forte (1597) is one of the earliest pieces to specify dynamics and instrumentation.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Giovanni_Gabrieli",
     "websiteUrl": null
@@ -3821,7 +3828,7 @@
     "died": 1656,
     "role": "both",
     "gender": "male",
-    "bio": "Welsh-born composer and organist, a pupil of Byrd, who served Worcester Cathedral and the Chapel Royal. His keyboard fugues, variations, and dances, preserved in a manuscript he copied in his final years, rank among the finest of the English virginal school.",
+    "bio": "Welsh-born composer and organist, who almost certainly studied with Byrd, who served Worcester Cathedral and the Chapel Royal. His keyboard fugues, variations, and dances, preserved in a manuscript he copied in his final years, rank among the finest of the English virginal school.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Thomas_Tomkins",
     "websiteUrl": null
@@ -3833,7 +3840,7 @@
     "died": 1672,
     "role": "composer",
     "gender": "male",
-    "bio": "German early Baroque composer regarded as the most important German composer before J.S. Bach. A pupil of Giovanni Gabrieli in Venice, his Psalmen Davids and sacred concertos such as Fili mi, Absalon feature prominent obbligato trombone parts.",
+    "bio": "German early Baroque composer regarded as the most important German composer before J.S. Bach. A pupil of Giovanni Gabrieli in Venice, his sacred concerto Fili mi, Absalon (SWV 269, Symphoniae sacrae I, 1629) is scored for solo bass, trombones and continuo.",
     "photoUrl": "/images/portraits/schutz.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Heinrich_Sch%C3%BCtz",
     "websiteUrl": null
@@ -3845,7 +3852,7 @@
     "died": 1654,
     "role": "both",
     "gender": "male",
-    "bio": "German organist and composer whose Tabulatura Nova (1624) reformed keyboard notation and variation technique. A pupil of Sweelinck, he served as Kapellmeister in Halle for over three decades.",
+    "bio": "German organist and composer whose Tabulatura Nova (1624), a landmark collection of keyboard variations and fantasias, was notated in score on staves rather than letter tablature. A pupil of Sweelinck, he served as court organist and later Kapellmeister to the Margrave of Brandenburg in Halle, then as music director of the city's main churches from 1628.",
     "photoUrl": "/images/portraits/scheidt.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Samuel_Scheidt",
     "websiteUrl": null
@@ -3893,7 +3900,7 @@
     "died": 1787,
     "role": "composer",
     "gender": "male",
-    "bio": "German-Austrian composer, violinist, and music theorist, best known as Wolfgang Amadeus Mozart's father and teacher. He wrote a Concerto for Alto Trombone for the Salzburg trombonist Thomas Gschladt, contributing to the golden age of alto trombone writing in Salzburg.",
+    "bio": "German-Austrian composer, violinist, and music theorist, best known as Wolfgang Amadeus Mozart's father and teacher. His Serenade in E-flat (1755) has an alto trombone movement often performed as a standalone concerto, and he wrote a serenade for the Austrian alto trombone virtuoso Thomas Gschladt, around what was perhaps a golden age of the alto trombone.",
     "photoUrl": "/images/portraits/l-mozart.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Leopold_Mozart",
     "websiteUrl": null
@@ -3917,7 +3924,7 @@
     "died": 1806,
     "role": "composer",
     "gender": "male",
-    "bio": "Austrian Classical-era composer and younger brother of Joseph Haydn, who served as concertmaster in Salzburg for 44 years. He wrote multiple works featuring trombone including a demanding Serenade with solo trombone and a Concerto in D major for two trombones.",
+    "bio": "Austrian Classical-era composer and younger brother of Joseph Haydn, who served as concertmaster in Salzburg for 44 years. He wrote multiple works featuring trombone, including a Serenade in D with a solo trombone movement and a Concerto in D major for alto trombone.",
     "photoUrl": "/images/portraits/m-haydn.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Michael_Haydn",
     "websiteUrl": null
@@ -3929,7 +3936,7 @@
     "died": 1813,
     "role": "both",
     "gender": "male",
-    "bio": "Bohemian-born composer and keyboard teacher active in Vienna alongside Haydn and Mozart. His prolific piano sonatas and didactic pieces circulated across Europe and helped shape Viennese Classical keyboard style.",
+    "bio": "Bohemian-born composer and teacher who settled in Vienna in 1760, where he reportedly played quartets with Haydn and Mozart. A prolific composer, he is credited with at least 73 symphonies and about 100 string quartets, and from around 1780 lived independently on piano music written for the growing middle class.",
     "photoUrl": "/images/portraits/vanhal.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Johann_Baptist_Wanhal",
     "websiteUrl": null
@@ -3953,7 +3960,7 @@
     "died": 1874,
     "role": "both",
     "gender": "male",
-    "bio": "German trombone virtuoso who was the first great soloist of the Leipzig Gewandhaus school. He served in the Berlin Court Orchestra for over 40 years, toured extensively across Europe, and composed numerous concertinos and studies for trombone.",
+    "bio": "German trombone virtuoso who is probably the first trombone soloist ever heard in a German concert hall, at the Leipzig Gewandhaus in 1815. He served in the Berlin royal chapel from 1816 to 1858, toured Denmark, Sweden, Holland, France and Austria, and composed concertos, a duo and studies for trombone.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Friedrich_August_Belcke",
     "websiteUrl": null
@@ -3965,7 +3972,7 @@
     "died": 1846,
     "role": "player",
     "gender": "male",
-    "bio": "German trombonist who was one of the first internationally famous trombone soloists. He served as trombone soloist at the Leipzig Gewandhaus Orchestra under Mendelssohn, performing alongside Liszt, Clara Schumann, and Paganini. Ferdinand David's famous Concertino was dedicated to him.",
+    "bio": "German trombonist and violist, known throughout Germany as a trombone soloist. He played trombone and viola in the Leipzig Gewandhaus Orchestra under Mendelssohn, serving as principal viola in the orchestra and its quartet; Schumann called him a 'Posaunengott', and Ferdinand David's Concertino was dedicated to him.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Karl_Traugott_Queisser",
     "websiteUrl": null
@@ -3977,7 +3984,7 @@
     "died": 1878,
     "role": "player",
     "gender": "male",
-    "bio": "Dutch-born French trombonist who served as professor of trombone at the Conservatoire de Paris from 1836 to 1871, establishing the French school of trombone playing. Berlioz particularly admired his playing and wrote with his capabilities in mind.",
+    "bio": "Dutch-born French trombonist who served as professor of trombone at the Conservatoire de Paris from 1836 to 1871 and authored one of the first reference methods for the instrument. Berlioz greatly appreciated his playing and wrote the trombone solo of the Oraison funèbre in the Symphonie funèbre et triomphale largely for him.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Antoine_Dieppo",
     "websiteUrl": null
@@ -3987,9 +3994,9 @@
     "name": "F. David",
     "born": 1810,
     "died": 1873,
-    "role": "composer",
+    "role": "both",
     "gender": "male",
-    "bio": "German violinist, composer, and conductor who served as concertmaster at the Leipzig Gewandhaus under Mendelssohn. His Concertino for Trombone and Orchestra, Op. 4 (1837), written for Karl Traugott Queisser, became the most frequently performed 19th-century solo trombone work.",
+    "bio": "German violinist, composer, and conductor who served as concertmaster at the Leipzig Gewandhaus under Mendelssohn. His Concertino for Trombone and Orchestra, Op. 4 (1837), written for Karl Traugott Queisser, became the most popular 19th-century solo trombone work.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Ferdinand_David_(musician)",
     "websiteUrl": null
@@ -3999,9 +4006,9 @@
     "name": "A. Guilmant",
     "born": 1837,
     "died": 1911,
-    "role": "composer",
+    "role": "both",
     "gender": "male",
-    "bio": "French organist and composer, one of the leading concert organists of his era and a co-founder of the Paris Schola Cantorum, celebrated for his eight organ symphonies. His Morceau symphonique, Op. 88 (1902), for trombone and orchestra has become a cornerstone of the trombone repertoire.",
+    "bio": "French organist and composer, one of the leading concert organists of his era and a co-founder of the Paris Schola Cantorum, celebrated for his eight organ sonatas, symphonic in style. His Morceau symphonique, Op. 88 (1902), for trombone and piano has become a cornerstone of the trombone repertoire.",
     "photoUrl": "/images/portraits/guilmant.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Alexandre_Guilmant",
     "websiteUrl": null
@@ -4025,7 +4032,7 @@
     "died": 1942,
     "role": "both",
     "gender": "male",
-    "bio": "American trombone virtuoso who joined the Sousa Band in 1892 and estimated he played 10,000 solos over 12 years. German Army trombonists famously demanded to disassemble his instrument, unable to believe a standard trombone could produce such playing. He formed his own concert band in 1903.",
+    "bio": "American trombone virtuoso who joined the Sousa Band in 1892 and estimated he played 10,000 solos over 12 years. German Army band trombonists, astonished by his playing, reportedly took his trombone apart, refusing to believe it was natural. He took over the reorganized Pryor band in 1903.",
     "photoUrl": "/images/portraits/pryor.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Arthur_Pryor",
     "websiteUrl": null
@@ -4047,9 +4054,9 @@
     "name": "Kid Ory",
     "born": 1886,
     "died": 1973,
-    "role": "player",
+    "role": "both",
     "gender": "male",
-    "bio": "Louisiana-born trombonist who pioneered the tailgate trombone style that became a defining element of New Orleans jazz. He led one of the best-known bands in New Orleans and recorded with Louis Armstrong, Jelly Roll Morton, and Bessie Smith.",
+    "bio": "Louisiana-born trombonist and composer who pioneered the tailgate trombone style that became a defining element of New Orleans jazz. He led one of the best-known bands in New Orleans, recorded with Louis Armstrong, Jelly Roll Morton, and Bessie Smith, and wrote the jazz standard Muskrat Ramble.",
     "photoUrl": "/images/portraits/kid-ory.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Kid_Ory",
     "websiteUrl": null
@@ -4097,7 +4104,7 @@
     "died": 1942,
     "role": "both",
     "gender": "male",
-    "bio": "Czech composer and pianist who fused jazz, Dada, and neoclassicism during the interwar years. His piano etudes, sonatas, and jazz-inspired suites thrived until the Nazis suppressed his music; he died in Wülzburg concentration camp.",
+    "bio": "Czech composer and pianist who fused jazz, Dada, and neoclassicism during the interwar years. His piano etudes, sonatas, and jazz-inspired suites thrived until the Nazis suppressed his music; he died of tuberculosis in 1942 in the Wülzburg internment camp in Bavaria.",
     "photoUrl": "/images/portraits/schulhoff.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Erwin_Schulhoff",
     "websiteUrl": null
@@ -4107,9 +4114,9 @@
     "name": "P. Hindemith",
     "born": 1895,
     "died": 1963,
-    "role": "composer",
+    "role": "both",
     "gender": "male",
-    "bio": "German-American composer, music theorist, and violist who was a major advocate of Neue Sachlichkeit. His Sonata for Trombone and Piano (1941) is the single most frequently performed trombone piece in the concert repertoire, a neoclassical masterpiece.",
+    "bio": "German-American composer, music theorist, and violist who was a major advocate of Neue Sachlichkeit. His Sonata for Trombone and Piano (1941) is a staple of the trombone repertoire, a neoclassical masterpiece.",
     "photoUrl": "/images/portraits/hindemith.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Paul_Hindemith",
     "websiteUrl": null
@@ -4133,7 +4140,7 @@
     "died": 1961,
     "role": "player",
     "gender": "male",
-    "bio": "American trombonist who transformed the instrument's role in jazz during the 1920s, trading tailgate slides for a clean, agile solo style. His records with Red Nichols and the Original Memphis Five, and his later work in the NBC studio orchestra, influenced nearly every trombonist who followed.",
+    "bio": "American trombonist credited with creating the first distinctive and influential solo jazz trombone style, featuring octave leaps, shakes and rapid-fire cadenzas. He recorded with Red Nichols and the Original Memphis Five, later worked at NBC, and influenced 1920s trombonists including Tommy Dorsey and Glenn Miller.",
     "photoUrl": "/images/portraits/mole.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Miff_Mole",
     "websiteUrl": null
@@ -4167,9 +4174,9 @@
     "name": "G. Miller",
     "born": 1904,
     "died": 1944,
-    "role": "player",
+    "role": "both",
     "gender": "male",
-    "bio": "American big band leader, arranger, and trombonist who led the best-selling recording band from 1939 to 1942. He joined the U.S. Army Air Forces during WWII and was lost over the English Channel in 1944 when his plane disappeared.",
+    "bio": "American big band leader, arranger, composer, and trombonist who wrote his signature theme \"Moonlight Serenade\" and led the best-selling recording band from 1939 to 1942. He joined the U.S. Army Air Forces during WWII and was lost over the English Channel in 1944 when his plane disappeared.",
     "photoUrl": "/images/portraits/glenn-miller.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Glenn_Miller",
     "websiteUrl": null
@@ -4181,7 +4188,7 @@
     "died": 1964,
     "role": "player",
     "gender": "male",
-    "bio": "Largely self-taught Texas-born trombonist who developed innovative slide positions and effects that revolutionized jazz trombone. Considered the greatest pre-bebop jazz trombonist, his influence was so profound that Tommy Dorsey altered his own style to avoid comparison.",
+    "bio": "Largely self-taught Texas-born trombonist who developed unusual alternative positions and special effects on the trombone. Considered by many the greatest jazz trombonist of his era, he influenced later trombonists, and Tommy Dorsey said Teagarden heavily influenced his own playing style.",
     "photoUrl": "/images/portraits/teagarden.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Jack_Teagarden",
     "websiteUrl": null
@@ -4265,7 +4272,7 @@
     "died": 2006,
     "role": "composer",
     "gender": "male",
-    "bio": "Dutch conductor and composer who led the Bavarian Radio Symphony Orchestra and taught conducting at the Munich Hochschule. He wrote a substantial body of brass chamber and solo music, including a widely performed trombone concerto and numerous trombone quartets.",
+    "bio": "Dutch conductor and composer who served as first Kapellmeister of the Bavarian Radio Symphony Orchestra from 1950 to 1966 and later taught conducting at the Munich Hochschule. He wrote a substantial body of brass chamber and solo music, including trombone concertinos and several trombone quartets.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Jan_Koetsier",
     "websiteUrl": null
@@ -4301,7 +4308,7 @@
     "died": 1986,
     "role": "composer",
     "gender": "male",
-    "bio": "Croatian composer, conductor, and violinist who taught composition at the Zagreb Academy of Music for four decades. His Vox Gabrieli (1973) for trombone and piano is a cornerstone of the modern trombone repertoire.",
+    "bio": "Croatian composer, conductor, and violinist who taught composition at the Zagreb Academy of Music from 1948 to 1975, nearly three decades. His Vox Gabrieli (1973) is a sonata for trombone and piano.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Stjepan_%C5%A0ulek",
     "websiteUrl": null
@@ -4313,7 +4320,7 @@
     "died": 1973,
     "role": "player",
     "gender": "male",
-    "bio": "American trombonist whose broad, vibrato-rich sound and rhythmic bite made him a star of Woody Herman's First and Second Herds. He recorded widely with Herman and with Jazz at the Philharmonic before settling into club and studio work in Florida.",
+    "bio": "American trombonist whose broad, vibrato-rich sound and rhythmic bite made him a star of Woody Herman's First and Second Herds. He recorded widely with Herman and with Jazz at the Philharmonic, later worked in Las Vegas and retired to Florida.",
     "photoUrl": "/images/portraits/bill-harris.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Bill_Harris_(trombonist)",
     "websiteUrl": null
@@ -4337,7 +4344,7 @@
     "died": 2012,
     "role": "composer",
     "gender": "male",
-    "bio": "Armenian composer whose Trumpet Concerto (1950) became a cornerstone of the brass repertoire. He chaired the Armenian Composers' Union and wrote a Trombone Concerto and other brass works blending Armenian folk idioms with late-Romantic harmony.",
+    "bio": "Armenian composer widely known for his Trumpet Concerto (1950). He headed the Armenian State Philharmonic from 1954 and served on the board of the Armenian Composers' Union; his brass works include a Trombone Concerto (1991) and a Tuba Concerto (1992), with Armenian folk music a strong influence.",
     "photoUrl": "/images/portraits/arutiunian.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Alexander_Arutiunian",
     "websiteUrl": null
@@ -4349,7 +4356,7 @@
     "died": 1983,
     "role": "player",
     "gender": "male",
-    "bio": "Danish-born American jazz trombonist best known for his collaboration with J.J. Johnson as the Jay and Kai Quintet, which helped develop the cool jazz style. His version of More reached number eight on the Billboard Hot 100 in 1963.",
+    "bio": "Danish-born American jazz trombonist best known for his partnership with J.J. Johnson in the Jay and Kai Quintet (1954-1956), and for playing on the Birth of the Cool sessions (1949). His version of More reached number eight on the Billboard Hot 100 in 1963.",
     "photoUrl": "/images/portraits/kai-winding.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Kai_Winding",
     "websiteUrl": null
@@ -4385,7 +4392,7 @@
     "died": 2001,
     "role": "both",
     "gender": "male",
-    "bio": "Widely regarded as the father of modern jazz trombone, Johnson was the first trombonist to master the fast, complex vocabulary of bebop. He worked with Charlie Parker, Dizzy Gillespie, and Miles Davis, and several of his compositions became jazz standards.",
+    "bio": "Widely regarded as the father of modern jazz trombone, Johnson was one of the earliest trombonists to embrace the fast, complex vocabulary of bebop. He worked with Charlie Parker, Dizzy Gillespie, and Miles Davis, and several of his compositions became jazz standards.",
     "photoUrl": "/images/portraits/jj-johnson.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/J._J._Johnson",
     "websiteUrl": null
@@ -4397,7 +4404,7 @@
     "died": 2003,
     "role": "composer",
     "gender": "male",
-    "bio": "Italian composer and one of the twentieth century's most prolific musical pioneers known for experimental work and electronic music. His Sequenza V for solo trombone (1966), written for Stuart Dempster, is the most famous avant-garde trombone solo, requiring multiphonics and extended techniques.",
+    "bio": "Italian composer noted for his experimental work and his pioneering work in electronic music; in 1955 he co-founded the Studio di fonologia musicale in Milan with Bruno Maderna. His Sequenza V for solo trombone (1966), written for Stuart Dempster, calls for multiphonics and other extended techniques.",
     "photoUrl": "/images/portraits/berio.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Luciano_Berio",
     "websiteUrl": null
@@ -4493,7 +4500,7 @@
     "died": 2005,
     "role": "both",
     "gender": "male",
-    "bio": "German jazz trombonist from Frankfurt who pioneered free jazz in Europe and innovated multiphonics, enabling the trombone to sound multiple notes simultaneously. He was among the first post-war European jazz musicians to create original music independent of American models.",
+    "bio": "German jazz trombonist from Frankfurt who moved increasingly toward free jazz in the late 1960s and innovated multiphonics, enabling the trombone to sound multiple notes simultaneously. He helped rebuild Germany's post-war jazz scene, and his style and musical language are regarded as distinctive and independent of American models.",
     "photoUrl": "/images/portraits/mangelsdorff.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Albert_Mangelsdorff",
     "websiteUrl": null
@@ -4505,7 +4512,7 @@
     "died": 2014,
     "role": "player",
     "gender": "male",
-    "bio": "American bass trombonist nicknamed \"Mr. Bass Trombone,\" a first-call Los Angeles studio musician whose warm low-register sound graced recordings by Frank Sinatra, Nelson Riddle, and Henry Mancini as well as film scores including Jaws and Close Encounters of the Third Kind. Over a decades-long session career he played on more than 6,000 recordings, redefining the bass trombone's role as a solo and melodic voice.",
+    "bio": "American bass trombonist nicknamed \"Mr. Bass Trombone,\" a Los Angeles studio musician who played sessions with Frank Sinatra, Nelson Riddle, and Henry Mancini as well as on film scores including Jaws and Close Encounters of the Third Kind. Over a decades-long session career he played on more than 6,000 recordings and was one of the first bass trombonists to champion the instrument's solo possibilities.",
     "photoUrl": "/images/portraits/george-roberts.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/George_Roberts_(trombonist)",
     "websiteUrl": null
@@ -4565,7 +4572,7 @@
     "died": 2025,
     "role": "composer",
     "gender": "female",
-    "bio": "Russian composer of Tatar heritage whose mystical, structurally daring music faced official condemnation in the Soviet Union. Her Chaconne and Musical Toys are modern classics of the piano repertoire.",
+    "bio": "Russian composer of Tatar heritage whose mystical, structurally daring music faced official condemnation in the Soviet Union. Best known for works such as Offertorium and Seven Words; her piano output includes the early Chaconne and Musical Toys.",
     "photoUrl": "/images/portraits/gubaidulina.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Sofia_Gubaidulina",
     "websiteUrl": null
@@ -4573,7 +4580,7 @@
   {
     "id": "curtis-fuller",
     "name": "C. Fuller",
-    "born": 1932,
+    "born": 1934,
     "died": 2021,
     "role": "player",
     "gender": "male",
@@ -4601,7 +4608,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "Slovenian-French composer, trombonist, and improviser central to the postwar avant-garde. His works, including Discours II for trombone octet, pioneered extended techniques and theatrical, improvisation-driven notation.",
+    "bio": "Slovenian-French composer, trombonist, and improviser central to the postwar avant-garde. His works, including Discours II for five trombones, draw on extended techniques, improvisation and music-theatre elements.",
     "photoUrl": "/images/portraits/globokar.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Vinko_Globokar",
     "websiteUrl": null
@@ -4637,7 +4644,7 @@
     "died": null,
     "role": "player",
     "gender": "male",
-    "bio": "American trombonist who championed extended techniques and premiered dozens of works by major composers including Berio's Sequenza V. He published the landmark book The Modern Trombone: A Definition of Its Idioms, fundamentally expanding the instrument's sonic possibilities.",
+    "bio": "American trombonist, didjeridu player and improviser who commissioned and performed works by composers including Berio, Pauline Oliveros, Ernst Krenek and Donald Erb; Berio's Sequenza V (1966) was written for him. He published The Modern Trombone: A Definition of Its Idioms (University of California Press, 1979).",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Stuart_Dempster",
     "websiteUrl": null
@@ -4672,6 +4679,7 @@
     "born": 1941,
     "died": 2017,
     "role": "composer",
+    "gender": "male",
     "bio": "Extraordinarily prolific English composer of 116 symphonies and extensive brass and wind band repertoire, including a Trombone Concerto (1988) and a Concerto for Bass Trombone and Band (2006). He served as director of the National Youth Orchestra (1984-1993) and director of music at St Paul's Girls' School (1994-2002).",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Derek_Bourgeois",
@@ -4695,9 +4703,9 @@
     "born": 1946,
     "died": null,
     "role": "player",
-    "bio": "Slovenian-born trombonist and pedagogue based in Switzerland who won the Geneva International Competition in 1973. He founded the Slokar Trombone Quartet and launched a full-time solo career in 1979, becoming renowned as a master class teacher worldwide.",
+    "bio": "Slovenian-born trombonist and pedagogue based in Switzerland who was a laureate at the Geneva International Competition in 1973 and a prizewinner at the ARD International Music Competition in Munich in 1974. He founded the Slokar Trombone Quartet and launched a full-time solo career in 1979, becoming renowned as a master class teacher worldwide.",
     "photoUrl": null,
-    "wikiUrl": "https://en.wikipedia.org/wiki/Branimir_Slokar",
+    "wikiUrl": "https://sl.wikipedia.org/wiki/Branimir_Slokar",
     "websiteUrl": null
   },
   {
@@ -4767,7 +4775,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "American jazz trombonist who pioneered the use of electronic effects with the trombone and co-founded the M-Base musical movement. He played for 15 years in Dave Holland's groups and served as professor at Oberlin Conservatory on J.J. Johnson's recommendation.",
+    "bio": "American jazz trombonist who pioneered the use of electronic effects with the trombone and was one of the pioneers of the M-Base collective. He played for 15 years in Dave Holland's groups and served as professor at Oberlin Conservatory on J.J. Johnson's recommendation.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Robin_Eubanks",
     "websiteUrl": null
@@ -4790,7 +4798,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "Swedish jazz, funk, and R&B trombonist known as The Man with the Red Horn for his trademark red trombone. He has contributed to over 500 albums by artists including ABBA and Herbie Hancock, and is one of the most prominent jazz musicians in Scandinavia.",
+    "bio": "Swedish jazz, funk, and R&B trombonist and singer known as The Man with the Red Horn for his trademark red trombone. By his own count he has contributed to at least 500 albums, including with ABBA and Herbie Hancock, and he received the Order of Merit of the Federal Republic of Germany in 2019.",
     "photoUrl": "/images/portraits/nils-landgren.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Nils_Landgren_(musician)",
     "websiteUrl": null
@@ -4802,7 +4810,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "Swedish trombonist, conductor, and composer widely considered the first classical trombonist to sustain a full-time solo career. He has commissioned and premiered over 300 trombone concertos and has an extensive discography on BIS Records.",
+    "bio": "Swedish trombonist, conductor, and composer widely considered the first classical trombonist to sustain a full-time solo career. He has premiered more than 100 trombone concertos and has an extensive discography on BIS Records.",
     "photoUrl": "/images/portraits/lindberg.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Christian_Lindberg",
     "websiteUrl": null
@@ -4862,7 +4870,7 @@
     "died": null,
     "role": "both",
     "gender": "male",
-    "bio": "American jazz trombonist named Jazz Trombonist of the Year thirteen times by the Jazz Journalists Association. A leading figure in traditional and New Orleans-style jazz, he carries on the legacy of the plunger-mute tradition.",
+    "bio": "American jazz trombonist, arranger and composer, many times named Jazz Trombonist of the Year by the Jazz Journalists Association. An original member of the Lincoln Center Jazz Orchestra (1995-2000), he also arranged the theme music for NPR's All Things Considered.",
     "photoUrl": "/images/portraits/wycliffe-gordon.jpg",
     "wikiUrl": "https://en.wikipedia.org/wiki/Wycliffe_Gordon",
     "websiteUrl": null
@@ -4874,7 +4882,7 @@
     "died": null,
     "role": "player",
     "gender": "male",
-    "bio": "Israeli-born American trombonist who serves as Principal Trombone of The Philadelphia Orchestra. He teaches at the Curtis Institute of Music and is widely considered one of the finest orchestral trombonists performing today.",
+    "bio": "Israeli-born trombonist who is Principal Trombone of The Philadelphia Orchestra, a post he held from 1995 to 2012 and again since rejoining in 2014. He was Principal Trombone of the Los Angeles Philharmonic from 2012 to 2014 and has taught at the Curtis Institute of Music since 1998.",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/Nitzan_Haroz",
     "websiteUrl": null
@@ -4886,7 +4894,7 @@
     "died": null,
     "role": "player",
     "gender": "male",
-    "bio": "Dutch trombonist who has been Principal Trombone of the Royal Concertgebouw Orchestra in Amsterdam since 1997. James MacMillan composed a trombone concerto for him, and he is one of Europe's foremost trombone soloists.",
+    "bio": "Dutch trombonist who has been Principal Trombone of the Royal Concertgebouw Orchestra in Amsterdam since 1997. James MacMillan composed a trombone concerto for him, which he premiered in 2017, and he is an award-winning soloist (Netherlands Music Prize 2004, Borletti-Buitoni Trust Award 2006).",
     "photoUrl": null,
     "wikiUrl": "https://en.wikipedia.org/wiki/J%C3%B6rgen_van_Rijen",
     "websiteUrl": null
